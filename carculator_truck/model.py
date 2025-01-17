@@ -345,11 +345,12 @@ class TruckModel(VehicleModel):
             fuel_cell_system_efficiency=self["fuel cell system efficiency"],
         )
 
-        self.energy.assign_coords(
+        self.energy = self.energy.assign_coords(
             {
-                "powertrain": self.array.coords["powertrain"].values,
-                "year": self.array.coords["year"].values,
-                "size": self.array.coords["size"].values,
+                "powertrain": self.array.powertrain,
+                "year": self.array.year,
+                "size": self.array.coords["size"],
+                "value": self.array.coords["value"],
             }
         )
 
