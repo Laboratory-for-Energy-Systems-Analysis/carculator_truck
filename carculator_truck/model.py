@@ -347,11 +347,13 @@ class TruckModel(VehicleModel):
 
         self.energy.assign_coords(
             {
-                "powertrain": self.array.powertrain,
-                "year": self.array.year,
-                "size": self.array.coords["size"],
+                "powertrain": self.array.coords["powertrain"].values,
+                "year": self.array.coords["year"].values,
+                "size": self.array.coords["size"].values,
             }
         )
+
+        print(self.energy.coords)
 
         if self.energy_consumption:
             self.override_ttw_energy()
