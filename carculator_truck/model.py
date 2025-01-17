@@ -298,11 +298,29 @@ class TruckModel(VehicleModel):
         if self.target_range is not None:
             target_range = self.target_range
         elif isinstance(self.cycle, str):
-            target_range = target_ranges[self.cycle]
-        else:
-            target_range = 800
+            target_range = {}
+            for pwt in self.array.coords["powertrain"].values:
+                for size in self.array.coords["size"].values:
+                    for year in self.array.coords["year"].values:
+                        target_range[(pwt, size, year)] = target_ranges[self.cycle]
 
-        self["target range"] = target_range
+        else:
+            target_range = {}
+            for pwt in self.array.coords["powertrain"].values:
+                for size in self.array.coords["size"].values:
+                    for year in self.array.coords["year"].values:
+                        target_range[(pwt, size, year)] = 800
+
+        for key, val in target_range.items():
+            pwt, size, year = key
+            self.array.loc[
+                dict(
+                    powertrain=pwt,
+                    size=size,
+                    year=year,
+                    parameter="target range",
+                )
+            ] = val
 
         # exception for PHEVs trucks
         # which are assumed ot eb able to drive 60 km in battery-depleting mode
