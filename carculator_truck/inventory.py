@@ -391,19 +391,4 @@ class InventoryTruck(Inventory):
             self.array.sel(parameter="combustion power") == 0
         )
 
-        # we end by removing all trucks which driving mass is superior to its "gross mass"
-        # but we save the ones in the diagonal
-
-        for powertrain in self.array.coords["powertrain"].values:
-            for size in self.array.coords["size"].values:
-                for year in self.array.coords["year"].values:
-                    if self.array.sel(powertrain=powertrain, size=size, year=year, parameter="driving mass").values > self.array.sel(powertrain=powertrain, size=size, year=year, parameter="gross mass").values:
-                        self.A[
-                            np.ix_(
-                                np.arange(self.iterations),
-                                [j for i, j in self.inputs.items() if all(x in i[0] for x in ["truck", powertrain, size, year])],
-                                [j for i, j in self.inputs.items() if i[0].startswith("truck, ")],
-                            )
-                        ] = 0
-
         print("*********************************************************************")
