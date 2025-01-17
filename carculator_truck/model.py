@@ -354,8 +354,6 @@ class TruckModel(VehicleModel):
             }
         )
 
-        print(self.energy.coords)
-
         if self.energy_consumption:
             self.override_ttw_energy()
 
@@ -1029,3 +1027,4 @@ class TruckModel(VehicleModel):
 
                 t.add_row(row + vals.tolist())
         print(t)
+
