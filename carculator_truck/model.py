@@ -91,10 +91,7 @@ class TruckModel(VehicleModel):
             self.set_recuperation()
             self.set_battery_preferences()
 
-            if self.energy_consumption:
-                self.override_ttw_energy()
-            else:
-                self.calculate_ttw_energy()
+            self.calculate_ttw_energy()
             self.set_ttw_efficiency()
 
             self.set_share_recuperated_energy()
