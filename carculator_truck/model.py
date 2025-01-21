@@ -132,9 +132,10 @@ class TruckModel(VehicleModel):
             for s in self.array.coords["size"].values:
                 for p in self.array.coords["powertrain"].values:
                     for y in self.array.coords["year"].values:
-                        self.array.loc[
-                            dict(size=s, powertrain=p, year=y, parameter="cargo mass")
-                        ] = self.payload[(p, s, y)]
+                        if (p, s, y) in self.payload:
+                            self.array.loc[
+                                dict(size=s, powertrain=p, year=y, parameter="cargo mass")
+                            ] = self.payload[(p, s, y)]
         else:
             with open(CARGO_MASSES, "r", encoding="utf-8") as stream:
                 generic_payload = yaml.safe_load(stream)["payload"]
@@ -149,14 +150,15 @@ class TruckModel(VehicleModel):
             for s in self.array.coords["size"].values:
                 for p in self.array.coords["powertrain"].values:
                     for y in self.array.coords["year"].values:
-                        self.array.loc[
-                            dict(
-                                size=s,
-                                powertrain=p,
-                                year=y,
-                                parameter="kilometers per year",
-                            )
-                        ] = self.annual_mileage[(p, s, y)]
+                        if (p, s, y) in self.annual_mileage:
+                            self.array.loc[
+                                dict(
+                                    size=s,
+                                    powertrain=p,
+                                    year=y,
+                                    parameter="kilometers per year",
+                                )
+                            ] = self.annual_mileage[(p, s, y)]
         else:
             with open(CARGO_MASSES, "r", encoding="utf-8") as stream:
                 annual_mileage = yaml.safe_load(stream)["annual mileage"]
