@@ -91,10 +91,7 @@ class TruckModel(VehicleModel):
             self.set_recuperation()
             self.set_battery_preferences()
 
-            if self.energy_consumption:
-                self.override_ttw_energy()
-            else:
-                self.calculate_ttw_energy()
+            self.calculate_ttw_energy()
             self.set_ttw_efficiency()
 
             self.set_share_recuperated_energy()
@@ -135,9 +132,10 @@ class TruckModel(VehicleModel):
             for s in self.array.coords["size"].values:
                 for p in self.array.coords["powertrain"].values:
                     for y in self.array.coords["year"].values:
-                        self.array.loc[
-                            dict(size=s, powertrain=p, year=y, parameter="cargo mass")
-                        ] = self.payload[(p, s, y)]
+                        if (p, s, y) in self.payload:
+                            self.array.loc[
+                                dict(size=s, powertrain=p, year=y, parameter="cargo mass")
+                            ] = self.payload[(p, s, y)]
         else:
             with open(CARGO_MASSES, "r", encoding="utf-8") as stream:
                 generic_payload = yaml.safe_load(stream)["payload"]
@@ -152,14 +150,15 @@ class TruckModel(VehicleModel):
             for s in self.array.coords["size"].values:
                 for p in self.array.coords["powertrain"].values:
                     for y in self.array.coords["year"].values:
-                        self.array.loc[
-                            dict(
-                                size=s,
-                                powertrain=p,
-                                year=y,
-                                parameter="kilometers per year",
-                            )
-                        ] = self.annual_mileage[(p, s, y)]
+                        if (p, s, y) in self.annual_mileage:
+                            self.array.loc[
+                                dict(
+                                    size=s,
+                                    powertrain=p,
+                                    year=y,
+                                    parameter="kilometers per year",
+                                )
+                            ] = self.annual_mileage[(p, s, y)]
         else:
             with open(CARGO_MASSES, "r", encoding="utf-8") as stream:
                 annual_mileage = yaml.safe_load(stream)["annual mileage"]
@@ -301,11 +300,29 @@ class TruckModel(VehicleModel):
         if self.target_range is not None:
             target_range = self.target_range
         elif isinstance(self.cycle, str):
-            target_range = target_ranges[self.cycle]
-        else:
-            target_range = 800
+            target_range = {}
+            for pwt in self.array.coords["powertrain"].values:
+                for size in self.array.coords["size"].values:
+                    for year in self.array.coords["year"].values:
+                        target_range[(pwt, size, year)] = target_ranges[self.cycle]
 
-        self["target range"] = target_range
+        else:
+            target_range = {}
+            for pwt in self.array.coords["powertrain"].values:
+                for size in self.array.coords["size"].values:
+                    for year in self.array.coords["year"].values:
+                        target_range[(pwt, size, year)] = 800
+
+        for key, val in target_range.items():
+            pwt, size, year = key
+            self.array.loc[
+                dict(
+                    powertrain=pwt,
+                    size=size,
+                    year=year,
+                    parameter="target range",
+                )
+            ] = val
 
         # exception for PHEVs trucks
         # which are assumed ot eb able to drive 60 km in battery-depleting mode
@@ -353,6 +370,7 @@ class TruckModel(VehicleModel):
                 "powertrain": self.array.powertrain,
                 "year": self.array.year,
                 "size": self.array.coords["size"],
+                "value": self.array.coords["value"],
             }
         )
 
@@ -1029,3 +1047,4 @@ class TruckModel(VehicleModel):
 
                 t.add_row(row + vals.tolist())
         print(t)
+
