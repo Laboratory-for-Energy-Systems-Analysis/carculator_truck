@@ -134,7 +134,9 @@ class TruckModel(VehicleModel):
                     for y in self.array.coords["year"].values:
                         if (p, s, y) in self.payload:
                             self.array.loc[
-                                dict(size=s, powertrain=p, year=y, parameter="cargo mass")
+                                dict(
+                                    size=s, powertrain=p, year=y, parameter="cargo mass"
+                                )
                             ] = self.payload[(p, s, y)]
         else:
             with open(CARGO_MASSES, "r", encoding="utf-8") as stream:
@@ -1047,4 +1049,3 @@ class TruckModel(VehicleModel):
 
                 t.add_row(row + vals.tolist())
         print(t)
-
