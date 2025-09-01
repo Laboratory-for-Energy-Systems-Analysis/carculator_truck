@@ -111,7 +111,6 @@ class TruckModel(VehicleModel):
             (self["cargo mass"] / self["available payload"]), 0, 1
         )
 
-
         self.set_electric_utility_factor(electric_utility_factor)
         self.set_electricity_consumption()
         self.set_costs()
@@ -169,7 +168,6 @@ class TruckModel(VehicleModel):
                 self.array.loc[dict(size=s, parameter="kilometers per year")] = (
                     annual_mileage[cycle][s]
                 )
-
 
     def set_battery_chemistry(self):
         # override default values for batteries
@@ -453,7 +451,6 @@ class TruckModel(VehicleModel):
             1 - self["lightweighting"]
         )
 
-
         curb_mass_includes = [
             "fuel mass",
             "charger mass",
@@ -666,7 +663,9 @@ class TruckModel(VehicleModel):
             "cabin mass",
         ]
 
-        self["glider cost"] = self["glider base cost per kg"] * self[glider_components].sum(axis=2)
+        self["glider cost"] = self["glider base cost per kg"] * self[
+            glider_components
+        ].sum(axis=2)
 
         # Discount glider cost for 40t and 60t trucks
         # because of the added trailer mass
@@ -699,11 +698,7 @@ class TruckModel(VehicleModel):
         self["fuel tank cost"] = self["fuel tank cost per kg"] * self["fuel mass"]
 
         # Per vkm
-        self["energy cost"] = (
-            self["energy cost per kWh"]
-            * self["TtW energy"]
-            / 3600
-        )
+        self["energy cost"] = self["energy cost per kWh"] * self["TtW energy"] / 3600
 
         # For battery, need to divide cost of electricity in battery by efficiency of charging
         for pt in [
@@ -760,14 +755,14 @@ class TruckModel(VehicleModel):
 
         # per vkm
         self["amortised purchase cost"] = (
-            self["purchase cost"]
-            * amortisation_factor
-            / self["kilometers per year"]
+            self["purchase cost"] * amortisation_factor / self["kilometers per year"]
         )
 
         # per vkm
         self["adblue cost"] = (
-            self["adblue cost per kg"] * self["adblue use per liter diesel"] * self["fuel mass"]
+            self["adblue cost per kg"]
+            * self["adblue use per liter diesel"]
+            * self["fuel mass"]
         ) / self["target range"]
         self["maintenance cost"] = self["maintenance cost per km"]
         self["maintenance cost"] += self["adblue cost"]
@@ -802,7 +797,7 @@ class TruckModel(VehicleModel):
         geom_sum = np.where(
             use_series,
             ne.evaluate("n"),  # limit as q->1
-            ne.evaluate("(1 - q ** n) / (1 - q)")
+            ne.evaluate("(1 - q ** n) / (1 - q)"),
         )
         prem_prop_pv = ne.evaluate("r_prop * P_ins * geom_sum")
 
@@ -816,7 +811,9 @@ class TruckModel(VehicleModel):
         prem_total_pv = (prem_prop_pv + prem_liab_pv + prem_cargo_pv) * loading * ipt
 
         # Annualize to €/year, then convert to €/vkm
-        self["insurance cost"] = ne.evaluate("(prem_total_pv * amortisation_factor) / km_y")
+        self["insurance cost"] = ne.evaluate(
+            "(prem_total_pv * amortisation_factor) / km_y"
+        )
 
         self["toll cost"] = self["toll cost per km"]
 
