@@ -111,7 +111,6 @@ class TruckModel(VehicleModel):
             (self["cargo mass"] / self["available payload"]), 0, 1
         )
 
-        self.adjust_cost()
 
         self.set_electric_utility_factor(electric_utility_factor)
         self.set_electricity_consumption()
@@ -171,90 +170,6 @@ class TruckModel(VehicleModel):
                     annual_mileage[cycle][s]
                 )
 
-    def adjust_cost(self):
-        """
-        This method adjusts costs of energy storage over time, to correct for the overly optimistic linear
-        interpolation between years.
-        """
-
-        n_iterations = self.array.shape[-1]
-        n_year = len(self.array.year.values)
-
-        # If uncertainty is not considered, teh cost factor equals 1.
-        # Otherwise, a variability of +/-30% is added.
-
-        if n_iterations == 1:
-            cost_factor = 1
-
-            # reflect a scaling effect for fuel cells
-            # according to
-            # FCEV trucks should cost the triple of an ICEV-d in 2020
-            cost_factor_fcev = 5
-
-        else:
-            if "reference" in self.array.value.values.tolist():
-                cost_factor = np.ones((n_iterations, 1))
-                cost_factor_fcev = np.full((n_iterations, 1), 5)
-            else:
-                cost_factor = np.random.triangular(0.7, 1, 1.3, (n_iterations, 1))
-                cost_factor_fcev = np.random.triangular(3, 5, 6, (n_iterations, 1))
-
-        # Correction of hydrogen tank cost, per kg
-        if "FCEV" in self.array.powertrain.values.tolist():
-            self.array.loc[:, ["FCEV"], "fuel tank cost per kg", :, :] = np.reshape(
-                (1.078e58 * np.exp(-6.32e-2 * self.array.year.values) + 3.43e2)
-                * cost_factor_fcev,
-                (1, 1, n_year, n_iterations),
-            )
-
-            # Correction of fuel cell stack cost, per kW
-            self.array.loc[:, ["FCEV"], "fuel cell cost per kW", :, :] = np.reshape(
-                (3.15e66 * np.exp(-7.35e-2 * self.array.year.values) + 2.39e1)
-                * cost_factor_fcev,
-                (1, 1, n_year, n_iterations),
-            )
-
-        # Correction of energy battery system cost, per kWh
-        l_pwt = [
-            p
-            for p in self.array.powertrain.values
-            if p in ["BEV", "PHEV-e", "PHEV-c-d"]
-        ]
-
-        if len(l_pwt) > 0:
-            self.array.loc[:, l_pwt, "energy battery cost per kWh", :, :] = np.reshape(
-                (2.75e86 * np.exp(-9.61e-2 * self.array.year.values) + 5.059e1)
-                * cost_factor,
-                (1, 1, n_year, n_iterations),
-            )
-
-        # Correction of power battery system cost, per kW
-        l_pwt = [
-            p
-            for p in self.array.powertrain.values
-            if p in ["ICEV-d", "ICEV-g", "PHEV-c-d", "FCEV", "HEV-d"]
-        ]
-
-        if len(l_pwt) > 0:
-            self.array.loc[:, l_pwt, "power battery cost per kW", :, :] = np.reshape(
-                (8.337e40 * np.exp(-4.49e-2 * self.array.year.values) + 11.17)
-                * cost_factor,
-                (1, 1, n_year, n_iterations),
-            )
-
-        # Correction of combustion powertrain cost for ICEV-g
-        if "ICEV-g" in self.array.powertrain.values:
-            self.array.loc[
-                :,
-                ["ICEV-g"],
-                "combustion powertrain cost per kW",
-                :,
-                :,
-            ] = np.reshape(
-                (5.92e160 * np.exp(-0.1819 * self.array.year.values) + 26.76)
-                * cost_factor,
-                (1, 1, n_year, n_iterations),
-            )
 
     def set_battery_chemistry(self):
         # override default values for batteries
@@ -538,6 +453,7 @@ class TruckModel(VehicleModel):
             1 - self["lightweighting"]
         )
 
+
         curb_mass_includes = [
             "fuel mass",
             "charger mass",
@@ -750,16 +666,10 @@ class TruckModel(VehicleModel):
             "cabin mass",
         ]
 
-        self["glider cost"] = np.clip(
-            (
-                (38747 * np.log(_nz(self[glider_components].sum(dim="parameter"))))
-                - 252194
-            ),
-            33500,
-            110000,
-        )
+        self["glider cost"] = self["glider base cost per kg"] * self[glider_components].sum(axis=2)
 
-        # Discount glider cost for 40t and 60t trucks because of the added trailer mass
+        # Discount glider cost for 40t and 60t trucks
+        # because of the added trailer mass
 
         for size in [
             s for s in ["40t", "60t"] if s in self.array.coords["size"].values
@@ -787,12 +697,12 @@ class TruckModel(VehicleModel):
             self["energy battery cost per kWh"] * self["electric energy stored"]
         )
         self["fuel tank cost"] = self["fuel tank cost per kg"] * self["fuel mass"]
-        # Per ton-km
+
+        # Per vkm
         self["energy cost"] = (
             self["energy cost per kWh"]
             * self["TtW energy"]
             / 3600
-            / (self["cargo mass"] / 1000)
         )
 
         # For battery, need to divide cost of electricity in battery by efficiency of charging
@@ -848,37 +758,87 @@ class TruckModel(VehicleModel):
 
         self["purchase cost"] = self[purchase_cost_list].sum(axis=2)
 
-        # per ton-km
+        # per vkm
         self["amortised purchase cost"] = (
             self["purchase cost"]
             * amortisation_factor
-            / (self["cargo mass"] / 1000)
             / self["kilometers per year"]
         )
 
-        # per km
+        # per vkm
         self["adblue cost"] = (
-            self["adblue cost per kg"] * 0.06 * self["fuel mass"]
+            self["adblue cost per kg"] * self["adblue use per liter diesel"] * self["fuel mass"]
         ) / self["target range"]
         self["maintenance cost"] = self["maintenance cost per km"]
         self["maintenance cost"] += self["adblue cost"]
-        self["maintenance cost"] /= self["cargo mass"] / 1000
 
-        self["insurance cost"] = (
-            self["insurance cost per year"]
-            / (self["cargo mass"] / 1000)
-            / self["kilometers per year"]
+        # --- Insurance (property + liability + optional cargo) with depreciation and discounting ---
+
+        # Inputs
+        i = self["interest rate"]  # per year
+        n = self["lifetime"]  # years (can be float)
+        km_y = self["kilometers per year"]  # vkm/year
+
+        P_ins = self.get("insured share of purchase cost", 1.0) * self["purchase cost"]
+        d = self["depreciation rate per year"]  # e.g., 0.18
+        r_prop = self["property insurance rate"]  # per € per year
+        r_liab = self["liability insurance rate per km"]  # €/km
+        r_cargo = self.get("cargo insurance rate per km", 0.0)  # €/km
+
+        loading = 1.0 + self.get("broker loading share", 0.0)
+        ipt = 1.0 + self.get("insurance premium tax", 0.0)
+
+        # Capital recovery factor you already computed
+        amortisation_factor = ne.evaluate("i + (i / ((1 + i) ** n - 1))")
+
+        # --- Present value (PV) of premiums in closed form ---
+
+        # Property: PV of r_prop * P_ins * (1 - d)^(t-1) / (1 + i)^(t-1), t=1..n
+        # Geometric series with ratio q = (1 - d) / (1 + i)
+        q = ne.evaluate("(1 - d) / (1 + i)")
+        # Guard against q ~ 1 numerical issues (very small d and i): use series limit
+        eps = 1e-12
+        use_series = np.abs(ne.evaluate("1 - q")) < eps
+        geom_sum = np.where(
+            use_series,
+            ne.evaluate("n"),  # limit as q->1
+            ne.evaluate("(1 - q ** n) / (1 - q)")
         )
+        prem_prop_pv = ne.evaluate("r_prop * P_ins * geom_sum")
 
-        self["toll cost"] = self["toll cost per km"] / (self["cargo mass"] / 1000)
+        # Liability: PV of r_liab * km_y each year for n years, discounted at i
+        prem_liab_pv = ne.evaluate("r_liab * km_y * (1 - (1 + i) ** (-n)) / i")
+
+        # Cargo (optional): same structure as liability
+        prem_cargo_pv = ne.evaluate("r_cargo * km_y * (1 - (1 + i) ** (-n)) / i")
+
+        # Combine, apply loadings & IPT
+        prem_total_pv = (prem_prop_pv + prem_liab_pv + prem_cargo_pv) * loading * ipt
+
+        # Annualize to €/year, then convert to €/vkm
+        self["insurance cost"] = ne.evaluate("(prem_total_pv * amortisation_factor) / km_y")
+
+        self["toll cost"] = self["toll cost per km"]
 
         # simple assumption that component replacement occurs at half of life.
         km_per_year = self["kilometers per year"]
         com_repl_cost = self["component replacement cost"]
-        cargo = self["cargo mass"] / 1000
 
+        df_mid = ne.evaluate("(1 + i) ** (-lifetime / 2)")
         self["amortised component replacement cost"] = ne.evaluate(
-            "(com_repl_cost * ((1 - i) ** lifetime / 2) * amortisation_factor) / km_per_year / cargo"
+            "(com_repl_cost * df_mid * amortisation_factor) / km_per_year"
+        )
+
+        # --- Residual value credit ---
+        # per vkm
+        rv_share = self["residual value share"]
+        sell_year = self["lifetime"]
+        fee_share = self["resale fee share"]
+
+        rv = ne.evaluate("rv_share * (1 - fee_share) * purchase_cost")
+        df_end = ne.evaluate("(1 + i) ** (-sell_year)")
+        self["amortised residual credit"] = ne.evaluate(
+            "(-rv * df_end * amortisation_factor) / km_per_year"
         )
 
         self["total cost per km"] = (
@@ -888,6 +848,7 @@ class TruckModel(VehicleModel):
             + self["insurance cost"]
             + self["toll cost"]
             + self["amortised component replacement cost"]
+            + self["amortised residual credit"]
         )
 
     def calculate_cost_impacts(self, sensitivity=False, scope=None):
