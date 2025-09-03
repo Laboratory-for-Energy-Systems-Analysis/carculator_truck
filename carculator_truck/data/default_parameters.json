@@ -7708,7 +7708,7 @@
         "maximum": 74.84515225581647
     },
     "268-2000-energy cost per kWh (depot)": {
-        "amount": 0.3,
+        "amount": 0.15,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -7732,12 +7732,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 0.3,
-        "minimum": 0.2,
-        "maximum": 0.4
+        "loc": 0.15,
+        "minimum": 0.1,
+        "maximum": 0.25
     },
     "269-2010-energy cost per kWh (depot)": {
-        "amount": 0.3,
+        "amount": 0.15,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -7761,12 +7761,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 0.3,
-        "minimum": 0.2,
-        "maximum": 0.4
+        "loc": 0.15,
+        "minimum": 0.1,
+        "maximum": 0.25
     },
     "270-2020-energy cost per kWh (depot)": {
-        "amount": 0.3,
+        "amount": 0.15,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -7790,12 +7790,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 0.3,
-        "minimum": 0.2,
-        "maximum": 0.4
+        "loc": 0.15,
+        "minimum": 0.1,
+        "maximum": 0.25
     },
     "271-2030-energy cost per kWh (depot)": {
-        "amount": 0.3,
+        "amount": 0.15,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -7819,12 +7819,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 0.3,
-        "minimum": 0.2,
-        "maximum": 0.4
+        "loc": 0.15,
+        "minimum": 0.1,
+        "maximum": 0.25
     },
     "272-2040-energy cost per kWh (depot)": {
-        "amount": 0.3,
+        "amount": 0.15,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -7848,12 +7848,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 0.3,
-        "minimum": 0.2,
-        "maximum": 0.4
+        "loc": 0.15,
+        "minimum": 0.1,
+        "maximum": 0.25
     },
     "273-2050-energy cost per kWh (depot)": {
-        "amount": 0.3,
+        "amount": 0.15,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -7877,9 +7877,9 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 0.3,
-        "minimum": 0.2,
-        "maximum": 0.4
+        "loc": 0.15,
+        "minimum": 0.1,
+        "maximum": 0.25
     },
     "274-2000-energy cost per kWh (depot)": {
         "amount": 0.3,
@@ -20583,8 +20583,8 @@
         "minimum": 0.001,
         "maximum": 0.093
     },
-    "748-2000-battery cycle life, NMC": {
-        "amount": 3000,
+    "748-2000-battery cycle life, Li-S": {
+        "amount": 1150,
         "category": "Energy Storage",
         "powertrain": [
             "PHEV-c-d",
@@ -20606,20 +20606,20 @@
             "60t"
         ],
         "year": 2000,
-        "name": "battery cycle life, NMC",
+        "name": "battery cycle life, Li-S",
         "unit": "unit",
         "importance": "Critical",
-        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
+        "source": "",
         "comment": "Cycle life, used to calculate battery lifetime.",
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3000,
-        "minimum": 2250,
-        "maximum": 3750
+        "loc": 1150,
+        "minimum": 800,
+        "maximum": 1500
     },
-    "749-2010-battery cycle life, NMC": {
-        "amount": 3000,
+    "749-2010-battery cycle life, Li-S": {
+        "amount": 1150,
         "category": "Energy Storage",
         "powertrain": [
             "PHEV-c-d",
@@ -20641,20 +20641,20 @@
             "60t"
         ],
         "year": 2010,
-        "name": "battery cycle life, NMC",
+        "name": "battery cycle life, Li-S",
         "unit": "unit",
         "importance": "Critical",
-        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
+        "source": "",
         "comment": "Cycle life, used to calculate battery lifetime.",
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3000,
-        "minimum": 2250,
-        "maximum": 3750
+        "loc": 1150,
+        "minimum": 800,
+        "maximum": 1500
     },
-    "750-2020-battery cycle life, NMC": {
-        "amount": 3000,
+    "750-2020-battery cycle life, Li-S": {
+        "amount": 1150,
         "category": "Energy Storage",
         "powertrain": [
             "PHEV-c-d",
@@ -20676,20 +20676,20 @@
             "60t"
         ],
         "year": 2020,
-        "name": "battery cycle life, NMC",
+        "name": "battery cycle life, Li-S",
         "unit": "unit",
         "importance": "Critical",
-        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
+        "source": "",
         "comment": "Cycle life, used to calculate battery lifetime.",
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3000,
-        "minimum": 2250,
-        "maximum": 3750
+        "loc": 1150,
+        "minimum": 800,
+        "maximum": 1500
     },
-    "751-2030-battery cycle life, NMC": {
-        "amount": 4000,
+    "751-2030-battery cycle life, Li-S": {
+        "amount": 1150,
         "category": "Energy Storage",
         "powertrain": [
             "PHEV-c-d",
@@ -20711,20 +20711,20 @@
             "60t"
         ],
         "year": 2030,
-        "name": "battery cycle life, NMC",
+        "name": "battery cycle life, Li-S",
         "unit": "unit",
         "importance": "Critical",
-        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
+        "source": "",
         "comment": "Cycle life, used to calculate battery lifetime.",
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 4000,
-        "minimum": 3000,
-        "maximum": 5000
+        "loc": 1150,
+        "minimum": 800,
+        "maximum": 1500
     },
-    "752-2040-battery cycle life, NMC": {
-        "amount": 4000,
+    "752-2040-battery cycle life, Li-S": {
+        "amount": 1150,
         "category": "Energy Storage",
         "powertrain": [
             "PHEV-c-d",
@@ -20746,20 +20746,20 @@
             "60t"
         ],
         "year": 2040,
-        "name": "battery cycle life, NMC",
+        "name": "battery cycle life, Li-S",
         "unit": "unit",
         "importance": "Critical",
-        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
+        "source": "",
         "comment": "Cycle life, used to calculate battery lifetime.",
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 4000,
-        "minimum": 3000,
-        "maximum": 5000
+        "loc": 1150,
+        "minimum": 800,
+        "maximum": 1500
     },
-    "753-2050-battery cycle life, NMC": {
-        "amount": 4000,
+    "753-2050-battery cycle life, Li-S": {
+        "amount": 1150,
         "category": "Energy Storage",
         "powertrain": [
             "PHEV-c-d",
@@ -20781,19 +20781,229 @@
             "60t"
         ],
         "year": 2050,
-        "name": "battery cycle life, NMC",
+        "name": "battery cycle life, Li-S",
         "unit": "unit",
         "importance": "Critical",
-        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
+        "source": "",
         "comment": "Cycle life, used to calculate battery lifetime.",
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 4000,
-        "minimum": 3000,
-        "maximum": 5000
+        "loc": 1150,
+        "minimum": 800,
+        "maximum": 1500
     },
-    "754-2000-battery cycle life, NCA": {
+    "754-2000-battery cycle life, Li-O2": {
+        "amount": 1300,
+        "category": "Energy Storage",
+        "powertrain": [
+            "PHEV-c-d",
+            "PHEV-e",
+            "ICEV-d",
+            "ICEV-g",
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-d"
+        ],
+        "sizes": [
+            "3.5t",
+            "7.5t",
+            "18t",
+            "26t",
+            "32t",
+            "40t",
+            "60t"
+        ],
+        "year": 2000,
+        "name": "battery cycle life, Li-O2",
+        "unit": "unit",
+        "importance": "Critical",
+        "source": "",
+        "comment": "Cycle life, used to calculate battery lifetime.",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1300,
+        "minimum": 1000,
+        "maximum": 1500
+    },
+    "755-2010-battery cycle life, Li-O2": {
+        "amount": 1300,
+        "category": "Energy Storage",
+        "powertrain": [
+            "PHEV-c-d",
+            "PHEV-e",
+            "ICEV-d",
+            "ICEV-g",
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-d"
+        ],
+        "sizes": [
+            "3.5t",
+            "7.5t",
+            "18t",
+            "26t",
+            "32t",
+            "40t",
+            "60t"
+        ],
+        "year": 2010,
+        "name": "battery cycle life, Li-O2",
+        "unit": "unit",
+        "importance": "Critical",
+        "source": "",
+        "comment": "Cycle life, used to calculate battery lifetime.",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1300,
+        "minimum": 1000,
+        "maximum": 1500
+    },
+    "756-2020-battery cycle life, Li-O2": {
+        "amount": 1300,
+        "category": "Energy Storage",
+        "powertrain": [
+            "PHEV-c-d",
+            "PHEV-e",
+            "ICEV-d",
+            "ICEV-g",
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-d"
+        ],
+        "sizes": [
+            "3.5t",
+            "7.5t",
+            "18t",
+            "26t",
+            "32t",
+            "40t",
+            "60t"
+        ],
+        "year": 2020,
+        "name": "battery cycle life, Li-O2",
+        "unit": "unit",
+        "importance": "Critical",
+        "source": "",
+        "comment": "Cycle life, used to calculate battery lifetime.",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1300,
+        "minimum": 1000,
+        "maximum": 1500
+    },
+    "757-2030-battery cycle life, Li-O2": {
+        "amount": 1300,
+        "category": "Energy Storage",
+        "powertrain": [
+            "PHEV-c-d",
+            "PHEV-e",
+            "ICEV-d",
+            "ICEV-g",
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-d"
+        ],
+        "sizes": [
+            "3.5t",
+            "7.5t",
+            "18t",
+            "26t",
+            "32t",
+            "40t",
+            "60t"
+        ],
+        "year": 2030,
+        "name": "battery cycle life, Li-O2",
+        "unit": "unit",
+        "importance": "Critical",
+        "source": "",
+        "comment": "Cycle life, used to calculate battery lifetime.",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1300,
+        "minimum": 1000,
+        "maximum": 1500
+    },
+    "758-2040-battery cycle life, Li-O2": {
+        "amount": 1300,
+        "category": "Energy Storage",
+        "powertrain": [
+            "PHEV-c-d",
+            "PHEV-e",
+            "ICEV-d",
+            "ICEV-g",
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-d"
+        ],
+        "sizes": [
+            "3.5t",
+            "7.5t",
+            "18t",
+            "26t",
+            "32t",
+            "40t",
+            "60t"
+        ],
+        "year": 2040,
+        "name": "battery cycle life, Li-O2",
+        "unit": "unit",
+        "importance": "Critical",
+        "source": "",
+        "comment": "Cycle life, used to calculate battery lifetime.",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1300,
+        "minimum": 1000,
+        "maximum": 1500
+    },
+    "759-2050-battery cycle life, Li-O2": {
+        "amount": 1300,
+        "category": "Energy Storage",
+        "powertrain": [
+            "PHEV-c-d",
+            "PHEV-e",
+            "ICEV-d",
+            "ICEV-g",
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-d"
+        ],
+        "sizes": [
+            "3.5t",
+            "7.5t",
+            "18t",
+            "26t",
+            "32t",
+            "40t",
+            "60t"
+        ],
+        "year": 2050,
+        "name": "battery cycle life, Li-O2",
+        "unit": "unit",
+        "importance": "Critical",
+        "source": "",
+        "comment": "Cycle life, used to calculate battery lifetime.",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 1300,
+        "minimum": 1000,
+        "maximum": 1500
+    },
+    "760-2000-battery cycle life, NCA": {
         "amount": 1500,
         "category": "Energy Storage",
         "powertrain": [
@@ -20828,7 +21038,7 @@
         "minimum": 1125,
         "maximum": 1875
     },
-    "755-2010-battery cycle life, NCA": {
+    "761-2010-battery cycle life, NCA": {
         "amount": 1500,
         "category": "Energy Storage",
         "powertrain": [
@@ -20863,7 +21073,7 @@
         "minimum": 1125,
         "maximum": 1875
     },
-    "756-2020-battery cycle life, NCA": {
+    "762-2020-battery cycle life, NCA": {
         "amount": 1500,
         "category": "Energy Storage",
         "powertrain": [
@@ -20898,7 +21108,7 @@
         "minimum": 1125,
         "maximum": 1875
     },
-    "757-2030-battery cycle life, NCA": {
+    "763-2030-battery cycle life, NCA": {
         "amount": 2000,
         "category": "Energy Storage",
         "powertrain": [
@@ -20933,7 +21143,7 @@
         "minimum": 1500,
         "maximum": 2500
     },
-    "758-2040-battery cycle life, NCA": {
+    "764-2040-battery cycle life, NCA": {
         "amount": 2000,
         "category": "Energy Storage",
         "powertrain": [
@@ -20968,7 +21178,7 @@
         "minimum": 1500,
         "maximum": 2500
     },
-    "759-2050-battery cycle life, NCA": {
+    "765-2050-battery cycle life, NCA": {
         "amount": 2000,
         "category": "Energy Storage",
         "powertrain": [
@@ -21003,8 +21213,8 @@
         "minimum": 1500,
         "maximum": 2500
     },
-    "760-2000-battery cycle life, LFP": {
-        "amount": 7000,
+    "766-2000-battery cycle life, NMC": {
+        "amount": 3000,
         "category": "Energy Storage",
         "powertrain": [
             "PHEV-c-d",
@@ -21026,7 +21236,7 @@
             "60t"
         ],
         "year": 2000,
-        "name": "battery cycle life, LFP",
+        "name": "battery cycle life, NMC",
         "unit": "unit",
         "importance": "Critical",
         "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
@@ -21034,12 +21244,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 7000,
-        "minimum": 5250,
-        "maximum": 8750
+        "loc": 3000,
+        "minimum": 2250,
+        "maximum": 3750
     },
-    "761-2010-battery cycle life, LFP": {
-        "amount": 7000,
+    "767-2010-battery cycle life, NMC": {
+        "amount": 3000,
         "category": "Energy Storage",
         "powertrain": [
             "PHEV-c-d",
@@ -21061,7 +21271,7 @@
             "60t"
         ],
         "year": 2010,
-        "name": "battery cycle life, LFP",
+        "name": "battery cycle life, NMC",
         "unit": "unit",
         "importance": "Critical",
         "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
@@ -21069,12 +21279,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 7000,
-        "minimum": 5250,
-        "maximum": 8750
+        "loc": 3000,
+        "minimum": 2250,
+        "maximum": 3750
     },
-    "762-2020-battery cycle life, LFP": {
-        "amount": 7000,
+    "768-2020-battery cycle life, NMC": {
+        "amount": 3000,
         "category": "Energy Storage",
         "powertrain": [
             "PHEV-c-d",
@@ -21096,7 +21306,7 @@
             "60t"
         ],
         "year": 2020,
-        "name": "battery cycle life, LFP",
+        "name": "battery cycle life, NMC",
         "unit": "unit",
         "importance": "Critical",
         "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
@@ -21104,12 +21314,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 7000,
-        "minimum": 5250,
-        "maximum": 8750
+        "loc": 3000,
+        "minimum": 2250,
+        "maximum": 3750
     },
-    "763-2030-battery cycle life, LFP": {
-        "amount": 7700.000000000001,
+    "769-2030-battery cycle life, NMC": {
+        "amount": 4000,
         "category": "Energy Storage",
         "powertrain": [
             "PHEV-c-d",
@@ -21131,7 +21341,7 @@
             "60t"
         ],
         "year": 2030,
-        "name": "battery cycle life, LFP",
+        "name": "battery cycle life, NMC",
         "unit": "unit",
         "importance": "Critical",
         "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
@@ -21139,12 +21349,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 7700.000000000001,
-        "minimum": 5775.000000000001,
-        "maximum": 9625.000000000002
+        "loc": 4000,
+        "minimum": 3000,
+        "maximum": 5000
     },
-    "764-2040-battery cycle life, LFP": {
-        "amount": 8470.000000000002,
+    "770-2040-battery cycle life, NMC": {
+        "amount": 4000,
         "category": "Energy Storage",
         "powertrain": [
             "PHEV-c-d",
@@ -21166,7 +21376,7 @@
             "60t"
         ],
         "year": 2040,
-        "name": "battery cycle life, LFP",
+        "name": "battery cycle life, NMC",
         "unit": "unit",
         "importance": "Critical",
         "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
@@ -21174,12 +21384,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 8470.000000000002,
-        "minimum": 6352.500000000002,
-        "maximum": 10587.500000000002
+        "loc": 4000,
+        "minimum": 3000,
+        "maximum": 5000
     },
-    "765-2050-battery cycle life, LFP": {
-        "amount": 9317.000000000004,
+    "771-2050-battery cycle life, NMC": {
+        "amount": 4000,
         "category": "Energy Storage",
         "powertrain": [
             "PHEV-c-d",
@@ -21201,7 +21411,7 @@
             "60t"
         ],
         "year": 2050,
-        "name": "battery cycle life, LFP",
+        "name": "battery cycle life, NMC",
         "unit": "unit",
         "importance": "Critical",
         "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
@@ -21209,219 +21419,9 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 9317.000000000004,
-        "minimum": 6987.750000000003,
-        "maximum": 11646.250000000004
-    },
-    "766-2000-battery cycle life, LTO": {
-        "amount": 7000,
-        "category": "Energy Storage",
-        "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
-            "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2000,
-        "name": "battery cycle life, LTO",
-        "unit": "unit",
-        "importance": "Critical",
-        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
-        "comment": "Cycle life, used to calculate battery lifetime.",
-        "status": "",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 7000,
-        "minimum": 5250,
-        "maximum": 8750
-    },
-    "767-2010-battery cycle life, LTO": {
-        "amount": 7000,
-        "category": "Energy Storage",
-        "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
-            "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2010,
-        "name": "battery cycle life, LTO",
-        "unit": "unit",
-        "importance": "Critical",
-        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
-        "comment": "Cycle life, used to calculate battery lifetime.",
-        "status": "",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 7000,
-        "minimum": 5250,
-        "maximum": 8750
-    },
-    "768-2020-battery cycle life, LTO": {
-        "amount": 7000,
-        "category": "Energy Storage",
-        "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
-            "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2020,
-        "name": "battery cycle life, LTO",
-        "unit": "unit",
-        "importance": "Critical",
-        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
-        "comment": "Cycle life, used to calculate battery lifetime.",
-        "status": "",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 7000,
-        "minimum": 5250,
-        "maximum": 8750
-    },
-    "769-2030-battery cycle life, LTO": {
-        "amount": 7700.000000000001,
-        "category": "Energy Storage",
-        "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
-            "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2030,
-        "name": "battery cycle life, LTO",
-        "unit": "unit",
-        "importance": "Critical",
-        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
-        "comment": "Cycle life, used to calculate battery lifetime.",
-        "status": "",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 7700.000000000001,
-        "minimum": 5775.000000000001,
-        "maximum": 9625.000000000002
-    },
-    "770-2040-battery cycle life, LTO": {
-        "amount": 8470.000000000002,
-        "category": "Energy Storage",
-        "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
-            "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2040,
-        "name": "battery cycle life, LTO",
-        "unit": "unit",
-        "importance": "Critical",
-        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
-        "comment": "Cycle life, used to calculate battery lifetime.",
-        "status": "",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 8470.000000000002,
-        "minimum": 6352.500000000002,
-        "maximum": 10587.500000000002
-    },
-    "771-2050-battery cycle life, LTO": {
-        "amount": 9317.000000000004,
-        "category": "Energy Storage",
-        "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
-            "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2050,
-        "name": "battery cycle life, LTO",
-        "unit": "unit",
-        "importance": "Critical",
-        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
-        "comment": "Cycle life, used to calculate battery lifetime.",
-        "status": "",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 9317.000000000004,
-        "minimum": 6987.750000000003,
-        "maximum": 11646.250000000004
+        "loc": 4000,
+        "minimum": 3000,
+        "maximum": 5000
     },
     "772-2000-battery DoD": {
         "amount": 0.8,
@@ -54653,427 +54653,7 @@
         "minimum": 3000,
         "maximum": 5000
     },
-    "1942-2000-battery cycle life, Li-O2": {
-        "amount": 1300,
-        "category": "Energy Storage",
-        "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
-            "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2000,
-        "name": "battery cycle life, Li-O2",
-        "unit": "unit",
-        "importance": "Critical",
-        "source": "",
-        "comment": "Cycle life, used to calculate battery lifetime.",
-        "status": "",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 1300,
-        "minimum": 1000,
-        "maximum": 1500
-    },
-    "1943-2010-battery cycle life, Li-O2": {
-        "amount": 1300,
-        "category": "Energy Storage",
-        "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
-            "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2010,
-        "name": "battery cycle life, Li-O2",
-        "unit": "unit",
-        "importance": "Critical",
-        "source": "",
-        "comment": "Cycle life, used to calculate battery lifetime.",
-        "status": "",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 1300,
-        "minimum": 1000,
-        "maximum": 1500
-    },
-    "1944-2020-battery cycle life, Li-O2": {
-        "amount": 1300,
-        "category": "Energy Storage",
-        "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
-            "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2020,
-        "name": "battery cycle life, Li-O2",
-        "unit": "unit",
-        "importance": "Critical",
-        "source": "",
-        "comment": "Cycle life, used to calculate battery lifetime.",
-        "status": "",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 1300,
-        "minimum": 1000,
-        "maximum": 1500
-    },
-    "1945-2030-battery cycle life, Li-O2": {
-        "amount": 1300,
-        "category": "Energy Storage",
-        "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
-            "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2030,
-        "name": "battery cycle life, Li-O2",
-        "unit": "unit",
-        "importance": "Critical",
-        "source": "",
-        "comment": "Cycle life, used to calculate battery lifetime.",
-        "status": "",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 1300,
-        "minimum": 1000,
-        "maximum": 1500
-    },
-    "1946-2040-battery cycle life, Li-O2": {
-        "amount": 1300,
-        "category": "Energy Storage",
-        "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
-            "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2040,
-        "name": "battery cycle life, Li-O2",
-        "unit": "unit",
-        "importance": "Critical",
-        "source": "",
-        "comment": "Cycle life, used to calculate battery lifetime.",
-        "status": "",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 1300,
-        "minimum": 1000,
-        "maximum": 1500
-    },
-    "1947-2050-battery cycle life, Li-O2": {
-        "amount": 1300,
-        "category": "Energy Storage",
-        "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
-            "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2050,
-        "name": "battery cycle life, Li-O2",
-        "unit": "unit",
-        "importance": "Critical",
-        "source": "",
-        "comment": "Cycle life, used to calculate battery lifetime.",
-        "status": "",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 1300,
-        "minimum": 1000,
-        "maximum": 1500
-    },
-    "1948-2000-battery cycle life, Li-S": {
-        "amount": 1150,
-        "category": "Energy Storage",
-        "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
-            "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2000,
-        "name": "battery cycle life, Li-S",
-        "unit": "unit",
-        "importance": "Critical",
-        "source": "",
-        "comment": "Cycle life, used to calculate battery lifetime.",
-        "status": "",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 1150,
-        "minimum": 800,
-        "maximum": 1500
-    },
-    "1949-2010-battery cycle life, Li-S": {
-        "amount": 1150,
-        "category": "Energy Storage",
-        "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
-            "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2010,
-        "name": "battery cycle life, Li-S",
-        "unit": "unit",
-        "importance": "Critical",
-        "source": "",
-        "comment": "Cycle life, used to calculate battery lifetime.",
-        "status": "",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 1150,
-        "minimum": 800,
-        "maximum": 1500
-    },
-    "1950-2020-battery cycle life, Li-S": {
-        "amount": 1150,
-        "category": "Energy Storage",
-        "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
-            "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2020,
-        "name": "battery cycle life, Li-S",
-        "unit": "unit",
-        "importance": "Critical",
-        "source": "",
-        "comment": "Cycle life, used to calculate battery lifetime.",
-        "status": "",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 1150,
-        "minimum": 800,
-        "maximum": 1500
-    },
-    "1951-2030-battery cycle life, Li-S": {
-        "amount": 1150,
-        "category": "Energy Storage",
-        "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
-            "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2030,
-        "name": "battery cycle life, Li-S",
-        "unit": "unit",
-        "importance": "Critical",
-        "source": "",
-        "comment": "Cycle life, used to calculate battery lifetime.",
-        "status": "",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 1150,
-        "minimum": 800,
-        "maximum": 1500
-    },
-    "1952-2040-battery cycle life, Li-S": {
-        "amount": 1150,
-        "category": "Energy Storage",
-        "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
-            "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2040,
-        "name": "battery cycle life, Li-S",
-        "unit": "unit",
-        "importance": "Critical",
-        "source": "",
-        "comment": "Cycle life, used to calculate battery lifetime.",
-        "status": "",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 1150,
-        "minimum": 800,
-        "maximum": 1500
-    },
-    "1953-2050-battery cycle life, Li-S": {
-        "amount": 1150,
-        "category": "Energy Storage",
-        "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
-            "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2050,
-        "name": "battery cycle life, Li-S",
-        "unit": "unit",
-        "importance": "Critical",
-        "source": "",
-        "comment": "Cycle life, used to calculate battery lifetime.",
-        "status": "",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 1150,
-        "minimum": 800,
-        "maximum": 1500
-    },
-    "1954-2000-battery cycle life, SiB": {
+    "1942-2000-battery cycle life, SiB": {
         "amount": 3250,
         "category": "Energy Storage",
         "powertrain": [
@@ -55108,7 +54688,7 @@
         "minimum": 2500,
         "maximum": 4000
     },
-    "1955-2010-battery cycle life, SiB": {
+    "1943-2010-battery cycle life, SiB": {
         "amount": 3250,
         "category": "Energy Storage",
         "powertrain": [
@@ -55143,7 +54723,7 @@
         "minimum": 2500,
         "maximum": 4000
     },
-    "1956-2020-battery cycle life, SiB": {
+    "1944-2020-battery cycle life, SiB": {
         "amount": 3250,
         "category": "Energy Storage",
         "powertrain": [
@@ -55178,7 +54758,7 @@
         "minimum": 2500,
         "maximum": 4000
     },
-    "1957-2030-battery cycle life, SiB": {
+    "1945-2030-battery cycle life, SiB": {
         "amount": 3250,
         "category": "Energy Storage",
         "powertrain": [
@@ -55213,7 +54793,7 @@
         "minimum": 2500,
         "maximum": 4000
     },
-    "1958-2040-battery cycle life, SiB": {
+    "1946-2040-battery cycle life, SiB": {
         "amount": 3250,
         "category": "Energy Storage",
         "powertrain": [
@@ -55248,7 +54828,7 @@
         "minimum": 2500,
         "maximum": 4000
     },
-    "1959-2050-battery cycle life, SiB": {
+    "1947-2050-battery cycle life, SiB": {
         "amount": 3250,
         "category": "Energy Storage",
         "powertrain": [
@@ -55282,6 +54862,426 @@
         "loc": 3250,
         "minimum": 2500,
         "maximum": 4000
+    },
+    "1948-2000-battery cycle life, LFP": {
+        "amount": 7000,
+        "category": "Energy Storage",
+        "powertrain": [
+            "PHEV-c-d",
+            "PHEV-e",
+            "ICEV-d",
+            "ICEV-g",
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-d"
+        ],
+        "sizes": [
+            "3.5t",
+            "7.5t",
+            "18t",
+            "26t",
+            "32t",
+            "40t",
+            "60t"
+        ],
+        "year": 2000,
+        "name": "battery cycle life, LFP",
+        "unit": "unit",
+        "importance": "Critical",
+        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
+        "comment": "Cycle life, used to calculate battery lifetime.",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 7000,
+        "minimum": 5250,
+        "maximum": 8750
+    },
+    "1949-2010-battery cycle life, LFP": {
+        "amount": 7000,
+        "category": "Energy Storage",
+        "powertrain": [
+            "PHEV-c-d",
+            "PHEV-e",
+            "ICEV-d",
+            "ICEV-g",
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-d"
+        ],
+        "sizes": [
+            "3.5t",
+            "7.5t",
+            "18t",
+            "26t",
+            "32t",
+            "40t",
+            "60t"
+        ],
+        "year": 2010,
+        "name": "battery cycle life, LFP",
+        "unit": "unit",
+        "importance": "Critical",
+        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
+        "comment": "Cycle life, used to calculate battery lifetime.",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 7000,
+        "minimum": 5250,
+        "maximum": 8750
+    },
+    "1950-2020-battery cycle life, LFP": {
+        "amount": 7000,
+        "category": "Energy Storage",
+        "powertrain": [
+            "PHEV-c-d",
+            "PHEV-e",
+            "ICEV-d",
+            "ICEV-g",
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-d"
+        ],
+        "sizes": [
+            "3.5t",
+            "7.5t",
+            "18t",
+            "26t",
+            "32t",
+            "40t",
+            "60t"
+        ],
+        "year": 2020,
+        "name": "battery cycle life, LFP",
+        "unit": "unit",
+        "importance": "Critical",
+        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
+        "comment": "Cycle life, used to calculate battery lifetime.",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 7000,
+        "minimum": 5250,
+        "maximum": 8750
+    },
+    "1951-2030-battery cycle life, LFP": {
+        "amount": 7700.000000000001,
+        "category": "Energy Storage",
+        "powertrain": [
+            "PHEV-c-d",
+            "PHEV-e",
+            "ICEV-d",
+            "ICEV-g",
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-d"
+        ],
+        "sizes": [
+            "3.5t",
+            "7.5t",
+            "18t",
+            "26t",
+            "32t",
+            "40t",
+            "60t"
+        ],
+        "year": 2030,
+        "name": "battery cycle life, LFP",
+        "unit": "unit",
+        "importance": "Critical",
+        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
+        "comment": "Cycle life, used to calculate battery lifetime.",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 7700.000000000001,
+        "minimum": 5775.000000000001,
+        "maximum": 9625.000000000002
+    },
+    "1952-2040-battery cycle life, LFP": {
+        "amount": 8470.000000000002,
+        "category": "Energy Storage",
+        "powertrain": [
+            "PHEV-c-d",
+            "PHEV-e",
+            "ICEV-d",
+            "ICEV-g",
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-d"
+        ],
+        "sizes": [
+            "3.5t",
+            "7.5t",
+            "18t",
+            "26t",
+            "32t",
+            "40t",
+            "60t"
+        ],
+        "year": 2040,
+        "name": "battery cycle life, LFP",
+        "unit": "unit",
+        "importance": "Critical",
+        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
+        "comment": "Cycle life, used to calculate battery lifetime.",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 8470.000000000002,
+        "minimum": 6352.500000000002,
+        "maximum": 10587.500000000002
+    },
+    "1953-2050-battery cycle life, LFP": {
+        "amount": 9317.000000000004,
+        "category": "Energy Storage",
+        "powertrain": [
+            "PHEV-c-d",
+            "PHEV-e",
+            "ICEV-d",
+            "ICEV-g",
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-d"
+        ],
+        "sizes": [
+            "3.5t",
+            "7.5t",
+            "18t",
+            "26t",
+            "32t",
+            "40t",
+            "60t"
+        ],
+        "year": 2050,
+        "name": "battery cycle life, LFP",
+        "unit": "unit",
+        "importance": "Critical",
+        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
+        "comment": "Cycle life, used to calculate battery lifetime.",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 9317.000000000004,
+        "minimum": 6987.750000000003,
+        "maximum": 11646.250000000004
+    },
+    "1954-2000-battery cycle life, LTO": {
+        "amount": 7000,
+        "category": "Energy Storage",
+        "powertrain": [
+            "PHEV-c-d",
+            "PHEV-e",
+            "ICEV-d",
+            "ICEV-g",
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-d"
+        ],
+        "sizes": [
+            "3.5t",
+            "7.5t",
+            "18t",
+            "26t",
+            "32t",
+            "40t",
+            "60t"
+        ],
+        "year": 2000,
+        "name": "battery cycle life, LTO",
+        "unit": "unit",
+        "importance": "Critical",
+        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
+        "comment": "Cycle life, used to calculate battery lifetime.",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 7000,
+        "minimum": 5250,
+        "maximum": 8750
+    },
+    "1955-2010-battery cycle life, LTO": {
+        "amount": 7000,
+        "category": "Energy Storage",
+        "powertrain": [
+            "PHEV-c-d",
+            "PHEV-e",
+            "ICEV-d",
+            "ICEV-g",
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-d"
+        ],
+        "sizes": [
+            "3.5t",
+            "7.5t",
+            "18t",
+            "26t",
+            "32t",
+            "40t",
+            "60t"
+        ],
+        "year": 2010,
+        "name": "battery cycle life, LTO",
+        "unit": "unit",
+        "importance": "Critical",
+        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
+        "comment": "Cycle life, used to calculate battery lifetime.",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 7000,
+        "minimum": 5250,
+        "maximum": 8750
+    },
+    "1956-2020-battery cycle life, LTO": {
+        "amount": 7000,
+        "category": "Energy Storage",
+        "powertrain": [
+            "PHEV-c-d",
+            "PHEV-e",
+            "ICEV-d",
+            "ICEV-g",
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-d"
+        ],
+        "sizes": [
+            "3.5t",
+            "7.5t",
+            "18t",
+            "26t",
+            "32t",
+            "40t",
+            "60t"
+        ],
+        "year": 2020,
+        "name": "battery cycle life, LTO",
+        "unit": "unit",
+        "importance": "Critical",
+        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
+        "comment": "Cycle life, used to calculate battery lifetime.",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 7000,
+        "minimum": 5250,
+        "maximum": 8750
+    },
+    "1957-2030-battery cycle life, LTO": {
+        "amount": 7700.000000000001,
+        "category": "Energy Storage",
+        "powertrain": [
+            "PHEV-c-d",
+            "PHEV-e",
+            "ICEV-d",
+            "ICEV-g",
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-d"
+        ],
+        "sizes": [
+            "3.5t",
+            "7.5t",
+            "18t",
+            "26t",
+            "32t",
+            "40t",
+            "60t"
+        ],
+        "year": 2030,
+        "name": "battery cycle life, LTO",
+        "unit": "unit",
+        "importance": "Critical",
+        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
+        "comment": "Cycle life, used to calculate battery lifetime.",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 7700.000000000001,
+        "minimum": 5775.000000000001,
+        "maximum": 9625.000000000002
+    },
+    "1958-2040-battery cycle life, LTO": {
+        "amount": 8470.000000000002,
+        "category": "Energy Storage",
+        "powertrain": [
+            "PHEV-c-d",
+            "PHEV-e",
+            "ICEV-d",
+            "ICEV-g",
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-d"
+        ],
+        "sizes": [
+            "3.5t",
+            "7.5t",
+            "18t",
+            "26t",
+            "32t",
+            "40t",
+            "60t"
+        ],
+        "year": 2040,
+        "name": "battery cycle life, LTO",
+        "unit": "unit",
+        "importance": "Critical",
+        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
+        "comment": "Cycle life, used to calculate battery lifetime.",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 8470.000000000002,
+        "minimum": 6352.500000000002,
+        "maximum": 10587.500000000002
+    },
+    "1959-2050-battery cycle life, LTO": {
+        "amount": 9317.000000000004,
+        "category": "Energy Storage",
+        "powertrain": [
+            "PHEV-c-d",
+            "PHEV-e",
+            "ICEV-d",
+            "ICEV-g",
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-d"
+        ],
+        "sizes": [
+            "3.5t",
+            "7.5t",
+            "18t",
+            "26t",
+            "32t",
+            "40t",
+            "60t"
+        ],
+        "year": 2050,
+        "name": "battery cycle life, LTO",
+        "unit": "unit",
+        "importance": "Critical",
+        "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
+        "comment": "Cycle life, used to calculate battery lifetime.",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 9317.000000000004,
+        "minimum": 6987.750000000003,
+        "maximum": 11646.250000000004
     },
     "1960-2000-road toll cost per km": {
         "amount": 0.078,
@@ -60408,7 +60408,7 @@
         "loc": 0
     },
     "2146-2000-energy cost per kWh (public)": {
-        "amount": 0.7,
+        "amount": 0.5,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -60432,12 +60432,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 0.7,
-        "minimum": 0.5,
-        "maximum": 0.9
+        "loc": 0.5,
+        "minimum": 0.3,
+        "maximum": 0.8
     },
     "2147-2010-energy cost per kWh (public)": {
-        "amount": 0.7,
+        "amount": 0.5,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -60461,12 +60461,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 0.7,
-        "minimum": 0.5,
-        "maximum": 0.9
+        "loc": 0.5,
+        "minimum": 0.3,
+        "maximum": 0.8
     },
     "2148-2020-energy cost per kWh (public)": {
-        "amount": 0.7,
+        "amount": 0.5,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -60490,12 +60490,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 0.7,
-        "minimum": 0.5,
-        "maximum": 0.9
+        "loc": 0.5,
+        "minimum": 0.3,
+        "maximum": 0.8
     },
     "2149-2030-energy cost per kWh (public)": {
-        "amount": 0.7,
+        "amount": 0.5,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -60519,12 +60519,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 0.7,
-        "minimum": 0.5,
-        "maximum": 0.9
+        "loc": 0.5,
+        "minimum": 0.3,
+        "maximum": 0.8
     },
     "2150-2040-energy cost per kWh (public)": {
-        "amount": 0.7,
+        "amount": 0.5,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -60548,9 +60548,9 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 0.7,
-        "minimum": 0.5,
-        "maximum": 0.9
+        "loc": 0.5,
+        "minimum": 0.3,
+        "maximum": 0.8
     },
     "2151-2050-energy cost per kWh (public)": {
         "amount": 0.7,

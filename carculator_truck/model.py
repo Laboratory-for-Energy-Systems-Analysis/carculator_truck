@@ -392,7 +392,7 @@ class TruckModel(VehicleModel):
                 / _(self["battery cycle life"])
                 - 1
             ),
-            1,
+            0,
             3,
         ) * (self["charger mass"] > 0)
 
