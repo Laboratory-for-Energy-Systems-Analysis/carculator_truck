@@ -101,7 +101,7 @@ class TruckModel(VehicleModel):
             self.set_energy_stored_properties()
             self.set_power_battery_properties()
             if "capacity" in self.energy_storage:
-                self.override_energy_storage()
+                self.override_battery_capacity()
             self.set_vehicle_masses()
 
             diff = (self["available payload"].sum().values - old_payload) / self[
