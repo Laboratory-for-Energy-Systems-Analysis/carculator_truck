@@ -426,7 +426,7 @@ class TruckModel(VehicleModel):
         duration_h = vel.sizes["second"] / 3600.0
 
         # 3) Distance covered by the representative cycle in km (∑ v*dt, with dt=1 s).
-        duty_km = (vel.sum(dim="second") / 1000.0)
+        duty_km = vel.sum(dim="second") / 1000.0
 
         # Guard against degenerate cycles
         duty_km = xr.where(duty_km > 0, duty_km, np.nan)
@@ -822,8 +822,9 @@ class TruckModel(VehicleModel):
         self["lifetime"] = self["lifetime kilometers"] / self["kilometers per year"]
         i = self["interest rate"]
         lifetime = self["lifetime"]
-        amortisation_factor = ne.evaluate("i * (1 + i) ** lifetime / ((1 + i) ** lifetime - 1)")
-
+        amortisation_factor = ne.evaluate(
+            "i * (1 + i) ** lifetime / ((1 + i) ** lifetime - 1)"
+        )
 
         purchase_cost_list = [
             "battery onboard charging infrastructure cost",
