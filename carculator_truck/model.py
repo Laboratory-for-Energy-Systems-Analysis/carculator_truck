@@ -189,9 +189,9 @@ class TruckModel(VehicleModel):
         years_sorted = sorted(default_chemistries.keys())
 
         for x in product(
-                self.array.coords["powertrain"].values,
-                self.array.coords["size"].values,
-                self.array.year.values,
+            self.array.coords["powertrain"].values,
+            self.array.coords["size"].values,
+            self.array.year.values,
         ):
             year = x[-1]
 
@@ -201,10 +201,14 @@ class TruckModel(VehicleModel):
                     self.energy_storage["electric"][x] = default_chemistries[year]
                 elif year < years_sorted[0]:
                     # below the lowest year
-                    self.energy_storage["electric"][x] = default_chemistries[years_sorted[0]]
+                    self.energy_storage["electric"][x] = default_chemistries[
+                        years_sorted[0]
+                    ]
                 elif year > years_sorted[-1]:
                     # above the highest year
-                    self.energy_storage["electric"][x] = default_chemistries[years_sorted[-1]]
+                    self.energy_storage["electric"][x] = default_chemistries[
+                        years_sorted[-1]
+                    ]
                 else:
                     # find the closest lower year
                     lower_years = [y for y in years_sorted if y <= year]
