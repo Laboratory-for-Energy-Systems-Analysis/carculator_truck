@@ -182,21 +182,34 @@ class TruckModel(VehicleModel):
             2015: "NMC-111",
             2020: "NMC-622",
             2025: "NMC-811",
-            2030: "NMC-955",
+            2030: "NMC-811",
+            2035: "NMC-955",
         }
 
+        years_sorted = sorted(default_chemistries.keys())
+
         for x in product(
-            self.array.coords["powertrain"].values,
-            self.array.coords["size"].values,
-            self.array.year.values,
+                self.array.coords["powertrain"].values,
+                self.array.coords["size"].values,
+                self.array.year.values,
         ):
+            year = x[-1]
+
             if x not in self.energy_storage["electric"]:
-                if x[-1] in default_chemistries:
-                    self.energy_storage["electric"][x] = default_chemistries[x[-1]]
-                elif x[-1] < min(default_chemistries.keys()):
-                    self.energy_storage["electric"][x] = "NMC-111"
+                if year in default_chemistries:
+                    # exact match
+                    self.energy_storage["electric"][x] = default_chemistries[year]
+                elif year < years_sorted[0]:
+                    # below the lowest year
+                    self.energy_storage["electric"][x] = default_chemistries[years_sorted[0]]
+                elif year > years_sorted[-1]:
+                    # above the highest year
+                    self.energy_storage["electric"][x] = default_chemistries[years_sorted[-1]]
                 else:
-                    self.energy_storage["electric"][x] = "NMC-955"
+                    # find the closest lower year
+                    lower_years = [y for y in years_sorted if y <= year]
+                    closest = max(lower_years)
+                    self.energy_storage["electric"][x] = default_chemistries[closest]
 
         if "origin" not in self.energy_storage:
             self.energy_storage.update({"origin": "CN"})
