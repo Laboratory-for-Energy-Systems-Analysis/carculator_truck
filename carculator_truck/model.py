@@ -941,7 +941,7 @@ class TruckModel(VehicleModel):
                 install_per_kw=self["depot charger installation per kW"],
                 connection_per_kw=self["depot charger connection per kW"],
                 fixed_om_share=self["depot charger O&M share"],
-                    trucks_per_charger=self["trucks per depot charger"],
+                trucks_per_charger=self["trucks per depot charger"],
                 annual_km_per_truck=self["kilometers per year"],
                 consumption_kwh_per_km_at_plug=(self["TtW energy"] / 3600)
                 / self["battery charge efficiency"],
