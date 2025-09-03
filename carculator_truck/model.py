@@ -100,8 +100,7 @@ class TruckModel(VehicleModel):
 
             self.set_energy_stored_properties()
             self.set_power_battery_properties()
-            if "capacity" in self.energy_storage:
-                self.override_battery_capacity()
+
             self.set_vehicle_masses()
 
             diff = (self["available payload"].sum().values - old_payload) / self[
@@ -644,14 +643,17 @@ class TruckModel(VehicleModel):
             self["fuel mass"] * self["LHV fuel MJ per kg"] / 3.6
         )
 
-        self["electric energy stored"] = (
-            self["target range"]
-            * self["TtW energy"]
-            / 1000
-            / _(self["battery DoD"])
-            / 3.6
-            * (self["combustion power share"] == 0)
-        )
+        if "capacity" in self.energy_storage:
+            self.override_battery_capacity()
+        else:
+            self["electric energy stored"] = (
+                self["target range"]
+                * self["TtW energy"]
+                / 1000
+                / _(self["battery DoD"])
+                / 3.6
+                * (self["combustion power share"] == 0)
+            )
 
         if "FCEV" in self.array.powertrain.values:
             # Fuel cell buses do also have a battery, which capacity
