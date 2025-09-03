@@ -980,9 +980,11 @@ class TruckModel(VehicleModel):
             "maintenance",
             "insurance",
             "toll",
+            "CO2 tax",
+            "charging infrastructure",
             "component replacement",
             "energy",
-            "total",
+            "residual credit",
         ]
 
         response = xr.DataArray(
@@ -1014,9 +1016,11 @@ class TruckModel(VehicleModel):
                 "maintenance cost",
                 "insurance cost",
                 "toll cost",
+                "CO2 tax cost",
+                "energy infrastructure cost",
                 "amortised component replacement cost",
                 "energy cost",
-                "total cost per km",
+                "amortised residual credit",
             ],
         ).values
 
