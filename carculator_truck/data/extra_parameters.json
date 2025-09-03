@@ -271,5 +271,9 @@
   "fuel consumption",
   "Nitrogen dioxide direct emissions, rural",
   "Nitrogen dioxide direct emissions, suburban",
-  "Nitrogen dioxide direct emissions, urban"
+  "Nitrogen dioxide direct emissions, urban",
+  "energy battery cost per kWh",
+  "amortised residual credit",
+  "CO2 tax cost",
+  "energy infrastructure cost"
 ]
