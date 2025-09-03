@@ -794,7 +794,7 @@ class TruckModel(VehicleModel):
             )
         ) / 3600
 
-        # For battery, need to divide cost of electricity in battery by efficiency of charging
+        # For BEVs, need to divide cost of electricity in battery by efficiency of charging
         for pt in [
             pwt
             for pwt in ["BEV", "PHEV-e"]
@@ -847,7 +847,9 @@ class TruckModel(VehicleModel):
             "power battery cost",
         ]
 
-        self["purchase cost"] = self[purchase_cost_list].sum(axis=2)
+        # we leave the possibility to override the purchase cost
+        if self["purchase cost"].all() == 0:
+            self["purchase cost"] = self[purchase_cost_list].sum(axis=2)
 
         # per vkm
         self["amortised purchase cost"] = (
@@ -860,8 +862,10 @@ class TruckModel(VehicleModel):
             * self["adblue use per liter diesel"]
             * self["fuel mass"]
         ) / self["target range"]
-        self["maintenance cost"] = self["maintenance cost per km"]
-        self["maintenance cost"] += self["adblue cost"]
+
+        if self["maintenance cost per km"].all() == 0:
+            self["maintenance cost"] = self["maintenance cost per km"]
+            self["maintenance cost"] += self["adblue cost"]
 
         # --- Insurance (property + liability + optional cargo) with depreciation and discounting ---
 
@@ -903,14 +907,20 @@ class TruckModel(VehicleModel):
         prem_total_pv = (prem_prop_pv + prem_liab_pv) * loading * ipt
 
         # Annualize to €/year, then convert to €/vkm
-        self["insurance cost"] = ne.evaluate(
-            "(prem_total_pv * amortisation_factor) / km_y"
-        )
 
-        self["toll cost"] = (
-            self["road toll cost per km"] * self["share tolled roads"]
-        )  # per vkm
-        self["CO2 tax cost"] = self["CO2 road charge per km"]  # per vkm
+        if self["insurance cost"].all() == 0:
+            self["insurance cost"] = ne.evaluate(
+                "(prem_total_pv * amortisation_factor) / km_y"
+            )
+
+        # --- Other costs ---
+        if self["toll cost"].all() == 0:
+            self["toll cost"] = (
+                self["road toll cost per km"] * self["share tolled roads"]
+            )  # per vkm
+
+        if self["CO2 tax cost"].all() == 0:
+            self["CO2 tax cost"] = self["CO2 road charge per km"]  # per vkm
 
         # simple assumption that component replacement occurs at half of life.
         km_per_year = self["kilometers per year"]
@@ -931,7 +941,7 @@ class TruckModel(VehicleModel):
                 install_per_kw=self["depot charger installation per kW"],
                 connection_per_kw=self["depot charger connection per kW"],
                 fixed_om_share=self["depot charger O&M share"],
-                trucks_per_charger=self["trucks per depot charger"],
+                    trucks_per_charger=self["trucks per depot charger"],
                 annual_km_per_truck=self["kilometers per year"],
                 consumption_kwh_per_km_at_plug=(self["TtW energy"] / 3600)
                 / self["battery charge efficiency"],
