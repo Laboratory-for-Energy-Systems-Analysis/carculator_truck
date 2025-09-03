@@ -653,26 +653,25 @@ class TruckModel(VehicleModel):
         )
 
     def set_depot_infrastructure_costs(
-            self,
-            charger_power_kw,
-            charger_life_years,
-            infra_wacc,
-            capex_per_kw,
-            install_per_kw,
-            connection_per_kw,
-            fixed_om_share,
-            capacity_charge_per_kw_year,
-            trucks_per_charger,
-            annual_km_per_truck,
-            consumption_kwh_per_km_at_plug,
-            availability=0.98,
-            efficiency=0.94,
-
+        self,
+        charger_power_kw,
+        charger_life_years,
+        infra_wacc,
+        capex_per_kw,
+        install_per_kw,
+        connection_per_kw,
+        fixed_om_share,
+        capacity_charge_per_kw_year,
+        trucks_per_charger,
+        annual_km_per_truck,
+        consumption_kwh_per_km_at_plug,
+        availability=0.98,
+        efficiency=0.94,
     ):
         """
-            Returns a DataArray of depot infra surcharge in €/kWh with full xarray broadcasting.
-            All inputs can be scalars or DataArrays aligned/broadcastable to your model dims.
-            """
+        Returns a DataArray of depot infra surcharge in €/kWh with full xarray broadcasting.
+        All inputs can be scalars or DataArrays aligned/broadcastable to your model dims.
+        """
 
         # Capital recovery factor (handle i==0 gracefully)
         i = infra_wacc
@@ -681,7 +680,9 @@ class TruckModel(VehicleModel):
         CRF = xr.where(i == 0, 1.0 / N, i + i / ((1 + i) ** N - 1))
 
         # Upfront per charger (€/kW * kW)
-        upfront_per_charger = charger_power_kw * (capex_per_kw + install_per_kw + connection_per_kw)
+        upfront_per_charger = charger_power_kw * (
+            capex_per_kw + install_per_kw + connection_per_kw
+        )
 
         # Annualized fixed cost per charger (€/year)
         annual_capital = CRF * upfront_per_charger
@@ -690,7 +691,9 @@ class TruckModel(VehicleModel):
         annual_cost_per_charger = annual_capital + annual_om + annual_capacity
 
         # Annual energy per charger (kWh/year)
-        E_demand = trucks_per_charger * annual_km_per_truck * consumption_kwh_per_km_at_plug
+        E_demand = (
+            trucks_per_charger * annual_km_per_truck * consumption_kwh_per_km_at_plug
+        )
         E_cap = charger_power_kw * 8760.0 * availability * efficiency
 
         # Element-wise minimum that preserves xarray coords
@@ -704,7 +707,6 @@ class TruckModel(VehicleModel):
 
         # replace NaN with 0
         return xr.where(np.isfinite(surcharge_per_kWh), surcharge_per_kWh, 0.0)
-
 
     def set_costs(self):
         _nz = lambda x: np.where(x < 1, 1, x)
@@ -744,7 +746,7 @@ class TruckModel(VehicleModel):
         self["fuel cell cost"] = self["fuel cell power"] * self["fuel cell cost per kW"]
 
         self["power battery cost"] = (
-                self["battery power"] * self["power battery cost per kW"]
+            self["battery power"] * self["power battery cost per kW"]
         )
         self["energy battery cost"] = (
             self["energy battery cost per kWh"] * self["electric energy stored"]
@@ -753,9 +755,17 @@ class TruckModel(VehicleModel):
 
         # Per vkm
         self["energy cost"] = (
-            (self["energy cost per kWh (depot)"] *  self["share depot charging"] * self["TtW energy"])
-            + (self["energy cost per kWh (public)"] * (1 - self["share depot charging"]) * self["TtW energy"])
-        )/ 3600
+            (
+                self["energy cost per kWh (depot)"]
+                * self["share depot charging"]
+                * self["TtW energy"]
+            )
+            + (
+                self["energy cost per kWh (public)"]
+                * (1 - self["share depot charging"])
+                * self["TtW energy"]
+            )
+        ) / 3600
 
         # For battery, need to divide cost of electricity in battery by efficiency of charging
         for pt in [
@@ -868,7 +878,9 @@ class TruckModel(VehicleModel):
             "(prem_total_pv * amortisation_factor) / km_y"
         )
 
-        self["toll cost"] = self["road toll cost per km"] * self["share tolled roads"]  # per vkm
+        self["toll cost"] = (
+            self["road toll cost per km"] * self["share tolled roads"]
+        )  # per vkm
         self["CO2 tax cost"] = self["CO2 road charge per km"]  # per vkm
 
         # simple assumption that component replacement occurs at half of life.
@@ -881,20 +893,27 @@ class TruckModel(VehicleModel):
         )
 
         # infrastructure cost for depot charging
-        self["energy infrastructure cost"] = self.set_depot_infrastructure_costs(
-            charger_power_kw=self["depot charger power"],
-            charger_life_years=self["depot charger lifetime"],
-            infra_wacc=self["interest rate"],
-            capex_per_kw=self["depot charger capex per kW"],
-            install_per_kw=self["depot charger installation per kW"],
-            connection_per_kw=self["depot charger connection per kW"],
-            fixed_om_share=self["depot charger O&M share"],
-            trucks_per_charger=self["trucks per depot charger"],
-            annual_km_per_truck=self["kilometers per year"],
-            consumption_kwh_per_km_at_plug=(self["TtW energy"]/3600) / self["battery charge efficiency"],
-            capacity_charge_per_kw_year=self["depot charger capacity charger per kW-year"],
-        ) * self["share depot charging"] * self["electricity consumption"] * (self["TtW energy"] > 0)
-
+        self["energy infrastructure cost"] = (
+            self.set_depot_infrastructure_costs(
+                charger_power_kw=self["depot charger power"],
+                charger_life_years=self["depot charger lifetime"],
+                infra_wacc=self["interest rate"],
+                capex_per_kw=self["depot charger capex per kW"],
+                install_per_kw=self["depot charger installation per kW"],
+                connection_per_kw=self["depot charger connection per kW"],
+                fixed_om_share=self["depot charger O&M share"],
+                trucks_per_charger=self["trucks per depot charger"],
+                annual_km_per_truck=self["kilometers per year"],
+                consumption_kwh_per_km_at_plug=(self["TtW energy"] / 3600)
+                / self["battery charge efficiency"],
+                capacity_charge_per_kw_year=self[
+                    "depot charger capacity charger per kW-year"
+                ],
+            )
+            * self["share depot charging"]
+            * self["electricity consumption"]
+            * (self["TtW energy"] > 0)
+        )
 
         # --- Residual value credit ---
         # per vkm
@@ -1026,16 +1045,19 @@ class TruckModel(VehicleModel):
             "amortised residual credit",
             "energy infrastructure cost",
         ]
-        self.array.loc[
-            dict(parameter=cost_params)
-        ] = np.where(
-            (self.array.loc[
-                dict(parameter=["is_compliant",])
-            ] == 0),
+        self.array.loc[dict(parameter=cost_params)] = np.where(
+            (
+                self.array.loc[
+                    dict(
+                        parameter=[
+                            "is_compliant",
+                        ]
+                    )
+                ]
+                == 0
+            ),
             0,
-            self.array.loc[
-                dict(parameter=cost_params)
-            ]
+            self.array.loc[dict(parameter=cost_params)],
         )
 
         # Indicate vehicles not available before 2020
@@ -1059,16 +1081,19 @@ class TruckModel(VehicleModel):
         )
 
         # same for costs
-        self.array.loc[
-            dict(parameter=cost_params)
-        ] = np.where(
-            (self.array.loc[
-                 dict(parameter=["is_available", ])
-             ] == 0),
+        self.array.loc[dict(parameter=cost_params)] = np.where(
+            (
+                self.array.loc[
+                    dict(
+                        parameter=[
+                            "is_available",
+                        ]
+                    )
+                ]
+                == 0
+            ),
             0,
-            self.array.loc[
-                dict(parameter=cost_params)
-            ]
+            self.array.loc[dict(parameter=cost_params)],
         )
 
         t = PrettyTable(
