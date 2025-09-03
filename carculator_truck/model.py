@@ -402,27 +402,34 @@ class TruckModel(VehicleModel):
         # The number of replacement is rounded *up* as we assume
         # no allocation of burden with a second life
 
-        average_speed = (
-            np.nanmean(
-                np.where(
-                    self.energy.sel(parameter="velocity") > 0,
-                    self.energy.sel(parameter="velocity"),
-                    np.nan,
-                ),
-                0,
-            )
-            * 3.6
-        )
+        # 1) Pull velocity (m/s) over the whole drive cycle; include zeros for stops.
+        vel = self.energy.sel(parameter="velocity")
+        vel = vel.fillna(0)
 
-        self["fuel cell lifetime replacements"] = np.ceil(
-            np.clip(
-                self["lifetime kilometers"]
-                / (average_speed.T * _(self["fuel cell lifetime hours"]))
-                - 1,
-                0,
-                5,
-            )
-        ) * (self["fuel cell lifetime hours"] > 0)
+        if "value" in vel.dims and vel.sizes["value"] == 1:
+            vel = vel.squeeze("value", drop=True)
+
+        # 2) Duration of the representative cycle in hours (1 sec timestep assumed by your coords).
+        duration_h = vel.sizes["second"] / 3600.0
+
+        # 3) Distance covered by the representative cycle in km (∑ v*dt, with dt=1 s).
+        duty_km = (vel.sum(dim="second") / 1000.0)
+
+        # Guard against degenerate cycles
+        duty_km = xr.where(duty_km > 0, duty_km, np.nan)
+
+        # 4) Convert lifetime kilometers → required stack operating hours, including idle:
+        #    lifetime_hours_required = lifetime_km * (duration_h / duty_km)
+        lifetime_hours_required = self["lifetime kilometers"] * (duration_h / duty_km)
+
+        # 5) Stacks needed and replacements
+        fc_life_h = _(self["fuel cell lifetime hours"])
+        stacks_needed = lifetime_hours_required / fc_life_h
+
+        replacements = xr.apply_ufunc(np.ceil, stacks_needed) - 1
+        replacements = replacements.clip(min=0, max=5)
+
+        self["fuel cell lifetime replacements"] = replacements
 
     def set_vehicle_masses(self):
         """
@@ -677,7 +684,7 @@ class TruckModel(VehicleModel):
         i = infra_wacc
         N = charger_life_years
         # CRF = i(1+i)^N / ((1+i)^N - 1); if i==0 -> 1/N
-        CRF = xr.where(i == 0, 1.0 / N, i + i / ((1 + i) ** N - 1))
+        CRF = xr.where(i == 0, 1.0 / N, i * (1 + i) ** N / ((1 + i) ** N - 1))
 
         # Upfront per charger (€/kW * kW)
         upfront_per_charger = charger_power_kw * (
@@ -802,7 +809,8 @@ class TruckModel(VehicleModel):
         self["lifetime"] = self["lifetime kilometers"] / self["kilometers per year"]
         i = self["interest rate"]
         lifetime = self["lifetime"]
-        amortisation_factor = ne.evaluate("i + (i / ((1 + i) ** lifetime - 1))")
+        amortisation_factor = ne.evaluate("i * (1 + i) ** lifetime / ((1 + i) ** lifetime - 1)")
+
 
         purchase_cost_list = [
             "battery onboard charging infrastructure cost",
