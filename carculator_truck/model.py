@@ -865,7 +865,7 @@ class TruckModel(VehicleModel):
             * self["fuel mass"]
         ) / self["target range"]
 
-        if self["maintenance cost per km"].all() == 0:
+        if self["maintenance cost"].all() == 0:
             self["maintenance cost"] = self["maintenance cost per km"]
             self["maintenance cost"] += self["adblue cost"]
 
