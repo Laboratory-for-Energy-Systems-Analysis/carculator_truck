@@ -162,6 +162,17 @@ class InventoryTruck(Inventory):
             / 16
         )
 
+        qty = self.A[
+            :,
+            self.find_input_indices(
+                contains=("maintenance, lorry 16 metric ton",),
+                excludes=("CH",),
+                excludes_in=1,
+            ),
+            [j for i, j in self.inputs.items() if i[0].startswith("truck, ")],
+        ]
+        print("MAINTENANCE 16T", qty.sum() )
+
         self.A[
             :,
             self.find_input_indices(contains=("maintenance, lorry 28 metric ton",)),
@@ -174,6 +185,17 @@ class InventoryTruck(Inventory):
             / 28
         )
 
+        qty = self.A[
+              :,
+              self.find_input_indices(
+                  contains=("maintenance, lorry 28 metric ton",),
+                  excludes=("CH",),
+                  excludes_in=1,
+              ),
+              [j for i, j in self.inputs.items() if i[0].startswith("truck, ")],
+              ]
+        print("MAINTENANCE 28T", qty.sum())
+
         self.A[
             :,
             self.find_input_indices(contains=("maintenance, lorry 40 metric ton",)),
@@ -184,6 +206,17 @@ class InventoryTruck(Inventory):
             / 1000
             / 40
         )
+
+        qty = self.A[
+              :,
+              self.find_input_indices(
+                  contains=("maintenance, lorry 40 metric ton",),
+                  excludes=("CH",),
+                  excludes_in=1,
+              ),
+              [j for i, j in self.inputs.items() if i[0].startswith("truck, ")],
+              ]
+        print("MAINTENANCE 40T", qty.sum())
 
         # Electric powertrain components
         self.A[
