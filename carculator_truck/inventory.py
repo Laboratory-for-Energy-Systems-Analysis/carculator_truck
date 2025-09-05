@@ -171,7 +171,7 @@ class InventoryTruck(Inventory):
             ),
             [j for i, j in self.inputs.items() if i[0].startswith("truck, ")],
         ]
-        print("MAINTENANCE 16T", qty.sum() )
+        print("MAINTENANCE 16T", qty.sum())
 
         self.A[
             :,
@@ -186,14 +186,14 @@ class InventoryTruck(Inventory):
         )
 
         qty = self.A[
-              :,
-              self.find_input_indices(
-                  contains=("maintenance, lorry 28 metric ton",),
-                  excludes=("CH",),
-                  excludes_in=1,
-              ),
-              [j for i, j in self.inputs.items() if i[0].startswith("truck, ")],
-              ]
+            :,
+            self.find_input_indices(
+                contains=("maintenance, lorry 28 metric ton",),
+                excludes=("CH",),
+                excludes_in=1,
+            ),
+            [j for i, j in self.inputs.items() if i[0].startswith("truck, ")],
+        ]
         print("MAINTENANCE 28T", qty.sum())
 
         self.A[
@@ -208,14 +208,14 @@ class InventoryTruck(Inventory):
         )
 
         qty = self.A[
-              :,
-              self.find_input_indices(
-                  contains=("maintenance, lorry 40 metric ton",),
-                  excludes=("CH",),
-                  excludes_in=1,
-              ),
-              [j for i, j in self.inputs.items() if i[0].startswith("truck, ")],
-              ]
+            :,
+            self.find_input_indices(
+                contains=("maintenance, lorry 40 metric ton",),
+                excludes=("CH",),
+                excludes_in=1,
+            ),
+            [j for i, j in self.inputs.items() if i[0].startswith("truck, ")],
+        ]
         print("MAINTENANCE 40T", qty.sum())
 
         # Electric powertrain components
