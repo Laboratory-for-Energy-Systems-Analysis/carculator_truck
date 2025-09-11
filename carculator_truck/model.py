@@ -22,6 +22,7 @@ CARGO_MASSES = DATA_DIR / "payloads.yaml"
 def finite(array, mask_value=0):
     return np.where(np.isfinite(array), array, mask_value)
 
+
 def _crf(i, n):
     # Capital Recovery Factor with i==0 → 1/n
     return xr.where(i == 0, 1.0 / n, i * (1 + i) ** n / ((1 + i) ** n - 1))
