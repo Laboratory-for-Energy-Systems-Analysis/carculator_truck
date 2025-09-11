@@ -908,8 +908,8 @@ class TruckModel(VehicleModel):
         # Liability: PV of r_liab * km_y each year for n years, discounted at i
         prem_liab_pv = xr.where(
             i == 0,
-            self["liability insurance rate"] * km_y * n,
-            self["liability insurance rate"] * km_y * (1 - (1 + i) ** (-n)) / i,
+            self["liability insurance rate per km"] * km_y * n,
+            self["liability insurance rate per km"] * km_y * (1 - (1 + i) ** (-n)) / i,
         )
         # Combine, apply loadings & IPT
         prem_total_pv = (prem_prop_pv + prem_liab_pv) * loading * ipt
