@@ -22,6 +22,10 @@ CARGO_MASSES = DATA_DIR / "payloads.yaml"
 def finite(array, mask_value=0):
     return np.where(np.isfinite(array), array, mask_value)
 
+def _crf(i, n):
+    # Capital Recovery Factor with i==0 → 1/n
+    return xr.where(i == 0, 1.0 / n, i * (1 + i) ** n / ((1 + i) ** n - 1))
+
 
 class TruckModel(VehicleModel):
     """
@@ -705,7 +709,6 @@ class TruckModel(VehicleModel):
         # Capital recovery factor (handle i==0 gracefully)
         i = infra_wacc
         N = charger_life_years
-        # CRF = i(1+i)^N / ((1+i)^N - 1); if i==0 -> 1/N
         CRF = xr.where(i == 0, 1.0 / N, i * (1 + i) ** N / ((1 + i) ** N - 1))
 
         # Upfront per charger (€/kW * kW)
@@ -831,9 +834,7 @@ class TruckModel(VehicleModel):
         self["lifetime"] = self["lifetime kilometers"] / self["kilometers per year"]
         i = self["interest rate"]
         lifetime = self["lifetime"]
-        amortisation_factor = ne.evaluate(
-            "i * (1 + i) ** lifetime / ((1 + i) ** lifetime - 1)"
-        )
+        amortisation_factor = _crf(i, lifetime)
 
         purchase_cost_list = [
             "battery onboard charging infrastructure cost",
@@ -887,7 +888,7 @@ class TruckModel(VehicleModel):
         ipt = 1.0 + self["insurance premium tax"]
 
         # Capital recovery factor you already computed
-        amortisation_factor = ne.evaluate("i + (i / ((1 + i) ** n - 1))")
+        amortisation_factor = _crf(i, n)
 
         # --- Present value (PV) of premiums in closed form ---
 
@@ -905,8 +906,11 @@ class TruckModel(VehicleModel):
         prem_prop_pv = ne.evaluate("r_prop * P_ins * geom_sum")
 
         # Liability: PV of r_liab * km_y each year for n years, discounted at i
-        prem_liab_pv = ne.evaluate("r_liab * km_y * (1 - (1 + i) ** (-n)) / i")
-
+        prem_liab_pv = xr.where(
+            i == 0,
+            self["liability insurance rate"] * km_y * n,
+            self["liability insurance rate"] * km_y * (1 - (1 + i) ** (-n)) / i,
+        )
         # Combine, apply loadings & IPT
         prem_total_pv = (prem_prop_pv + prem_liab_pv) * loading * ipt
 
