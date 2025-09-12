@@ -384,38 +384,41 @@ class InventoryTruck(Inventory):
 
         print(
             (
-                    (
-                            -1
-                            / (
-                                    self.array.sel(
-                                        parameter=["trucks per depot charger"],
-                                    )
-                                    * self.array.sel(
-                                parameter=["depot charger lifetime"],
-                            )
-                            )
-                    ) * (
-                            self.array.sel(parameter="combustion power") == 0
+                (
+                    -1
+                    / (
+                        self.array.sel(
+                            parameter=["trucks per depot charger"],
+                        )
+                        * self.array.sel(
+                            parameter=["depot charger lifetime"],
+                        )
                     )
+                )
+                * (self.array.sel(parameter="combustion power") == 0)
             ).shape
         )
 
         print(
             self.array.sel(
-                parameter=["trucks per depot charger",],
+                parameter=[
+                    "trucks per depot charger",
+                ],
             )
         )
 
         print(
             self.array.sel(
-                parameter=["depot charger lifetime",],
+                parameter=[
+                    "depot charger lifetime",
+                ],
             )
         )
 
         tpdc = self.array.sel(parameter="trucks per depot charger")
         life = self.array.sel(parameter="depot charger lifetime")
         power = self.array.sel(parameter="depot charger power")
-        mask = (self.array.sel(parameter="combustion power") == 0)
+        mask = self.array.sel(parameter="combustion power") == 0
 
         base = (-1.0 / (tpdc * life)) / 200 * power * mask
 
