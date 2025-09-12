@@ -871,8 +871,6 @@ class TruckModel(VehicleModel):
             self["maintenance cost"] = self["maintenance cost per km"]
             self["maintenance cost"] += self["adblue cost"]
 
-        print(self["maintenance cost"])
-
         # --- Insurance (property + liability + optional cargo) with depreciation and discounting ---
 
         # Inputs

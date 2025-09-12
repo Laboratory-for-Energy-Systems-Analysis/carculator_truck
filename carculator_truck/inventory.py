@@ -151,8 +151,8 @@ class InventoryTruck(Inventory):
             :,
             self.find_input_indices(
                 contains=("maintenance, lorry 16 metric ton",),
-                # excludes=("CH",),
-                # excludes_in=1,
+                excludes=("Europe without Switzerland",),
+                excludes_in=1,
             ),
             [j for i, j in self.inputs.items() if i[0].startswith("truck, ")],
         ] = -1 * (
