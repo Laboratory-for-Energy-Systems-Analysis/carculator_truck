@@ -375,17 +375,17 @@ class InventoryTruck(Inventory):
         power = self.array.sel(parameter="depot charger power")
         mask = self.array.sel(parameter="combustion power") == 0
 
-        #base = (-1.0 / (tpdc * life)) / 200 * power * mask
+        # base = (-1.0 / (tpdc * life)) / 200 * power * mask
         base = (-1.0 / (tpdc * 1)) / 200 * power * mask
 
         val = base.values[:, None, :, :]
 
         self.A[
-           np.ix_(
-            np.arange(self.iterations),
+            np.ix_(
+                np.arange(self.iterations),
                 self.find_input_indices(("EV charger, level 3, plugin, 200 kW",)),
-               [j for i, j in self.inputs.items() if i[0].startswith("truck, ")],
-           )
+                [j for i, j in self.inputs.items() if i[0].startswith("truck, ")],
+            )
         ] = val
 
         print("*********************************************************************")
