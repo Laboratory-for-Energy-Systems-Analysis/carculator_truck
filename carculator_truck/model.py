@@ -409,16 +409,17 @@ class TruckModel(VehicleModel):
 
         _ = lambda array: np.where(array == 0, 1, array)
 
-        self["battery lifetime replacements"] = np.clip(
-            (
-                (self["lifetime kilometers"] * self["TtW energy"] / 3600)
-                / _(self["electric energy stored"])
-                / _(self["battery cycle life"])
-                - 1
-            ),
-            0,
-            3,
-        ) * (self["charger mass"] > 0)
+        if self["battery lifetime replacements"].sum() == 0:
+            self["battery lifetime replacements"] = np.clip(
+                (
+                    (self["lifetime kilometers"] * self["TtW energy"] / 3600)
+                    / _(self["electric energy stored"])
+                    / _(self["battery cycle life"])
+                    - 1
+                ),
+                0,
+                3,
+            ) * (self["charger mass"] > 0)
 
         # The number of fuel cell replacements is based on the
         # average distance driven with a set of fuel cells given
@@ -453,7 +454,8 @@ class TruckModel(VehicleModel):
         replacements = xr.apply_ufunc(np.ceil, stacks_needed) - 1
         replacements = replacements.clip(min=0, max=5)
 
-        self["fuel cell lifetime replacements"] = replacements
+        if self["fuel cell lifetime replacements"].sum() == 0:
+            self["fuel cell lifetime replacements"] = replacements
 
     def set_vehicle_masses(self):
         """
