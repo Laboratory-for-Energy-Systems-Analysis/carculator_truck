@@ -13828,7 +13828,7 @@
         "maximum": 0.20350000000000001
     },
     "502-2000-markup factor": {
-        "amount": 1.56,
+        "amount": 1.7,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -13848,12 +13848,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.56,
-        "minimum": 1.4040000000000001,
-        "maximum": 1.7160000000000002
+        "loc": 1.7,
+        "minimum": 1.53,
+        "maximum": 1.87
     },
     "503-2010-markup factor": {
-        "amount": 1.56,
+        "amount": 1.7,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -13873,12 +13873,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.56,
-        "minimum": 1.4040000000000001,
-        "maximum": 1.7160000000000002
+        "loc": 1.7,
+        "minimum": 1.53,
+        "maximum": 1.87
     },
     "504-2020-markup factor": {
-        "amount": 1.56,
+        "amount": 1.7,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -13898,12 +13898,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.56,
-        "minimum": 1.4040000000000001,
-        "maximum": 1.7160000000000002
+        "loc": 1.7,
+        "minimum": 1.53,
+        "maximum": 1.87
     },
     "505-2030-markup factor": {
-        "amount": 1.56,
+        "amount": 1.7,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -13923,12 +13923,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.56,
-        "minimum": 1.4040000000000001,
-        "maximum": 1.7160000000000002
+        "loc": 1.7,
+        "minimum": 1.53,
+        "maximum": 1.87
     },
     "506-2040-markup factor": {
-        "amount": 1.56,
+        "amount": 1.7,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -13948,12 +13948,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.56,
-        "minimum": 1.4040000000000001,
-        "maximum": 1.7160000000000002
+        "loc": 1.7,
+        "minimum": 1.53,
+        "maximum": 1.87
     },
     "507-2050-markup factor": {
-        "amount": 1.56,
+        "amount": 1.7,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -13973,12 +13973,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.56,
-        "minimum": 1.4040000000000001,
-        "maximum": 1.7160000000000002
+        "loc": 1.7,
+        "minimum": 1.53,
+        "maximum": 1.87
     },
     "508-2000-markup factor": {
-        "amount": 1.5,
+        "amount": 1.55,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -13998,12 +13998,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.5,
-        "minimum": 1.35,
-        "maximum": 1.6500000000000001
+        "loc": 1.55,
+        "minimum": 1.395,
+        "maximum": 1.7050000000000003
     },
     "509-2010-markup factor": {
-        "amount": 1.5,
+        "amount": 1.55,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -14023,12 +14023,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.5,
-        "minimum": 1.35,
-        "maximum": 1.6500000000000001
+        "loc": 1.55,
+        "minimum": 1.395,
+        "maximum": 1.7050000000000003
     },
     "510-2020-markup factor": {
-        "amount": 1.5,
+        "amount": 1.55,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -14048,12 +14048,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.5,
-        "minimum": 1.35,
-        "maximum": 1.6500000000000001
+        "loc": 1.55,
+        "minimum": 1.395,
+        "maximum": 1.7050000000000003
     },
     "511-2030-markup factor": {
-        "amount": 1.5,
+        "amount": 1.55,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -14073,12 +14073,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.5,
-        "minimum": 1.35,
-        "maximum": 1.6500000000000001
+        "loc": 1.55,
+        "minimum": 1.395,
+        "maximum": 1.7050000000000003
     },
     "512-2040-markup factor": {
-        "amount": 1.5,
+        "amount": 1.55,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -14098,12 +14098,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.5,
-        "minimum": 1.35,
-        "maximum": 1.6500000000000001
+        "loc": 1.55,
+        "minimum": 1.395,
+        "maximum": 1.7050000000000003
     },
     "513-2050-markup factor": {
-        "amount": 1.5,
+        "amount": 1.55,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -14123,9 +14123,9 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.5,
-        "minimum": 1.35,
-        "maximum": 1.6500000000000001
+        "loc": 1.55,
+        "minimum": 1.395,
+        "maximum": 1.7050000000000003
     },
     "514-2000-markup factor": {
         "amount": 1.2,
@@ -14578,7 +14578,7 @@
         "maximum": 1.32
     },
     "532-2000-markup factor": {
-        "amount": 1.44,
+        "amount": 1.5,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -14598,12 +14598,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.5,
+        "minimum": 1.35,
+        "maximum": 1.6500000000000001
     },
     "533-2010-markup factor": {
-        "amount": 1.44,
+        "amount": 1.5,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -14623,12 +14623,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.5,
+        "minimum": 1.35,
+        "maximum": 1.6500000000000001
     },
     "534-2020-markup factor": {
-        "amount": 1.44,
+        "amount": 1.5,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -14648,12 +14648,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.5,
+        "minimum": 1.35,
+        "maximum": 1.6500000000000001
     },
     "535-2030-markup factor": {
-        "amount": 1.44,
+        "amount": 1.5,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -14673,12 +14673,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.5,
+        "minimum": 1.35,
+        "maximum": 1.6500000000000001
     },
     "536-2040-markup factor": {
-        "amount": 1.44,
+        "amount": 1.5,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -14698,12 +14698,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.5,
+        "minimum": 1.35,
+        "maximum": 1.6500000000000001
     },
     "537-2050-markup factor": {
-        "amount": 1.44,
+        "amount": 1.5,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -14723,9 +14723,9 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.5,
+        "minimum": 1.35,
+        "maximum": 1.6500000000000001
     },
     "538-2000-markup factor": {
         "amount": 1.2,
@@ -14878,7 +14878,7 @@
         "maximum": 1.32
     },
     "544-2000-markup factor": {
-        "amount": 1.32,
+        "amount": 2.1,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -14896,12 +14896,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.32,
-        "minimum": 1.1880000000000002,
-        "maximum": 1.4520000000000002
+        "loc": 2.1,
+        "minimum": 1.8900000000000001,
+        "maximum": 2.3100000000000005
     },
     "545-2010-markup factor": {
-        "amount": 1.32,
+        "amount": 2.1,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -14919,12 +14919,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.32,
-        "minimum": 1.1880000000000002,
-        "maximum": 1.4520000000000002
+        "loc": 2.1,
+        "minimum": 1.8900000000000001,
+        "maximum": 2.3100000000000005
     },
     "546-2020-markup factor": {
-        "amount": 1.32,
+        "amount": 2.1,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -14942,12 +14942,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.32,
-        "minimum": 1.1880000000000002,
-        "maximum": 1.4520000000000002
+        "loc": 2.1,
+        "minimum": 1.8900000000000001,
+        "maximum": 2.3100000000000005
     },
     "547-2030-markup factor": {
-        "amount": 1.32,
+        "amount": 2.1,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -14965,12 +14965,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.32,
-        "minimum": 1.1880000000000002,
-        "maximum": 1.4520000000000002
+        "loc": 2.1,
+        "minimum": 1.8900000000000001,
+        "maximum": 2.3100000000000005
     },
     "548-2040-markup factor": {
-        "amount": 1.32,
+        "amount": 2.1,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -14988,12 +14988,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.32,
-        "minimum": 1.1880000000000002,
-        "maximum": 1.4520000000000002
+        "loc": 2.1,
+        "minimum": 1.8900000000000001,
+        "maximum": 2.3100000000000005
     },
     "549-2050-markup factor": {
-        "amount": 1.32,
+        "amount": 2.1,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15011,12 +15011,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.32,
-        "minimum": 1.1880000000000002,
-        "maximum": 1.4520000000000002
+        "loc": 2.1,
+        "minimum": 1.8900000000000001,
+        "maximum": 2.3100000000000005
     },
     "550-2000-markup factor": {
-        "amount": 1.26,
+        "amount": 1.95,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15034,12 +15034,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.26,
-        "minimum": 1.1340000000000001,
-        "maximum": 1.3860000000000001
+        "loc": 1.95,
+        "minimum": 1.755,
+        "maximum": 2.145
     },
     "551-2010-markup factor": {
-        "amount": 1.26,
+        "amount": 1.95,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15057,12 +15057,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.26,
-        "minimum": 1.1340000000000001,
-        "maximum": 1.3860000000000001
+        "loc": 1.95,
+        "minimum": 1.755,
+        "maximum": 2.145
     },
     "552-2020-markup factor": {
-        "amount": 1.26,
+        "amount": 1.95,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15080,12 +15080,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.26,
-        "minimum": 1.1340000000000001,
-        "maximum": 1.3860000000000001
+        "loc": 1.95,
+        "minimum": 1.755,
+        "maximum": 2.145
     },
     "553-2030-markup factor": {
-        "amount": 1.26,
+        "amount": 1.95,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15103,12 +15103,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.26,
-        "minimum": 1.1340000000000001,
-        "maximum": 1.3860000000000001
+        "loc": 1.95,
+        "minimum": 1.755,
+        "maximum": 2.145
     },
     "554-2040-markup factor": {
-        "amount": 1.26,
+        "amount": 1.95,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15126,12 +15126,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.26,
-        "minimum": 1.1340000000000001,
-        "maximum": 1.3860000000000001
+        "loc": 1.95,
+        "minimum": 1.755,
+        "maximum": 2.145
     },
     "555-2050-markup factor": {
-        "amount": 1.26,
+        "amount": 1.95,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15149,12 +15149,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.26,
-        "minimum": 1.1340000000000001,
-        "maximum": 1.3860000000000001
+        "loc": 1.95,
+        "minimum": 1.755,
+        "maximum": 2.145
     },
     "556-2000-markup factor": {
-        "amount": 1.05,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15172,12 +15172,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.05,
-        "minimum": 0.9450000000000001,
-        "maximum": 1.1550000000000002
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "557-2010-markup factor": {
-        "amount": 1.05,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15195,12 +15195,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.05,
-        "minimum": 0.9450000000000001,
-        "maximum": 1.1550000000000002
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "558-2020-markup factor": {
-        "amount": 1.05,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15218,12 +15218,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.05,
-        "minimum": 0.9450000000000001,
-        "maximum": 1.1550000000000002
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "559-2030-markup factor": {
-        "amount": 1.05,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15241,12 +15241,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.05,
-        "minimum": 0.9450000000000001,
-        "maximum": 1.1550000000000002
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "560-2040-markup factor": {
-        "amount": 1.05,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15264,12 +15264,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.05,
-        "minimum": 0.9450000000000001,
-        "maximum": 1.1550000000000002
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "561-2050-markup factor": {
-        "amount": 1.05,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15287,12 +15287,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.05,
-        "minimum": 0.9450000000000001,
-        "maximum": 1.1550000000000002
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "562-2000-markup factor": {
-        "amount": 1.2,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15310,12 +15310,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "563-2010-markup factor": {
-        "amount": 1.2,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15333,12 +15333,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "564-2020-markup factor": {
-        "amount": 1.2,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15356,12 +15356,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "565-2030-markup factor": {
-        "amount": 1.2,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15379,12 +15379,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "566-2040-markup factor": {
-        "amount": 1.2,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15402,12 +15402,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "567-2050-markup factor": {
-        "amount": 1.2,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15425,12 +15425,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "568-2000-markup factor": {
-        "amount": 1.2,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15448,12 +15448,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "569-2010-markup factor": {
-        "amount": 1.2,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15471,12 +15471,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "570-2020-markup factor": {
-        "amount": 1.2,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15494,12 +15494,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "571-2030-markup factor": {
-        "amount": 1.2,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15517,12 +15517,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "572-2040-markup factor": {
-        "amount": 1.2,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15540,12 +15540,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "573-2050-markup factor": {
-        "amount": 1.2,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15563,12 +15563,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "574-2000-markup factor": {
-        "amount": 1.2,
+        "amount": 1.9,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15586,12 +15586,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.9,
+        "minimum": 1.71,
+        "maximum": 2.09
     },
     "575-2010-markup factor": {
-        "amount": 1.2,
+        "amount": 1.9,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15609,12 +15609,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.9,
+        "minimum": 1.71,
+        "maximum": 2.09
     },
     "576-2020-markup factor": {
-        "amount": 1.2,
+        "amount": 1.9,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15632,12 +15632,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.9,
+        "minimum": 1.71,
+        "maximum": 2.09
     },
     "577-2030-markup factor": {
-        "amount": 1.2,
+        "amount": 1.9,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15655,12 +15655,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.9,
+        "minimum": 1.71,
+        "maximum": 2.09
     },
     "578-2040-markup factor": {
-        "amount": 1.2,
+        "amount": 1.9,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15678,12 +15678,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.9,
+        "minimum": 1.71,
+        "maximum": 2.09
     },
     "579-2050-markup factor": {
-        "amount": 1.2,
+        "amount": 1.9,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15701,12 +15701,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.9,
+        "minimum": 1.71,
+        "maximum": 2.09
     },
     "580-2000-markup factor": {
-        "amount": 1.2,
+        "amount": 1.8,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15724,12 +15724,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.8,
+        "minimum": 1.62,
+        "maximum": 1.9800000000000002
     },
     "581-2010-markup factor": {
-        "amount": 1.2,
+        "amount": 1.8,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15747,12 +15747,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.8,
+        "minimum": 1.62,
+        "maximum": 1.9800000000000002
     },
     "582-2020-markup factor": {
-        "amount": 1.2,
+        "amount": 1.8,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15770,12 +15770,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.8,
+        "minimum": 1.62,
+        "maximum": 1.9800000000000002
     },
     "583-2030-markup factor": {
-        "amount": 1.2,
+        "amount": 1.8,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15793,12 +15793,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.8,
+        "minimum": 1.62,
+        "maximum": 1.9800000000000002
     },
     "584-2040-markup factor": {
-        "amount": 1.2,
+        "amount": 1.8,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15816,12 +15816,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.8,
+        "minimum": 1.62,
+        "maximum": 1.9800000000000002
     },
     "585-2050-markup factor": {
-        "amount": 1.2,
+        "amount": 1.8,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -15839,12 +15839,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.2,
-        "minimum": 1.08,
-        "maximum": 1.32
+        "loc": 1.8,
+        "minimum": 1.62,
+        "maximum": 1.9800000000000002
     },
     "586-2000-markup factor": {
-        "amount": 2,
+        "amount": 2.6,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -15861,12 +15861,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 2,
-        "minimum": 1.8,
-        "maximum": 2.2
+        "loc": 2.6,
+        "minimum": 2.3400000000000003,
+        "maximum": 2.8600000000000003
     },
     "587-2010-markup factor": {
-        "amount": 2,
+        "amount": 2.6,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -15883,12 +15883,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 2,
-        "minimum": 1.8,
-        "maximum": 2.2
+        "loc": 2.6,
+        "minimum": 2.3400000000000003,
+        "maximum": 2.8600000000000003
     },
     "588-2020-markup factor": {
-        "amount": 2,
+        "amount": 2.6,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -15905,12 +15905,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 2,
-        "minimum": 1.8,
-        "maximum": 2.2
+        "loc": 2.6,
+        "minimum": 2.3400000000000003,
+        "maximum": 2.8600000000000003
     },
     "589-2030-markup factor": {
-        "amount": 2,
+        "amount": 2.6,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -15927,12 +15927,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 2,
-        "minimum": 1.8,
-        "maximum": 2.2
+        "loc": 2.6,
+        "minimum": 2.3400000000000003,
+        "maximum": 2.8600000000000003
     },
     "590-2040-markup factor": {
-        "amount": 2,
+        "amount": 2.6,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -15949,12 +15949,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 2,
-        "minimum": 1.8,
-        "maximum": 2.2
+        "loc": 2.6,
+        "minimum": 2.3400000000000003,
+        "maximum": 2.8600000000000003
     },
     "591-2050-markup factor": {
-        "amount": 2,
+        "amount": 2.6,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -15971,12 +15971,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 2,
-        "minimum": 1.8,
-        "maximum": 2.2
+        "loc": 2.6,
+        "minimum": 2.3400000000000003,
+        "maximum": 2.8600000000000003
     },
     "592-2000-markup factor": {
-        "amount": 1.68,
+        "amount": 2.1,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -15993,12 +15993,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.68,
-        "minimum": 1.512,
-        "maximum": 1.848
+        "loc": 2.1,
+        "minimum": 1.8900000000000001,
+        "maximum": 2.3100000000000005
     },
     "593-2010-markup factor": {
-        "amount": 1.68,
+        "amount": 2.1,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16015,12 +16015,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.68,
-        "minimum": 1.512,
-        "maximum": 1.848
+        "loc": 2.1,
+        "minimum": 1.8900000000000001,
+        "maximum": 2.3100000000000005
     },
     "594-2020-markup factor": {
-        "amount": 1.68,
+        "amount": 2.1,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16037,12 +16037,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.68,
-        "minimum": 1.512,
-        "maximum": 1.848
+        "loc": 2.1,
+        "minimum": 1.8900000000000001,
+        "maximum": 2.3100000000000005
     },
     "595-2030-markup factor": {
-        "amount": 1.68,
+        "amount": 2.1,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16059,12 +16059,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.68,
-        "minimum": 1.512,
-        "maximum": 1.848
+        "loc": 2.1,
+        "minimum": 1.8900000000000001,
+        "maximum": 2.3100000000000005
     },
     "596-2040-markup factor": {
-        "amount": 1.68,
+        "amount": 2.1,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16081,12 +16081,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.68,
-        "minimum": 1.512,
-        "maximum": 1.848
+        "loc": 2.1,
+        "minimum": 1.8900000000000001,
+        "maximum": 2.3100000000000005
     },
     "597-2050-markup factor": {
-        "amount": 1.68,
+        "amount": 2.1,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16103,12 +16103,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.68,
-        "minimum": 1.512,
-        "maximum": 1.848
+        "loc": 2.1,
+        "minimum": 1.8900000000000001,
+        "maximum": 2.3100000000000005
     },
     "598-2000-markup factor": {
-        "amount": 1.5,
+        "amount": 1.75,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16125,12 +16125,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.5,
-        "minimum": 1.35,
-        "maximum": 1.6500000000000001
+        "loc": 1.75,
+        "minimum": 1.575,
+        "maximum": 1.9250000000000003
     },
     "599-2010-markup factor": {
-        "amount": 1.5,
+        "amount": 1.75,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16147,12 +16147,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.5,
-        "minimum": 1.35,
-        "maximum": 1.6500000000000001
+        "loc": 1.75,
+        "minimum": 1.575,
+        "maximum": 1.9250000000000003
     },
     "600-2020-markup factor": {
-        "amount": 1.5,
+        "amount": 1.75,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16169,12 +16169,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.5,
-        "minimum": 1.35,
-        "maximum": 1.6500000000000001
+        "loc": 1.75,
+        "minimum": 1.575,
+        "maximum": 1.9250000000000003
     },
     "601-2030-markup factor": {
-        "amount": 1.5,
+        "amount": 1.75,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16191,12 +16191,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.5,
-        "minimum": 1.35,
-        "maximum": 1.6500000000000001
+        "loc": 1.75,
+        "minimum": 1.575,
+        "maximum": 1.9250000000000003
     },
     "602-2040-markup factor": {
-        "amount": 1.5,
+        "amount": 1.75,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16213,12 +16213,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.5,
-        "minimum": 1.35,
-        "maximum": 1.6500000000000001
+        "loc": 1.75,
+        "minimum": 1.575,
+        "maximum": 1.9250000000000003
     },
     "603-2050-markup factor": {
-        "amount": 1.5,
+        "amount": 1.75,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16235,12 +16235,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.5,
-        "minimum": 1.35,
-        "maximum": 1.6500000000000001
+        "loc": 1.75,
+        "minimum": 1.575,
+        "maximum": 1.9250000000000003
     },
     "604-2000-markup factor": {
-        "amount": 1.5,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16257,12 +16257,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.5,
-        "minimum": 1.35,
-        "maximum": 1.6500000000000001
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "605-2010-markup factor": {
-        "amount": 1.5,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16279,12 +16279,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.5,
-        "minimum": 1.35,
-        "maximum": 1.6500000000000001
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "606-2020-markup factor": {
-        "amount": 1.5,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16301,12 +16301,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.5,
-        "minimum": 1.35,
-        "maximum": 1.6500000000000001
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "607-2030-markup factor": {
-        "amount": 1.5,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16323,12 +16323,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.5,
-        "minimum": 1.35,
-        "maximum": 1.6500000000000001
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "608-2040-markup factor": {
-        "amount": 1.5,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16345,12 +16345,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.5,
-        "minimum": 1.35,
-        "maximum": 1.6500000000000001
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
     },
     "609-2050-markup factor": {
-        "amount": 1.5,
+        "amount": 1.6,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16367,34 +16367,34 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
+        "loc": 1.6,
+        "minimum": 1.4400000000000002,
+        "maximum": 1.7600000000000002
+    },
+    "610-2000-markup factor": {
+        "amount": 1.5,
+        "category": "Costs",
+        "powertrain": [
+            "FCEV"
+        ],
+        "sizes": [
+            "32t"
+        ],
+        "year": 2000,
+        "name": "markup factor",
+        "unit": "unitless",
+        "importance": "",
+        "source": "",
+        "comment": "",
+        "status": "",
+        "kind": "distribution",
+        "uncertainty_type": 5,
         "loc": 1.5,
         "minimum": 1.35,
         "maximum": 1.6500000000000001
     },
-    "610-2000-markup factor": {
-        "amount": 1.44,
-        "category": "Costs",
-        "powertrain": [
-            "FCEV"
-        ],
-        "sizes": [
-            "32t"
-        ],
-        "year": 2000,
-        "name": "markup factor",
-        "unit": "unitless",
-        "importance": "",
-        "source": "",
-        "comment": "",
-        "status": "",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
-    },
     "611-2010-markup factor": {
-        "amount": 1.44,
+        "amount": 1.5,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16411,12 +16411,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.5,
+        "minimum": 1.35,
+        "maximum": 1.6500000000000001
     },
     "612-2020-markup factor": {
-        "amount": 1.44,
+        "amount": 1.5,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16433,12 +16433,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.5,
+        "minimum": 1.35,
+        "maximum": 1.6500000000000001
     },
     "613-2030-markup factor": {
-        "amount": 1.44,
+        "amount": 1.5,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16455,12 +16455,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.5,
+        "minimum": 1.35,
+        "maximum": 1.6500000000000001
     },
     "614-2040-markup factor": {
-        "amount": 1.44,
+        "amount": 1.5,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16477,12 +16477,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.5,
+        "minimum": 1.35,
+        "maximum": 1.6500000000000001
     },
     "615-2050-markup factor": {
-        "amount": 1.44,
+        "amount": 1.5,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16499,12 +16499,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.5,
+        "minimum": 1.35,
+        "maximum": 1.6500000000000001
     },
     "616-2000-markup factor": {
-        "amount": 1.44,
+        "amount": 1.8,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16521,12 +16521,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.8,
+        "minimum": 1.62,
+        "maximum": 1.9800000000000002
     },
     "617-2010-markup factor": {
-        "amount": 1.44,
+        "amount": 1.8,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16543,12 +16543,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.8,
+        "minimum": 1.62,
+        "maximum": 1.9800000000000002
     },
     "618-2020-markup factor": {
-        "amount": 1.44,
+        "amount": 1.8,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16565,12 +16565,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.8,
+        "minimum": 1.62,
+        "maximum": 1.9800000000000002
     },
     "619-2030-markup factor": {
-        "amount": 1.44,
+        "amount": 1.8,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16587,12 +16587,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.8,
+        "minimum": 1.62,
+        "maximum": 1.9800000000000002
     },
     "620-2040-markup factor": {
-        "amount": 1.44,
+        "amount": 1.8,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16609,12 +16609,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.8,
+        "minimum": 1.62,
+        "maximum": 1.9800000000000002
     },
     "621-2050-markup factor": {
-        "amount": 1.44,
+        "amount": 1.8,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16631,12 +16631,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.8,
+        "minimum": 1.62,
+        "maximum": 1.9800000000000002
     },
     "622-2000-markup factor": {
-        "amount": 1.44,
+        "amount": 1.7,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16653,12 +16653,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.7,
+        "minimum": 1.53,
+        "maximum": 1.87
     },
     "623-2010-markup factor": {
-        "amount": 1.44,
+        "amount": 1.7,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16675,12 +16675,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.7,
+        "minimum": 1.53,
+        "maximum": 1.87
     },
     "624-2020-markup factor": {
-        "amount": 1.44,
+        "amount": 1.7,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16697,12 +16697,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.7,
+        "minimum": 1.53,
+        "maximum": 1.87
     },
     "625-2030-markup factor": {
-        "amount": 1.44,
+        "amount": 1.7,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16719,12 +16719,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.7,
+        "minimum": 1.53,
+        "maximum": 1.87
     },
     "626-2040-markup factor": {
-        "amount": 1.44,
+        "amount": 1.7,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16741,12 +16741,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.7,
+        "minimum": 1.53,
+        "maximum": 1.87
     },
     "627-2050-markup factor": {
-        "amount": 1.44,
+        "amount": 1.7,
         "category": "Costs",
         "powertrain": [
             "FCEV"
@@ -16763,9 +16763,9 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 1.44,
-        "minimum": 1.296,
-        "maximum": 1.584
+        "loc": 1.7,
+        "minimum": 1.53,
+        "maximum": 1.87
     },
     "628-2000-power battery cost per kW": {
         "amount": 20,
