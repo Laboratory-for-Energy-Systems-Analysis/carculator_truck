@@ -827,6 +827,9 @@ class TruckModel(VehicleModel):
             "glider cost",
             "lightweighting cost",
             "power battery cost",
+            "battery onboard charging infrastructure cost",
+            "combustion exhaust treatment cost",
+            "heat pump cost",
         ]
 
         self[to_markup] *= self["markup factor"]
@@ -854,6 +857,7 @@ class TruckModel(VehicleModel):
         # we leave the possibility to override the purchase cost
         if self["purchase cost"].all() == 0:
             self["purchase cost"] = self[purchase_cost_list].sum(axis=2)
+
 
         # per vkm
         self["amortised purchase cost"] = (
