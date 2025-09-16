@@ -858,7 +858,6 @@ class TruckModel(VehicleModel):
         if self["purchase cost"].all() == 0:
             self["purchase cost"] = self[purchase_cost_list].sum(axis=2)
 
-
         # per vkm
         self["amortised purchase cost"] = (
             self["purchase cost"] * amortisation_factor / self["kilometers per year"]
