@@ -455,7 +455,9 @@ class TruckModel(VehicleModel):
         replacements = replacements.clip(min=0, max=5)
 
         if self["fuel cell lifetime replacements"].sum() == 0:
-            self["fuel cell lifetime replacements"] = replacements
+            self["fuel cell lifetime replacements"] = replacements * (
+                self["fuel cell stack mass"] > 0
+            )
 
     def set_vehicle_masses(self):
         """
