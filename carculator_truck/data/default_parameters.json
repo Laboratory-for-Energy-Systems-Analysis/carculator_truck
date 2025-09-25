@@ -12172,7 +12172,7 @@
         "maximum": 7
     },
     "439-2030-glider base cost per kg": {
-        "amount": 4.5,
+        "amount": 4.199999999999999,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12197,12 +12197,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 4.5,
+        "loc": 4.199999999999999,
         "minimum": 5,
         "maximum": 7
     },
     "440-2040-glider base cost per kg": {
-        "amount": 3.375,
+        "amount": 2.9399999999999995,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12227,12 +12227,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3.375,
+        "loc": 2.9399999999999995,
         "minimum": 5,
         "maximum": 7
     },
     "441-2050-glider base cost per kg": {
-        "amount": 2.53125,
+        "amount": 2.0579999999999994,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12257,7 +12257,7 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 2.53125,
+        "loc": 2.0579999999999994,
         "minimum": 5,
         "maximum": 7
     },
@@ -12349,7 +12349,7 @@
         "maximum": 16.099999999999998
     },
     "445-2030-glider base cost per kg": {
-        "amount": 10.35,
+        "amount": 9.659999999999998,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12373,12 +12373,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 10.35,
+        "loc": 9.659999999999998,
         "minimum": 11.5,
         "maximum": 16.099999999999998
     },
     "446-2040-glider base cost per kg": {
-        "amount": 7.762499999999999,
+        "amount": 6.761999999999999,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12402,12 +12402,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 7.762499999999999,
+        "loc": 6.761999999999999,
         "minimum": 11.5,
         "maximum": 16.099999999999998
     },
     "447-2050-glider base cost per kg": {
-        "amount": 5.8218749999999995,
+        "amount": 4.733399999999998,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12431,7 +12431,7 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 5.8218749999999995,
+        "loc": 4.733399999999998,
         "minimum": 11.5,
         "maximum": 16.099999999999998
     },
@@ -12523,7 +12523,7 @@
         "maximum": 14
     },
     "451-2030-glider base cost per kg": {
-        "amount": 9,
+        "amount": 8.399999999999999,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12547,12 +12547,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 9,
+        "loc": 8.399999999999999,
         "minimum": 10,
         "maximum": 14
     },
     "452-2040-glider base cost per kg": {
-        "amount": 6.75,
+        "amount": 5.879999999999999,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12576,12 +12576,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 6.75,
+        "loc": 5.879999999999999,
         "minimum": 10,
         "maximum": 14
     },
     "453-2050-glider base cost per kg": {
-        "amount": 5.0625,
+        "amount": 4.115999999999999,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12605,7 +12605,7 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 5.0625,
+        "loc": 4.115999999999999,
         "minimum": 10,
         "maximum": 14
     },
@@ -12697,7 +12697,7 @@
         "maximum": 8.4
     },
     "457-2030-glider base cost per kg": {
-        "amount": 5.3999999999999995,
+        "amount": 5.039999999999999,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12721,12 +12721,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 5.3999999999999995,
+        "loc": 5.039999999999999,
         "minimum": 6,
         "maximum": 8.4
     },
     "458-2040-glider base cost per kg": {
-        "amount": 4.05,
+        "amount": 3.527999999999999,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12750,12 +12750,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 4.05,
+        "loc": 3.527999999999999,
         "minimum": 6,
         "maximum": 8.4
     },
     "459-2050-glider base cost per kg": {
-        "amount": 3.0375,
+        "amount": 2.4695999999999994,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12779,7 +12779,7 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3.0375,
+        "loc": 2.4695999999999994,
         "minimum": 6,
         "maximum": 8.4
     },
@@ -12874,7 +12874,7 @@
         "maximum": 10.5
     },
     "463-2030-glider base cost per kg": {
-        "amount": 6.75,
+        "amount": 6.299999999999999,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12899,12 +12899,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 6.75,
+        "loc": 6.299999999999999,
         "minimum": 7.5,
         "maximum": 10.5
     },
     "464-2040-glider base cost per kg": {
-        "amount": 5.0625,
+        "amount": 4.409999999999999,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12929,12 +12929,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 5.0625,
+        "loc": 4.409999999999999,
         "minimum": 7.5,
         "maximum": 10.5
     },
     "465-2050-glider base cost per kg": {
-        "amount": 3.796875,
+        "amount": 3.086999999999999,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12959,7 +12959,7 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 3.796875,
+        "loc": 3.086999999999999,
         "minimum": 7.5,
         "maximum": 10.5
     },
