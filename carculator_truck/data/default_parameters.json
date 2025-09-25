@@ -8728,7 +8728,7 @@
         "maximum": 100
     },
     "321-2030-energy battery cost per kWh, LFP": {
-        "amount": 67.82524957987687,
+        "amount": 62.99999999999999,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -8753,7 +8753,7 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 67.82524957987687,
+        "loc": 62.99999999999999,
         "minimum": 60,
         "maximum": 80
     },
@@ -8848,7 +8848,7 @@
         "maximum": 150
     },
     "325-2030-energy battery cost per kWh, Li-O2": {
-        "amount": 100.86824933980651,
+        "amount": 91,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -8873,7 +8873,7 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 100.86824933980651,
+        "loc": 91,
         "minimum": 90,
         "maximum": 130
     },
@@ -8968,7 +8968,7 @@
         "maximum": 130
     },
     "329-2030-energy battery cost per kWh, Li-S": {
-        "amount": 84.34674945984167,
+        "amount": 77,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -8993,7 +8993,7 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 84.34674945984167,
+        "loc": 77,
         "minimum": 70,
         "maximum": 110
     },
@@ -9088,7 +9088,7 @@
         "maximum": 180
     },
     "333-2030-energy battery cost per kWh, LTO": {
-        "amount": 133.91124909973615,
+        "amount": 118.99999999999999,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -9113,7 +9113,7 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 133.91124909973615,
+        "loc": 118.99999999999999,
         "minimum": 140,
         "maximum": 160
     },
@@ -9208,7 +9208,7 @@
         "maximum": 115
     },
     "337-2030-energy battery cost per kWh, NCA": {
-        "amount": 80.21637448985048,
+        "amount": 73.5,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -9233,7 +9233,7 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 80.21637448985048,
+        "loc": 73.5,
         "minimum": 75,
         "maximum": 95
     },
@@ -9328,7 +9328,7 @@
         "maximum": 140
     },
     "341-2030-energy battery cost per kWh, NMC-111": {
-        "amount": 100.86824933980651,
+        "amount": 91,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -9353,7 +9353,7 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 100.86824933980651,
+        "loc": 91,
         "minimum": 100,
         "maximum": 120
     },
@@ -9448,7 +9448,7 @@
         "maximum": 135
     },
     "345-2030-energy battery cost per kWh, NMC-523": {
-        "amount": 96.7378743698153,
+        "amount": 87.5,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -9473,7 +9473,7 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 96.7378743698153,
+        "loc": 87.5,
         "minimum": 95,
         "maximum": 115
     },
@@ -9568,7 +9568,7 @@
         "maximum": 130
     },
     "349-2030-energy battery cost per kWh, NMC-622": {
-        "amount": 92.60749939982409,
+        "amount": 84,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -9593,7 +9593,7 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 92.60749939982409,
+        "loc": 84,
         "minimum": 90,
         "maximum": 110
     },
@@ -9688,7 +9688,7 @@
         "maximum": 120
     },
     "353-2030-energy battery cost per kWh, NMC-811": {
-        "amount": 84.34674945984167,
+        "amount": 77,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -9713,7 +9713,7 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 84.34674945984167,
+        "loc": 77,
         "minimum": 80,
         "maximum": 100
     },
@@ -9808,7 +9808,7 @@
         "maximum": 110
     },
     "357-2030-energy battery cost per kWh, NMC-955": {
-        "amount": 76.08599951985927,
+        "amount": 70,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -9833,7 +9833,7 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 76.08599951985927,
+        "loc": 70,
         "minimum": 70,
         "maximum": 90
     },
@@ -9928,7 +9928,7 @@
         "maximum": 120
     },
     "361-2030-energy battery cost per kWh, SiB": {
-        "amount": 76.08599951985927,
+        "amount": 70,
         "category": "Costs",
         "powertrain": [
             "BEV",
@@ -9953,7 +9953,7 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 76.08599951985927,
+        "loc": 70,
         "minimum": 60,
         "maximum": 100
     },
@@ -12172,7 +12172,7 @@
         "maximum": 7
     },
     "439-2030-glider base cost per kg": {
-        "amount": 5.4,
+        "amount": 4.5,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12197,12 +12197,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 5.4,
+        "loc": 4.5,
         "minimum": 5,
         "maximum": 7
     },
     "440-2040-glider base cost per kg": {
-        "amount": 4.86,
+        "amount": 3.375,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12227,12 +12227,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 4.86,
+        "loc": 3.375,
         "minimum": 5,
         "maximum": 7
     },
     "441-2050-glider base cost per kg": {
-        "amount": 4.3740000000000006,
+        "amount": 2.53125,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12257,7 +12257,7 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 4.3740000000000006,
+        "loc": 2.53125,
         "minimum": 5,
         "maximum": 7
     },
@@ -12349,7 +12349,7 @@
         "maximum": 16.099999999999998
     },
     "445-2030-glider base cost per kg": {
-        "amount": 12.42,
+        "amount": 10.35,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12373,12 +12373,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 12.42,
+        "loc": 10.35,
         "minimum": 11.5,
         "maximum": 16.099999999999998
     },
     "446-2040-glider base cost per kg": {
-        "amount": 11.177999999999999,
+        "amount": 7.762499999999999,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12402,12 +12402,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 11.177999999999999,
+        "loc": 7.762499999999999,
         "minimum": 11.5,
         "maximum": 16.099999999999998
     },
     "447-2050-glider base cost per kg": {
-        "amount": 10.0602,
+        "amount": 5.8218749999999995,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12431,7 +12431,7 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 10.0602,
+        "loc": 5.8218749999999995,
         "minimum": 11.5,
         "maximum": 16.099999999999998
     },
@@ -12523,7 +12523,7 @@
         "maximum": 14
     },
     "451-2030-glider base cost per kg": {
-        "amount": 10.8,
+        "amount": 9,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12547,12 +12547,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 10.8,
+        "loc": 9,
         "minimum": 10,
         "maximum": 14
     },
     "452-2040-glider base cost per kg": {
-        "amount": 9.72,
+        "amount": 6.75,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12576,12 +12576,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 9.72,
+        "loc": 6.75,
         "minimum": 10,
         "maximum": 14
     },
     "453-2050-glider base cost per kg": {
-        "amount": 8.748000000000001,
+        "amount": 5.0625,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12605,7 +12605,7 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 8.748000000000001,
+        "loc": 5.0625,
         "minimum": 10,
         "maximum": 14
     },
@@ -12697,7 +12697,7 @@
         "maximum": 8.4
     },
     "457-2030-glider base cost per kg": {
-        "amount": 6.48,
+        "amount": 5.3999999999999995,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12721,12 +12721,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 6.48,
+        "loc": 5.3999999999999995,
         "minimum": 6,
         "maximum": 8.4
     },
     "458-2040-glider base cost per kg": {
-        "amount": 5.832,
+        "amount": 4.05,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12750,12 +12750,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 5.832,
+        "loc": 4.05,
         "minimum": 6,
         "maximum": 8.4
     },
     "459-2050-glider base cost per kg": {
-        "amount": 5.2488,
+        "amount": 3.0375,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12779,7 +12779,7 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 5.2488,
+        "loc": 3.0375,
         "minimum": 6,
         "maximum": 8.4
     },
@@ -12874,7 +12874,7 @@
         "maximum": 10.5
     },
     "463-2030-glider base cost per kg": {
-        "amount": 8.100000000000001,
+        "amount": 6.75,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12899,12 +12899,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 8.100000000000001,
+        "loc": 6.75,
         "minimum": 7.5,
         "maximum": 10.5
     },
     "464-2040-glider base cost per kg": {
-        "amount": 7.290000000000001,
+        "amount": 5.0625,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12929,12 +12929,12 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 7.290000000000001,
+        "loc": 5.0625,
         "minimum": 7.5,
         "maximum": 10.5
     },
     "465-2050-glider base cost per kg": {
-        "amount": 6.561000000000001,
+        "amount": 3.796875,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -12959,7 +12959,7 @@
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 6.561000000000001,
+        "loc": 3.796875,
         "minimum": 7.5,
         "maximum": 10.5
     },
@@ -13069,7 +13069,7 @@
         "maximum": 43
     },
     "469-2030-glider lightweighting cost per kg": {
-        "amount": 30,
+        "amount": 25,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -13099,12 +13099,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 30,
-        "minimum": 24,
-        "maximum": 36
+        "loc": 25,
+        "minimum": 20,
+        "maximum": 30
     },
     "470-2040-glider lightweighting cost per kg": {
-        "amount": 25,
+        "amount": 20,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -13134,12 +13134,12 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 25,
-        "minimum": 20,
-        "maximum": 30
+        "loc": 20,
+        "minimum": 16,
+        "maximum": 24
     },
     "471-2050-glider lightweighting cost per kg": {
-        "amount": 20,
+        "amount": 15,
         "category": "Costs",
         "powertrain": [
             "PHEV-c-d",
@@ -13169,9 +13169,9 @@
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
-        "loc": 20,
-        "minimum": 16,
-        "maximum": 24
+        "loc": 15,
+        "minimum": 12,
+        "maximum": 18
     },
     "472-2000-heat pump cost": {
         "amount": 300,
