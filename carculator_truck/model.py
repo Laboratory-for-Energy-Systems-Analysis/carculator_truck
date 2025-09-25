@@ -788,6 +788,7 @@ class TruckModel(VehicleModel):
         self["energy battery cost"] = (
             self["energy battery cost per kWh"] * self["electric energy stored"]
         )
+
         self["fuel tank cost"] = self["fuel tank cost per kg"] * self["fuel mass"]
 
         # Per vkm
