@@ -364,3 +364,51 @@ The inventories will link to the ecoinvent database.
     i.add_unlinked_flows_to_biosphere_database()
 
     i.write_database()
+
+Cost overrides
+--------------
+
+Truck costs accept a mixture of calculated defaults and custom values. For
+purchase, maintenance, insurance, toll, and CO2 tax costs, nonzero entries in the
+input array are preserved independently for each size, powertrain, year, and
+sample. Zero array entries retain the legacy meaning of "calculate a default".
+
+Use the explicit ``cost_overrides`` argument when zero is an intentional value,
+or to give a fixed cost precedence over existing array values:
+
+.. code-block:: python
+
+    from carculator_truck import (
+        TruckInputParameters,
+        TruckModel,
+        fill_xarray_from_input_parameters,
+    )
+
+    inputs = TruckInputParameters()
+    inputs.static()
+    _, array = fill_xarray_from_input_parameters(
+        inputs,
+        scope={"size": ["40t"], "powertrain": ["BEV"], "year": [2020]},
+    )
+    model = TruckModel(
+        array,
+        cycle="Long haul",
+        cost_overrides={
+            "purchase cost": {("BEV", "40t", 2020): 180000},
+            "toll cost": {("BEV", "40t", 2020): 0},
+        },
+    )
+    model.set_all()
+
+Supported parameter names are ``purchase cost``, ``maintenance cost``,
+``insurance cost``, ``toll cost``, and ``CO2 tax cost``. Purchase cost is in
+EUR per vehicle; the other four costs are in EUR per vehicle-kilometre. Keys
+are ``(powertrain, size, year)`` tuples referring to coordinates in the model.
+Values must be finite, nonnegative numeric scalars and apply to every sample
+at those coordinates. For sample-specific nonzero costs, use the input array.
+The constructor copies the override dictionary so later caller edits do not
+change the model.
+
+Insurance uses discounted property and liability premiums over the vehicle
+lifetime in years. Zero and near-zero interest rates use stable financial
+limits. Annual depreciation must be finite and between zero and one, inclusive.

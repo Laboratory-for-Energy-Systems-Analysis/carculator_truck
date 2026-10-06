@@ -1,5 +1,7 @@
 import warnings
+from copy import deepcopy
 from itertools import product
+from numbers import Integral, Real
 
 import numexpr as ne
 import numpy as np
@@ -43,6 +45,69 @@ class TruckModel(VehicleModel):
     :vartype ecm: coarse.energy_consumption.EnergyConsumptionModel
 
     """
+
+    def __init__(self, array, *args, cost_overrides=None, **kwargs):
+        """Initialize a truck model with optional explicit cost overrides.
+
+        :param cost_overrides: Cost parameter names mapped to dictionaries of
+            (powertrain, size, year): amount. Purchase cost is per vehicle;
+            maintenance, insurance, toll and CO2 tax costs are per vehicle-km.
+            Explicit zero overrides are retained. Without an explicit override,
+            zero array entries continue to request calculated defaults.
+        """
+        super().__init__(array, *args, **kwargs)
+        self.cost_overrides = deepcopy({} if cost_overrides is None else cost_overrides)
+        allowed = {
+            "purchase cost",
+            "maintenance cost",
+            "insurance cost",
+            "toll cost",
+            "CO2 tax cost",
+        }
+        if not isinstance(self.cost_overrides, dict):
+            raise ValueError("cost_overrides must be a dictionary.")
+        for parameter, overrides in self.cost_overrides.items():
+            if parameter not in allowed:
+                raise ValueError(f"Unsupported cost override {parameter!r}.")
+            if not isinstance(overrides, dict):
+                raise ValueError(f"Cost override {parameter!r} must be a dictionary.")
+            for key, amount in overrides.items():
+                if (
+                    not isinstance(key, tuple)
+                    or len(key) != 3
+                    or not all(isinstance(label, str) for label in key[:2])
+                    or isinstance(key[2], (bool, np.bool_))
+                    or not isinstance(key[2], Integral)
+                ):
+                    raise ValueError(
+                        f"Cost override {parameter!r}: expected "
+                        "(powertrain, size, year) keys."
+                    )
+                for dimension, label in zip(("powertrain", "size", "year"), key):
+                    if label not in self.array.get_index(dimension):
+                        raise ValueError(
+                            f"Cost override {parameter!r}: unknown {dimension} {label!r}."
+                        )
+                if (
+                    isinstance(amount, (bool, np.bool_))
+                    or not isinstance(amount, Real)
+                    or not np.isfinite(amount)
+                    or amount < 0
+                ):
+                    raise ValueError(
+                        f"Cost override {parameter!r} at {key!r} "
+                        "must be finite and nonnegative."
+                    )
+
+    def _set_cost_with_default(self, parameter, default):
+        """Fill legacy zero cells while preserving explicit overrides."""
+        self[parameter] = self[parameter].where(self[parameter] != 0, default)
+        for (powertrain, size, year), amount in self.cost_overrides.get(
+            parameter, {}
+        ).items():
+            self.array.loc[
+                dict(parameter=parameter, powertrain=powertrain, size=size, year=year)
+            ] = amount
 
     def set_all(self, electric_utility_factor: float = None):
         """
@@ -864,8 +929,9 @@ class TruckModel(VehicleModel):
         ]
 
         # we leave the possibility to override the purchase cost
-        if self["purchase cost"].all() == 0:
-            self["purchase cost"] = self[purchase_cost_list].sum(axis=2)
+        self._set_cost_with_default(
+            "purchase cost", self[purchase_cost_list].sum(dim="parameter")
+        )
 
         # per vkm
         self["amortised purchase cost"] = (
@@ -879,9 +945,9 @@ class TruckModel(VehicleModel):
             * self["fuel mass"]
         ) / self["target range"]
 
-        if self["maintenance cost"].all() == 0:
-            self["maintenance cost"] = self["maintenance cost per km"]
-            self["maintenance cost"] += self["adblue cost"]
+        self._set_cost_with_default(
+            "maintenance cost", self["maintenance cost per km"] + self["adblue cost"]
+        )
 
         # --- Insurance (property + liability + optional cargo) with depreciation and discounting ---
 
@@ -892,6 +958,10 @@ class TruckModel(VehicleModel):
 
         P_ins = self["insured share of purchase cost"] * self["purchase cost"]
         d = self["depreciation rate per year"]  # e.g., 0.18
+        if not np.isfinite(d).all() or ((d < 0) | (d > 1)).any():
+            raise ValueError(
+                "depreciation rate per year must be finite and within [0, 1]."
+            )
         r_prop = self["property insurance rate"]  # per € per year
         r_liab = self["liability insurance rate per km"]  # €/km
 
@@ -905,41 +975,32 @@ class TruckModel(VehicleModel):
 
         # Property: PV of r_prop * P_ins * (1 - d)^(t-1) / (1 + i)^(t-1), t=1..n
         # Geometric series with ratio q = (1 - d) / (1 + i)
-        q = ne.evaluate("(1 - d) / (1 + i)")
-        # Guard against q ~ 1 numerical issues (very small d and i): use series limit
-        eps = 1e-12
-        use_series = np.abs(ne.evaluate("1 - q")) < eps
-        geom_sum = np.where(
-            use_series,
-            ne.evaluate("n"),  # limit as q->1
-            ne.evaluate("(1 - q ** n) / (1 - q)"),
-        )
-        prem_prop_pv = ne.evaluate("r_prop * P_ins * geom_sum")
+        q = (1 - d) / (1 + i)
+        use_series = np.abs(1 - q) < 1e-12
+        # Both branches of where are evaluated. Make the unused denominator and
+        # logarithm safe, including the fully depreciated (q == 0) case.
+        safe_q = q.where(q > 0, 1)
+        geom_sum = -np.expm1(n * np.log(safe_q)) / (1 - q).where(~use_series, 1)
+        geom_sum = xr.where(use_series, n, xr.where(q == 0, 1, geom_sum))
+        prem_prop_pv = r_prop * P_ins * geom_sum
 
         # Liability: PV of r_liab * km_y each year for n years, discounted at i
-        prem_liab_pv = xr.where(
-            i == 0,
-            self["liability insurance rate per km"] * km_y * n,
-            self["liability insurance rate per km"] * km_y * (1 - (1 + i) ** (-n)) / i,
-        )
+        prem_liab_pv = r_liab * km_y / amortisation_factor
         # Combine, apply loadings & IPT
         prem_total_pv = (prem_prop_pv + prem_liab_pv) * loading * ipt
 
         # Annualize to €/year, then convert to €/vkm
 
-        if self["insurance cost"].all() == 0:
-            self["insurance cost"] = ne.evaluate(
-                "(prem_total_pv * amortisation_factor) / km_y"
-            )
+        self._set_cost_with_default(
+            "insurance cost", prem_total_pv * amortisation_factor / km_y
+        )
 
         # --- Other costs ---
-        if self["toll cost"].all() == 0:
-            self["toll cost"] = (
-                self["road toll cost per km"] * self["share tolled roads"]
-            )  # per vkm
+        self._set_cost_with_default(
+            "toll cost", self["road toll cost per km"] * self["share tolled roads"]
+        )
 
-        if self["CO2 tax cost"].all() == 0:
-            self["CO2 tax cost"] = self["CO2 road charge per km"]  # per vkm
+        self._set_cost_with_default("CO2 tax cost", self["CO2 road charge per km"])
 
         # simple assumption that component replacement occurs at half of life.
         km_per_year = self["kilometers per year"]
