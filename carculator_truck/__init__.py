@@ -18,10 +18,10 @@ __all__ = (
 )
 
 
-# library version
-__version__ = (0, 5, 0, "dev0")
-
 from pathlib import Path
+
+# library version
+from ._version import __version__
 
 DATA_DIR = Path(__file__).resolve().parent / "data"
 

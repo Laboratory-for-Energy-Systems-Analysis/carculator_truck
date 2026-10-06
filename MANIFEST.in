@@ -1,0 +1,7 @@
+include LICENSE README.md pyproject.toml
+recursive-include carculator_truck/data *.json *.yaml *.yml *.csv *.npz *.xlsx
+recursive-include tests *.py *.json *.xlsx
+recursive-include scripts *.py
+prune dev
+prune examples
+global-exclude .DS_Store *.pyc

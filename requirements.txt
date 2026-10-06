@@ -1,2 +1,2 @@
-carculator-utils
-prettytable
+# Runtime dependencies are declared in pyproject.toml.
+.
