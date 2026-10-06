@@ -27,6 +27,8 @@ Environ Sci Technol 2021. [https://doi.org/10.1021/acs.est.0c07773](https://doi.
 
 ## How to install?
 
+Python **3.12** is required (`>=3.12,<3.13`).
+
 For the latest version, using conda::
 
     conda install -c romainsacchi carculator_truck
