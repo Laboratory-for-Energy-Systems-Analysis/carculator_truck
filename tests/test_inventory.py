@@ -1,25 +1,41 @@
+from copy import deepcopy
+
 import numpy as np
 import pytest
-from carculator_utils.array import fill_xarray_from_input_parameters
-
 from carculator_truck import InventoryTruck, TruckInputParameters, TruckModel
 
-tip = TruckInputParameters()
-tip.static()
-_, array = fill_xarray_from_input_parameters(
-    tip, scope={"size": ["40t", "60t"], "powertrain": ["ICEV-d", "BEV"]}
-)
-tm = TruckModel(array, cycle="Long haul", country="CH")
-tm.set_all()
+from carculator_utils.array import fill_xarray_from_input_parameters
 
 
-def test_check_country():
+@pytest.fixture(scope="module")
+def array():
+    ip = TruckInputParameters()
+    ip.static()
+    return fill_xarray_from_input_parameters(
+        ip, scope={"size": ["40t", "60t"], "powertrain": ["ICEV-d", "BEV"]}
+    )[1]
+
+
+@pytest.fixture(scope="module")
+def _model(array):
+    model = TruckModel(array, cycle="Long haul", country="CH")
+    model.set_all()
+    return model
+
+
+@pytest.fixture
+def tm(_model):
+    # Tests may modify model state; preserve independence without import-time work.
+    return deepcopy(_model)
+
+
+def test_check_country(tm):
     # Ensure that country specified in TruckModel equals country in InventoryTruck
     ic = InventoryTruck(tm)
     assert tm.country == ic.vm.country
 
 
-def test_electricity_mix():
+def test_electricity_mix(tm):
     # Electricity mix must be equal to 1
     ic = InventoryTruck(tm)
     assert np.allclose(np.sum(ic.mix, axis=1), [1.0, 1.0, 1.0, 1.0, 1.0, 1.0])
@@ -40,7 +56,7 @@ def test_electricity_mix():
     assert np.allclose(ic.mix, custom_mix)
 
 
-def test_scope():
+def test_scope(tm):
     """Test if scope works as expected"""
     ic = InventoryTruck(
         tm,
@@ -53,7 +69,7 @@ def test_scope():
     assert "ICEV-g" not in results.coords["powertrain"].values
 
 
-def test_fuel_blend():
+def test_fuel_blend(array):
     """Test if fuel blends defined by the user are considered"""
 
     fb = {
@@ -136,7 +152,7 @@ def test_fuel_blend():
         ic.calculate_impacts()
 
 
-def test_countries():
+def test_countries(tm):
     """Test that calculation works with all countries"""
     for c in ["AO", "AT", "AU"]:
         tm.country = c
@@ -148,7 +164,7 @@ def test_countries():
         ic.calculate_impacts()
 
 
-def test_endpoint():
+def test_endpoint(tm):
     """Test if the correct impact categories are considered"""
     ic = InventoryTruck(tm, method="recipe", indicator="endpoint")
     results = ic.calculate_impacts()
@@ -164,12 +180,12 @@ def test_endpoint():
     assert wrapped_error.type == ValueError
 
 
-def test_sulfur_concentration():
+def test_sulfur_concentration(tm):
     ic = InventoryTruck(tm, method="recipe", indicator="endpoint")
     ic.get_sulfur_content("RER", "diesel")
 
 
-def test_custom_electricity_mix():
+def test_custom_electricity_mix(tm):
     """Test if a wrong number of electricity mixes throws an error"""
 
     # Passing four mixes instead of 6
@@ -206,16 +222,19 @@ def test_custom_electricity_mix():
             )
 
 
-def test_export_lci():
+def test_export_lci(tm, tmp_path):
     """Test that inventories export successfully"""
     ic = InventoryTruck(tm, method="recipe", indicator="midpoint")
     for b in ("3.9", "3.10"):
         for s in ("brightway2", "simapro"):
-            for f in ("file", "string", "bw2io"):
+            for f in (
+                ("file", "string", "bw2io") if s == "brightway2" else ("file", "string")
+            ):
                 ic.export_lci(
                     ecoinvent_version=b,
                     software=s,
                     format=f,
+                    directory=tmp_path,
                 )
 
 

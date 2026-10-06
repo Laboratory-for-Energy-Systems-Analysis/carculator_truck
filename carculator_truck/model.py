@@ -5,12 +5,13 @@ import numexpr as ne
 import numpy as np
 import xarray as xr
 import yaml
+from prettytable import PrettyTable
+
 from carculator_utils.energy_consumption import (
     EnergyConsumptionModel,
     get_default_driving_cycle_name,
 )
 from carculator_utils.model import VehicleModel
-from prettytable import PrettyTable
 
 from . import DATA_DIR
 
@@ -60,8 +61,6 @@ class TruckModel(VehicleModel):
         :return: Does not return anything. Modifies ``self.array`` in place.
         """
 
-        diff = 1.0
-
         self["is_compliant"] = True
         self["is_available"] = True
 
@@ -80,8 +79,14 @@ class TruckModel(VehicleModel):
 
         self.override_range()
 
-        while abs(diff) > 0.01:
-            old_payload = self["available payload"].sum().values
+        # The availability policy below excludes electrified trucks before 2020.
+        # PHEV intermediates inherit the same policy as their final powertrain.
+        sizing_available = (self.array.year >= 2020) | ~self.array.powertrain.isin(
+            ["BEV", "FCEV", "PHEV-d", "HEV-d", "PHEV-e", "PHEV-c-d"]
+        )
+        for _ in self.iterate_sizing(
+            "available payload", rtol=0.01, mask=sizing_available
+        ):
 
             if self.target_mass:
                 self.override_vehicle_mass()
@@ -107,10 +112,6 @@ class TruckModel(VehicleModel):
             self.set_power_battery_properties()
 
             self.set_vehicle_masses()
-
-            diff = (self["available payload"].sum().values - old_payload) / self[
-                "available payload"
-            ].sum()
 
         self["cargo mass"] = np.clip(self["cargo mass"], 0, self["available payload"])
 

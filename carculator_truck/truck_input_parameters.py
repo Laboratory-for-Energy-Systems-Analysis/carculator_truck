@@ -29,4 +29,4 @@ class TruckInputParameters(VehicleInputParameters):
         extra: Union[str, Path, list] = None,
     ) -> None:
         """Create a `klausen <https://github.com/cmutel/klausen>`__ model with the car input parameters."""
-        super().__init__(None)
+        super().__init__(parameters=parameters, extra=extra)

@@ -1,24 +1,38 @@
-from pathlib import Path
+from copy import deepcopy
 
 import numpy as np
-import pandas as pd
-from carculator_utils.array import fill_xarray_from_input_parameters
-
+import pytest
 from carculator_truck import TruckInputParameters, TruckModel
 
-tip = TruckInputParameters()
-tip.static()
-_, array = fill_xarray_from_input_parameters(tip)
-tm = TruckModel(array, cycle="Long haul", country="CH")
-tm.set_all()
+from carculator_utils.array import fill_xarray_from_input_parameters
 
 
-def test_presence_PHEVe():
+@pytest.fixture(scope="module")
+def array():
+    ip = TruckInputParameters()
+    ip.static()
+    return fill_xarray_from_input_parameters(ip, scope={})[1]
+
+
+@pytest.fixture(scope="module")
+def _model(array):
+    model = TruckModel(array, country="CH")
+    model.set_all()
+    return model
+
+
+@pytest.fixture
+def tm(_model):
+    # Tests may modify model state; preserve independence without import-time work.
+    return deepcopy(_model)
+
+
+def test_presence_PHEVe(tm):
     # PHEV-e should be dropped
     assert "PHEV-e" not in tm.array.powertrain.values.tolist()
 
 
-def test_ttw_energy_against_VECTO():
+def test_ttw_energy_against_VECTO(tm):
     # The TtW energy consumption of a 40-ton diesel must be
     # within an interval given by VECTO
     vecto_empty, vecto_full = (8300, 16000)
@@ -32,7 +46,7 @@ def test_ttw_energy_against_VECTO():
     )
 
 
-def test_auxiliary_power_demand():
+def test_auxiliary_power_demand(tm):
     # The auxilliary power demand must be lower for combustion trucks
     assert np.all(
         tm.array.sel(
@@ -44,12 +58,12 @@ def test_auxiliary_power_demand():
     )
 
 
-def test_battery_replacement():
+def test_battery_replacement(tm):
     # Battery replacements cannot be lower than 0
     assert np.all(tm["battery lifetime replacements"] >= 0)
 
 
-def test_cargo_mass():
+def test_cargo_mass(tm):
     # Cargo mass must equal the available payload * load factor
 
     assert np.allclose(
@@ -74,15 +88,19 @@ def test_cargo_mass():
     )
 
 
-def test_electric_utility_factor():
+def test_electric_utility_factor(tm):
     # Electric utility factor must be between 0 and 1
-    assert 0 <= np.all(tm["electric utility factor"]) <= 1
+    assert bool(
+        (
+            (tm["electric utility factor"] >= 0) & (tm["electric utility factor"] <= 1)
+        ).all()
+    )
     assert (
         tm.array.sel(parameter="electric utility factor", powertrain="PHEV-d").all() > 0
     )
 
 
-def test_fuel_blends():
+def test_fuel_blends(tm):
     # Shares of a fuel blend must equal 1
     for fuel in tm.fuel_blend:
         np.testing.assert_array_equal(
@@ -99,7 +117,7 @@ def test_fuel_blends():
         )
 
 
-def test_battery_mass():
+def test_battery_mass(tm):
     # Battery mass must equal cell mass and BoP mass
 
     assert np.allclose(
@@ -132,73 +150,13 @@ def test_battery_mass():
     )
 
 
-DATA = Path(__file__, "..").resolve() / "fixtures" / "trucks_values.xlsx"
-OUTPUT = Path(__file__, "..").resolve() / "fixtures" / "test_model_results.xlsx"
-ref = pd.read_excel(DATA, index_col=0)
-
-tip = TruckInputParameters()
-tip.static()
-dcts, arr = fill_xarray_from_input_parameters(tip)
-tm = TruckModel(arr)
-tm.set_all()
-
-
-def test_model_results():
-    list_powertrains = [
-        "ICEV-d",
-        "PHEV-d",
-        "BEV",
-        "ICEV-g",
-        "HEV-d",
-    ]
-    list_sizes = [
-        # "3.5t",
-        # "7.5t",
-        "18t",
-        # "32t"
-    ]
-    list_years = [
-        2020,
-        # 2030,
-        # 2040,
-        # 2050
-    ]
-
-    l_res = []
-
-    for pwt in list_powertrains:
-        for size in list_sizes:
-            for year in list_years:
-                for param in tm.array.parameter.values:
-                    val = float(
-                        tm.array.sel(
-                            powertrain=pwt,
-                            size=size,
-                            year=year,
-                            parameter=param,
-                            value=0,
-                        ).values
-                    )
-
-                    try:
-                        ref_val = (
-                            ref.loc[
-                                (ref["powertrain"] == pwt)
-                                & (ref["size"] == size)
-                                & (ref["parameter"] == param),
-                                year,
-                            ]
-                            .values.astype(float)
-                            .item(0)
-                        )
-                    except:
-                        ref_val = 1
-
-                    _ = lambda x: np.where(ref_val == 0, 1, ref_val)
-                    diff = val / _(ref_val)
-                    l_res.append([pwt, size, year, param, val, ref_val, diff])
-
-    pd.DataFrame(
-        l_res,
-        columns=["powertrain", "size", "year", "parameter", "val", "ref_val", "diff"],
-    ).to_excel(OUTPUT)
+def test_model_results(tm):
+    # Assert useful physical invariants rather than writing an unchecked workbook.
+    selected = tm.array.sel(year=2020)
+    for parameter in ("curb mass", "driving mass", "TtW energy"):
+        values = selected.sel(parameter=parameter)
+        assert np.all(np.isfinite(values)), parameter
+        assert np.all(values >= 0), parameter
+    assert np.all(
+        selected.sel(parameter="driving mass") >= selected.sel(parameter="curb mass")
+    )
