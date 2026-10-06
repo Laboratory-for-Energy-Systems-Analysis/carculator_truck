@@ -12,6 +12,7 @@ from carculator_utils.energy_consumption import (
     get_default_driving_cycle_name,
 )
 from carculator_utils.model import VehicleModel
+from carculator_utils.numerical import capital_recovery_factor
 
 from . import DATA_DIR
 
@@ -26,7 +27,7 @@ def finite(array, mask_value=0):
 
 def _crf(i, n):
     # Capital Recovery Factor with i==0 → 1/n
-    return xr.where(i == 0, 1.0 / n, i * (1 + i) ** n / ((1 + i) ** n - 1))
+    return capital_recovery_factor(i, n)
 
 
 class TruckModel(VehicleModel):
@@ -712,10 +713,12 @@ class TruckModel(VehicleModel):
         All inputs can be scalars or DataArrays aligned/broadcastable to your model dims.
         """
 
-        # Capital recovery factor (handle i==0 gracefully)
-        i = infra_wacc
-        N = charger_life_years
-        CRF = xr.where(i == 0, 1.0 / N, i * (1 + i) ** N / ((1 + i) ** N - 1))
+        # Non-charging vehicles have zero charger lifetime in the parameter
+        # grid. Validate financial inputs only for actual charging infrastructure.
+        has_charger = charger_power_kw > 0
+        i = xr.where(has_charger, infra_wacc, 0.0)
+        N = xr.where(has_charger, charger_life_years, 1.0)
+        CRF = _crf(i, N)
 
         # Upfront per charger (€/kW * kW)
         upfront_per_charger = charger_power_kw * (
