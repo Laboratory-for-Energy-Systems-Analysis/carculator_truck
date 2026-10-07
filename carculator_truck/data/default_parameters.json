@@ -23829,18 +23829,12 @@
         "minimum": 0.75,
         "maximum": 0.85
     },
-    "862-2000-battery discharge efficiency": {
+    "temporal-remainder-862-2000-battery discharge efficiency-0": {
         "amount": 0.88,
         "category": "Energy Storage",
         "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
             "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
+            "ICEV-g"
         ],
         "sizes": [
             "3.5t",
@@ -23864,18 +23858,12 @@
         "minimum": 0.85,
         "maximum": 0.92
     },
-    "863-2010-battery discharge efficiency": {
+    "temporal-remainder-863-2010-battery discharge efficiency-0": {
         "amount": 0.88,
         "category": "Energy Storage",
         "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
             "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
+            "ICEV-g"
         ],
         "sizes": [
             "3.5t",
@@ -23899,18 +23887,12 @@
         "minimum": 0.85,
         "maximum": 0.92
     },
-    "864-2020-battery discharge efficiency": {
+    "temporal-remainder-864-2020-battery discharge efficiency-0": {
         "amount": 0.88,
         "category": "Energy Storage",
         "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
             "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
+            "ICEV-g"
         ],
         "sizes": [
             "3.5t",
@@ -23934,18 +23916,12 @@
         "minimum": 0.85,
         "maximum": 0.92
     },
-    "865-2030-battery discharge efficiency": {
+    "temporal-remainder-865-2030-battery discharge efficiency-0": {
         "amount": 0.88,
         "category": "Energy Storage",
         "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
             "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
+            "ICEV-g"
         ],
         "sizes": [
             "3.5t",
@@ -23969,18 +23945,12 @@
         "minimum": 0.85,
         "maximum": 0.92
     },
-    "866-2040-battery discharge efficiency": {
+    "temporal-remainder-866-2040-battery discharge efficiency-0": {
         "amount": 0.8931999999999999,
         "category": "Energy Storage",
         "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
             "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
+            "ICEV-g"
         ],
         "sizes": [
             "3.5t",
@@ -24004,18 +23974,12 @@
         "minimum": 0.85,
         "maximum": 0.9476000000000001
     },
-    "867-2050-battery discharge efficiency": {
+    "temporal-remainder-867-2050-battery discharge efficiency-0": {
         "amount": 0.8931999999999999,
         "category": "Energy Storage",
         "powertrain": [
-            "PHEV-c-d",
-            "PHEV-e",
             "ICEV-d",
-            "ICEV-g",
-            "BEV",
-            "FCEV",
-            "HEV-d",
-            "PHEV-d"
+            "ICEV-g"
         ],
         "sizes": [
             "3.5t",
@@ -24038,186 +24002,6 @@
         "loc": 0.8931999999999999,
         "minimum": 0.85,
         "maximum": 0.9476000000000001
-    },
-    "868-2000-battery charge efficiency": {
-        "amount": 0.85,
-        "category": "Energy Storage",
-        "powertrain": [
-            "BEV",
-            "PHEV-e",
-            "FCEV"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2000,
-        "name": "battery charge efficiency",
-        "unit": "unitless",
-        "importance": "Moderate",
-        "source": "Cox et al. 2020",
-        "comment": "Same as for passenger vehicles.",
-        "status": "Acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 0.85,
-        "minimum": 0.8,
-        "maximum": 0.9
-    },
-    "869-2010-battery charge efficiency": {
-        "amount": 0.85,
-        "category": "Energy Storage",
-        "powertrain": [
-            "BEV",
-            "PHEV-e",
-            "FCEV"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2010,
-        "name": "battery charge efficiency",
-        "unit": "unitless",
-        "importance": "Moderate",
-        "source": "Cox et al. 2020",
-        "comment": "Same as for passenger vehicles.",
-        "status": "Acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 0.85,
-        "minimum": 0.8,
-        "maximum": 0.9
-    },
-    "870-2020-battery charge efficiency": {
-        "amount": 0.85,
-        "category": "Energy Storage",
-        "powertrain": [
-            "BEV",
-            "PHEV-e",
-            "FCEV"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2020,
-        "name": "battery charge efficiency",
-        "unit": "unitless",
-        "importance": "Moderate",
-        "source": "Cox et al. 2020",
-        "comment": "Same as for passenger vehicles.",
-        "status": "Acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 0.85,
-        "minimum": 0.8,
-        "maximum": 0.9
-    },
-    "871-2030-battery charge efficiency": {
-        "amount": 0.85,
-        "category": "Energy Storage",
-        "powertrain": [
-            "BEV",
-            "PHEV-e",
-            "FCEV"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2030,
-        "name": "battery charge efficiency",
-        "unit": "unitless",
-        "importance": "Moderate",
-        "source": "Cox et al. 2020",
-        "comment": "Same as for passenger vehicles.",
-        "status": "Acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 0.85,
-        "minimum": 0.8,
-        "maximum": 0.9
-    },
-    "872-2040-battery charge efficiency": {
-        "amount": 0.8627499999999999,
-        "category": "Energy Storage",
-        "powertrain": [
-            "BEV",
-            "PHEV-e",
-            "FCEV"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2040,
-        "name": "battery charge efficiency",
-        "unit": "unitless",
-        "importance": "Moderate",
-        "source": "Cox et al. 2020",
-        "comment": "Same as for passenger vehicles.",
-        "status": "Acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 0.8627499999999999,
-        "minimum": 0.8,
-        "maximum": 0.927
-    },
-    "873-2050-battery charge efficiency": {
-        "amount": 0.8627499999999999,
-        "category": "Energy Storage",
-        "powertrain": [
-            "BEV",
-            "PHEV-e",
-            "FCEV"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2050,
-        "name": "battery charge efficiency",
-        "unit": "unitless",
-        "importance": "Moderate",
-        "source": "Cox et al. 2020",
-        "comment": "Same as for passenger vehicles.",
-        "status": "Acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 0.8627499999999999,
-        "minimum": 0.8,
-        "maximum": 0.927
     },
     "874-2000-battery cell production energy electricity share": {
         "amount": 0.5,
@@ -50723,14 +50507,12 @@
         "minimum": 25.65,
         "maximum": 38
     },
-    "1846-2000-battery charge efficiency": {
+    "temporal-remainder-1846-2000-battery charge efficiency-0": {
         "amount": 1,
         "category": "Energy Storage",
         "powertrain": [
             "ICEV-d",
-            "HEV-d",
-            "ICEV-g",
-            "PHEV-c-d"
+            "ICEV-g"
         ],
         "sizes": [
             "3.5t",
@@ -50752,14 +50534,12 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "1847-2010-battery charge efficiency": {
+    "temporal-remainder-1847-2010-battery charge efficiency-0": {
         "amount": 1,
         "category": "Energy Storage",
         "powertrain": [
             "ICEV-d",
-            "HEV-d",
-            "ICEV-g",
-            "PHEV-c-d"
+            "ICEV-g"
         ],
         "sizes": [
             "3.5t",
@@ -50781,14 +50561,12 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "1848-2020-battery charge efficiency": {
+    "temporal-remainder-1848-2020-battery charge efficiency-0": {
         "amount": 1,
         "category": "Energy Storage",
         "powertrain": [
             "ICEV-d",
-            "HEV-d",
-            "ICEV-g",
-            "PHEV-c-d"
+            "ICEV-g"
         ],
         "sizes": [
             "3.5t",
@@ -50810,14 +50588,12 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "1849-2030-battery charge efficiency": {
+    "temporal-remainder-1849-2030-battery charge efficiency-0": {
         "amount": 1,
         "category": "Energy Storage",
         "powertrain": [
             "ICEV-d",
-            "HEV-d",
-            "ICEV-g",
-            "PHEV-c-d"
+            "ICEV-g"
         ],
         "sizes": [
             "3.5t",
@@ -50839,14 +50615,12 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "1850-2040-battery charge efficiency": {
+    "temporal-remainder-1850-2040-battery charge efficiency-0": {
         "amount": 1,
         "category": "Energy Storage",
         "powertrain": [
             "ICEV-d",
-            "HEV-d",
-            "ICEV-g",
-            "PHEV-c-d"
+            "ICEV-g"
         ],
         "sizes": [
             "3.5t",
@@ -50868,14 +50642,12 @@
         "uncertainty_type": 1,
         "loc": 1
     },
-    "1851-2050-battery charge efficiency": {
+    "temporal-remainder-1851-2050-battery charge efficiency-0": {
         "amount": 1,
         "category": "Energy Storage",
         "powertrain": [
             "ICEV-d",
-            "HEV-d",
-            "ICEV-g",
-            "PHEV-c-d"
+            "ICEV-g"
         ],
         "sizes": [
             "3.5t",
@@ -50892,168 +50664,6 @@
         "importance": "Moderate",
         "source": "Cox et al. 2020",
         "comment": "Same as for passenger vehicles.",
-        "status": "Acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 1
-    },
-    "1852-2000-charger efficiency": {
-        "amount": 1,
-        "category": "Energy Storage",
-        "powertrain": [
-            "BEV",
-            "PHEV-e"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2000,
-        "name": "charger efficiency",
-        "unit": "unitless",
-        "importance": "Limited",
-        "source": "",
-        "comment": "Not used.",
-        "status": "Acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 1
-    },
-    "1853-2010-charger efficiency": {
-        "amount": 1,
-        "category": "Energy Storage",
-        "powertrain": [
-            "BEV",
-            "PHEV-e"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2010,
-        "name": "charger efficiency",
-        "unit": "unitless",
-        "importance": "Limited",
-        "source": "",
-        "comment": "Not used.",
-        "status": "Acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 1
-    },
-    "1854-2020-charger efficiency": {
-        "amount": 1,
-        "category": "Energy Storage",
-        "powertrain": [
-            "BEV",
-            "PHEV-e"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2020,
-        "name": "charger efficiency",
-        "unit": "unitless",
-        "importance": "Limited",
-        "source": "",
-        "comment": "Not used.",
-        "status": "Acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 1
-    },
-    "1855-2030-charger efficiency": {
-        "amount": 1,
-        "category": "Energy Storage",
-        "powertrain": [
-            "BEV",
-            "PHEV-e"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2030,
-        "name": "charger efficiency",
-        "unit": "unitless",
-        "importance": "Limited",
-        "source": "",
-        "comment": "Not used.",
-        "status": "Acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 1
-    },
-    "1856-2040-charger efficiency": {
-        "amount": 1,
-        "category": "Energy Storage",
-        "powertrain": [
-            "BEV",
-            "PHEV-e"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2040,
-        "name": "charger efficiency",
-        "unit": "unitless",
-        "importance": "Limited",
-        "source": "",
-        "comment": "Not used.",
-        "status": "Acceptable",
-        "kind": "distribution",
-        "uncertainty_type": 1,
-        "loc": 1
-    },
-    "1857-2050-charger efficiency": {
-        "amount": 1,
-        "category": "Energy Storage",
-        "powertrain": [
-            "BEV",
-            "PHEV-e"
-        ],
-        "sizes": [
-            "3.5t",
-            "7.5t",
-            "18t",
-            "26t",
-            "32t",
-            "40t",
-            "60t"
-        ],
-        "year": 2050,
-        "name": "charger efficiency",
-        "unit": "unitless",
-        "importance": "Limited",
-        "source": "",
-        "comment": "Not used.",
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 1,
@@ -77949,5 +77559,1205 @@
         "kind": "distribution",
         "uncertainty_type": 1,
         "loc": 0.9848857801796105
+    },
+    "temporal-0000-2000-battery charge efficiency": {
+        "amount": 0.9848857801796105,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Symmetric one-way storage efficiency sqrt(0.97), following FASTSim's battery round-trip prior. Excludes charger and motor/inverter. Transfer to other vehicles is an engineering assumption, not independent validation. Temporal extension: relative legacy loss trend rebased on 2025 component prior. See temporal_energy_provenance.json.",
+        "importance": "Moderate",
+        "kind": "distribution",
+        "loc": 0.9848857801796105,
+        "name": "battery charge efficiency",
+        "source": "https://github.com/NatLabRockies/fastsim/blob/63808be8d09cb191047b536a2b9b7f883dbbd0c3/python/fastsim/resources/vehdb/2022_Tesla_Model_3_RWD.csv",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2000,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0001-2010-battery charge efficiency": {
+        "amount": 0.9848857801796105,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Symmetric one-way storage efficiency sqrt(0.97), following FASTSim's battery round-trip prior. Excludes charger and motor/inverter. Transfer to other vehicles is an engineering assumption, not independent validation. Temporal extension: relative legacy loss trend rebased on 2025 component prior. See temporal_energy_provenance.json.",
+        "importance": "Moderate",
+        "kind": "distribution",
+        "loc": 0.9848857801796105,
+        "name": "battery charge efficiency",
+        "source": "https://github.com/NatLabRockies/fastsim/blob/63808be8d09cb191047b536a2b9b7f883dbbd0c3/python/fastsim/resources/vehdb/2022_Tesla_Model_3_RWD.csv",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2010,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0002-2020-battery charge efficiency": {
+        "amount": 0.9848857801796105,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Symmetric one-way storage efficiency sqrt(0.97), following FASTSim's battery round-trip prior. Excludes charger and motor/inverter. Transfer to other vehicles is an engineering assumption, not independent validation. Temporal extension: relative legacy loss trend rebased on 2025 component prior. See temporal_energy_provenance.json.",
+        "importance": "Moderate",
+        "kind": "distribution",
+        "loc": 0.9848857801796105,
+        "name": "battery charge efficiency",
+        "source": "https://github.com/NatLabRockies/fastsim/blob/63808be8d09cb191047b536a2b9b7f883dbbd0c3/python/fastsim/resources/vehdb/2022_Tesla_Model_3_RWD.csv",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2020,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0003-2030-battery charge efficiency": {
+        "amount": 0.9848857801796105,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Symmetric one-way storage efficiency sqrt(0.97), following FASTSim's battery round-trip prior. Excludes charger and motor/inverter. Transfer to other vehicles is an engineering assumption, not independent validation. Temporal extension: relative legacy loss trend rebased on 2025 component prior. See temporal_energy_provenance.json.",
+        "importance": "Moderate",
+        "kind": "distribution",
+        "loc": 0.9848857801796105,
+        "name": "battery charge efficiency",
+        "source": "https://github.com/NatLabRockies/fastsim/blob/63808be8d09cb191047b536a2b9b7f883dbbd0c3/python/fastsim/resources/vehdb/2022_Tesla_Model_3_RWD.csv",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2030,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0004-2040-battery charge efficiency": {
+        "amount": 0.9861704888643436,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Symmetric one-way storage efficiency sqrt(0.97), following FASTSim's battery round-trip prior. Excludes charger and motor/inverter. Transfer to other vehicles is an engineering assumption, not independent validation. Temporal extension: relative legacy loss trend rebased on 2025 component prior. See temporal_energy_provenance.json.",
+        "importance": "Moderate",
+        "kind": "distribution",
+        "loc": 0.9861704888643436,
+        "name": "battery charge efficiency",
+        "source": "https://github.com/NatLabRockies/fastsim/blob/63808be8d09cb191047b536a2b9b7f883dbbd0c3/python/fastsim/resources/vehdb/2022_Tesla_Model_3_RWD.csv",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2040,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0005-2050-battery charge efficiency": {
+        "amount": 0.9861704888643436,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Symmetric one-way storage efficiency sqrt(0.97), following FASTSim's battery round-trip prior. Excludes charger and motor/inverter. Transfer to other vehicles is an engineering assumption, not independent validation. Temporal extension: relative legacy loss trend rebased on 2025 component prior. See temporal_energy_provenance.json.",
+        "importance": "Moderate",
+        "kind": "distribution",
+        "loc": 0.9861704888643436,
+        "name": "battery charge efficiency",
+        "source": "https://github.com/NatLabRockies/fastsim/blob/63808be8d09cb191047b536a2b9b7f883dbbd0c3/python/fastsim/resources/vehdb/2022_Tesla_Model_3_RWD.csv",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2050,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0006-2000-charger efficiency": {
+        "amount": 0.9,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Charger conversion excludes internal battery losses. Temporal extension: constant prior; missing, zero or ideal legacy efficiency. See temporal_energy_provenance.json.",
+        "importance": "Limited",
+        "kind": "distribution",
+        "loc": 0.9,
+        "name": "charger efficiency",
+        "source": "Engineering assumption; AC input to battery-terminal DC, not fitted",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2000,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0007-2010-charger efficiency": {
+        "amount": 0.9,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Charger conversion excludes internal battery losses. Temporal extension: constant prior; missing, zero or ideal legacy efficiency. See temporal_energy_provenance.json.",
+        "importance": "Limited",
+        "kind": "distribution",
+        "loc": 0.9,
+        "name": "charger efficiency",
+        "source": "Engineering assumption; AC input to battery-terminal DC, not fitted",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2010,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0008-2020-charger efficiency": {
+        "amount": 0.9,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Charger conversion excludes internal battery losses. Temporal extension: constant prior; missing, zero or ideal legacy efficiency. See temporal_energy_provenance.json.",
+        "importance": "Limited",
+        "kind": "distribution",
+        "loc": 0.9,
+        "name": "charger efficiency",
+        "source": "Engineering assumption; AC input to battery-terminal DC, not fitted",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2020,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0009-2030-charger efficiency": {
+        "amount": 0.9,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Charger conversion excludes internal battery losses. Temporal extension: constant prior; missing, zero or ideal legacy efficiency. See temporal_energy_provenance.json.",
+        "importance": "Limited",
+        "kind": "distribution",
+        "loc": 0.9,
+        "name": "charger efficiency",
+        "source": "Engineering assumption; AC input to battery-terminal DC, not fitted",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2030,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0010-2040-charger efficiency": {
+        "amount": 0.9,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Charger conversion excludes internal battery losses. Temporal extension: constant prior; missing, zero or ideal legacy efficiency. See temporal_energy_provenance.json.",
+        "importance": "Limited",
+        "kind": "distribution",
+        "loc": 0.9,
+        "name": "charger efficiency",
+        "source": "Engineering assumption; AC input to battery-terminal DC, not fitted",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2040,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0011-2050-charger efficiency": {
+        "amount": 0.9,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Charger conversion excludes internal battery losses. Temporal extension: constant prior; missing, zero or ideal legacy efficiency. See temporal_energy_provenance.json.",
+        "importance": "Limited",
+        "kind": "distribution",
+        "loc": 0.9,
+        "name": "charger efficiency",
+        "source": "Engineering assumption; AC input to battery-terminal DC, not fitted",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2050,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0012-2000-electric motor efficiency": {
+        "amount": 0.9,
+        "category": "Efficiency",
+        "comment": "Cycle-average motor/inverter efficiency used for electric traction, regenerative storage and subsequent electric propulsion in hybrids. Excludes battery and transmission losses. Aggregate consumption does not identify this component uniquely; retained as an explicit, adjustable assumption. Temporal extension: constant 2025 component or architecture prior. See temporal_energy_provenance.json.",
+        "kind": "distribution",
+        "loc": 0.9,
+        "name": "electric motor efficiency",
+        "source": "Engineering assumption; not measurement-fitted",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2000,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "ICEV-d",
+            "ICEV-g",
+            "PHEV-c-d",
+            "PHEV-d",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0013-2010-electric motor efficiency": {
+        "amount": 0.9,
+        "category": "Efficiency",
+        "comment": "Cycle-average motor/inverter efficiency used for electric traction, regenerative storage and subsequent electric propulsion in hybrids. Excludes battery and transmission losses. Aggregate consumption does not identify this component uniquely; retained as an explicit, adjustable assumption. Temporal extension: constant 2025 component or architecture prior. See temporal_energy_provenance.json.",
+        "kind": "distribution",
+        "loc": 0.9,
+        "name": "electric motor efficiency",
+        "source": "Engineering assumption; not measurement-fitted",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2010,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "ICEV-d",
+            "ICEV-g",
+            "PHEV-c-d",
+            "PHEV-d",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0014-2020-electric motor efficiency": {
+        "amount": 0.9,
+        "category": "Efficiency",
+        "comment": "Cycle-average motor/inverter efficiency used for electric traction, regenerative storage and subsequent electric propulsion in hybrids. Excludes battery and transmission losses. Aggregate consumption does not identify this component uniquely; retained as an explicit, adjustable assumption. Temporal extension: constant 2025 component or architecture prior. See temporal_energy_provenance.json.",
+        "kind": "distribution",
+        "loc": 0.9,
+        "name": "electric motor efficiency",
+        "source": "Engineering assumption; not measurement-fitted",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2020,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "ICEV-d",
+            "ICEV-g",
+            "PHEV-c-d",
+            "PHEV-d",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0015-2030-electric motor efficiency": {
+        "amount": 0.9,
+        "category": "Efficiency",
+        "comment": "Cycle-average motor/inverter efficiency used for electric traction, regenerative storage and subsequent electric propulsion in hybrids. Excludes battery and transmission losses. Aggregate consumption does not identify this component uniquely; retained as an explicit, adjustable assumption. Temporal extension: constant 2025 component or architecture prior. See temporal_energy_provenance.json.",
+        "kind": "distribution",
+        "loc": 0.9,
+        "name": "electric motor efficiency",
+        "source": "Engineering assumption; not measurement-fitted",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2030,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "ICEV-d",
+            "ICEV-g",
+            "PHEV-c-d",
+            "PHEV-d",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0016-2040-electric motor efficiency": {
+        "amount": 0.9,
+        "category": "Efficiency",
+        "comment": "Cycle-average motor/inverter efficiency used for electric traction, regenerative storage and subsequent electric propulsion in hybrids. Excludes battery and transmission losses. Aggregate consumption does not identify this component uniquely; retained as an explicit, adjustable assumption. Temporal extension: constant 2025 component or architecture prior. See temporal_energy_provenance.json.",
+        "kind": "distribution",
+        "loc": 0.9,
+        "name": "electric motor efficiency",
+        "source": "Engineering assumption; not measurement-fitted",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2040,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "ICEV-d",
+            "ICEV-g",
+            "PHEV-c-d",
+            "PHEV-d",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0017-2050-electric motor efficiency": {
+        "amount": 0.9,
+        "category": "Efficiency",
+        "comment": "Cycle-average motor/inverter efficiency used for electric traction, regenerative storage and subsequent electric propulsion in hybrids. Excludes battery and transmission losses. Aggregate consumption does not identify this component uniquely; retained as an explicit, adjustable assumption. Temporal extension: constant 2025 component or architecture prior. See temporal_energy_provenance.json.",
+        "kind": "distribution",
+        "loc": 0.9,
+        "name": "electric motor efficiency",
+        "source": "Engineering assumption; not measurement-fitted",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2050,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "ICEV-d",
+            "ICEV-g",
+            "PHEV-c-d",
+            "PHEV-d",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0018-2000-electric motor power share": {
+        "amount": 0.65,
+        "category": "Power",
+        "comment": "Unfitted motor peak/system power ratio. Hybrid component peaks need not sum to system power; replace with published vehicle-specific ratios where available. Temporal extension: constant 2025 component or architecture prior. See temporal_energy_provenance.json.",
+        "kind": "distribution",
+        "loc": 0.65,
+        "name": "electric motor power share",
+        "source": "Engineering assumption; not measurement-fitted",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2000,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "HEV-d",
+            "PHEV-c-d"
+        ]
+    },
+    "temporal-0019-2010-electric motor power share": {
+        "amount": 0.65,
+        "category": "Power",
+        "comment": "Unfitted motor peak/system power ratio. Hybrid component peaks need not sum to system power; replace with published vehicle-specific ratios where available. Temporal extension: constant 2025 component or architecture prior. See temporal_energy_provenance.json.",
+        "kind": "distribution",
+        "loc": 0.65,
+        "name": "electric motor power share",
+        "source": "Engineering assumption; not measurement-fitted",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2010,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "HEV-d",
+            "PHEV-c-d"
+        ]
+    },
+    "temporal-0020-2020-electric motor power share": {
+        "amount": 0.65,
+        "category": "Power",
+        "comment": "Unfitted motor peak/system power ratio. Hybrid component peaks need not sum to system power; replace with published vehicle-specific ratios where available. Temporal extension: constant 2025 component or architecture prior. See temporal_energy_provenance.json.",
+        "kind": "distribution",
+        "loc": 0.65,
+        "name": "electric motor power share",
+        "source": "Engineering assumption; not measurement-fitted",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2020,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "HEV-d",
+            "PHEV-c-d"
+        ]
+    },
+    "temporal-0021-2030-electric motor power share": {
+        "amount": 0.65,
+        "category": "Power",
+        "comment": "Unfitted motor peak/system power ratio. Hybrid component peaks need not sum to system power; replace with published vehicle-specific ratios where available. Temporal extension: constant 2025 component or architecture prior. See temporal_energy_provenance.json.",
+        "kind": "distribution",
+        "loc": 0.65,
+        "name": "electric motor power share",
+        "source": "Engineering assumption; not measurement-fitted",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2030,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "HEV-d",
+            "PHEV-c-d"
+        ]
+    },
+    "temporal-0022-2040-electric motor power share": {
+        "amount": 0.65,
+        "category": "Power",
+        "comment": "Unfitted motor peak/system power ratio. Hybrid component peaks need not sum to system power; replace with published vehicle-specific ratios where available. Temporal extension: constant 2025 component or architecture prior. See temporal_energy_provenance.json.",
+        "kind": "distribution",
+        "loc": 0.65,
+        "name": "electric motor power share",
+        "source": "Engineering assumption; not measurement-fitted",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2040,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "HEV-d",
+            "PHEV-c-d"
+        ]
+    },
+    "temporal-0023-2050-electric motor power share": {
+        "amount": 0.65,
+        "category": "Power",
+        "comment": "Unfitted motor peak/system power ratio. Hybrid component peaks need not sum to system power; replace with published vehicle-specific ratios where available. Temporal extension: constant 2025 component or architecture prior. See temporal_energy_provenance.json.",
+        "kind": "distribution",
+        "loc": 0.65,
+        "name": "electric motor power share",
+        "source": "Engineering assumption; not measurement-fitted",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2050,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "HEV-d",
+            "PHEV-c-d"
+        ]
+    },
+    "temporal-0024-2000-electric transmission efficiency": {
+        "amount": 0.97,
+        "category": "Efficiency",
+        "comment": "Unfitted electric drivetrain mechanical transmission efficiency; excludes motor/inverter and battery losses. Temporal extension: constant 2025 component or architecture prior. See temporal_energy_provenance.json.",
+        "kind": "distribution",
+        "loc": 0.97,
+        "name": "electric transmission efficiency",
+        "source": "Engineering assumption; not measurement-fitted",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2000,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "ICEV-d",
+            "ICEV-g",
+            "PHEV-c-d",
+            "PHEV-d",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0025-2010-electric transmission efficiency": {
+        "amount": 0.97,
+        "category": "Efficiency",
+        "comment": "Unfitted electric drivetrain mechanical transmission efficiency; excludes motor/inverter and battery losses. Temporal extension: constant 2025 component or architecture prior. See temporal_energy_provenance.json.",
+        "kind": "distribution",
+        "loc": 0.97,
+        "name": "electric transmission efficiency",
+        "source": "Engineering assumption; not measurement-fitted",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2010,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "ICEV-d",
+            "ICEV-g",
+            "PHEV-c-d",
+            "PHEV-d",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0026-2020-electric transmission efficiency": {
+        "amount": 0.97,
+        "category": "Efficiency",
+        "comment": "Unfitted electric drivetrain mechanical transmission efficiency; excludes motor/inverter and battery losses. Temporal extension: constant 2025 component or architecture prior. See temporal_energy_provenance.json.",
+        "kind": "distribution",
+        "loc": 0.97,
+        "name": "electric transmission efficiency",
+        "source": "Engineering assumption; not measurement-fitted",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2020,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "ICEV-d",
+            "ICEV-g",
+            "PHEV-c-d",
+            "PHEV-d",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0027-2030-electric transmission efficiency": {
+        "amount": 0.97,
+        "category": "Efficiency",
+        "comment": "Unfitted electric drivetrain mechanical transmission efficiency; excludes motor/inverter and battery losses. Temporal extension: constant 2025 component or architecture prior. See temporal_energy_provenance.json.",
+        "kind": "distribution",
+        "loc": 0.97,
+        "name": "electric transmission efficiency",
+        "source": "Engineering assumption; not measurement-fitted",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2030,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "ICEV-d",
+            "ICEV-g",
+            "PHEV-c-d",
+            "PHEV-d",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0028-2040-electric transmission efficiency": {
+        "amount": 0.97,
+        "category": "Efficiency",
+        "comment": "Unfitted electric drivetrain mechanical transmission efficiency; excludes motor/inverter and battery losses. Temporal extension: constant 2025 component or architecture prior. See temporal_energy_provenance.json.",
+        "kind": "distribution",
+        "loc": 0.97,
+        "name": "electric transmission efficiency",
+        "source": "Engineering assumption; not measurement-fitted",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2040,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "ICEV-d",
+            "ICEV-g",
+            "PHEV-c-d",
+            "PHEV-d",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0029-2050-electric transmission efficiency": {
+        "amount": 0.97,
+        "category": "Efficiency",
+        "comment": "Unfitted electric drivetrain mechanical transmission efficiency; excludes motor/inverter and battery losses. Temporal extension: constant 2025 component or architecture prior. See temporal_energy_provenance.json.",
+        "kind": "distribution",
+        "loc": 0.97,
+        "name": "electric transmission efficiency",
+        "source": "Engineering assumption; not measurement-fitted",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2050,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "ICEV-d",
+            "ICEV-g",
+            "PHEV-c-d",
+            "PHEV-d",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0030-2000-battery charge efficiency": {
+        "amount": 0.9848857801796105,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Symmetric one-way storage efficiency sqrt(0.97), following FASTSim's battery round-trip prior. Excludes charger and motor/inverter. Transfer to other vehicles is an engineering assumption, not independent validation. Temporal extension: constant prior; missing, zero or ideal legacy efficiency. See temporal_energy_provenance.json.",
+        "importance": "Moderate",
+        "kind": "distribution",
+        "loc": 0.9848857801796105,
+        "name": "battery charge efficiency",
+        "source": "https://github.com/NatLabRockies/fastsim/blob/63808be8d09cb191047b536a2b9b7f883dbbd0c3/python/fastsim/resources/vehdb/2022_Tesla_Model_3_RWD.csv",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2000,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "HEV-d",
+            "PHEV-c-d"
+        ]
+    },
+    "temporal-0031-2010-battery charge efficiency": {
+        "amount": 0.9848857801796105,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Symmetric one-way storage efficiency sqrt(0.97), following FASTSim's battery round-trip prior. Excludes charger and motor/inverter. Transfer to other vehicles is an engineering assumption, not independent validation. Temporal extension: constant prior; missing, zero or ideal legacy efficiency. See temporal_energy_provenance.json.",
+        "importance": "Moderate",
+        "kind": "distribution",
+        "loc": 0.9848857801796105,
+        "name": "battery charge efficiency",
+        "source": "https://github.com/NatLabRockies/fastsim/blob/63808be8d09cb191047b536a2b9b7f883dbbd0c3/python/fastsim/resources/vehdb/2022_Tesla_Model_3_RWD.csv",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2010,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "HEV-d",
+            "PHEV-c-d"
+        ]
+    },
+    "temporal-0032-2020-battery charge efficiency": {
+        "amount": 0.9848857801796105,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Symmetric one-way storage efficiency sqrt(0.97), following FASTSim's battery round-trip prior. Excludes charger and motor/inverter. Transfer to other vehicles is an engineering assumption, not independent validation. Temporal extension: constant prior; missing, zero or ideal legacy efficiency. See temporal_energy_provenance.json.",
+        "importance": "Moderate",
+        "kind": "distribution",
+        "loc": 0.9848857801796105,
+        "name": "battery charge efficiency",
+        "source": "https://github.com/NatLabRockies/fastsim/blob/63808be8d09cb191047b536a2b9b7f883dbbd0c3/python/fastsim/resources/vehdb/2022_Tesla_Model_3_RWD.csv",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2020,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "HEV-d",
+            "PHEV-c-d"
+        ]
+    },
+    "temporal-0033-2030-battery charge efficiency": {
+        "amount": 0.9848857801796105,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Symmetric one-way storage efficiency sqrt(0.97), following FASTSim's battery round-trip prior. Excludes charger and motor/inverter. Transfer to other vehicles is an engineering assumption, not independent validation. Temporal extension: constant prior; missing, zero or ideal legacy efficiency. See temporal_energy_provenance.json.",
+        "importance": "Moderate",
+        "kind": "distribution",
+        "loc": 0.9848857801796105,
+        "name": "battery charge efficiency",
+        "source": "https://github.com/NatLabRockies/fastsim/blob/63808be8d09cb191047b536a2b9b7f883dbbd0c3/python/fastsim/resources/vehdb/2022_Tesla_Model_3_RWD.csv",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2030,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "HEV-d",
+            "PHEV-c-d"
+        ]
+    },
+    "temporal-0034-2040-battery charge efficiency": {
+        "amount": 0.9848857801796105,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Symmetric one-way storage efficiency sqrt(0.97), following FASTSim's battery round-trip prior. Excludes charger and motor/inverter. Transfer to other vehicles is an engineering assumption, not independent validation. Temporal extension: constant prior; missing, zero or ideal legacy efficiency. See temporal_energy_provenance.json.",
+        "importance": "Moderate",
+        "kind": "distribution",
+        "loc": 0.9848857801796105,
+        "name": "battery charge efficiency",
+        "source": "https://github.com/NatLabRockies/fastsim/blob/63808be8d09cb191047b536a2b9b7f883dbbd0c3/python/fastsim/resources/vehdb/2022_Tesla_Model_3_RWD.csv",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2040,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "HEV-d",
+            "PHEV-c-d"
+        ]
+    },
+    "temporal-0035-2050-battery charge efficiency": {
+        "amount": 0.9848857801796105,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Symmetric one-way storage efficiency sqrt(0.97), following FASTSim's battery round-trip prior. Excludes charger and motor/inverter. Transfer to other vehicles is an engineering assumption, not independent validation. Temporal extension: constant prior; missing, zero or ideal legacy efficiency. See temporal_energy_provenance.json.",
+        "importance": "Moderate",
+        "kind": "distribution",
+        "loc": 0.9848857801796105,
+        "name": "battery charge efficiency",
+        "source": "https://github.com/NatLabRockies/fastsim/blob/63808be8d09cb191047b536a2b9b7f883dbbd0c3/python/fastsim/resources/vehdb/2022_Tesla_Model_3_RWD.csv",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2050,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "HEV-d",
+            "PHEV-c-d"
+        ]
+    },
+    "temporal-0036-2000-battery discharge efficiency": {
+        "amount": 0.9848857801796105,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Symmetric one-way storage efficiency sqrt(0.97), following FASTSim's battery round-trip prior. Excludes charger and motor/inverter. Transfer to other vehicles is an engineering assumption, not independent validation. Temporal extension: relative legacy loss trend rebased on 2025 component prior. See temporal_energy_provenance.json.",
+        "importance": "Moderate",
+        "kind": "distribution",
+        "loc": 0.9848857801796105,
+        "name": "battery discharge efficiency",
+        "source": "https://github.com/NatLabRockies/fastsim/blob/63808be8d09cb191047b536a2b9b7f883dbbd0c3/python/fastsim/resources/vehdb/2022_Tesla_Model_3_RWD.csv",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2000,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-c-d",
+            "PHEV-d",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0037-2010-battery discharge efficiency": {
+        "amount": 0.9848857801796105,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Symmetric one-way storage efficiency sqrt(0.97), following FASTSim's battery round-trip prior. Excludes charger and motor/inverter. Transfer to other vehicles is an engineering assumption, not independent validation. Temporal extension: relative legacy loss trend rebased on 2025 component prior. See temporal_energy_provenance.json.",
+        "importance": "Moderate",
+        "kind": "distribution",
+        "loc": 0.9848857801796105,
+        "name": "battery discharge efficiency",
+        "source": "https://github.com/NatLabRockies/fastsim/blob/63808be8d09cb191047b536a2b9b7f883dbbd0c3/python/fastsim/resources/vehdb/2022_Tesla_Model_3_RWD.csv",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2010,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-c-d",
+            "PHEV-d",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0038-2020-battery discharge efficiency": {
+        "amount": 0.9848857801796105,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Symmetric one-way storage efficiency sqrt(0.97), following FASTSim's battery round-trip prior. Excludes charger and motor/inverter. Transfer to other vehicles is an engineering assumption, not independent validation. Temporal extension: relative legacy loss trend rebased on 2025 component prior. See temporal_energy_provenance.json.",
+        "importance": "Moderate",
+        "kind": "distribution",
+        "loc": 0.9848857801796105,
+        "name": "battery discharge efficiency",
+        "source": "https://github.com/NatLabRockies/fastsim/blob/63808be8d09cb191047b536a2b9b7f883dbbd0c3/python/fastsim/resources/vehdb/2022_Tesla_Model_3_RWD.csv",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2020,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-c-d",
+            "PHEV-d",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0039-2030-battery discharge efficiency": {
+        "amount": 0.9848857801796105,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Symmetric one-way storage efficiency sqrt(0.97), following FASTSim's battery round-trip prior. Excludes charger and motor/inverter. Transfer to other vehicles is an engineering assumption, not independent validation. Temporal extension: relative legacy loss trend rebased on 2025 component prior. See temporal_energy_provenance.json.",
+        "importance": "Moderate",
+        "kind": "distribution",
+        "loc": 0.9848857801796105,
+        "name": "battery discharge efficiency",
+        "source": "https://github.com/NatLabRockies/fastsim/blob/63808be8d09cb191047b536a2b9b7f883dbbd0c3/python/fastsim/resources/vehdb/2022_Tesla_Model_3_RWD.csv",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2030,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-c-d",
+            "PHEV-d",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0040-2040-battery discharge efficiency": {
+        "amount": 0.9865483443598533,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Symmetric one-way storage efficiency sqrt(0.97), following FASTSim's battery round-trip prior. Excludes charger and motor/inverter. Transfer to other vehicles is an engineering assumption, not independent validation. Temporal extension: relative legacy loss trend rebased on 2025 component prior. See temporal_energy_provenance.json.",
+        "importance": "Moderate",
+        "kind": "distribution",
+        "loc": 0.9865483443598533,
+        "name": "battery discharge efficiency",
+        "source": "https://github.com/NatLabRockies/fastsim/blob/63808be8d09cb191047b536a2b9b7f883dbbd0c3/python/fastsim/resources/vehdb/2022_Tesla_Model_3_RWD.csv",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2040,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-c-d",
+            "PHEV-d",
+            "PHEV-e"
+        ]
+    },
+    "temporal-0041-2050-battery discharge efficiency": {
+        "amount": 0.9865483443598533,
+        "category": "Energy Storage",
+        "comment": "2025 component prior, not consumption-fitted. Symmetric one-way storage efficiency sqrt(0.97), following FASTSim's battery round-trip prior. Excludes charger and motor/inverter. Transfer to other vehicles is an engineering assumption, not independent validation. Temporal extension: relative legacy loss trend rebased on 2025 component prior. See temporal_energy_provenance.json.",
+        "importance": "Moderate",
+        "kind": "distribution",
+        "loc": 0.9865483443598533,
+        "name": "battery discharge efficiency",
+        "source": "https://github.com/NatLabRockies/fastsim/blob/63808be8d09cb191047b536a2b9b7f883dbbd0c3/python/fastsim/resources/vehdb/2022_Tesla_Model_3_RWD.csv",
+        "status": "Acceptable",
+        "uncertainty_type": 1,
+        "unit": "unitless",
+        "year": 2050,
+        "sizes": [
+            "18t",
+            "26t",
+            "3.5t",
+            "32t",
+            "40t",
+            "60t",
+            "7.5t"
+        ],
+        "powertrain": [
+            "BEV",
+            "FCEV",
+            "HEV-d",
+            "PHEV-c-d",
+            "PHEV-d",
+            "PHEV-e"
+        ]
     }
 }
