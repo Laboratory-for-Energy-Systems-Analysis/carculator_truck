@@ -1183,6 +1183,10 @@ class TruckModel(VehicleModel):
             (self["is_available"] == 0), 0, self["TtW energy"]
         )
 
+        self.mask_energy_outputs(
+            (self["is_available"] != 0) & (self["is_compliant"] != 0)
+        )
+
         # same for costs
         self.array.loc[dict(parameter=cost_params)] = np.where(
             (
