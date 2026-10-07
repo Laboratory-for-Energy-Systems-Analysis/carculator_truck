@@ -450,10 +450,9 @@ the efficiency of these drivetrain components.
 |s_caption| *Relation between transmission and engine efficiency on one end, and the relative power load on the other end* |e_caption|
 
 Such calibration exercise with VECTO for the diesel-powered 40t truck is
-shown below, against the “Urban delivery” driving cycle. After
-calibration, the tank-to-wheel energy consumption value obtained from
-VECTO and from ``carculator_truck`` for diesel-powered trucks differ by
-less than 1 percent over the entire driving cycle.
+shown below, against the “Urban delivery” driving cycle. The original exercise reported less than 1 percent difference over that
+cycle. This is historical simulator agreement, not an independent measured
+validation or a guarantee for the revised model and every truck configuration.
 
 .. _figure-5:
 
@@ -462,7 +461,7 @@ less than 1 percent over the entire driving cycle.
 
    Figure 5: Calibration of carculator_truck energy model against VECTO simulations for a 40t articulated truck diesel truck (first 1’500 seconds shown)
 
-Unfortunately, VECTO does not have a model for compressed gas-powered
+The original study did not use a VECTO model for compressed gas-powered
 trucks. The calibrated model for diesel-powered buses is used and a
 penalty factor of 10% is applied, based on findings from a working paper
 from the ICCT :cite:`ct-1068` showing that compressed gas-powered trucks
@@ -1052,6 +1051,14 @@ All while considering the **following constraints**:
 
 Validation
 **********
+
+.. note::
+
+   For the current 2025 calibration status, measurement boundaries, temporal
+   update and remaining evidence gaps, see :doc:`validity`. Historical figures
+   below retain their original configurations and do not constitute a new
+   validation of the revised defaults.
+
 
 Diesel trucks
 ~~~~~~~~~~~~~

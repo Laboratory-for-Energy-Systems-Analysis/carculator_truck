@@ -60,5 +60,5 @@ Inventory export
 Background systems
 ------------------
 
-.. automodule:: carculator_truck.background_systems
+.. automodule:: carculator_utils.background_systems
     :members:

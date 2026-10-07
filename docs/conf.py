@@ -75,7 +75,6 @@ html_theme_options = {
     "site_url": "https://carculator-truck.readthedocs.io",
     "repo_url": "https://github.com/romainsacchi/carculator_truck/",
     "repo_name": "romainsacchi/carculator_truck",
-    "repo_type": "github",
     "edit_uri": "blob/master/docs/",
     "globaltoc_collapse": True,
     "features": ["navigation.top", "search.share", "navigation.tracking", "toc.follow"],
