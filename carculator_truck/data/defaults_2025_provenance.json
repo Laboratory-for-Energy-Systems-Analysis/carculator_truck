@@ -1,0 +1,2844 @@
+{
+  "method": "2025 interpolated inputs with explicit component-efficiency priors; not universally measurement-calibrated",
+  "source_sha256": "204e470c44de832c9f9a68b717eaa01022c1df2cddf1dd0d7d62c8f0e3f16008",
+  "original_record_count": 2386,
+  "new_record_count": 407,
+  "records": {
+    "baseline-2025-0000-CNG engine efficiency correction factor": {
+      "endpoint_records": [
+        "1722-2020-CNG engine efficiency correction factor",
+        "1723-2030-CNG engine efficiency correction factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0001-CNG engine efficiency correction factor": {
+      "endpoint_records": [
+        "1728-2020-CNG engine efficiency correction factor",
+        "1729-2030-CNG engine efficiency correction factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0002-CNG engine efficiency correction factor": {
+      "endpoint_records": [
+        "1710-2020-CNG engine efficiency correction factor",
+        "1711-2030-CNG engine efficiency correction factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0003-CNG engine efficiency correction factor": {
+      "endpoint_records": [
+        "1734-2020-CNG engine efficiency correction factor",
+        "1735-2030-CNG engine efficiency correction factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0004-CNG engine efficiency correction factor": {
+      "endpoint_records": [
+        "1740-2020-CNG engine efficiency correction factor",
+        "1741-2030-CNG engine efficiency correction factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0005-CNG engine efficiency correction factor": {
+      "endpoint_records": [
+        "1746-2020-CNG engine efficiency correction factor",
+        "1747-2030-CNG engine efficiency correction factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0006-CNG engine efficiency correction factor": {
+      "endpoint_records": [
+        "1716-2020-CNG engine efficiency correction factor",
+        "1717-2030-CNG engine efficiency correction factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0007-CNG pump-to-tank leakage": {
+      "endpoint_records": [
+        "828-2020-CNG pump-to-tank leakage",
+        "829-2030-CNG pump-to-tank leakage"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0008-CNG tank mass intercept": {
+      "endpoint_records": [
+        "822-2020-CNG tank mass intercept",
+        "823-2030-CNG tank mass intercept"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0009-CNG tank mass slope": {
+      "endpoint_records": [
+        "816-2020-CNG tank mass slope",
+        "817-2030-CNG tank mass slope"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0010-CO2 per kg fuel": {
+      "endpoint_records": [
+        "774-2020-CO2 per kg fuel",
+        "775-2030-CO2 per kg fuel"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0011-CO2 per kg fuel": {
+      "endpoint_records": [
+        "768-2020-CO2 per kg fuel",
+        "769-2030-CO2 per kg fuel"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0012-CO2 per kg fuel": {
+      "endpoint_records": [
+        "762-2020-CO2 per kg fuel",
+        "763-2030-CO2 per kg fuel"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0013-CO2 road charge per km": {
+      "endpoint_records": [
+        "218-2020-CO2 road charge per km",
+        "219-2030-CO2 road charge per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0014-CO2 road charge per km": {
+      "endpoint_records": [
+        "176-2020-CO2 road charge per km",
+        "177-2030-CO2 road charge per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0015-CO2 road charge per km": {
+      "endpoint_records": [
+        "224-2020-CO2 road charge per km",
+        "225-2030-CO2 road charge per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0016-CO2 road charge per km": {
+      "endpoint_records": [
+        "182-2020-CO2 road charge per km",
+        "183-2030-CO2 road charge per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0017-CO2 road charge per km": {
+      "endpoint_records": [
+        "206-2020-CO2 road charge per km",
+        "207-2030-CO2 road charge per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0018-CO2 road charge per km": {
+      "endpoint_records": [
+        "164-2020-CO2 road charge per km",
+        "165-2030-CO2 road charge per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0019-CO2 road charge per km": {
+      "endpoint_records": [
+        "230-2020-CO2 road charge per km",
+        "231-2030-CO2 road charge per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0020-CO2 road charge per km": {
+      "endpoint_records": [
+        "188-2020-CO2 road charge per km",
+        "189-2030-CO2 road charge per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0021-CO2 road charge per km": {
+      "endpoint_records": [
+        "236-2020-CO2 road charge per km",
+        "237-2030-CO2 road charge per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0022-CO2 road charge per km": {
+      "endpoint_records": [
+        "194-2020-CO2 road charge per km",
+        "195-2030-CO2 road charge per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0023-CO2 road charge per km": {
+      "endpoint_records": [
+        "242-2020-CO2 road charge per km",
+        "243-2030-CO2 road charge per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0024-CO2 road charge per km": {
+      "endpoint_records": [
+        "200-2020-CO2 road charge per km",
+        "201-2030-CO2 road charge per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0025-CO2 road charge per km": {
+      "endpoint_records": [
+        "212-2020-CO2 road charge per km",
+        "213-2030-CO2 road charge per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0026-CO2 road charge per km": {
+      "endpoint_records": [
+        "170-2020-CO2 road charge per km",
+        "171-2030-CO2 road charge per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0027-LHV fuel MJ per kg": {
+      "endpoint_records": [
+        "792-2020-LHV fuel MJ per kg",
+        "793-2030-LHV fuel MJ per kg"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0028-LHV fuel MJ per kg": {
+      "endpoint_records": [
+        "780-2020-LHV fuel MJ per kg",
+        "781-2030-LHV fuel MJ per kg"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0029-LHV fuel MJ per kg": {
+      "endpoint_records": [
+        "786-2020-LHV fuel MJ per kg",
+        "787-2030-LHV fuel MJ per kg"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0030-adblue cost per kg": {
+      "endpoint_records": [
+        "146-2020-adblue cost per kg",
+        "147-2030-adblue cost per kg"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0031-adblue use per liter diesel": {
+      "endpoint_records": [
+        "2124-2020-adblue use per liter diesel",
+        "2125-2030-adblue use per liter diesel"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0032-aerodynamic drag coefficient": {
+      "endpoint_records": [
+        "1608-2020-aerodynamic drag coefficient",
+        "1609-2030-aerodynamic drag coefficient"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0033-auxilliary power base demand": {
+      "endpoint_records": [
+        "116-2020-auxilliary power base demand",
+        "117-2030-auxilliary power base demand"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0034-auxilliary power base demand": {
+      "endpoint_records": [
+        "122-2020-auxilliary power base demand",
+        "123-2030-auxilliary power base demand"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0035-auxilliary power base demand": {
+      "endpoint_records": [
+        "104-2020-auxilliary power base demand",
+        "105-2030-auxilliary power base demand"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0036-auxilliary power base demand": {
+      "endpoint_records": [
+        "128-2020-auxilliary power base demand",
+        "129-2030-auxilliary power base demand"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0037-auxilliary power base demand": {
+      "endpoint_records": [
+        "134-2020-auxilliary power base demand",
+        "135-2030-auxilliary power base demand"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0038-auxilliary power base demand": {
+      "endpoint_records": [
+        "140-2020-auxilliary power base demand",
+        "141-2030-auxilliary power base demand"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0039-auxilliary power base demand": {
+      "endpoint_records": [
+        "110-2020-auxilliary power base demand",
+        "111-2030-auxilliary power base demand"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0040-average passenger mass": {
+      "endpoint_records": [
+        "1602-2020-average passenger mass",
+        "1603-2030-average passenger mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0041-average passengers": {
+      "endpoint_records": [
+        "1596-2020-average passengers",
+        "1597-2030-average passengers"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0042-battery DoD": {
+      "endpoint_records": [
+        "858-2020-battery DoD",
+        "859-2030-battery DoD"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0043-battery cell energy density, LFP": {
+      "endpoint_records": [
+        "1968-2020-battery cell energy density, LFP",
+        "1969-2030-battery cell energy density, LFP"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0044-battery cell energy density, LTO": {
+      "endpoint_records": [
+        "1992-2020-battery cell energy density, LTO",
+        "1993-2030-battery cell energy density, LTO"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0045-battery cell energy density, Li-O2": {
+      "endpoint_records": [
+        "1974-2020-battery cell energy density, Li-O2",
+        "1975-2030-battery cell energy density, Li-O2"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0046-battery cell energy density, Li-S": {
+      "endpoint_records": [
+        "1980-2020-battery cell energy density, Li-S",
+        "1981-2030-battery cell energy density, Li-S"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0047-battery cell energy density, NCA": {
+      "endpoint_records": [
+        "1962-2020-battery cell energy density, NCA",
+        "1963-2030-battery cell energy density, NCA"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0048-battery cell energy density, NMC-111": {
+      "endpoint_records": [
+        "1932-2020-battery cell energy density, NMC-111",
+        "1933-2030-battery cell energy density, NMC-111"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0049-battery cell energy density, NMC-523": {
+      "endpoint_records": [
+        "1938-2020-battery cell energy density, NMC-523",
+        "1939-2030-battery cell energy density, NMC-523"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0050-battery cell energy density, NMC-622": {
+      "endpoint_records": [
+        "1944-2020-battery cell energy density, NMC-622",
+        "1945-2030-battery cell energy density, NMC-622"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0051-battery cell energy density, NMC-811": {
+      "endpoint_records": [
+        "1950-2020-battery cell energy density, NMC-811",
+        "1951-2030-battery cell energy density, NMC-811"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0052-battery cell energy density, NMC-955": {
+      "endpoint_records": [
+        "1956-2020-battery cell energy density, NMC-955",
+        "1957-2030-battery cell energy density, NMC-955"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0053-battery cell energy density, SiB": {
+      "endpoint_records": [
+        "1986-2020-battery cell energy density, SiB",
+        "1987-2030-battery cell energy density, SiB"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0054-battery cell mass share, LFP": {
+      "endpoint_records": [
+        "1866-2020-battery cell mass share, LFP",
+        "1867-2030-battery cell mass share, LFP"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0055-battery cell mass share, LTO": {
+      "endpoint_records": [
+        "1926-2020-battery cell mass share, LTO",
+        "1927-2030-battery cell mass share, LTO"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0056-battery cell mass share, Li-O2": {
+      "endpoint_records": [
+        "1908-2020-battery cell mass share, Li-O2",
+        "1909-2030-battery cell mass share, Li-O2"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0057-battery cell mass share, Li-S": {
+      "endpoint_records": [
+        "1914-2020-battery cell mass share, Li-S",
+        "1915-2030-battery cell mass share, Li-S"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0058-battery cell mass share, NCA": {
+      "endpoint_records": [
+        "1872-2020-battery cell mass share, NCA",
+        "1873-2030-battery cell mass share, NCA"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0059-battery cell mass share, NMC-111": {
+      "endpoint_records": [
+        "1878-2020-battery cell mass share, NMC-111",
+        "1879-2030-battery cell mass share, NMC-111"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0060-battery cell mass share, NMC-523": {
+      "endpoint_records": [
+        "1884-2020-battery cell mass share, NMC-523",
+        "1885-2030-battery cell mass share, NMC-523"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0061-battery cell mass share, NMC-622": {
+      "endpoint_records": [
+        "1890-2020-battery cell mass share, NMC-622",
+        "1891-2030-battery cell mass share, NMC-622"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0062-battery cell mass share, NMC-811": {
+      "endpoint_records": [
+        "1896-2020-battery cell mass share, NMC-811",
+        "1897-2030-battery cell mass share, NMC-811"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0063-battery cell mass share, NMC-955": {
+      "endpoint_records": [
+        "1902-2020-battery cell mass share, NMC-955",
+        "1903-2030-battery cell mass share, NMC-955"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0064-battery cell mass share, SiB": {
+      "endpoint_records": [
+        "1920-2020-battery cell mass share, SiB",
+        "1921-2030-battery cell mass share, SiB"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0065-battery cell power density": {
+      "endpoint_records": [
+        "900-2020-battery cell power density",
+        "901-2030-battery cell power density"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0066-battery cell production energy": {
+      "endpoint_records": [
+        "888-2020-battery cell production energy",
+        "889-2030-battery cell production energy"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0067-battery cell production energy": {
+      "endpoint_records": [
+        "894-2020-battery cell production energy",
+        "895-2030-battery cell production energy"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0068-battery cell production energy electricity share": {
+      "endpoint_records": [
+        "876-2020-battery cell production energy electricity share",
+        "877-2030-battery cell production energy electricity share"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0069-battery cell production energy electricity share": {
+      "endpoint_records": [
+        "882-2020-battery cell production energy electricity share",
+        "883-2030-battery cell production energy electricity share"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0070-battery charge efficiency": {
+      "method": "component-boundary prior",
+      "fitted": false,
+      "replaces": "baseline-2025-0070-battery charge efficiency",
+      "source": "https://github.com/NatLabRockies/fastsim/blob/63808be8d09cb191047b536a2b9b7f883dbbd0c3/python/fastsim/resources/vehdb/2022_Tesla_Model_3_RWD.csv"
+    },
+    "baseline-2025-0071-battery charge efficiency": {
+      "endpoint_records": [
+        "1848-2020-battery charge efficiency",
+        "1849-2030-battery charge efficiency"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0072-battery cycle life, LFP": {
+      "endpoint_records": [
+        "2034-2020-battery cycle life, LFP",
+        "2035-2030-battery cycle life, LFP"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0073-battery cycle life, LTO": {
+      "endpoint_records": [
+        "2040-2020-battery cycle life, LTO",
+        "2041-2030-battery cycle life, LTO"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0074-battery cycle life, Li-O2": {
+      "endpoint_records": [
+        "840-2020-battery cycle life, Li-O2",
+        "841-2030-battery cycle life, Li-O2"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0075-battery cycle life, Li-S": {
+      "endpoint_records": [
+        "834-2020-battery cycle life, Li-S",
+        "835-2030-battery cycle life, Li-S"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0076-battery cycle life, NCA": {
+      "endpoint_records": [
+        "846-2020-battery cycle life, NCA",
+        "847-2030-battery cycle life, NCA"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0077-battery cycle life, NMC": {
+      "endpoint_records": [
+        "852-2020-battery cycle life, NMC",
+        "853-2030-battery cycle life, NMC"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0078-battery cycle life, NMC-111": {
+      "endpoint_records": [
+        "1998-2020-battery cycle life, NMC-111",
+        "1999-2030-battery cycle life, NMC-111"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0079-battery cycle life, NMC-523": {
+      "endpoint_records": [
+        "2004-2020-battery cycle life, NMC-523",
+        "2005-2030-battery cycle life, NMC-523"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0080-battery cycle life, NMC-622": {
+      "endpoint_records": [
+        "2010-2020-battery cycle life, NMC-622",
+        "2011-2030-battery cycle life, NMC-622"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0081-battery cycle life, NMC-811": {
+      "endpoint_records": [
+        "2016-2020-battery cycle life, NMC-811",
+        "2017-2030-battery cycle life, NMC-811"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0082-battery cycle life, NMC-955": {
+      "endpoint_records": [
+        "2022-2020-battery cycle life, NMC-955",
+        "2023-2030-battery cycle life, NMC-955"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0083-battery cycle life, SiB": {
+      "endpoint_records": [
+        "2028-2020-battery cycle life, SiB",
+        "2029-2030-battery cycle life, SiB"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0084-battery discharge efficiency": {
+      "endpoint_records": [
+        "864-2020-battery discharge efficiency",
+        "865-2030-battery discharge efficiency"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0085-battery onboard charging infrastructure cost": {
+      "endpoint_records": [
+        "152-2020-battery onboard charging infrastructure cost",
+        "153-2030-battery onboard charging infrastructure cost"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0086-braking system mass": {
+      "endpoint_records": [
+        "1566-2020-braking system mass",
+        "1567-2030-braking system mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0087-braking system mass": {
+      "endpoint_records": [
+        "1572-2020-braking system mass",
+        "1573-2030-braking system mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0088-braking system mass": {
+      "endpoint_records": [
+        "1554-2020-braking system mass",
+        "1555-2030-braking system mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0089-braking system mass": {
+      "endpoint_records": [
+        "1578-2020-braking system mass",
+        "1579-2030-braking system mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0090-braking system mass": {
+      "endpoint_records": [
+        "1584-2020-braking system mass",
+        "1585-2030-braking system mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0091-braking system mass": {
+      "endpoint_records": [
+        "1590-2020-braking system mass",
+        "1591-2030-braking system mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0092-braking system mass": {
+      "endpoint_records": [
+        "1560-2020-braking system mass",
+        "1561-2030-braking system mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0093-broker loading share": {
+      "endpoint_records": [
+        "158-2020-broker loading share",
+        "159-2030-broker loading share"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0094-cabin mass": {
+      "endpoint_records": [
+        "1524-2020-cabin mass",
+        "1525-2030-cabin mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0095-cabin mass": {
+      "endpoint_records": [
+        "1530-2020-cabin mass",
+        "1531-2030-cabin mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0096-cabin mass": {
+      "endpoint_records": [
+        "1512-2020-cabin mass",
+        "1513-2030-cabin mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0097-cabin mass": {
+      "endpoint_records": [
+        "1536-2020-cabin mass",
+        "1537-2030-cabin mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0098-cabin mass": {
+      "endpoint_records": [
+        "1542-2020-cabin mass",
+        "1543-2030-cabin mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0099-cabin mass": {
+      "endpoint_records": [
+        "1548-2020-cabin mass",
+        "1549-2030-cabin mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0100-cabin mass": {
+      "endpoint_records": [
+        "1518-2020-cabin mass",
+        "1519-2030-cabin mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0101-charger efficiency": {
+      "method": "component-boundary prior",
+      "fitted": false,
+      "replaces": "baseline-2025-0101-charger efficiency",
+      "source": "Engineering assumption; AC input to battery-terminal DC, not fitted"
+    },
+    "baseline-2025-0102-charger mass": {
+      "endpoint_records": [
+        "1842-2020-charger mass",
+        "1843-2030-charger mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0103-combustion exhaust treatment cost": {
+      "endpoint_records": [
+        "258-2020-combustion exhaust treatment cost",
+        "259-2030-combustion exhaust treatment cost"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0104-combustion exhaust treatment cost": {
+      "endpoint_records": [
+        "263-2020-combustion exhaust treatment cost",
+        "264-2030-combustion exhaust treatment cost"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0105-combustion exhaust treatment cost": {
+      "endpoint_records": [
+        "248-2020-combustion exhaust treatment cost",
+        "249-2030-combustion exhaust treatment cost"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0106-combustion exhaust treatment cost": {
+      "endpoint_records": [
+        "268-2020-combustion exhaust treatment cost",
+        "269-2030-combustion exhaust treatment cost"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0107-combustion exhaust treatment cost": {
+      "endpoint_records": [
+        "273-2020-combustion exhaust treatment cost",
+        "274-2030-combustion exhaust treatment cost"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0108-combustion exhaust treatment cost": {
+      "endpoint_records": [
+        "278-2020-combustion exhaust treatment cost",
+        "279-2030-combustion exhaust treatment cost"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0109-combustion exhaust treatment cost": {
+      "endpoint_records": [
+        "253-2020-combustion exhaust treatment cost",
+        "254-2030-combustion exhaust treatment cost"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0110-combustion power share": {
+      "endpoint_records": [
+        "1836-2020-combustion power share",
+        "1837-2030-combustion power share"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0111-combustion power share": {
+      "endpoint_records": [
+        "1794-2020-combustion power share",
+        "1795-2030-combustion power share"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0112-combustion power share": {
+      "endpoint_records": [
+        "1824-2020-combustion power share",
+        "1825-2030-combustion power share"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0113-combustion power share": {
+      "endpoint_records": [
+        "1830-2020-combustion power share",
+        "1831-2030-combustion power share"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0114-combustion power share": {
+      "endpoint_records": [
+        "1800-2020-combustion power share",
+        "1801-2030-combustion power share"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0115-combustion power share": {
+      "endpoint_records": [
+        "1782-2020-combustion power share",
+        "1783-2030-combustion power share"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0116-combustion power share": {
+      "endpoint_records": [
+        "1806-2020-combustion power share",
+        "1807-2030-combustion power share"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0117-combustion power share": {
+      "endpoint_records": [
+        "1812-2020-combustion power share",
+        "1813-2030-combustion power share"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0118-combustion power share": {
+      "endpoint_records": [
+        "1818-2020-combustion power share",
+        "1819-2030-combustion power share"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0119-combustion power share": {
+      "endpoint_records": [
+        "1788-2020-combustion power share",
+        "1789-2030-combustion power share"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0120-combustion powertrain cost per kW": {
+      "endpoint_records": [
+        "284-2020-combustion powertrain cost per kW",
+        "285-2030-combustion powertrain cost per kW"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0121-combustion powertrain cost per kW": {
+      "endpoint_records": [
+        "296-2020-combustion powertrain cost per kW",
+        "297-2030-combustion powertrain cost per kW"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0122-combustion powertrain cost per kW": {
+      "endpoint_records": [
+        "290-2020-combustion powertrain cost per kW",
+        "291-2030-combustion powertrain cost per kW"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0123-converter mass": {
+      "endpoint_records": [
+        "1776-2020-converter mass",
+        "1777-2030-converter mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0124-cooling energy consumption": {
+      "endpoint_records": [
+        "98-2020-cooling energy consumption",
+        "99-2030-cooling energy consumption"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0125-cooling thermal demand": {
+      "endpoint_records": [
+        "68-2020-cooling thermal demand",
+        "69-2030-cooling thermal demand"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0126-cooling thermal demand": {
+      "endpoint_records": [
+        "74-2020-cooling thermal demand",
+        "75-2030-cooling thermal demand"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0127-cooling thermal demand": {
+      "endpoint_records": [
+        "56-2020-cooling thermal demand",
+        "57-2030-cooling thermal demand"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0128-cooling thermal demand": {
+      "endpoint_records": [
+        "80-2020-cooling thermal demand",
+        "81-2030-cooling thermal demand"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0129-cooling thermal demand": {
+      "endpoint_records": [
+        "86-2020-cooling thermal demand",
+        "87-2030-cooling thermal demand"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0130-cooling thermal demand": {
+      "endpoint_records": [
+        "92-2020-cooling thermal demand",
+        "93-2030-cooling thermal demand"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0131-cooling thermal demand": {
+      "endpoint_records": [
+        "62-2020-cooling thermal demand",
+        "63-2030-cooling thermal demand"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0132-depot charger O&M share": {
+      "endpoint_records": [
+        "2322-2020-depot charger O&M share",
+        "2323-2030-depot charger O&M share"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0133-depot charger O&M share": {
+      "endpoint_records": [
+        "2370-2020-depot charger O&M share",
+        "2371-2030-depot charger O&M share"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0134-depot charger capacity charger per kW-year": {
+      "endpoint_records": [
+        "2328-2020-depot charger capacity charger per kW-year",
+        "2329-2030-depot charger capacity charger per kW-year"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0135-depot charger capacity charger per kW-year": {
+      "endpoint_records": [
+        "2376-2020-depot charger capacity charger per kW-year",
+        "2377-2030-depot charger capacity charger per kW-year"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0136-depot charger capex per kW": {
+      "endpoint_records": [
+        "2304-2020-depot charger capex per kW",
+        "2305-2030-depot charger capex per kW"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0137-depot charger capex per kW": {
+      "endpoint_records": [
+        "2352-2020-depot charger capex per kW",
+        "2353-2030-depot charger capex per kW"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0138-depot charger connection per kW": {
+      "endpoint_records": [
+        "2316-2020-depot charger connection per kW",
+        "2317-2030-depot charger connection per kW"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0139-depot charger connection per kW": {
+      "endpoint_records": [
+        "2364-2020-depot charger connection per kW",
+        "2365-2030-depot charger connection per kW"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0140-depot charger installation per kW": {
+      "endpoint_records": [
+        "2310-2020-depot charger installation per kW",
+        "2311-2030-depot charger installation per kW"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0141-depot charger installation per kW": {
+      "endpoint_records": [
+        "2358-2020-depot charger installation per kW",
+        "2359-2030-depot charger installation per kW"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0142-depot charger lifetime": {
+      "endpoint_records": [
+        "2298-2020-depot charger lifetime",
+        "2299-2030-depot charger lifetime"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0143-depot charger lifetime": {
+      "endpoint_records": [
+        "2346-2020-depot charger lifetime",
+        "2347-2030-depot charger lifetime"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0144-depot charger power": {
+      "endpoint_records": [
+        "2286-2020-depot charger power",
+        "2287-2030-depot charger power"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0145-depot charger power": {
+      "endpoint_records": [
+        "2340-2020-depot charger power",
+        "2341-2030-depot charger power"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0146-depot charger power": {
+      "endpoint_records": [
+        "2280-2020-depot charger power",
+        "2281-2030-depot charger power"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0147-depot charger power": {
+      "endpoint_records": [
+        "2292-2020-depot charger power",
+        "2293-2030-depot charger power"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0148-depreciation rate per year": {
+      "endpoint_records": [
+        "302-2020-depreciation rate per year",
+        "303-2030-depreciation rate per year"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0149-electric energy stored": {
+      "endpoint_records": [
+        "918-2020-electric energy stored",
+        "919-2030-electric energy stored"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0150-electric energy stored": {
+      "endpoint_records": [
+        "924-2020-electric energy stored",
+        "925-2030-electric energy stored"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0151-electric energy stored": {
+      "endpoint_records": [
+        "906-2020-electric energy stored",
+        "907-2030-electric energy stored"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0152-electric energy stored": {
+      "endpoint_records": [
+        "930-2020-electric energy stored",
+        "931-2030-electric energy stored"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0153-electric energy stored": {
+      "endpoint_records": [
+        "936-2020-electric energy stored",
+        "937-2030-electric energy stored"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0154-electric energy stored": {
+      "endpoint_records": [
+        "942-2020-electric energy stored",
+        "943-2030-electric energy stored"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0155-electric energy stored": {
+      "endpoint_records": [
+        "912-2020-electric energy stored",
+        "913-2030-electric energy stored"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0156-electric powertrain cost per kW": {
+      "endpoint_records": [
+        "308-2020-electric powertrain cost per kW",
+        "309-2030-electric powertrain cost per kW"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0157-electric powertrain cost per kW": {
+      "endpoint_records": [
+        "314-2020-electric powertrain cost per kW",
+        "315-2030-electric powertrain cost per kW"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0158-electrical system mass": {
+      "endpoint_records": [
+        "1482-2020-electrical system mass",
+        "1483-2030-electrical system mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0159-electrical system mass": {
+      "endpoint_records": [
+        "1488-2020-electrical system mass",
+        "1489-2030-electrical system mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0160-electrical system mass": {
+      "endpoint_records": [
+        "1470-2020-electrical system mass",
+        "1471-2030-electrical system mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0161-electrical system mass": {
+      "endpoint_records": [
+        "1494-2020-electrical system mass",
+        "1495-2030-electrical system mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0162-electrical system mass": {
+      "endpoint_records": [
+        "1500-2020-electrical system mass",
+        "1501-2030-electrical system mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0163-electrical system mass": {
+      "endpoint_records": [
+        "1506-2020-electrical system mass",
+        "1507-2030-electrical system mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0164-electrical system mass": {
+      "endpoint_records": [
+        "1476-2020-electrical system mass",
+        "1477-2030-electrical system mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0165-emission factor": {
+      "endpoint_records": [
+        "756-2020-emission factor",
+        "757-2030-emission factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0166-emotor fixed mass": {
+      "endpoint_records": [
+        "1770-2020-emotor fixed mass",
+        "1771-2030-emotor fixed mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0167-emotor mass per power": {
+      "endpoint_records": [
+        "1764-2020-emotor mass per power",
+        "1765-2030-emotor mass per power"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0168-energy battery cost per kWh, LFP": {
+      "endpoint_records": [
+        "320-2020-energy battery cost per kWh, LFP",
+        "321-2030-energy battery cost per kWh, LFP"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0169-energy battery cost per kWh, LTO": {
+      "endpoint_records": [
+        "332-2020-energy battery cost per kWh, LTO",
+        "333-2030-energy battery cost per kWh, LTO"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0170-energy battery cost per kWh, Li-O2": {
+      "endpoint_records": [
+        "324-2020-energy battery cost per kWh, Li-O2",
+        "325-2030-energy battery cost per kWh, Li-O2"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0171-energy battery cost per kWh, Li-S": {
+      "endpoint_records": [
+        "328-2020-energy battery cost per kWh, Li-S",
+        "329-2030-energy battery cost per kWh, Li-S"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0172-energy battery cost per kWh, NCA": {
+      "endpoint_records": [
+        "336-2020-energy battery cost per kWh, NCA",
+        "337-2030-energy battery cost per kWh, NCA"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0173-energy battery cost per kWh, NMC-111": {
+      "endpoint_records": [
+        "340-2020-energy battery cost per kWh, NMC-111",
+        "341-2030-energy battery cost per kWh, NMC-111"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0174-energy battery cost per kWh, NMC-523": {
+      "endpoint_records": [
+        "344-2020-energy battery cost per kWh, NMC-523",
+        "345-2030-energy battery cost per kWh, NMC-523"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0175-energy battery cost per kWh, NMC-622": {
+      "endpoint_records": [
+        "348-2020-energy battery cost per kWh, NMC-622",
+        "349-2030-energy battery cost per kWh, NMC-622"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0176-energy battery cost per kWh, NMC-811": {
+      "endpoint_records": [
+        "352-2020-energy battery cost per kWh, NMC-811",
+        "353-2030-energy battery cost per kWh, NMC-811"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0177-energy battery cost per kWh, NMC-955": {
+      "endpoint_records": [
+        "356-2020-energy battery cost per kWh, NMC-955",
+        "357-2030-energy battery cost per kWh, NMC-955"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0178-energy battery cost per kWh, SiB": {
+      "endpoint_records": [
+        "360-2020-energy battery cost per kWh, SiB",
+        "361-2030-energy battery cost per kWh, SiB"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0179-energy cost per kWh (depot)": {
+      "endpoint_records": [
+        "366-2020-energy cost per kWh (depot)",
+        "367-2030-energy cost per kWh (depot)"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0180-energy cost per kWh (depot)": {
+      "endpoint_records": [
+        "372-2020-energy cost per kWh (depot)",
+        "373-2030-energy cost per kWh (depot)"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0181-energy cost per kWh (depot)": {
+      "endpoint_records": [
+        "378-2020-energy cost per kWh (depot)",
+        "379-2030-energy cost per kWh (depot)"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0182-energy cost per kWh (depot)": {
+      "endpoint_records": [
+        "384-2020-energy cost per kWh (depot)",
+        "385-2030-energy cost per kWh (depot)"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0183-energy cost per kWh (public)": {
+      "endpoint_records": [
+        "390-2020-energy cost per kWh (public)",
+        "391-2030-energy cost per kWh (public)"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0184-energy cost per kWh (public)": {
+      "endpoint_records": [
+        "396-2020-energy cost per kWh (public)",
+        "397-2030-energy cost per kWh (public)"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0185-energy cost per kWh (public)": {
+      "endpoint_records": [
+        "402-2020-energy cost per kWh (public)",
+        "403-2030-energy cost per kWh (public)"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0186-energy cost per kWh (public)": {
+      "endpoint_records": [
+        "408-2020-energy cost per kWh (public)",
+        "409-2030-energy cost per kWh (public)"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0187-engine efficiency": {
+      "endpoint_records": [
+        "1752-2020-engine efficiency",
+        "1753-2030-engine efficiency"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0188-engine fixed mass": {
+      "endpoint_records": [
+        "1698-2020-engine fixed mass",
+        "1699-2030-engine fixed mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0189-engine fixed mass": {
+      "endpoint_records": [
+        "1704-2020-engine fixed mass",
+        "1705-2030-engine fixed mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0190-engine mass per power": {
+      "endpoint_records": [
+        "1686-2020-engine mass per power",
+        "1687-2030-engine mass per power"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0191-engine mass per power": {
+      "endpoint_records": [
+        "1692-2020-engine mass per power",
+        "1693-2030-engine mass per power"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0192-exhaust system mass": {
+      "endpoint_records": [
+        "1440-2020-exhaust system mass",
+        "1441-2030-exhaust system mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0193-exhaust system mass": {
+      "endpoint_records": [
+        "1446-2020-exhaust system mass",
+        "1447-2030-exhaust system mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0194-exhaust system mass": {
+      "endpoint_records": [
+        "1428-2020-exhaust system mass",
+        "1429-2030-exhaust system mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0195-exhaust system mass": {
+      "endpoint_records": [
+        "1452-2020-exhaust system mass",
+        "1453-2030-exhaust system mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0196-exhaust system mass": {
+      "endpoint_records": [
+        "1458-2020-exhaust system mass",
+        "1459-2030-exhaust system mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0197-exhaust system mass": {
+      "endpoint_records": [
+        "1464-2020-exhaust system mass",
+        "1465-2030-exhaust system mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0198-exhaust system mass": {
+      "endpoint_records": [
+        "1434-2020-exhaust system mass",
+        "1435-2030-exhaust system mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0199-frontal area": {
+      "endpoint_records": [
+        "1398-2020-frontal area",
+        "1399-2030-frontal area"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0200-frontal area": {
+      "endpoint_records": [
+        "1404-2020-frontal area",
+        "1405-2030-frontal area"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0201-frontal area": {
+      "endpoint_records": [
+        "1386-2020-frontal area",
+        "1387-2030-frontal area"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0202-frontal area": {
+      "endpoint_records": [
+        "1410-2020-frontal area",
+        "1411-2030-frontal area"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0203-frontal area": {
+      "endpoint_records": [
+        "1416-2020-frontal area",
+        "1417-2030-frontal area"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0204-frontal area": {
+      "endpoint_records": [
+        "1422-2020-frontal area",
+        "1423-2030-frontal area"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0205-frontal area": {
+      "endpoint_records": [
+        "1392-2020-frontal area",
+        "1393-2030-frontal area"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0206-fuel cell ancillary BoP mass per power": {
+      "endpoint_records": [
+        "1680-2020-fuel cell ancillary BoP mass per power",
+        "1681-2030-fuel cell ancillary BoP mass per power"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0207-fuel cell cost per kW": {
+      "endpoint_records": [
+        "414-2020-fuel cell cost per kW",
+        "415-2030-fuel cell cost per kW"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0208-fuel cell essential BoP mass per power": {
+      "endpoint_records": [
+        "1674-2020-fuel cell essential BoP mass per power",
+        "1675-2030-fuel cell essential BoP mass per power"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0209-fuel cell lifetime hours": {
+      "endpoint_records": [
+        "810-2020-fuel cell lifetime hours",
+        "811-2030-fuel cell lifetime hours"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0210-fuel cell own consumption": {
+      "endpoint_records": [
+        "1668-2020-fuel cell own consumption",
+        "1669-2030-fuel cell own consumption"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0211-fuel cell power area density": {
+      "endpoint_records": [
+        "1662-2020-fuel cell power area density",
+        "1663-2030-fuel cell power area density"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0212-fuel cell power density": {
+      "endpoint_records": [
+        "1860-2020-fuel cell power density",
+        "1861-2030-fuel cell power density"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0213-fuel cell power share": {
+      "endpoint_records": [
+        "1650-2020-fuel cell power share",
+        "1651-2030-fuel cell power share"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0214-fuel cell power share": {
+      "endpoint_records": [
+        "1656-2020-fuel cell power share",
+        "1657-2030-fuel cell power share"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0215-fuel cell stack efficiency": {
+      "endpoint_records": [
+        "1644-2020-fuel cell stack efficiency",
+        "1645-2030-fuel cell stack efficiency"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0216-fuel tank cost per kg": {
+      "endpoint_records": [
+        "420-2020-fuel tank cost per kg",
+        "421-2030-fuel tank cost per kg"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0217-fuel tank cost per kg": {
+      "endpoint_records": [
+        "426-2020-fuel tank cost per kg",
+        "427-2030-fuel tank cost per kg"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0218-fuel tank cost per kg": {
+      "endpoint_records": [
+        "432-2020-fuel tank cost per kg",
+        "433-2030-fuel tank cost per kg"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0219-fuel tank mass per energy": {
+      "endpoint_records": [
+        "798-2020-fuel tank mass per energy",
+        "799-2030-fuel tank mass per energy"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0220-fuel tank mass per energy": {
+      "endpoint_records": [
+        "804-2020-fuel tank mass per energy",
+        "805-2030-fuel tank mass per energy"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0221-glider base cost per kg": {
+      "endpoint_records": [
+        "438-2020-glider base cost per kg",
+        "439-2030-glider base cost per kg"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0222-glider base cost per kg": {
+      "endpoint_records": [
+        "444-2020-glider base cost per kg",
+        "445-2030-glider base cost per kg"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0223-glider base cost per kg": {
+      "endpoint_records": [
+        "456-2020-glider base cost per kg",
+        "457-2030-glider base cost per kg"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0224-glider base cost per kg": {
+      "endpoint_records": [
+        "462-2020-glider base cost per kg",
+        "463-2030-glider base cost per kg"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0225-glider base cost per kg": {
+      "endpoint_records": [
+        "450-2020-glider base cost per kg",
+        "451-2030-glider base cost per kg"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0226-glider base mass": {
+      "endpoint_records": [
+        "1356-2020-glider base mass",
+        "1357-2030-glider base mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0227-glider base mass": {
+      "endpoint_records": [
+        "1362-2020-glider base mass",
+        "1363-2030-glider base mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0228-glider base mass": {
+      "endpoint_records": [
+        "1344-2020-glider base mass",
+        "1345-2030-glider base mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0229-glider base mass": {
+      "endpoint_records": [
+        "1368-2020-glider base mass",
+        "1369-2030-glider base mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0230-glider base mass": {
+      "endpoint_records": [
+        "1374-2020-glider base mass",
+        "1375-2030-glider base mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0231-glider base mass": {
+      "endpoint_records": [
+        "1380-2020-glider base mass",
+        "1381-2030-glider base mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0232-glider base mass": {
+      "endpoint_records": [
+        "1350-2020-glider base mass",
+        "1351-2030-glider base mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0233-glider lightweighting cost per kg": {
+      "endpoint_records": [
+        "468-2020-glider lightweighting cost per kg",
+        "469-2030-glider lightweighting cost per kg"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0234-gross mass": {
+      "endpoint_records": [
+        "1314-2020-gross mass",
+        "1315-2030-gross mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0235-gross mass": {
+      "endpoint_records": [
+        "1320-2020-gross mass",
+        "1321-2030-gross mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0236-gross mass": {
+      "endpoint_records": [
+        "1302-2020-gross mass",
+        "1303-2030-gross mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0237-gross mass": {
+      "endpoint_records": [
+        "1326-2020-gross mass",
+        "1327-2030-gross mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0238-gross mass": {
+      "endpoint_records": [
+        "1332-2020-gross mass",
+        "1333-2030-gross mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0239-gross mass": {
+      "endpoint_records": [
+        "1338-2020-gross mass",
+        "1339-2030-gross mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0240-gross mass": {
+      "endpoint_records": [
+        "1308-2020-gross mass",
+        "1309-2030-gross mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0241-heat pump cost": {
+      "endpoint_records": [
+        "474-2020-heat pump cost",
+        "475-2030-heat pump cost"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0242-heating energy consumption": {
+      "endpoint_records": [
+        "50-2020-heating energy consumption",
+        "51-2030-heating energy consumption"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0243-heating energy consumption": {
+      "endpoint_records": [
+        "44-2020-heating energy consumption",
+        "45-2030-heating energy consumption"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0244-heating thermal demand": {
+      "endpoint_records": [
+        "14-2020-heating thermal demand",
+        "15-2030-heating thermal demand"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0245-heating thermal demand": {
+      "endpoint_records": [
+        "20-2020-heating thermal demand",
+        "21-2030-heating thermal demand"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0246-heating thermal demand": {
+      "endpoint_records": [
+        "2-2020-heating thermal demand",
+        "3-2030-heating thermal demand"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0247-heating thermal demand": {
+      "endpoint_records": [
+        "26-2020-heating thermal demand",
+        "27-2030-heating thermal demand"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0248-heating thermal demand": {
+      "endpoint_records": [
+        "32-2020-heating thermal demand",
+        "33-2030-heating thermal demand"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0249-heating thermal demand": {
+      "endpoint_records": [
+        "38-2020-heating thermal demand",
+        "39-2030-heating thermal demand"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0250-heating thermal demand": {
+      "endpoint_records": [
+        "8-2020-heating thermal demand",
+        "9-2030-heating thermal demand"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0251-insurance cost share per year": {
+      "endpoint_records": [
+        "492-2020-insurance cost share per year",
+        "493-2030-insurance cost share per year"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0252-insurance cost share per year": {
+      "endpoint_records": [
+        "498-2020-insurance cost share per year",
+        "499-2030-insurance cost share per year"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0253-insurance cost share per year": {
+      "endpoint_records": [
+        "480-2020-insurance cost share per year",
+        "481-2030-insurance cost share per year"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0254-insurance cost share per year": {
+      "endpoint_records": [
+        "504-2020-insurance cost share per year",
+        "505-2030-insurance cost share per year"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0255-insurance cost share per year": {
+      "endpoint_records": [
+        "510-2020-insurance cost share per year",
+        "511-2030-insurance cost share per year"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0256-insurance cost share per year": {
+      "endpoint_records": [
+        "516-2020-insurance cost share per year",
+        "517-2030-insurance cost share per year"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0257-insurance cost share per year": {
+      "endpoint_records": [
+        "486-2020-insurance cost share per year",
+        "487-2030-insurance cost share per year"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0258-insurance premium tax": {
+      "endpoint_records": [
+        "522-2020-insurance premium tax",
+        "523-2030-insurance premium tax"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0259-insured share of purchase cost": {
+      "endpoint_records": [
+        "528-2020-insured share of purchase cost",
+        "529-2030-insured share of purchase cost"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0260-interest rate": {
+      "endpoint_records": [
+        "534-2020-interest rate",
+        "535-2030-interest rate"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0261-inverter fix mass": {
+      "endpoint_records": [
+        "1638-2020-inverter fix mass",
+        "1639-2030-inverter fix mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0262-inverter mass per power": {
+      "endpoint_records": [
+        "1632-2020-inverter mass per power",
+        "1633-2030-inverter mass per power"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0263-liability insurance rate per km": {
+      "endpoint_records": [
+        "540-2020-liability insurance rate per km",
+        "541-2030-liability insurance rate per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0264-lifetime kilometers": {
+      "endpoint_records": [
+        "726-2020-lifetime kilometers",
+        "727-2030-lifetime kilometers"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0265-lifetime kilometers": {
+      "endpoint_records": [
+        "732-2020-lifetime kilometers",
+        "733-2030-lifetime kilometers"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0266-lifetime kilometers": {
+      "endpoint_records": [
+        "714-2020-lifetime kilometers",
+        "715-2030-lifetime kilometers"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0267-lifetime kilometers": {
+      "endpoint_records": [
+        "738-2020-lifetime kilometers",
+        "739-2030-lifetime kilometers"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0268-lifetime kilometers": {
+      "endpoint_records": [
+        "744-2020-lifetime kilometers",
+        "745-2030-lifetime kilometers"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0269-lifetime kilometers": {
+      "endpoint_records": [
+        "750-2020-lifetime kilometers",
+        "751-2030-lifetime kilometers"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0270-lifetime kilometers": {
+      "endpoint_records": [
+        "720-2020-lifetime kilometers",
+        "721-2030-lifetime kilometers"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0271-lightweighting": {
+      "endpoint_records": [
+        "1290-2020-lightweighting",
+        "1291-2030-lightweighting"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0272-lightweighting": {
+      "endpoint_records": [
+        "1296-2020-lightweighting",
+        "1297-2030-lightweighting"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0273-maintenance cost per km": {
+      "endpoint_records": [
+        "558-2020-maintenance cost per km",
+        "559-2030-maintenance cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0274-maintenance cost per km": {
+      "endpoint_records": [
+        "600-2020-maintenance cost per km",
+        "601-2030-maintenance cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0275-maintenance cost per km": {
+      "endpoint_records": [
+        "642-2020-maintenance cost per km",
+        "643-2030-maintenance cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0276-maintenance cost per km": {
+      "endpoint_records": [
+        "564-2020-maintenance cost per km",
+        "565-2030-maintenance cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0277-maintenance cost per km": {
+      "endpoint_records": [
+        "606-2020-maintenance cost per km",
+        "607-2030-maintenance cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0278-maintenance cost per km": {
+      "endpoint_records": [
+        "648-2020-maintenance cost per km",
+        "649-2030-maintenance cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0279-maintenance cost per km": {
+      "endpoint_records": [
+        "546-2020-maintenance cost per km",
+        "547-2030-maintenance cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0280-maintenance cost per km": {
+      "endpoint_records": [
+        "588-2020-maintenance cost per km",
+        "589-2030-maintenance cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0281-maintenance cost per km": {
+      "endpoint_records": [
+        "630-2020-maintenance cost per km",
+        "631-2030-maintenance cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0282-maintenance cost per km": {
+      "endpoint_records": [
+        "570-2020-maintenance cost per km",
+        "571-2030-maintenance cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0283-maintenance cost per km": {
+      "endpoint_records": [
+        "612-2020-maintenance cost per km",
+        "613-2030-maintenance cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0284-maintenance cost per km": {
+      "endpoint_records": [
+        "654-2020-maintenance cost per km",
+        "655-2030-maintenance cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0285-maintenance cost per km": {
+      "endpoint_records": [
+        "576-2020-maintenance cost per km",
+        "577-2030-maintenance cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0286-maintenance cost per km": {
+      "endpoint_records": [
+        "618-2020-maintenance cost per km",
+        "619-2030-maintenance cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0287-maintenance cost per km": {
+      "endpoint_records": [
+        "660-2020-maintenance cost per km",
+        "661-2030-maintenance cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0288-maintenance cost per km": {
+      "endpoint_records": [
+        "582-2020-maintenance cost per km",
+        "583-2030-maintenance cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0289-maintenance cost per km": {
+      "endpoint_records": [
+        "624-2020-maintenance cost per km",
+        "625-2030-maintenance cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0290-maintenance cost per km": {
+      "endpoint_records": [
+        "666-2020-maintenance cost per km",
+        "667-2030-maintenance cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0291-maintenance cost per km": {
+      "endpoint_records": [
+        "552-2020-maintenance cost per km",
+        "553-2030-maintenance cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0292-maintenance cost per km": {
+      "endpoint_records": [
+        "594-2020-maintenance cost per km",
+        "595-2030-maintenance cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0293-maintenance cost per km": {
+      "endpoint_records": [
+        "636-2020-maintenance cost per km",
+        "637-2030-maintenance cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0294-markup factor": {
+      "endpoint_records": [
+        "2058-2020-markup factor",
+        "2059-2030-markup factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0295-markup factor": {
+      "endpoint_records": [
+        "2100-2020-markup factor",
+        "2101-2030-markup factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0296-markup factor": {
+      "endpoint_records": [
+        "684-2020-markup factor",
+        "685-2030-markup factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0297-markup factor": {
+      "endpoint_records": [
+        "2064-2020-markup factor",
+        "2065-2030-markup factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0298-markup factor": {
+      "endpoint_records": [
+        "2106-2020-markup factor",
+        "2107-2030-markup factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0299-markup factor": {
+      "endpoint_records": [
+        "690-2020-markup factor",
+        "691-2030-markup factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0300-markup factor": {
+      "endpoint_records": [
+        "2046-2020-markup factor",
+        "2047-2030-markup factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0301-markup factor": {
+      "endpoint_records": [
+        "2088-2020-markup factor",
+        "2089-2030-markup factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0302-markup factor": {
+      "endpoint_records": [
+        "672-2020-markup factor",
+        "673-2030-markup factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0303-markup factor": {
+      "endpoint_records": [
+        "2070-2020-markup factor",
+        "2071-2030-markup factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0304-markup factor": {
+      "endpoint_records": [
+        "2112-2020-markup factor",
+        "2113-2030-markup factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0305-markup factor": {
+      "endpoint_records": [
+        "696-2020-markup factor",
+        "697-2030-markup factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0306-markup factor": {
+      "endpoint_records": [
+        "2076-2020-markup factor",
+        "2077-2030-markup factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0307-markup factor": {
+      "endpoint_records": [
+        "2118-2020-markup factor",
+        "2119-2030-markup factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0308-markup factor": {
+      "endpoint_records": [
+        "702-2020-markup factor",
+        "703-2030-markup factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0309-markup factor": {
+      "endpoint_records": [
+        "2082-2020-markup factor",
+        "2083-2030-markup factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0310-markup factor": {
+      "endpoint_records": [
+        "2130-2020-markup factor",
+        "2131-2030-markup factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0311-markup factor": {
+      "endpoint_records": [
+        "708-2020-markup factor",
+        "709-2030-markup factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0312-markup factor": {
+      "endpoint_records": [
+        "2052-2020-markup factor",
+        "2053-2030-markup factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0313-markup factor": {
+      "endpoint_records": [
+        "2094-2020-markup factor",
+        "2095-2030-markup factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0314-markup factor": {
+      "endpoint_records": [
+        "678-2020-markup factor",
+        "679-2030-markup factor"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0315-maximum theoretical payload": {
+      "endpoint_records": [
+        "1260-2020-maximum theoretical payload",
+        "1261-2030-maximum theoretical payload"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0316-maximum theoretical payload": {
+      "endpoint_records": [
+        "1266-2020-maximum theoretical payload",
+        "1267-2030-maximum theoretical payload"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0317-maximum theoretical payload": {
+      "endpoint_records": [
+        "1248-2020-maximum theoretical payload",
+        "1249-2030-maximum theoretical payload"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0318-maximum theoretical payload": {
+      "endpoint_records": [
+        "1272-2020-maximum theoretical payload",
+        "1273-2030-maximum theoretical payload"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0319-maximum theoretical payload": {
+      "endpoint_records": [
+        "1278-2020-maximum theoretical payload",
+        "1279-2030-maximum theoretical payload"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0320-maximum theoretical payload": {
+      "endpoint_records": [
+        "1284-2020-maximum theoretical payload",
+        "1285-2030-maximum theoretical payload"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0321-maximum theoretical payload": {
+      "endpoint_records": [
+        "1254-2020-maximum theoretical payload",
+        "1255-2030-maximum theoretical payload"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0322-number of axles": {
+      "endpoint_records": [
+        "960-2020-number of axles",
+        "961-2030-number of axles"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0323-number of axles": {
+      "endpoint_records": [
+        "966-2020-number of axles",
+        "967-2030-number of axles"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0324-number of axles": {
+      "endpoint_records": [
+        "948-2020-number of axles",
+        "949-2030-number of axles"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0325-number of axles": {
+      "endpoint_records": [
+        "972-2020-number of axles",
+        "973-2030-number of axles"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0326-number of axles": {
+      "endpoint_records": [
+        "978-2020-number of axles",
+        "979-2030-number of axles"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0327-number of axles": {
+      "endpoint_records": [
+        "984-2020-number of axles",
+        "985-2030-number of axles"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0328-number of axles": {
+      "endpoint_records": [
+        "954-2020-number of axles",
+        "955-2030-number of axles"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0329-other components mass": {
+      "endpoint_records": [
+        "1218-2020-other components mass",
+        "1219-2030-other components mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0330-other components mass": {
+      "endpoint_records": [
+        "1224-2020-other components mass",
+        "1225-2030-other components mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0331-other components mass": {
+      "endpoint_records": [
+        "1206-2020-other components mass",
+        "1207-2030-other components mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0332-other components mass": {
+      "endpoint_records": [
+        "1230-2020-other components mass",
+        "1231-2030-other components mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0333-other components mass": {
+      "endpoint_records": [
+        "1236-2020-other components mass",
+        "1237-2030-other components mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0334-other components mass": {
+      "endpoint_records": [
+        "1242-2020-other components mass",
+        "1243-2030-other components mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0335-other components mass": {
+      "endpoint_records": [
+        "1212-2020-other components mass",
+        "1213-2030-other components mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0336-power battery cost per kW": {
+      "endpoint_records": [
+        "2136-2020-power battery cost per kW",
+        "2137-2030-power battery cost per kW"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0337-power distribution unit mass": {
+      "endpoint_records": [
+        "1626-2020-power distribution unit mass",
+        "1627-2030-power distribution unit mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0338-power to mass ratio": {
+      "endpoint_records": [
+        "1134-2020-power to mass ratio",
+        "1135-2030-power to mass ratio"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0339-power to mass ratio": {
+      "endpoint_records": [
+        "1176-2020-power to mass ratio",
+        "1177-2030-power to mass ratio"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0340-power to mass ratio": {
+      "endpoint_records": [
+        "1092-2020-power to mass ratio",
+        "1093-2030-power to mass ratio"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0341-power to mass ratio": {
+      "endpoint_records": [
+        "1140-2020-power to mass ratio",
+        "1141-2030-power to mass ratio"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0342-power to mass ratio": {
+      "endpoint_records": [
+        "1182-2020-power to mass ratio",
+        "1183-2030-power to mass ratio"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0343-power to mass ratio": {
+      "endpoint_records": [
+        "1098-2020-power to mass ratio",
+        "1099-2030-power to mass ratio"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0344-power to mass ratio": {
+      "endpoint_records": [
+        "1122-2020-power to mass ratio",
+        "1123-2030-power to mass ratio"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0345-power to mass ratio": {
+      "endpoint_records": [
+        "1164-2020-power to mass ratio",
+        "1165-2030-power to mass ratio"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0346-power to mass ratio": {
+      "endpoint_records": [
+        "1080-2020-power to mass ratio",
+        "1081-2030-power to mass ratio"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0347-power to mass ratio": {
+      "endpoint_records": [
+        "1146-2020-power to mass ratio",
+        "1147-2030-power to mass ratio"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0348-power to mass ratio": {
+      "endpoint_records": [
+        "1188-2020-power to mass ratio",
+        "1189-2030-power to mass ratio"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0349-power to mass ratio": {
+      "endpoint_records": [
+        "1104-2020-power to mass ratio",
+        "1105-2030-power to mass ratio"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0350-power to mass ratio": {
+      "endpoint_records": [
+        "1152-2020-power to mass ratio",
+        "1153-2030-power to mass ratio"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0351-power to mass ratio": {
+      "endpoint_records": [
+        "1194-2020-power to mass ratio",
+        "1195-2030-power to mass ratio"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0352-power to mass ratio": {
+      "endpoint_records": [
+        "1110-2020-power to mass ratio",
+        "1111-2030-power to mass ratio"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0353-power to mass ratio": {
+      "endpoint_records": [
+        "1158-2020-power to mass ratio",
+        "1159-2030-power to mass ratio"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0354-power to mass ratio": {
+      "endpoint_records": [
+        "1200-2020-power to mass ratio",
+        "1201-2030-power to mass ratio"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0355-power to mass ratio": {
+      "endpoint_records": [
+        "1116-2020-power to mass ratio",
+        "1117-2030-power to mass ratio"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0356-power to mass ratio": {
+      "endpoint_records": [
+        "1128-2020-power to mass ratio",
+        "1129-2030-power to mass ratio"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0357-power to mass ratio": {
+      "endpoint_records": [
+        "1170-2020-power to mass ratio",
+        "1171-2030-power to mass ratio"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0358-power to mass ratio": {
+      "endpoint_records": [
+        "1086-2020-power to mass ratio",
+        "1087-2030-power to mass ratio"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0359-property insurance rate": {
+      "endpoint_records": [
+        "2148-2020-property insurance rate",
+        "2149-2030-property insurance rate"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0360-property insurance rate": {
+      "endpoint_records": [
+        "2142-2020-property insurance rate",
+        "2143-2030-property insurance rate"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0361-resale fee share": {
+      "endpoint_records": [
+        "2154-2020-resale fee share",
+        "2155-2030-resale fee share"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0362-residual value share": {
+      "endpoint_records": [
+        "2160-2020-residual value share",
+        "2161-2030-residual value share"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0363-residual value share": {
+      "endpoint_records": [
+        "2166-2020-residual value share",
+        "2167-2030-residual value share"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0364-residual value share": {
+      "endpoint_records": [
+        "2172-2020-residual value share",
+        "2173-2030-residual value share"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0365-road toll cost per km": {
+      "endpoint_records": [
+        "2232-2020-road toll cost per km",
+        "2233-2030-road toll cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0366-road toll cost per km": {
+      "endpoint_records": [
+        "2190-2020-road toll cost per km",
+        "2191-2030-road toll cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0367-road toll cost per km": {
+      "endpoint_records": [
+        "2238-2020-road toll cost per km",
+        "2239-2030-road toll cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0368-road toll cost per km": {
+      "endpoint_records": [
+        "2196-2020-road toll cost per km",
+        "2197-2030-road toll cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0369-road toll cost per km": {
+      "endpoint_records": [
+        "2220-2020-road toll cost per km",
+        "2221-2030-road toll cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0370-road toll cost per km": {
+      "endpoint_records": [
+        "2178-2020-road toll cost per km",
+        "2179-2030-road toll cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0371-road toll cost per km": {
+      "endpoint_records": [
+        "2256-2020-road toll cost per km",
+        "2257-2030-road toll cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0372-road toll cost per km": {
+      "endpoint_records": [
+        "2202-2020-road toll cost per km",
+        "2203-2030-road toll cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0373-road toll cost per km": {
+      "endpoint_records": [
+        "2262-2020-road toll cost per km",
+        "2263-2030-road toll cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0374-road toll cost per km": {
+      "endpoint_records": [
+        "2208-2020-road toll cost per km",
+        "2209-2030-road toll cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0375-road toll cost per km": {
+      "endpoint_records": [
+        "2268-2020-road toll cost per km",
+        "2269-2030-road toll cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0376-road toll cost per km": {
+      "endpoint_records": [
+        "2214-2020-road toll cost per km",
+        "2215-2030-road toll cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0377-road toll cost per km": {
+      "endpoint_records": [
+        "2226-2020-road toll cost per km",
+        "2227-2030-road toll cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0378-road toll cost per km": {
+      "endpoint_records": [
+        "2184-2020-road toll cost per km",
+        "2185-2030-road toll cost per km"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0379-rolling resistance coefficient": {
+      "endpoint_records": [
+        "1074-2020-rolling resistance coefficient",
+        "1075-2030-rolling resistance coefficient"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0380-share depot charging": {
+      "endpoint_records": [
+        "2244-2020-share depot charging",
+        "2245-2030-share depot charging"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0381-share depot charging": {
+      "endpoint_records": [
+        "2250-2020-share depot charging",
+        "2251-2030-share depot charging"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0382-share tolled roads": {
+      "endpoint_records": [
+        "2274-2020-share tolled roads",
+        "2275-2030-share tolled roads"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0383-suspension mass": {
+      "endpoint_records": [
+        "1044-2020-suspension mass",
+        "1045-2030-suspension mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0384-suspension mass": {
+      "endpoint_records": [
+        "1050-2020-suspension mass",
+        "1051-2030-suspension mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0385-suspension mass": {
+      "endpoint_records": [
+        "1032-2020-suspension mass",
+        "1033-2030-suspension mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0386-suspension mass": {
+      "endpoint_records": [
+        "1056-2020-suspension mass",
+        "1057-2030-suspension mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0387-suspension mass": {
+      "endpoint_records": [
+        "1062-2020-suspension mass",
+        "1063-2030-suspension mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0388-suspension mass": {
+      "endpoint_records": [
+        "1068-2020-suspension mass",
+        "1069-2030-suspension mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0389-suspension mass": {
+      "endpoint_records": [
+        "1038-2020-suspension mass",
+        "1039-2030-suspension mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0390-transmission efficiency": {
+      "endpoint_records": [
+        "1758-2020-transmission efficiency",
+        "1759-2030-transmission efficiency"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0391-transmission mass per ton of gross weight": {
+      "endpoint_records": [
+        "1614-2020-transmission mass per ton of gross weight",
+        "1615-2030-transmission mass per ton of gross weight"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0392-transmission mass per ton of gross weight": {
+      "endpoint_records": [
+        "1620-2020-transmission mass per ton of gross weight",
+        "1621-2030-transmission mass per ton of gross weight"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0393-trucks per depot charger": {
+      "endpoint_records": [
+        "2334-2020-trucks per depot charger",
+        "2335-2030-trucks per depot charger"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0394-trucks per depot charger": {
+      "endpoint_records": [
+        "2382-2020-trucks per depot charger",
+        "2383-2030-trucks per depot charger"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0395-wheels and tires mass": {
+      "endpoint_records": [
+        "1002-2020-wheels and tires mass",
+        "1003-2030-wheels and tires mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0396-wheels and tires mass": {
+      "endpoint_records": [
+        "1008-2020-wheels and tires mass",
+        "1009-2030-wheels and tires mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0397-wheels and tires mass": {
+      "endpoint_records": [
+        "990-2020-wheels and tires mass",
+        "991-2030-wheels and tires mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0398-wheels and tires mass": {
+      "endpoint_records": [
+        "1014-2020-wheels and tires mass",
+        "1015-2030-wheels and tires mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0399-wheels and tires mass": {
+      "endpoint_records": [
+        "1020-2020-wheels and tires mass",
+        "1021-2030-wheels and tires mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0400-wheels and tires mass": {
+      "endpoint_records": [
+        "1026-2020-wheels and tires mass",
+        "1027-2030-wheels and tires mass"
+      ],
+      "missing_endpoint": false
+    },
+    "baseline-2025-0401-wheels and tires mass": {
+      "endpoint_records": [
+        "996-2020-wheels and tires mass",
+        "997-2030-wheels and tires mass"
+      ],
+      "missing_endpoint": false
+    },
+    "assumption-2025-electric-motor-efficiency": {
+      "method": "explicit engineering assumption",
+      "fitted": false
+    },
+    "assumption-2025-electric-motor-power-share": {
+      "method": "explicit engineering assumption",
+      "fitted": false
+    },
+    "assumption-2025-electric-transmission-efficiency": {
+      "method": "explicit engineering assumption",
+      "fitted": false
+    },
+    "baseline-2025-0071-battery charge efficiency-component": {
+      "method": "component-boundary prior",
+      "fitted": false,
+      "replaces": "baseline-2025-0071-battery charge efficiency",
+      "source": "https://github.com/NatLabRockies/fastsim/blob/63808be8d09cb191047b536a2b9b7f883dbbd0c3/python/fastsim/resources/vehdb/2022_Tesla_Model_3_RWD.csv"
+    },
+    "baseline-2025-0084-battery discharge efficiency-component": {
+      "method": "component-boundary prior",
+      "fitted": false,
+      "replaces": "baseline-2025-0084-battery discharge efficiency",
+      "source": "https://github.com/NatLabRockies/fastsim/blob/63808be8d09cb191047b536a2b9b7f883dbbd0c3/python/fastsim/resources/vehdb/2022_Tesla_Model_3_RWD.csv"
+    }
+  }
+}

@@ -358,13 +358,19 @@ class TruckModel(VehicleModel):
         """
 
         self.energy = self.ecm.motive_energy_per_km(
+            engine_efficiency=self.get_energy_efficiency_override("engine efficiency"),
+            transmission_efficiency=self.get_energy_efficiency_override(
+                "transmission efficiency"
+            ),
             driving_mass=self["driving mass"],
             rr_coef=self["rolling resistance coefficient"],
             drag_coef=self["aerodynamic drag coefficient"],
             frontal_area=self["frontal area"],
             electric_motor_power=self["electric power"],
             engine_power=self["power"],
+            combustion_engine_power=self["combustion power"],
             recuperation_efficiency=self["recuperation efficiency"],
+            electric_motor_efficiency=self.get_electric_motor_efficiency(),
             aux_power=self["auxiliary power demand"],
             battery_charge_eff=self["battery charge efficiency"],
             battery_discharge_eff=self["battery discharge efficiency"],
@@ -425,27 +431,8 @@ class TruckModel(VehicleModel):
             / distance
         ).T
 
-        # saved_TtW_energy_by_recuperation = recuperated energy
-        # * electric motor efficiency * electric transmission efficiency
-        # / (engine efficiency * transmission efficiency)
-
-        self["TtW energy"] += (
-            (
-                self.energy.sel(parameter="recuperated energy").sum(dim="second")
-                / distance
-            ).T
-            * self.array.sel(parameter="engine efficiency")
-            * self.array.sel(parameter="transmission efficiency")
-            / (
-                self["engine efficiency"]
-                * self["transmission efficiency"]
-                * np.where(
-                    self["fuel cell system efficiency"] == 0,
-                    1,
-                    self["fuel cell system efficiency"],
-                )
-            )
-        )
+        self["TtW energy"] += self.get_regeneration_credit()
+        self.set_battery_energy_balance()
 
         self["TtW energy, combustion mode"] = self["TtW energy"] * (
             self["combustion power share"] > 0
@@ -1149,7 +1136,7 @@ class TruckModel(VehicleModel):
         print("'-' vehicle with driving mass superior to the permissible gross weight.")
         print("'/' vehicle not available for the specified year.")
 
-        self["is_compliant"] *= self["driving mass"] < self["gross mass"]
+        self["is_compliant"] *= self["driving mass"] <= self["gross mass"] + 1e-6
 
         # we flag trucks that are not compliant
         self["TtW energy"] = np.where(
