@@ -359,6 +359,11 @@ class TruckModel(VehicleModel):
 
         self.energy = self.ecm.motive_energy_per_km(
             engine_efficiency=self.get_energy_efficiency_override("engine efficiency"),
+            engine_efficiency_factor=xr.where(
+                self.array.powertrain == "ICEV-g",
+                1 - self["CNG engine efficiency correction factor"],
+                1.0,
+            ).transpose("size", "powertrain", "year", "value"),
             transmission_efficiency=self.get_energy_efficiency_override(
                 "transmission efficiency"
             ),
@@ -390,18 +395,6 @@ class TruckModel(VehicleModel):
             self.override_ttw_energy()
 
         distance = self.energy.sel(parameter="velocity").sum(dim="second") / 1000
-
-        # Correction for CNG trucks
-        if "ICEV-g" in self.array.powertrain.values:
-            self.energy.loc[
-                dict(parameter="engine efficiency", powertrain="ICEV-g")
-            ] *= (
-                1
-                - self.array.sel(
-                    parameter="CNG engine efficiency correction factor",
-                    powertrain="ICEV-g",
-                )
-            ).T.values
 
         self["transmission efficiency"] = (
             np.ma.array(
