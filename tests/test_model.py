@@ -1,10 +1,12 @@
+import json
 from copy import deepcopy
+from pathlib import Path
 
 import numpy as np
 import pytest
-from carculator_truck import TruckInputParameters, TruckModel
-
 from carculator_utils.array import fill_xarray_from_input_parameters
+
+from carculator_truck import TruckInputParameters, TruckModel
 
 
 @pytest.fixture(scope="module")
@@ -33,9 +35,14 @@ def test_presence_PHEVe(tm):
 
 
 def test_ttw_energy_against_VECTO(tm):
-    # The TtW energy consumption of a 40-ton diesel must be
-    # within an interval given by VECTO
-    vecto_empty, vecto_full = (8300, 16000)
+    # Use the actual urban-delivery envelope: the former lower bound came
+    # from long haul. The fixture records primary .vmod hashes and calculation.
+    # This is a simulation screening check, not empirical validation.
+    reference = json.loads(
+        (Path(__file__).parent / "fixtures/vecto_urban_delivery_40t.json").read_text()
+    )
+    assert tm.cycle == reference["cycle"]
+    vecto_empty, vecto_full = [r["energy_kJ_km"] for r in reference["references"]]
 
     assert (
         vecto_empty
@@ -106,7 +113,7 @@ def test_fuel_blends(tm):
         np.testing.assert_array_equal(
             np.array(tm.fuel_blend[fuel]["primary"]["share"])
             + np.array(tm.fuel_blend[fuel]["secondary"]["share"]),
-            [1, 1, 1, 1, 1, 1],
+            np.ones(tm.array.sizes["year"]),
         )
 
     # A fuel cannot be specified both as primary and secondary fuel

@@ -1,0 +1,27 @@
+{
+  "cycle": "Urban delivery",
+  "vehicle": "Class5 tractor, ENG_400",
+  "fuel_lower_heating_value_kJ_kg": 42400,
+  "formula": "sum(FC-Final[g/h] * dt[s]) / 3600000 * LHV[kJ/kg] / (sum(v_act[km/h] * dt[s]) / 3600)",
+  "interpretation": "Historical VECTO simulation screening envelope, not independent measured fuel-consumption validation. Reproduces the repository calibration notebook, cell 5 and cells 7-9.",
+  "references": [
+    {
+      "load": "empty",
+      "source": "dev/Class5_Tractor_ENG_400_Urban_Delivery_1Hz_empty.vmod",
+      "source_sha256": "3eb4425149f8ef654e804c132c65add6a6b5b19e031039e62ef7d0fd7f06a6c6",
+      "version": "# VECTO 3.3.7.1964 - 25.08.2020 20:04",
+      "fuel_kg": 7.8846723104166445,
+      "distance_km": 27.816129444444442,
+      "energy_kJ_km": 12018.570255411132
+    },
+    {
+      "load": "full",
+      "source": "dev/Class5_Tractor_ENG_400_Urban_Delivery_1Hz_full.vmod",
+      "source_sha256": "992f9c9df4827e33a53dbdb94ffb2a2cb4c9f299c06641dddcc4eae596aa068d",
+      "version": "# VECTO 3.3.7.1964 - 25.08.2020 20:14",
+      "fuel_kg": 14.72081195925002,
+      "distance_km": 27.814881083333336,
+      "energy_kJ_km": 22439.87400852843
+    }
+  ]
+}

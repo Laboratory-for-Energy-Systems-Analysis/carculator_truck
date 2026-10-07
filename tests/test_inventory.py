@@ -38,17 +38,13 @@ def test_check_country(tm):
 def test_electricity_mix(tm):
     # Electricity mix must be equal to 1
     ic = InventoryTruck(tm)
-    assert np.allclose(np.sum(ic.mix, axis=1), [1.0, 1.0, 1.0, 1.0, 1.0, 1.0])
+    assert np.allclose(np.sum(ic.mix, axis=1), np.ones(tm.array.sizes["year"]))
 
     # If we pass a custom electricity mix, check that it is used
-    custom_mix = [
-        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    ]
+    custom_mix = np.zeros((tm.array.sizes["year"], 21))
+    custom_mix[:, 0] = 1
+    custom_mix[-1, 0] = 0
+    custom_mix[-1, 9] = 1
 
     bc = {"custom electricity mix": custom_mix}
     ic = InventoryTruck(tm, background_configuration=bc)
@@ -76,17 +72,17 @@ def test_fuel_blend(array):
         "diesel": {
             "primary": {
                 "type": "diesel",
-                "share": [0.93, 0.93, 0.93, 0.93, 0.93, 0.93],
+                "share": np.full(array.sizes["year"], 0.93),
             },
             "secondary": {
                 "type": "diesel - biodiesel - cooking oil",
-                "share": [0.07, 0.07, 0.07, 0.07, 0.07, 0.07],
+                "share": np.full(array.sizes["year"], 0.07),
             },
         },
         "methane": {
             "primary": {
                 "type": "methane - biomethane - sewage sludge",
-                "share": [1, 1, 1, 1, 1, 1],
+                "share": np.full(array.sizes["year"], 1),
             }
         },
     }
@@ -98,13 +94,15 @@ def test_fuel_blend(array):
 
     assert np.allclose(
         tm.fuel_blend["diesel"]["primary"]["share"],
-        [0.93, 0.93, 0.93, 0.93, 0.93, 0.93],
+        np.full(array.sizes["year"], 0.93),
     )
     assert np.allclose(
         tm.fuel_blend["diesel"]["secondary"]["share"],
-        [0.07, 0.07, 0.07, 0.07, 0.07, 0.07],
+        np.full(array.sizes["year"], 0.07),
     )
-    assert np.allclose(tm.fuel_blend["methane"]["primary"]["share"], [1, 1, 1, 1, 1, 1])
+    assert np.allclose(
+        tm.fuel_blend["methane"]["primary"]["share"], np.full(array.sizes["year"], 1)
+    )
 
     ic.calculate_impacts()
 
@@ -138,10 +136,14 @@ def test_fuel_blend(array):
     ]:
         fb = {
             "diesel": {
-                "primary": {"type": fuels[0], "share": [1, 1, 1, 1, 1, 1]},
+                "primary": {"type": fuels[0], "share": np.full(array.sizes["year"], 1)},
             },
-            "hydrogen": {"primary": {"type": fuels[1], "share": [1, 1, 1, 1, 1, 1]}},
-            "methane": {"primary": {"type": fuels[2], "share": [1, 1, 1, 1, 1, 1]}},
+            "hydrogen": {
+                "primary": {"type": fuels[1], "share": np.full(array.sizes["year"], 1)}
+            },
+            "methane": {
+                "primary": {"type": fuels[2], "share": np.full(array.sizes["year"], 1)}
+            },
         }
 
         print(fb)
@@ -188,15 +190,15 @@ def test_sulfur_concentration(tm):
 def test_custom_electricity_mix(tm):
     """Test if a wrong number of electricity mixes throws an error"""
 
-    # Passing four mixes instead of 6
-    mix_1 = np.zeros((4, 21))
+    # Passing one fewer mix than the model years
+    mix_1 = np.zeros((tm.array.sizes["year"] - 1, 21))
     mix_1[:, 0] = 1
     # Passing a mix inferior to 1
-    mix_2 = np.zeros((6, 21))
+    mix_2 = np.zeros((tm.array.sizes["year"], 21))
     mix_2[:, 0] = 0.9
 
     # Passing a mix superior to 1
-    mix_3 = np.zeros((6, 21))
+    mix_3 = np.zeros((tm.array.sizes["year"], 21))
     mix_3[:, 0] = 1
     mix_3[:, 1] = 0.1
 
