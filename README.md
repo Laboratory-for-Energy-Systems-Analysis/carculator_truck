@@ -1,104 +1,108 @@
-# ``carculator_truck``
+# carculator_truck
 
-<p align="center">
-  <img style="height:130px;" src="https://github.com/romainsacchi/carculator_truck/blob/master/docs/_static/img/mediumsmall.png">
-</p>
+Prospective environmental and economic life cycle assessment of freight vehicles, with coupled payload, range, energy storage and charging infrastructure.
 
+[![Installed artifacts](https://github.com/Laboratory-for-Energy-Systems-Analysis/carculator_truck/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/Laboratory-for-Energy-Systems-Analysis/carculator_truck/actions/workflows/main.yml)
+[![PyPI](https://img.shields.io/pypi/v/carculator_truck)](https://pypi.org/project/carculator_truck/)
 
-<p align="center">
-  <a href="https://badge.fury.io/py/carculator-truck" target="_blank"><img src="https://badge.fury.io/py/carculator-truck.svg"></a>
-  <a href="https://github.com/romainsacchi/carculator_truck" target="_blank"><img src="https://github.com/romainsacchi/carculator_truck/actions/workflows/main.yml/badge.svg?branch=master"></a>
-  <a href="https://coveralls.io/github/romainsacchi/carculator_truck" target="_blank"><img src="https://coveralls.io/repos/github/romainsacchi/carculator_truck/badge.svg"></a>
-  <a href="https://carculator_truck.readthedocs.io/en/latest/" target="_blank"><img src="https://readthedocs.org/projects/carculator_truck/badge/?version=latest"></a>
- </p>
+Developed at the [Paul Scherrer Institute](https://www.psi.ch/en).
+This checkout prepares **0.5.1**; see [CHANGELOG.md](https://github.com/Laboratory-for-Energy-Systems-Analysis/carculator_truck/blob/master/CHANGELOG.md) for release status and changes.
 
-Prospective environmental and economic life cycle assessment of medium and heavy duty vehicles.
+## Installation
 
-A fully parameterized Python model developed by the [Technology Assessment group](https://www.psi.ch/en/ta) of the
-[Paul Scherrer Institut](https://www.psi.ch/en) to perform life cycle assessments (LCA) of medium and heavy duty trucks.
-Based on the Life Cycle Assessment tool for passenger vehicles [carculator](https://github.com/romainsacchi/carculator).
+Use **Python 3.12** (`>=3.12,<3.13`) and a fresh environment. The shared runtime
+requires NumPy `>=1.26.4,<2`.
 
-See [the documentation](https://carculator_truck.readthedocs.io/en/latest/index.html) for more detail, validation, etc.
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+```
 
-The model has been introduced and detailed in a publication to the journal <i>Environmental Science and Technology</i>.
+On Windows, activate with `.venv\Scripts\activate`. After publication, install
+this release from PyPI:
 
-[1] Sacchi R, Bauer C, Cox BL. Does Size Matter? The Influence of Size, Load Factor, Range Autonomy, and Application Type on the Life Cycle Assessment of Current and Future Medium and Heavy-Duty Vehicles.
-Environ Sci Technol 2021. [https://doi.org/10.1021/acs.est.0c07773](https://doi.org/10.1021/acs.est.0c07773).
+```bash
+python -m pip install "carculator_truck==0.5.1"
+```
 
-## How to install?
+Before publication, use the matching source checkouts as described under development.
+Core calculations use bundled resources and need no Brightway project, ecoinvent
+installation or network access. Inventory export has optional dependencies:
 
-Python **3.12** is required (`>=3.12,<3.13`).
+```bash
+python -m pip install "carculator_truck[excel,brightway]==0.5.1"
+```
 
-For the latest version, using conda::
+The Brightway extra supports the legacy stack (`bw2io<0.9`, `bw2data<4`,
+`bw2calc<2`). Export currently targets ecoinvent 3.9 and 3.10; importing those
+inventories requires the corresponding background database in the destination tool.
 
-    conda install -c romainsacchi carculator_truck
+## Quick start
 
-or for a stable release, from Pypi::
+```python
+from carculator_truck import (
+    TruckInputParameters,
+    TruckModel,
+    InventoryTruck,
+    fill_xarray_from_input_parameters,
+)
 
-    pip install carculator_truck
+inputs = TruckInputParameters()
+inputs.static()
+_, array = fill_xarray_from_input_parameters(
+    inputs,
+    scope={"size": ["40t"], "powertrain": ["ICEV-d", "BEV"], "year": [2025]},
+)
+model = TruckModel(array, cycle="Long haul")
+model.set_all()
+print(model["TtW energy"])  # kJ per vehicle-kilometre
 
+inventory = InventoryTruck(model, functional_unit="tkm")
+impacts = inventory.calculate_impacts()
+print(impacts.sel(impact_category="climate change").sum("impact"))
+```
 
-## What does it do?
+Truck model costs are per vehicle-kilometre; the example reports impacts per tonne-kilometre of actual cargo.
 
-<i>carculator_truck</i> allows to model vehicles across:
-<ul>
-<li>different conventional and alternative powertrains: diesel, compressed natural gas, hybrid-diesel, plugin hybrid, electric, fuel cell</li>
-<li>different gross weight cateogries: 3.5t, 7.5t, 18t, 26t, 32t, 40t and 60t</li>
-<li>different fuel pathways: conventional fuels, bio-based fuels (biodiesel, biomethane), synthetic fuels
-(Fischer-Tropsch-based synthetic diesel, synhtetic methane)</li>
-<li>different years: from 2000 to 2050. Technological progress at the vehicle level but also in the rest of the world energy
-system (e.g., power generation) is accounted for, using energy scenario-specific IAM-coupled ecoinvent databases produced by
-<a href="https://github.com/romainsacchi/premise" target="_blank">premise</a>.</li>
-<li>Inventories can be imported into <a href="https://brightway.dev/" target="_blank">Brightway2</a> and
-<a href="https://www.simapro.com/" target="_blank">SimaPro 9.x.</a>.</li>
-</ul>
+## Modelling and validation
 
-<p align="center">
-    The energy model of <i>carculator_truck</i> considers the vehicle aerodynamics, the road gradient and other factors.
-    It also considers varying efficiencies of the transmission and engine at various load points for each second
-    of the driving cycle.
-  
-  <img style="height:150px;" src="https://github.com/romainsacchi/carculator_truck/blob/master/docs/_static/img/energy_model.png">
-</p>
+The vehicle models include native **2025** parameters and documented temporal
+extensions. These combine engineering priors and selected calibration evidence;
+they are not independent measurements for every vehicle configuration.
 
-<p align="center">
-    The energy model and the calculated tank-to-wheel energy consumption is validated against the simulation software
-    <a href="https://ec.europa.eu/clima/policies/transport/vehicles/vecto_en" target="_blank">VECTO</a>.
-  
-  <img style="height:150px;" src="https://github.com/romainsacchi/carculator_truck/blob/master/docs/_static/img/vecto_validation.png">
-</p>
+`TtW energy` is in kJ/km. For BEVs it is net stored-energy depletion;
+`model.battery_terminal_energy` reports terminal DC separately, while
+`electricity consumption` is grid electricity in kWh/km. Identify the measurement
+boundary before comparing energy outputs. Availability-masked zeroes do not
+represent physically zero consumption.
 
-<p align="center">
-    Benefits of hybrid powertrains are fully conidered: the possibility to recuperate braking energy as well as efficiency gains from engine
-    downsizing is accounted for.
-  
-  <img style="height:150px;" src="https://github.com/romainsacchi/carculator_truck/blob/master/docs/_static/img/hybrid_efficiency.png">
-</p>
+Supported background scenarios are `SSP2-NPi`, `SSP2-PkBudg1000`,
+`SSP2-PkBudg650`, and `static`. ReCiPe supports midpoint/endpoint and EF midpoint.
+Use fresh model instances for independent cases. `inputs.stochastic(n, seed=...)`
+seeds parameter sampling, not every downstream cost adjustment.
 
-<p align="center">
-    Global warming potential impacts per ton-km for a 40-t truck, across different powertrain technologies,
-    using an urban driving cycle.
-  
-  <img style="height:150px;" src="https://github.com/romainsacchi/carculator_truck/blob/master/docs/_static/img/urban_gwp.png">
-</p>
+See [validation and limitations](https://github.com/Laboratory-for-Energy-Systems-Analysis/carculator_truck/blob/master/docs/validity.rst), [migration notes](https://github.com/Laboratory-for-Energy-Systems-Analysis/carculator_truck/blob/master/docs/release.rst)
+and the [documentation](https://carculator-truck.readthedocs.io/en/latest/).
 
-## How to use it?
+## Development and release
 
-See the notebook with [examples](https://github.com/romainsacchi/carculator_truck/blob/master/examples/Examples.ipynb).
+Use matching sibling checkouts, especially `carculator_utils` **1.3.6 or newer**:
 
-## Support
+```bash
+python -m pip install -e "../carculator_utils[test,excel,brightway]" -e ".[test,docs,excel,brightway]"
+python -m pip check
+python -m pytest
+python -m sphinx -b html docs docs/_build/html
+```
 
-Do not hesitate to contact the development team at [carculator@psi.ch](mailto:carculator@psi.ch).
+The `docs` extra includes the extensions used by this repository.
+See [RELEASING.md](https://github.com/Laboratory-for-Energy-Systems-Analysis/carculator_truck/blob/master/RELEASING.md) for artifact verification, release order and publication.
 
-## Maintainers
+## Support and license
 
-* [Romain Sacchi](https://github.com/romainsacchi)
-* [Chris Mutel](https://github.com/cmutel/)
+Contact [carculator@psi.ch](mailto:carculator@psi.ch) or open an [issue](https://github.com/Laboratory-for-Energy-Systems-Analysis/carculator_truck/issues).
+Maintained by [Romain Sacchi](https://github.com/romainsacchi), with contributions
+from the carculator development team. See [contributing](https://github.com/Laboratory-for-Energy-Systems-Analysis/carculator_truck/blob/master/CONTRIBUTING.md).
+Licensed under [BSD-3-Clause](https://github.com/Laboratory-for-Energy-Systems-Analysis/carculator_truck/blob/master/LICENSE).
 
-## Contributing
-
-See [contributing](https://github.com/romainsacchi/carculator_truck/blob/master/CONTRIBUTING.md).
-
-## License
-
-[BSD-3-Clause](https://github.com/romainsacchi/carculator_truck/blob/master/LICENSE). Copyright 2020 Paul Scherrer Institut.
+Scientific background: [Sacchi, Bauer and Cox (2021), Does Size Matter?](https://doi.org/10.1021/acs.est.0c07773).

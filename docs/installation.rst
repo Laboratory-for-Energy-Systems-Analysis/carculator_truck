@@ -3,39 +3,43 @@
 Installation
 ============
 
-Python Version
---------------
-``carculator_truck`` requires Python 3.12 (``>=3.12,<3.13``).
-Because ``carculator_truck`` is still at an early development stage, we recommend installing it in a separate environment.
+Use Python **3.12** (``>=3.12,<3.13``) in a fresh environment.
+The shared runtime requires NumPy ``>=1.26.4,<2``.
 
-Using Conda environment
------------------------
+Published release
+-----------------
 
-Create a conda environment:
+After ``0.5.1`` is published on PyPI::
 
-.. code-block:: bash
+   python3.12 -m venv .venv
+   source .venv/bin/activate
+   python -m pip install "carculator_truck==0.5.1"
 
-    conda create -n <name of the environment> python=3.12
+On Windows activate with ``.venv\Scripts\activate``. Alternatively, create a
+conda environment with ``conda create -n carculator-release python=3.12 pip``,
+activate it, and use the same pip command. Availability of a conda package is
+separate from the PyPI release.
 
-Once your environment created, you should activate it:
+Core calculations use bundled resources without a Brightway project, an
+ecoinvent installation or network access. For export support::
 
-.. code-block:: bash
+   python -m pip install "carculator_truck[excel,brightway]==0.5.1"
 
-    conda activate <name of the environment>
+The Brightway extra intentionally targets the legacy stack (``bw2io<0.9``,
+``bw2data<4``, ``bw2calc<2``). Importing exported inventories requires a matching
+background database in the destination LCA tool.
 
-And install the ``carculator_truck`` library in your new environment via Conda:
+Source checkout and documentation
+---------------------------------
 
-.. code-block:: bash
+Before publication, use the matching sibling checkouts and install from this
+repository root::
 
-    conda install -c romainsacchi carculator_truck
+   python -m pip install -e "../carculator_utils[test,excel,brightway]" -e ".[test,docs,excel,brightway]"
+   python -m pip check
+   python -m pytest
+   python -m sphinx -b html docs docs/_build/html
 
-Using Pip
----------
-
-Use the following command to install the ``carculator_truck`` via ``pip``:
-
-.. code-block:: bash
-
-    pip install carculator_truck
-
-.. note:: This will install the package and the required dependencies.
+The ``docs`` extra includes the Sphinx extensions used here. See :doc:`release`
+for migration notes and the :download:`release checklist <../RELEASING.md>` for
+wheel/source-distribution verification.

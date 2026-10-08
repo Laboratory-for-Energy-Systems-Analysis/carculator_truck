@@ -48,7 +48,7 @@ Finally, beside being more flexible and transparent, ``carculator_truck`` provid
 
 * a stochastic mode, that allows fast Monte Carlo analyses, to include uncertainty at the vehicle level
 * possibility to override any or all of the 200+ default input truck parameters (e.g., cargo load, drag coefficient) but also calculated parameters (e.g., driving mass).
-* hot pollutants emissions as a function of the driving cycle, using `HBEFA <https://www.hbefa.net/e/index.html>`_ 4.1 data, further divided between rural, suburban and urban areas
+* hot pollutants emissions as a function of the driving cycle, using bundled `HBEFA <https://www.hbefa.net/e/index.html>`_ emission factors, further divided between rural, suburban and urban areas
 * noise emissions, based on `CNOSSOS-EU <https://ec.europa.eu/jrc/en/publication/reference-reports/common-noise-assessment-methods-europe-cnossos-eu>`_ models for noise emissions and an article by :cite:`ct-1015` for inventory modelling and mid- and endpoint characterization of noise emissions, function of driving cycle and further divided between rural, suburban and urban areas
 * export of inventories as an Excel/CSV file, to be used with Brightway2 or Simapro, including uncertainty information. This requires the user to have `ecoinvent` installed on the LCA software the trucks inventories are exported to.
 * export inventories directly into Brightway2, as a LCIImporter object to be registered. Additionally, when run in stochastic mode, it is possible to export arrays of pre-sampled values using the `presamples <https://pypi.org/project/presamples/>`_ library to be used together with the Monte Carlo function of Brightway2.
@@ -62,6 +62,7 @@ User's Guide
    :maxdepth: 2
 
    installation
+   release
    usage
    modeling
    structure
