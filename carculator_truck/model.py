@@ -7,14 +7,13 @@ import numexpr as ne
 import numpy as np
 import xarray as xr
 import yaml
-from prettytable import PrettyTable
-
 from carculator_utils.energy_consumption import (
     EnergyConsumptionModel,
     get_default_driving_cycle_name,
 )
 from carculator_utils.model import VehicleModel
 from carculator_utils.numerical import capital_recovery_factor
+from prettytable import PrettyTable
 
 from . import DATA_DIR
 
@@ -1203,6 +1202,14 @@ class TruckModel(VehicleModel):
             self.array.loc[dict(parameter=cost_params)],
         )
 
+        # Report the sensitivity reference, or the first retained sample.
+        # Masses and availability must describe the same sample.
+        sample = (
+            "reference"
+            if "reference" in self.array.coords["value"].values
+            else self.array.coords["value"].values[0]
+        )
+        display = self.array.sel(value=sample)
         t = PrettyTable(
             ["Payload (in tons)"] + self.array.coords["size"].values.tolist()
         )
@@ -1216,33 +1223,26 @@ class TruckModel(VehicleModel):
                 vals = np.asarray(
                     [
                         (
-                            np.round(v[2][0], 1)
-                            if (v[0][0] - v[1][0]) > 0
-                            else f"-{np.round(v[2][0])}-"
+                            np.round(cargo, 1)
+                            if (gross - driving) > 0
+                            else f"-{np.round(cargo)}-"
                         )
-                        for v in (
-                            self.array.sel(
+                        for gross, driving, cargo in (
+                            display.sel(
                                 parameter=["gross mass", "driving mass", "cargo mass"],
                                 powertrain=pt,
                                 year=y,
                             )
                             / 1000
-                        ).values.tolist()
+                        )
+                        .transpose("size", "parameter")
+                        .values
                     ]
                 )
 
                 # indicate vehicles that are not commercially available
                 vals = np.where(
-                    self.array.sel(
-                        parameter="is_available",
-                        powertrain=pt,
-                        year=y,
-                        value=(
-                            "reference"
-                            if "reference" in self.array.coords["value"]
-                            else 0
-                        ),
-                    ).values,
+                    display.sel(parameter="is_available", powertrain=pt, year=y).values,
                     vals,
                     "/",
                 )

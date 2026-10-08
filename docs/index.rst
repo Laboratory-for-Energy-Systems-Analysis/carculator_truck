@@ -51,7 +51,7 @@ Finally, beside being more flexible and transparent, ``carculator_truck`` provid
 * hot pollutants emissions as a function of the driving cycle, using bundled `HBEFA <https://www.hbefa.net/e/index.html>`_ emission factors, further divided between rural, suburban and urban areas
 * noise emissions, based on `CNOSSOS-EU <https://ec.europa.eu/jrc/en/publication/reference-reports/common-noise-assessment-methods-europe-cnossos-eu>`_ models for noise emissions and an article by :cite:`ct-1015` for inventory modelling and mid- and endpoint characterization of noise emissions, function of driving cycle and further divided between rural, suburban and urban areas
 * export of inventories as an Excel/CSV file, to be used with Brightway2 or Simapro, including uncertainty information. This requires the user to have `ecoinvent` installed on the LCA software the trucks inventories are exported to.
-* export inventories directly into Brightway2, as a LCIImporter object to be registered. Additionally, when run in stochastic mode, it is possible to export arrays of pre-sampled values using the `presamples <https://pypi.org/project/presamples/>`_ library to be used together with the Monte Carlo function of Brightway2.
+* export inventories for one retained sample directly into Brightway2, as an LCIImporter object to be registered. Select a sample before constructing the model and inventory; see :doc:`usage`.
 
 Get started with :ref:`Installation <install>` and continue with an overview about :ref:`how to use the library <usage>`.
 

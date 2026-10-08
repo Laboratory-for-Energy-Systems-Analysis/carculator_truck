@@ -5,13 +5,14 @@ from functools import lru_cache
 import numpy as np
 import pytest
 import xarray as xr
+from hypothesis import given, settings
+from hypothesis import strategies as st
+
 from carculator_truck import (
     TruckInputParameters,
     TruckModel,
     fill_xarray_from_input_parameters,
 )
-from hypothesis import given, settings
-from hypothesis import strategies as st
 
 
 @lru_cache(maxsize=1)
@@ -85,3 +86,45 @@ def test_labelled_axes_and_model_instances_are_independent(order):
     first["glider base mass"] = 999
     xr.testing.assert_identical(source, original)
     xr.testing.assert_identical(second.array, original)
+
+
+@pytest.mark.parametrize(
+    "labels,available,driving,expected",
+    [
+        ([7], [1], [20000], "1.2"),
+        ([9, 2], [1, 0], [20000, 42000], "1.2"),
+        (["changed", "reference"], [0, 1], [20000, 42000], "-2.0-"),
+        (["changed", "reference"], [1, 0], [20000, 21000], "/"),
+    ],
+)
+def test_payload_table_uses_one_retained_sample(
+    labels, available, driving, expected, capsys
+):
+    source = (
+        parameter_template().isel(value=[0] * len(labels)).assign_coords(value=labels)
+    )
+    model = TruckModel(source)
+    model["gross mass"] = 40000
+    model["driving mass"] = xr.DataArray(
+        driving, dims="value", coords={"value": labels}
+    )
+    model["cargo mass"] = xr.DataArray(
+        [1200, 2400][: len(labels)], dims="value", coords={"value": labels}
+    )
+    model["is_available"] = xr.DataArray(
+        available, dims="value", coords={"value": labels}
+    )
+    model["is_compliant"] = 1
+    model["TtW energy"] = 100
+    capsys.readouterr()
+    model.remove_energy_consumption_from_unavailable_vehicles()
+    (row,) = [
+        line for line in capsys.readouterr().out.splitlines() if "BEV, 2020" in line
+    ]
+    assert row.split("|")[2].strip() == expected
+    np.testing.assert_array_equal(model.array.value, labels)
+    # Reporting must leave the per-sample physical masks intact.
+    np.testing.assert_array_equal(
+        model["TtW energy"].values.ravel(),
+        np.where((np.asarray(available) != 0) & (np.asarray(driving) <= 40000), 100, 0),
+    )

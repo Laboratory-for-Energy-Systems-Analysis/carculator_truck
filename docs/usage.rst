@@ -67,6 +67,11 @@ Availability-masked zero consumption does not describe a zero-energy vehicle.
 Truck duty cycles are ``Urban delivery``, ``Regional delivery`` and ``Long haul``.
 Tonne-kilometres use actual cargo in tonnes, not gross vehicle mass. Review
 payload and power-deficit diagnostics when changing mass or target range.
+The printed payload table describes the sample labelled ``reference`` when
+present, otherwise the first retained sample. Payload, weight warnings and
+availability all use that same sample. Model arrays and LCIA results retain
+all selected sample labels in their original order; inspect those arrays for
+sample-specific results.
 
 
 Inventory export
@@ -91,6 +96,20 @@ The supported ecoinvent targets are 3.9 and 3.10. Multi-year runs preserve every
 year in the returned exports, and exporting does not change the original
 inventory or calculated impacts. A destination Brightway/ecoinvent setup is
 needed to register and link exported inventories, not for the core calculation.
+
+Export requires exactly one retained sample. Select it before constructing the
+model and inventory; brackets preserve the ``value`` dimension::
+
+   selected = array.isel(value=[1])  # Second draw; its label stays unchanged.
+   model = TruckModel(selected, cycle="Long haul")
+   model.set_all()
+   inventory = InventoryTruck(model, functional_unit="tkm")
+   importer = inventory.export_lci(format="bw2io")
+
+Numeric labels other than zero and named samples such as ``reference`` are
+supported. Multiple samples raise an error; the exporter does not average them
+or create uncertainty distributions. Sensitivity LCIA uses the retained sample
+labelled ``reference``, regardless of its position.
 
 Reproducibility and interpretation
 ----------------------------------

@@ -143,3 +143,18 @@ Completed regressions include 40t long-haul trucks, diesel/BEV controls,
 methane and mixed fuels. They check mass balance, unchanged upstream inventories,
 ReCiPe/EF climate contributions, and repeated multi-year Brightway exports.
 These establish accounting consistency, not measured leakage-rate validation.
+
+
+Retained uncertainty samples
+-----------------------------
+
+The shared ``tests/test_sample_labels.py`` completes 40t long-haul diesel runs
+in 2025/2030 after selecting a single nonzero-labelled Monte Carlo sample.
+Relabelling that same draw to zero leaves physical outputs, inventories and
+LCIA unchanged. Reordered completed samples preserve their corresponding LCIA
+results, and sensitivity ratios use the named reference even when it is last.
+Repeated Brightway/SimaPro exports preserve both years and the source inventory;
+exported fuel inputs equal consumption divided by cargo in tonnes.
+Truck component tests separately check payload-table selection, availability
+and weight warnings with distinct sample values. These are software consistency
+checks and do not change the physical calibration.
