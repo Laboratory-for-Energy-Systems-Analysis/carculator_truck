@@ -62,7 +62,6 @@ User's Guide
    :maxdepth: 2
 
    installation
-   release
    usage
    modeling
    structure
@@ -75,6 +74,14 @@ API Reference
    :maxdepth: 2
 
    api
+
+Project information
+-------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   release
 
 .. toctree::
    :maxdepth: 2
