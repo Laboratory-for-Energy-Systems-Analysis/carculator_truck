@@ -100,3 +100,8 @@ fuel blend, background scenario, functional unit and energy meter boundary.
 Seeded parameter draws do not seed every downstream cost adjustment.
 See :doc:`validity` for the scope of
 calibration, measurement comparisons and known limitations.
+
+
+The complete default parameter set is validated before sampling. See
+:doc:`uncertainty_bounds` for repaired truck cost distributions, their provenance
+and a complete stochastic model/inventory example.

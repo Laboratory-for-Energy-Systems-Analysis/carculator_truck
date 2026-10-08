@@ -63,6 +63,7 @@ User's Guide
 
    installation
    usage
+   uncertainty_bounds
    modeling
    structure
    validity

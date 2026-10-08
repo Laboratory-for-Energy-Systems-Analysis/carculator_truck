@@ -9114,8 +9114,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 118.99999999999999,
-        "minimum": 140,
-        "maximum": 160
+        "minimum": 112.0,
+        "maximum": 125.99999999999999
     },
     "334-2040-energy battery cost per kWh, LTO": {
         "amount": 97.82249819947228,
@@ -9234,8 +9234,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 73.5,
-        "minimum": 75,
-        "maximum": 95
+        "minimum": 66.5,
+        "maximum": 80.5
     },
     "338-2040-energy battery cost per kWh, NCA": {
         "amount": 55.43274897970095,
@@ -9354,8 +9354,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 91,
-        "minimum": 100,
-        "maximum": 120
+        "minimum": 84.0,
+        "maximum": 98.0
     },
     "342-2040-energy battery cost per kWh, NMC-111": {
         "amount": 71.736498679613,
@@ -9474,8 +9474,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 87.5,
-        "minimum": 95,
-        "maximum": 115
+        "minimum": 80.5,
+        "maximum": 94.5
     },
     "346-2040-energy battery cost per kWh, NMC-523": {
         "amount": 68.47574873963059,
@@ -9594,8 +9594,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 84,
-        "minimum": 90,
-        "maximum": 110
+        "minimum": 77.0,
+        "maximum": 91.0
     },
     "350-2040-energy battery cost per kWh, NMC-622": {
         "amount": 65.21499879964819,
@@ -9714,8 +9714,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 77,
-        "minimum": 80,
-        "maximum": 100
+        "minimum": 70.0,
+        "maximum": 84.0
     },
     "354-2040-energy battery cost per kWh, NMC-811": {
         "amount": 58.693498919683364,
@@ -12198,8 +12198,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 4.199999999999999,
-        "minimum": 5,
-        "maximum": 7
+        "minimum": 3.499999999999999,
+        "maximum": 4.899999999999999
     },
     "440-2040-glider base cost per kg": {
         "amount": 2.9399999999999995,
@@ -12228,8 +12228,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 2.9399999999999995,
-        "minimum": 5,
-        "maximum": 7
+        "minimum": 2.4499999999999997,
+        "maximum": 3.4299999999999997
     },
     "441-2050-glider base cost per kg": {
         "amount": 2.0579999999999994,
@@ -12258,8 +12258,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 2.0579999999999994,
-        "minimum": 5,
-        "maximum": 7
+        "minimum": 1.7149999999999996,
+        "maximum": 2.4009999999999994
     },
     "442-2000-glider base cost per kg": {
         "amount": 13.799999999999999,
@@ -12374,8 +12374,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 9.659999999999998,
-        "minimum": 11.5,
-        "maximum": 16.099999999999998
+        "minimum": 8.049999999999999,
+        "maximum": 11.269999999999998
     },
     "446-2040-glider base cost per kg": {
         "amount": 6.761999999999999,
@@ -12403,8 +12403,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 6.761999999999999,
-        "minimum": 11.5,
-        "maximum": 16.099999999999998
+        "minimum": 5.634999999999999,
+        "maximum": 7.888999999999998
     },
     "447-2050-glider base cost per kg": {
         "amount": 4.733399999999998,
@@ -12432,8 +12432,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 4.733399999999998,
-        "minimum": 11.5,
-        "maximum": 16.099999999999998
+        "minimum": 3.9444999999999983,
+        "maximum": 5.522299999999997
     },
     "448-2000-glider base cost per kg": {
         "amount": 12,
@@ -12548,8 +12548,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 8.399999999999999,
-        "minimum": 10,
-        "maximum": 14
+        "minimum": 6.999999999999998,
+        "maximum": 9.799999999999997
     },
     "452-2040-glider base cost per kg": {
         "amount": 5.879999999999999,
@@ -12577,8 +12577,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 5.879999999999999,
-        "minimum": 10,
-        "maximum": 14
+        "minimum": 4.8999999999999995,
+        "maximum": 6.859999999999999
     },
     "453-2050-glider base cost per kg": {
         "amount": 4.115999999999999,
@@ -12606,8 +12606,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 4.115999999999999,
-        "minimum": 10,
-        "maximum": 14
+        "minimum": 3.4299999999999993,
+        "maximum": 4.801999999999999
     },
     "454-2000-glider base cost per kg": {
         "amount": 7.199999999999999,
@@ -12722,8 +12722,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 5.039999999999999,
-        "minimum": 6,
-        "maximum": 8.4
+        "minimum": 4.199999999999999,
+        "maximum": 5.88
     },
     "458-2040-glider base cost per kg": {
         "amount": 3.527999999999999,
@@ -12751,8 +12751,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 3.527999999999999,
-        "minimum": 6,
-        "maximum": 8.4
+        "minimum": 2.9399999999999995,
+        "maximum": 4.116
     },
     "459-2050-glider base cost per kg": {
         "amount": 2.4695999999999994,
@@ -12780,8 +12780,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 2.4695999999999994,
-        "minimum": 6,
-        "maximum": 8.4
+        "minimum": 2.0579999999999994,
+        "maximum": 2.8811999999999993
     },
     "460-2000-glider base cost per kg": {
         "amount": 9,
@@ -12900,8 +12900,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 6.299999999999999,
-        "minimum": 7.5,
-        "maximum": 10.5
+        "minimum": 5.249999999999999,
+        "maximum": 7.349999999999999
     },
     "464-2040-glider base cost per kg": {
         "amount": 4.409999999999999,
@@ -12930,8 +12930,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 4.409999999999999,
-        "minimum": 7.5,
-        "maximum": 10.5
+        "minimum": 3.6749999999999994,
+        "maximum": 5.145
     },
     "465-2050-glider base cost per kg": {
         "amount": 3.086999999999999,
@@ -12960,8 +12960,8 @@
         "kind": "distribution",
         "uncertainty_type": 5,
         "loc": 3.086999999999999,
-        "minimum": 7.5,
-        "maximum": 10.5
+        "minimum": 2.572499999999999,
+        "maximum": 3.6014999999999984
     },
     "466-2000-glider lightweighting cost per kg": {
         "amount": 38.5,

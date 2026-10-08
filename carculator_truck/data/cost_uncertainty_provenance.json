@@ -1,0 +1,1442 @@
+{
+  "method": "Scale valid 2020 minimum and maximum by target-year loc / 2020 loc; preserve the central cost and the anchor relative uncertainty. This follows the reconstruction already documented in the native 2025 records, not a new empirical calibration.",
+  "source_commit": "b8acc3eddae34774a2de7d2b79fb20a39921a40b",
+  "source_sha256": "d20b2e9c04cba02e80c2a23f46a70db2fc27f7af613e835716884bb9f3a8ce26",
+  "corrected_sha256": "5a303e0b7e49af4be5a8c37737eb2150329c6cc4d419eb1080a37b2b09a45208",
+  "changed_record_count": 21,
+  "unchanged_fields": "All fields except minimum and maximum; all 2025 records and all unaffected records remain unchanged.",
+  "records": [
+    {
+      "record_id": "333-2030-energy battery cost per kWh, LTO",
+      "anchor_record_id": "332-2020-energy battery cost per kWh, LTO",
+      "anchor_record": {
+        "amount": 170,
+        "category": "Costs",
+        "powertrain": [
+          "BEV",
+          "PHEV-e",
+          "PHEV-c-d"
+        ],
+        "sizes": [
+          "3.5t",
+          "7.5t",
+          "18t",
+          "26t",
+          "32t",
+          "40t",
+          "60t"
+        ],
+        "year": 2020,
+        "name": "energy battery cost per kWh, LTO",
+        "unit": "€/kWh",
+        "importance": "High",
+        "source": "Sources: BNEF 2023; https://battery2030.eu/research/roadmap; https://www.iea.org/reports/global-ev-outlook-2024; www.anl.gov/cse/batpac-model-software;\nhttps://ourworldindata.org/grapher/average-battery-cell-price\nhttps://www.spglobal.com/automotive-insights/en/blogs/2025/01/where-are-ev-battery-prices-headed-in-2025-and-beyond\nhttps://patentpc.com/blog/battery-costs-in-2020-2030-how-much-have-prices-dropped-for-evs-and-energy-storage\nhttps://www.batterytechonline.com/ev-batteries/iea-report-lfp-dominates-as-ev-battery-prices-fall ",
+        "comment": "",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 170,
+        "minimum": 160,
+        "maximum": 180
+      },
+      "original_record": {
+        "amount": 118.99999999999999,
+        "category": "Costs",
+        "powertrain": [
+          "BEV",
+          "PHEV-e",
+          "PHEV-c-d"
+        ],
+        "sizes": [
+          "3.5t",
+          "7.5t",
+          "18t",
+          "26t",
+          "32t",
+          "40t",
+          "60t"
+        ],
+        "year": 2030,
+        "name": "energy battery cost per kWh, LTO",
+        "unit": "€/kWh",
+        "importance": "High",
+        "source": "Sources: BNEF 2023; https://battery2030.eu/research/roadmap; https://www.iea.org/reports/global-ev-outlook-2024; www.anl.gov/cse/batpac-model-software;\nhttps://ourworldindata.org/grapher/average-battery-cell-price\nhttps://www.spglobal.com/automotive-insights/en/blogs/2025/01/where-are-ev-battery-prices-headed-in-2025-and-beyond\nhttps://patentpc.com/blog/battery-costs-in-2020-2030-how-much-have-prices-dropped-for-evs-and-energy-storage\nhttps://www.batterytechonline.com/ev-batteries/iea-report-lfp-dominates-as-ev-battery-prices-fall ",
+        "comment": "",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 118.99999999999999,
+        "minimum": 140,
+        "maximum": 160
+      },
+      "corrected_bounds": {
+        "minimum": 112.0,
+        "maximum": 125.99999999999999
+      },
+      "scale_factor": 0.7
+    },
+    {
+      "record_id": "337-2030-energy battery cost per kWh, NCA",
+      "anchor_record_id": "336-2020-energy battery cost per kWh, NCA",
+      "anchor_record": {
+        "amount": 105,
+        "category": "Costs",
+        "powertrain": [
+          "BEV",
+          "PHEV-e",
+          "PHEV-c-d"
+        ],
+        "sizes": [
+          "3.5t",
+          "7.5t",
+          "18t",
+          "26t",
+          "32t",
+          "40t",
+          "60t"
+        ],
+        "year": 2020,
+        "name": "energy battery cost per kWh, NCA",
+        "unit": "€/kWh",
+        "importance": "High",
+        "source": "Sources: BNEF 2023; https://battery2030.eu/research/roadmap; https://www.iea.org/reports/global-ev-outlook-2024; www.anl.gov/cse/batpac-model-software;\nhttps://ourworldindata.org/grapher/average-battery-cell-price\nhttps://www.spglobal.com/automotive-insights/en/blogs/2025/01/where-are-ev-battery-prices-headed-in-2025-and-beyond\nhttps://patentpc.com/blog/battery-costs-in-2020-2030-how-much-have-prices-dropped-for-evs-and-energy-storage\nhttps://www.batterytechonline.com/ev-batteries/iea-report-lfp-dominates-as-ev-battery-prices-fall ",
+        "comment": "",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 105,
+        "minimum": 95,
+        "maximum": 115
+      },
+      "original_record": {
+        "amount": 73.5,
+        "category": "Costs",
+        "powertrain": [
+          "BEV",
+          "PHEV-e",
+          "PHEV-c-d"
+        ],
+        "sizes": [
+          "3.5t",
+          "7.5t",
+          "18t",
+          "26t",
+          "32t",
+          "40t",
+          "60t"
+        ],
+        "year": 2030,
+        "name": "energy battery cost per kWh, NCA",
+        "unit": "€/kWh",
+        "importance": "High",
+        "source": "Sources: BNEF 2023; https://battery2030.eu/research/roadmap; https://www.iea.org/reports/global-ev-outlook-2024; www.anl.gov/cse/batpac-model-software;\nhttps://ourworldindata.org/grapher/average-battery-cell-price\nhttps://www.spglobal.com/automotive-insights/en/blogs/2025/01/where-are-ev-battery-prices-headed-in-2025-and-beyond\nhttps://patentpc.com/blog/battery-costs-in-2020-2030-how-much-have-prices-dropped-for-evs-and-energy-storage\nhttps://www.batterytechonline.com/ev-batteries/iea-report-lfp-dominates-as-ev-battery-prices-fall ",
+        "comment": "",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 73.5,
+        "minimum": 75,
+        "maximum": 95
+      },
+      "corrected_bounds": {
+        "minimum": 66.5,
+        "maximum": 80.5
+      },
+      "scale_factor": 0.7
+    },
+    {
+      "record_id": "341-2030-energy battery cost per kWh, NMC-111",
+      "anchor_record_id": "340-2020-energy battery cost per kWh, NMC-111",
+      "anchor_record": {
+        "amount": 130,
+        "category": "Costs",
+        "powertrain": [
+          "BEV",
+          "PHEV-e",
+          "PHEV-c-d"
+        ],
+        "sizes": [
+          "3.5t",
+          "7.5t",
+          "18t",
+          "26t",
+          "32t",
+          "40t",
+          "60t"
+        ],
+        "year": 2020,
+        "name": "energy battery cost per kWh, NMC-111",
+        "unit": "€/kWh",
+        "importance": "High",
+        "source": "Sources: BNEF 2023; https://battery2030.eu/research/roadmap; https://www.iea.org/reports/global-ev-outlook-2024; www.anl.gov/cse/batpac-model-software;\nhttps://ourworldindata.org/grapher/average-battery-cell-price\nhttps://www.spglobal.com/automotive-insights/en/blogs/2025/01/where-are-ev-battery-prices-headed-in-2025-and-beyond\nhttps://patentpc.com/blog/battery-costs-in-2020-2030-how-much-have-prices-dropped-for-evs-and-energy-storage\nhttps://www.batterytechonline.com/ev-batteries/iea-report-lfp-dominates-as-ev-battery-prices-fall ",
+        "comment": "",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 130,
+        "minimum": 120,
+        "maximum": 140
+      },
+      "original_record": {
+        "amount": 91,
+        "category": "Costs",
+        "powertrain": [
+          "BEV",
+          "PHEV-e",
+          "PHEV-c-d"
+        ],
+        "sizes": [
+          "3.5t",
+          "7.5t",
+          "18t",
+          "26t",
+          "32t",
+          "40t",
+          "60t"
+        ],
+        "year": 2030,
+        "name": "energy battery cost per kWh, NMC-111",
+        "unit": "€/kWh",
+        "importance": "High",
+        "source": "Sources: BNEF 2023; https://battery2030.eu/research/roadmap; https://www.iea.org/reports/global-ev-outlook-2024; www.anl.gov/cse/batpac-model-software;\nhttps://ourworldindata.org/grapher/average-battery-cell-price\nhttps://www.spglobal.com/automotive-insights/en/blogs/2025/01/where-are-ev-battery-prices-headed-in-2025-and-beyond\nhttps://patentpc.com/blog/battery-costs-in-2020-2030-how-much-have-prices-dropped-for-evs-and-energy-storage\nhttps://www.batterytechonline.com/ev-batteries/iea-report-lfp-dominates-as-ev-battery-prices-fall ",
+        "comment": "",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 91,
+        "minimum": 100,
+        "maximum": 120
+      },
+      "corrected_bounds": {
+        "minimum": 84.0,
+        "maximum": 98.0
+      },
+      "scale_factor": 0.7
+    },
+    {
+      "record_id": "345-2030-energy battery cost per kWh, NMC-523",
+      "anchor_record_id": "344-2020-energy battery cost per kWh, NMC-523",
+      "anchor_record": {
+        "amount": 125,
+        "category": "Costs",
+        "powertrain": [
+          "BEV",
+          "PHEV-e",
+          "PHEV-c-d"
+        ],
+        "sizes": [
+          "3.5t",
+          "7.5t",
+          "18t",
+          "26t",
+          "32t",
+          "40t",
+          "60t"
+        ],
+        "year": 2020,
+        "name": "energy battery cost per kWh, NMC-523",
+        "unit": "€/kWh",
+        "importance": "High",
+        "source": "Sources: BNEF 2023; https://battery2030.eu/research/roadmap; https://www.iea.org/reports/global-ev-outlook-2024; www.anl.gov/cse/batpac-model-software;\nhttps://ourworldindata.org/grapher/average-battery-cell-price\nhttps://www.spglobal.com/automotive-insights/en/blogs/2025/01/where-are-ev-battery-prices-headed-in-2025-and-beyond\nhttps://patentpc.com/blog/battery-costs-in-2020-2030-how-much-have-prices-dropped-for-evs-and-energy-storage\nhttps://www.batterytechonline.com/ev-batteries/iea-report-lfp-dominates-as-ev-battery-prices-fall ",
+        "comment": "",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 125,
+        "minimum": 115,
+        "maximum": 135
+      },
+      "original_record": {
+        "amount": 87.5,
+        "category": "Costs",
+        "powertrain": [
+          "BEV",
+          "PHEV-e",
+          "PHEV-c-d"
+        ],
+        "sizes": [
+          "3.5t",
+          "7.5t",
+          "18t",
+          "26t",
+          "32t",
+          "40t",
+          "60t"
+        ],
+        "year": 2030,
+        "name": "energy battery cost per kWh, NMC-523",
+        "unit": "€/kWh",
+        "importance": "High",
+        "source": "Sources: BNEF 2023; https://battery2030.eu/research/roadmap; https://www.iea.org/reports/global-ev-outlook-2024; www.anl.gov/cse/batpac-model-software;\nhttps://ourworldindata.org/grapher/average-battery-cell-price\nhttps://www.spglobal.com/automotive-insights/en/blogs/2025/01/where-are-ev-battery-prices-headed-in-2025-and-beyond\nhttps://patentpc.com/blog/battery-costs-in-2020-2030-how-much-have-prices-dropped-for-evs-and-energy-storage\nhttps://www.batterytechonline.com/ev-batteries/iea-report-lfp-dominates-as-ev-battery-prices-fall ",
+        "comment": "",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 87.5,
+        "minimum": 95,
+        "maximum": 115
+      },
+      "corrected_bounds": {
+        "minimum": 80.5,
+        "maximum": 94.5
+      },
+      "scale_factor": 0.7
+    },
+    {
+      "record_id": "349-2030-energy battery cost per kWh, NMC-622",
+      "anchor_record_id": "348-2020-energy battery cost per kWh, NMC-622",
+      "anchor_record": {
+        "amount": 120,
+        "category": "Costs",
+        "powertrain": [
+          "BEV",
+          "PHEV-e",
+          "PHEV-c-d"
+        ],
+        "sizes": [
+          "3.5t",
+          "7.5t",
+          "18t",
+          "26t",
+          "32t",
+          "40t",
+          "60t"
+        ],
+        "year": 2020,
+        "name": "energy battery cost per kWh, NMC-622",
+        "unit": "€/kWh",
+        "importance": "High",
+        "source": "Sources: BNEF 2023; https://battery2030.eu/research/roadmap; https://www.iea.org/reports/global-ev-outlook-2024; www.anl.gov/cse/batpac-model-software;\nhttps://ourworldindata.org/grapher/average-battery-cell-price\nhttps://www.spglobal.com/automotive-insights/en/blogs/2025/01/where-are-ev-battery-prices-headed-in-2025-and-beyond\nhttps://patentpc.com/blog/battery-costs-in-2020-2030-how-much-have-prices-dropped-for-evs-and-energy-storage\nhttps://www.batterytechonline.com/ev-batteries/iea-report-lfp-dominates-as-ev-battery-prices-fall ",
+        "comment": "",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 120,
+        "minimum": 110,
+        "maximum": 130
+      },
+      "original_record": {
+        "amount": 84,
+        "category": "Costs",
+        "powertrain": [
+          "BEV",
+          "PHEV-e",
+          "PHEV-c-d"
+        ],
+        "sizes": [
+          "3.5t",
+          "7.5t",
+          "18t",
+          "26t",
+          "32t",
+          "40t",
+          "60t"
+        ],
+        "year": 2030,
+        "name": "energy battery cost per kWh, NMC-622",
+        "unit": "€/kWh",
+        "importance": "High",
+        "source": "Sources: BNEF 2023; https://battery2030.eu/research/roadmap; https://www.iea.org/reports/global-ev-outlook-2024; www.anl.gov/cse/batpac-model-software;\nhttps://ourworldindata.org/grapher/average-battery-cell-price\nhttps://www.spglobal.com/automotive-insights/en/blogs/2025/01/where-are-ev-battery-prices-headed-in-2025-and-beyond\nhttps://patentpc.com/blog/battery-costs-in-2020-2030-how-much-have-prices-dropped-for-evs-and-energy-storage\nhttps://www.batterytechonline.com/ev-batteries/iea-report-lfp-dominates-as-ev-battery-prices-fall ",
+        "comment": "",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 84,
+        "minimum": 90,
+        "maximum": 110
+      },
+      "corrected_bounds": {
+        "minimum": 77.0,
+        "maximum": 91.0
+      },
+      "scale_factor": 0.7
+    },
+    {
+      "record_id": "353-2030-energy battery cost per kWh, NMC-811",
+      "anchor_record_id": "352-2020-energy battery cost per kWh, NMC-811",
+      "anchor_record": {
+        "amount": 110,
+        "category": "Costs",
+        "powertrain": [
+          "BEV",
+          "PHEV-e",
+          "PHEV-c-d"
+        ],
+        "sizes": [
+          "3.5t",
+          "7.5t",
+          "18t",
+          "26t",
+          "32t",
+          "40t",
+          "60t"
+        ],
+        "year": 2020,
+        "name": "energy battery cost per kWh, NMC-811",
+        "unit": "€/kWh",
+        "importance": "High",
+        "source": "Sources: BNEF 2023; https://battery2030.eu/research/roadmap; https://www.iea.org/reports/global-ev-outlook-2024; www.anl.gov/cse/batpac-model-software;\nhttps://ourworldindata.org/grapher/average-battery-cell-price\nhttps://www.spglobal.com/automotive-insights/en/blogs/2025/01/where-are-ev-battery-prices-headed-in-2025-and-beyond\nhttps://patentpc.com/blog/battery-costs-in-2020-2030-how-much-have-prices-dropped-for-evs-and-energy-storage\nhttps://www.batterytechonline.com/ev-batteries/iea-report-lfp-dominates-as-ev-battery-prices-fall ",
+        "comment": "",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 110,
+        "minimum": 100,
+        "maximum": 120
+      },
+      "original_record": {
+        "amount": 77,
+        "category": "Costs",
+        "powertrain": [
+          "BEV",
+          "PHEV-e",
+          "PHEV-c-d"
+        ],
+        "sizes": [
+          "3.5t",
+          "7.5t",
+          "18t",
+          "26t",
+          "32t",
+          "40t",
+          "60t"
+        ],
+        "year": 2030,
+        "name": "energy battery cost per kWh, NMC-811",
+        "unit": "€/kWh",
+        "importance": "High",
+        "source": "Sources: BNEF 2023; https://battery2030.eu/research/roadmap; https://www.iea.org/reports/global-ev-outlook-2024; www.anl.gov/cse/batpac-model-software;\nhttps://ourworldindata.org/grapher/average-battery-cell-price\nhttps://www.spglobal.com/automotive-insights/en/blogs/2025/01/where-are-ev-battery-prices-headed-in-2025-and-beyond\nhttps://patentpc.com/blog/battery-costs-in-2020-2030-how-much-have-prices-dropped-for-evs-and-energy-storage\nhttps://www.batterytechonline.com/ev-batteries/iea-report-lfp-dominates-as-ev-battery-prices-fall ",
+        "comment": "",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 77,
+        "minimum": 80,
+        "maximum": 100
+      },
+      "corrected_bounds": {
+        "minimum": 70.0,
+        "maximum": 84.0
+      },
+      "scale_factor": 0.7
+    },
+    {
+      "record_id": "439-2030-glider base cost per kg",
+      "anchor_record_id": "438-2020-glider base cost per kg",
+      "anchor_record": {
+        "amount": 6,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "18t",
+          "26t"
+        ],
+        "year": 2020,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 6,
+        "minimum": 5,
+        "maximum": 7
+      },
+      "original_record": {
+        "amount": 4.199999999999999,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "18t",
+          "26t"
+        ],
+        "year": 2030,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 4.199999999999999,
+        "minimum": 5,
+        "maximum": 7
+      },
+      "corrected_bounds": {
+        "minimum": 3.499999999999999,
+        "maximum": 4.899999999999999
+      },
+      "scale_factor": 0.6999999999999998
+    },
+    {
+      "record_id": "440-2040-glider base cost per kg",
+      "anchor_record_id": "438-2020-glider base cost per kg",
+      "anchor_record": {
+        "amount": 6,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "18t",
+          "26t"
+        ],
+        "year": 2020,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 6,
+        "minimum": 5,
+        "maximum": 7
+      },
+      "original_record": {
+        "amount": 2.9399999999999995,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "18t",
+          "26t"
+        ],
+        "year": 2040,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 2.9399999999999995,
+        "minimum": 5,
+        "maximum": 7
+      },
+      "corrected_bounds": {
+        "minimum": 2.4499999999999997,
+        "maximum": 3.4299999999999997
+      },
+      "scale_factor": 0.48999999999999994
+    },
+    {
+      "record_id": "441-2050-glider base cost per kg",
+      "anchor_record_id": "438-2020-glider base cost per kg",
+      "anchor_record": {
+        "amount": 6,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "18t",
+          "26t"
+        ],
+        "year": 2020,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 6,
+        "minimum": 5,
+        "maximum": 7
+      },
+      "original_record": {
+        "amount": 2.0579999999999994,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "18t",
+          "26t"
+        ],
+        "year": 2050,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 2.0579999999999994,
+        "minimum": 5,
+        "maximum": 7
+      },
+      "corrected_bounds": {
+        "minimum": 1.7149999999999996,
+        "maximum": 2.4009999999999994
+      },
+      "scale_factor": 0.3429999999999999
+    },
+    {
+      "record_id": "445-2030-glider base cost per kg",
+      "anchor_record_id": "444-2020-glider base cost per kg",
+      "anchor_record": {
+        "amount": 13.799999999999999,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "3.5t"
+        ],
+        "year": 2020,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 13.799999999999999,
+        "minimum": 11.5,
+        "maximum": 16.099999999999998
+      },
+      "original_record": {
+        "amount": 9.659999999999998,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "3.5t"
+        ],
+        "year": 2030,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 9.659999999999998,
+        "minimum": 11.5,
+        "maximum": 16.099999999999998
+      },
+      "corrected_bounds": {
+        "minimum": 8.049999999999999,
+        "maximum": 11.269999999999998
+      },
+      "scale_factor": 0.7
+    },
+    {
+      "record_id": "446-2040-glider base cost per kg",
+      "anchor_record_id": "444-2020-glider base cost per kg",
+      "anchor_record": {
+        "amount": 13.799999999999999,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "3.5t"
+        ],
+        "year": 2020,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 13.799999999999999,
+        "minimum": 11.5,
+        "maximum": 16.099999999999998
+      },
+      "original_record": {
+        "amount": 6.761999999999999,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "3.5t"
+        ],
+        "year": 2040,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 6.761999999999999,
+        "minimum": 11.5,
+        "maximum": 16.099999999999998
+      },
+      "corrected_bounds": {
+        "minimum": 5.634999999999999,
+        "maximum": 7.888999999999998
+      },
+      "scale_factor": 0.48999999999999994
+    },
+    {
+      "record_id": "447-2050-glider base cost per kg",
+      "anchor_record_id": "444-2020-glider base cost per kg",
+      "anchor_record": {
+        "amount": 13.799999999999999,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "3.5t"
+        ],
+        "year": 2020,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 13.799999999999999,
+        "minimum": 11.5,
+        "maximum": 16.099999999999998
+      },
+      "original_record": {
+        "amount": 4.733399999999998,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "3.5t"
+        ],
+        "year": 2050,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 4.733399999999998,
+        "minimum": 11.5,
+        "maximum": 16.099999999999998
+      },
+      "corrected_bounds": {
+        "minimum": 3.9444999999999983,
+        "maximum": 5.522299999999997
+      },
+      "scale_factor": 0.34299999999999986
+    },
+    {
+      "record_id": "451-2030-glider base cost per kg",
+      "anchor_record_id": "450-2020-glider base cost per kg",
+      "anchor_record": {
+        "amount": 12,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "7.5t"
+        ],
+        "year": 2020,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 12,
+        "minimum": 10,
+        "maximum": 14
+      },
+      "original_record": {
+        "amount": 8.399999999999999,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "7.5t"
+        ],
+        "year": 2030,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 8.399999999999999,
+        "minimum": 10,
+        "maximum": 14
+      },
+      "corrected_bounds": {
+        "minimum": 6.999999999999998,
+        "maximum": 9.799999999999997
+      },
+      "scale_factor": 0.6999999999999998
+    },
+    {
+      "record_id": "452-2040-glider base cost per kg",
+      "anchor_record_id": "450-2020-glider base cost per kg",
+      "anchor_record": {
+        "amount": 12,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "7.5t"
+        ],
+        "year": 2020,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 12,
+        "minimum": 10,
+        "maximum": 14
+      },
+      "original_record": {
+        "amount": 5.879999999999999,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "7.5t"
+        ],
+        "year": 2040,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 5.879999999999999,
+        "minimum": 10,
+        "maximum": 14
+      },
+      "corrected_bounds": {
+        "minimum": 4.8999999999999995,
+        "maximum": 6.859999999999999
+      },
+      "scale_factor": 0.48999999999999994
+    },
+    {
+      "record_id": "453-2050-glider base cost per kg",
+      "anchor_record_id": "450-2020-glider base cost per kg",
+      "anchor_record": {
+        "amount": 12,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "7.5t"
+        ],
+        "year": 2020,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 12,
+        "minimum": 10,
+        "maximum": 14
+      },
+      "original_record": {
+        "amount": 4.115999999999999,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "7.5t"
+        ],
+        "year": 2050,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 4.115999999999999,
+        "minimum": 10,
+        "maximum": 14
+      },
+      "corrected_bounds": {
+        "minimum": 3.4299999999999993,
+        "maximum": 4.801999999999999
+      },
+      "scale_factor": 0.3429999999999999
+    },
+    {
+      "record_id": "457-2030-glider base cost per kg",
+      "anchor_record_id": "456-2020-glider base cost per kg",
+      "anchor_record": {
+        "amount": 7.199999999999999,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "32t"
+        ],
+        "year": 2020,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 7.199999999999999,
+        "minimum": 6,
+        "maximum": 8.4
+      },
+      "original_record": {
+        "amount": 5.039999999999999,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "32t"
+        ],
+        "year": 2030,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 5.039999999999999,
+        "minimum": 6,
+        "maximum": 8.4
+      },
+      "corrected_bounds": {
+        "minimum": 4.199999999999999,
+        "maximum": 5.88
+      },
+      "scale_factor": 0.7
+    },
+    {
+      "record_id": "458-2040-glider base cost per kg",
+      "anchor_record_id": "456-2020-glider base cost per kg",
+      "anchor_record": {
+        "amount": 7.199999999999999,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "32t"
+        ],
+        "year": 2020,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 7.199999999999999,
+        "minimum": 6,
+        "maximum": 8.4
+      },
+      "original_record": {
+        "amount": 3.527999999999999,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "32t"
+        ],
+        "year": 2040,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 3.527999999999999,
+        "minimum": 6,
+        "maximum": 8.4
+      },
+      "corrected_bounds": {
+        "minimum": 2.9399999999999995,
+        "maximum": 4.116
+      },
+      "scale_factor": 0.48999999999999994
+    },
+    {
+      "record_id": "459-2050-glider base cost per kg",
+      "anchor_record_id": "456-2020-glider base cost per kg",
+      "anchor_record": {
+        "amount": 7.199999999999999,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "32t"
+        ],
+        "year": 2020,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 7.199999999999999,
+        "minimum": 6,
+        "maximum": 8.4
+      },
+      "original_record": {
+        "amount": 2.4695999999999994,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "32t"
+        ],
+        "year": 2050,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 2.4695999999999994,
+        "minimum": 6,
+        "maximum": 8.4
+      },
+      "corrected_bounds": {
+        "minimum": 2.0579999999999994,
+        "maximum": 2.8811999999999993
+      },
+      "scale_factor": 0.3429999999999999
+    },
+    {
+      "record_id": "463-2030-glider base cost per kg",
+      "anchor_record_id": "462-2020-glider base cost per kg",
+      "anchor_record": {
+        "amount": 9,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "40t",
+          "60t"
+        ],
+        "year": 2020,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 9,
+        "minimum": 7.5,
+        "maximum": 10.5
+      },
+      "original_record": {
+        "amount": 6.299999999999999,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "40t",
+          "60t"
+        ],
+        "year": 2030,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 6.299999999999999,
+        "minimum": 7.5,
+        "maximum": 10.5
+      },
+      "corrected_bounds": {
+        "minimum": 5.249999999999999,
+        "maximum": 7.349999999999999
+      },
+      "scale_factor": 0.6999999999999998
+    },
+    {
+      "record_id": "464-2040-glider base cost per kg",
+      "anchor_record_id": "462-2020-glider base cost per kg",
+      "anchor_record": {
+        "amount": 9,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "40t",
+          "60t"
+        ],
+        "year": 2020,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 9,
+        "minimum": 7.5,
+        "maximum": 10.5
+      },
+      "original_record": {
+        "amount": 4.409999999999999,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "40t",
+          "60t"
+        ],
+        "year": 2040,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 4.409999999999999,
+        "minimum": 7.5,
+        "maximum": 10.5
+      },
+      "corrected_bounds": {
+        "minimum": 3.6749999999999994,
+        "maximum": 5.145
+      },
+      "scale_factor": 0.48999999999999994
+    },
+    {
+      "record_id": "465-2050-glider base cost per kg",
+      "anchor_record_id": "462-2020-glider base cost per kg",
+      "anchor_record": {
+        "amount": 9,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "40t",
+          "60t"
+        ],
+        "year": 2020,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 9,
+        "minimum": 7.5,
+        "maximum": 10.5
+      },
+      "original_record": {
+        "amount": 3.086999999999999,
+        "category": "Costs",
+        "powertrain": [
+          "PHEV-c-d",
+          "PHEV-e",
+          "ICEV-d",
+          "ICEV-g",
+          "BEV",
+          "FCEV",
+          "HEV-d",
+          "PHEV-d"
+        ],
+        "sizes": [
+          "40t",
+          "60t"
+        ],
+        "year": 2050,
+        "name": "glider base cost per kg",
+        "unit": "€/kg",
+        "importance": "High",
+        "source": "https://theicct.org/wp-content/uploads/2023/11/ID-54-%E2%80%93-EU-HDV-TCO_paper_final2.pdf\nhttps://theicct.org/wp-content/uploads/2023/04/tco-alt-powertrain-long-haul-trucks-us-apr23.pdf",
+        "comment": "An approximate cost of the glider (chassis, cab, and accessories excluding the powertrain) for heavy-duty trucks can be derived by combining cost data from recent ICCT studies with mass data from teardown analyses. The European heavy-duty vehicle decarbonization pathways report (ICCT, 2023) estimates the direct manufacturing cost of the chassis for a long-haul tractor (VECTO group 5-LH) at about €28,750 per vehicle\n. Complementarily, the US TCO of alternative powertrains report (ICCT, 2023), based on Ricardo Strategic Consulting teardown data, provides a base glider mass of approximately 10,439 lb (4,735 kg) for current Class 8 tractors, with future lightweight designs reaching ~3,915 kg\n. Normalizing the European cost estimates by these mass figures yields an implied glider cost in the range of 6–7 €/kg, depending on assumed vehicle lightweighting. This integrated approach thus provides a first-order estimate of glider cost per unit mass, which is not reported directly in the reviewed sources.",
+        "status": "Acceptable",
+        "kind": "distribution",
+        "uncertainty_type": 5,
+        "loc": 3.086999999999999,
+        "minimum": 7.5,
+        "maximum": 10.5
+      },
+      "corrected_bounds": {
+        "minimum": 2.572499999999999,
+        "maximum": 3.6014999999999984
+      },
+      "scale_factor": 0.34299999999999986
+    }
+  ],
+  "source_records_sha256": "7672cee78cb73ca5f81f24ea715f57b2a3e50ac68ffb8c6f0f2fb2db0d17680a"
+}
