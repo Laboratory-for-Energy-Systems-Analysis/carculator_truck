@@ -16,6 +16,7 @@ it has not yet been published. Older entries, where present, retain their origin
 
 ### Model and inventory changes
 
+- Gas trucks now emit the methane represented by their additional fuel-purchase allowance; previously the lost gas was absent from direct emissions. Use the shared mass balance, include both origins in impacts/exports, and document the historical loss-rate boundary; see [validation](docs/validity.rst#additional-methane-leakage).
 - Repair 21 invalid triangular battery/glider cost distributions by scaling bounds from valid 2020 relative uncertainty. Preserve every central value and all 2025 records; restore sampling of the full defaults and verify completed stochastic models/inventories. Ship original-record provenance and document the shared contextual validation.
 - Add native 2025 inputs, explicit component-efficiency priors and consistent temporal extensions across model years.
 - Apply corrected shared energy boundaries and regenerative accounting, and apply the CNG efficiency correction before fuel conversion.
