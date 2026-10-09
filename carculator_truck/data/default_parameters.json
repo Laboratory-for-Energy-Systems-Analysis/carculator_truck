@@ -22648,7 +22648,7 @@
         "maximum": 30
     },
     "826-2000-CNG pump-to-tank leakage": {
-        "amount": 0.004,
+        "amount": 0,
         "category": "Energy Storage",
         "powertrain": [
             "ICEV-g"
@@ -22666,17 +22666,15 @@
         "name": "CNG pump-to-tank leakage",
         "unit": "unitless",
         "importance": "Unknown",
-        "source": "https://iopscience.iop.org/article/10.1088/2516-1083/ab56af/pdf",
-        "comment": "Leakage represented as a fraction of CNG input.\nIncludes leakage from Delivery, Station tank, Continuous leaks at stations, Fuelling nozzle, Vehicle fuel tank and Vehicle manual vent.",
+        "source": "Supplier-boundary policy, 2026-10-09; see methane_leakage_provenance.json and shared docs/methane_leakage.rst.",
+        "comment": "No unqualified additional loss beyond the delivered-fuel supplier by default. Zero is an exclusion of an unmeasured residual, not a claim that upstream losses or vehicle leakage are physically zero. Specify a stage-matched residual in kg lost/kg engine fuel when available.",
         "status": "Acceptable",
         "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 0.004,
-        "minimum": 0.001,
-        "maximum": 0.093
+        "uncertainty_type": 1,
+        "loc": 0
     },
     "827-2010-CNG pump-to-tank leakage": {
-        "amount": 0.004,
+        "amount": 0,
         "category": "Energy Storage",
         "powertrain": [
             "ICEV-g"
@@ -22694,17 +22692,15 @@
         "name": "CNG pump-to-tank leakage",
         "unit": "unitless",
         "importance": "Unknown",
-        "source": "https://iopscience.iop.org/article/10.1088/2516-1083/ab56af/pdf",
-        "comment": "Leakage represented as a fraction of CNG input.\nIncludes leakage from Delivery, Station tank, Continuous leaks at stations, Fuelling nozzle, Vehicle fuel tank and Vehicle manual vent.",
+        "source": "Supplier-boundary policy, 2026-10-09; see methane_leakage_provenance.json and shared docs/methane_leakage.rst.",
+        "comment": "No unqualified additional loss beyond the delivered-fuel supplier by default. Zero is an exclusion of an unmeasured residual, not a claim that upstream losses or vehicle leakage are physically zero. Specify a stage-matched residual in kg lost/kg engine fuel when available.",
         "status": "Acceptable",
         "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 0.004,
-        "minimum": 0.001,
-        "maximum": 0.093
+        "uncertainty_type": 1,
+        "loc": 0
     },
     "828-2020-CNG pump-to-tank leakage": {
-        "amount": 0.004,
+        "amount": 0,
         "category": "Energy Storage",
         "powertrain": [
             "ICEV-g"
@@ -22722,17 +22718,15 @@
         "name": "CNG pump-to-tank leakage",
         "unit": "unitless",
         "importance": "Unknown",
-        "source": "https://iopscience.iop.org/article/10.1088/2516-1083/ab56af/pdf",
-        "comment": "Leakage represented as a fraction of CNG input.\nIncludes leakage from Delivery, Station tank, Continuous leaks at stations, Fuelling nozzle, Vehicle fuel tank and Vehicle manual vent.",
+        "source": "Supplier-boundary policy, 2026-10-09; see methane_leakage_provenance.json and shared docs/methane_leakage.rst.",
+        "comment": "No unqualified additional loss beyond the delivered-fuel supplier by default. Zero is an exclusion of an unmeasured residual, not a claim that upstream losses or vehicle leakage are physically zero. Specify a stage-matched residual in kg lost/kg engine fuel when available.",
         "status": "Acceptable",
         "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 0.004,
-        "minimum": 0.001,
-        "maximum": 0.093
+        "uncertainty_type": 1,
+        "loc": 0
     },
     "829-2030-CNG pump-to-tank leakage": {
-        "amount": 0.004,
+        "amount": 0,
         "category": "Energy Storage",
         "powertrain": [
             "ICEV-g"
@@ -22750,17 +22744,15 @@
         "name": "CNG pump-to-tank leakage",
         "unit": "unitless",
         "importance": "Unknown",
-        "source": "https://iopscience.iop.org/article/10.1088/2516-1083/ab56af/pdf",
-        "comment": "Leakage represented as a fraction of CNG input.\nIncludes leakage from Delivery, Station tank, Continuous leaks at stations, Fuelling nozzle, Vehicle fuel tank and Vehicle manual vent.",
+        "source": "Supplier-boundary policy, 2026-10-09; see methane_leakage_provenance.json and shared docs/methane_leakage.rst.",
+        "comment": "No unqualified additional loss beyond the delivered-fuel supplier by default. Zero is an exclusion of an unmeasured residual, not a claim that upstream losses or vehicle leakage are physically zero. Specify a stage-matched residual in kg lost/kg engine fuel when available.",
         "status": "Acceptable",
         "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 0.004,
-        "minimum": 0.001,
-        "maximum": 0.093
+        "uncertainty_type": 1,
+        "loc": 0
     },
     "830-2040-CNG pump-to-tank leakage": {
-        "amount": 0.004,
+        "amount": 0,
         "category": "Energy Storage",
         "powertrain": [
             "ICEV-g"
@@ -22778,17 +22770,15 @@
         "name": "CNG pump-to-tank leakage",
         "unit": "unitless",
         "importance": "Unknown",
-        "source": "https://iopscience.iop.org/article/10.1088/2516-1083/ab56af/pdf",
-        "comment": "Leakage represented as a fraction of CNG input.\nIncludes leakage from Delivery, Station tank, Continuous leaks at stations, Fuelling nozzle, Vehicle fuel tank and Vehicle manual vent.",
+        "source": "Supplier-boundary policy, 2026-10-09; see methane_leakage_provenance.json and shared docs/methane_leakage.rst.",
+        "comment": "No unqualified additional loss beyond the delivered-fuel supplier by default. Zero is an exclusion of an unmeasured residual, not a claim that upstream losses or vehicle leakage are physically zero. Specify a stage-matched residual in kg lost/kg engine fuel when available.",
         "status": "Acceptable",
         "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 0.004,
-        "minimum": 0.001,
-        "maximum": 0.093
+        "uncertainty_type": 1,
+        "loc": 0
     },
     "831-2050-CNG pump-to-tank leakage": {
-        "amount": 0.004,
+        "amount": 0,
         "category": "Energy Storage",
         "powertrain": [
             "ICEV-g"
@@ -22806,14 +22796,12 @@
         "name": "CNG pump-to-tank leakage",
         "unit": "unitless",
         "importance": "Unknown",
-        "source": "https://iopscience.iop.org/article/10.1088/2516-1083/ab56af/pdf",
-        "comment": "Leakage represented as a fraction of CNG input.\nIncludes leakage from Delivery, Station tank, Continuous leaks at stations, Fuelling nozzle, Vehicle fuel tank and Vehicle manual vent.",
+        "source": "Supplier-boundary policy, 2026-10-09; see methane_leakage_provenance.json and shared docs/methane_leakage.rst.",
+        "comment": "No unqualified additional loss beyond the delivered-fuel supplier by default. Zero is an exclusion of an unmeasured residual, not a claim that upstream losses or vehicle leakage are physically zero. Specify a stage-matched residual in kg lost/kg engine fuel when available.",
         "status": "Acceptable",
         "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 0.004,
-        "minimum": 0.001,
-        "maximum": 0.093
+        "uncertainty_type": 1,
+        "loc": 0
     },
     "832-2000-battery cycle life, Li-S": {
         "amount": 1150,
@@ -66352,7 +66340,7 @@
         "maximum": 0.095
     },
     "baseline-2025-0007-CNG pump-to-tank leakage": {
-        "amount": 0.004,
+        "amount": 0,
         "category": "Energy Storage",
         "powertrain": [
             "ICEV-g"
@@ -66370,14 +66358,12 @@
         "name": "CNG pump-to-tank leakage",
         "unit": "unitless",
         "importance": "Unknown",
-        "source": "https://iopscience.iop.org/article/10.1088/2516-1083/ab56af/pdf",
-        "comment": "2025 baseline: linear interpolation of the effective 2020 and 2030 records, before empirical calibration. Triangular modes and bounds are interpolated. Endpoint records: ('828-2020-CNG pump-to-tank leakage', '829-2030-CNG pump-to-tank leakage'). Leakage represented as a fraction of CNG input.\nIncludes leakage from Delivery, Station tank, Continuous leaks at stations, Fuelling nozzle, Vehicle fuel tank and Vehicle manual vent.",
+        "source": "Supplier-boundary policy, 2026-10-09; see methane_leakage_provenance.json and shared docs/methane_leakage.rst.",
+        "comment": "No unqualified additional loss beyond the delivered-fuel supplier by default. Zero is an exclusion of an unmeasured residual, not a claim that upstream losses or vehicle leakage are physically zero. Specify a stage-matched residual in kg lost/kg engine fuel when available.",
         "status": "Acceptable",
         "kind": "distribution",
-        "uncertainty_type": 5,
-        "loc": 0.004,
-        "minimum": 0.001,
-        "maximum": 0.093
+        "uncertainty_type": 1,
+        "loc": 0
     },
     "baseline-2025-0008-CNG tank mass intercept": {
         "amount": 25.0,

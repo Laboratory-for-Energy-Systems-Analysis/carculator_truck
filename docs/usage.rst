@@ -129,3 +129,14 @@ Existing coordinate selections and explicit input-cell edits are supported.
 Modify PHEV component inputs in a fresh model rather than aggregated outputs.
 See the `shared repeat-run contract
 <https://github.com/Laboratory-for-Energy-Systems-Analysis/carculator_utils/blob/master/docs/repeated_runs.rst>`_.
+
+Additional gas leakage
+----------------------
+
+``CNG pump-to-tank leakage`` now defaults to zero at all native years. This
+excludes an unqualified overlay beyond the delivered-fuel supplier boundary; it
+does not remove upstream emissions or exhaust methane, or assert that actual
+vehicle leakage is zero. The former 0.004 prior combined potentially overlapping
+delivery/storage/vehicle stages. Supply a documented residual loss (kg lost/kg
+engine fuel) for the selected pathway when available. Original records and
+source/boundary rationale are packaged in ``data/methane_leakage_provenance.json``.
