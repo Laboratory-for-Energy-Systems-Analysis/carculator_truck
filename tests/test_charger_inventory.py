@@ -176,7 +176,7 @@ def test_charger_impacts_follow_physical_allocation(completed, functional_unit):
                     ) == pytest.approx(expected, rel=2e-5, abs=1e-9)
 
 
-@pytest.mark.parametrize("version", ["3.9", "3.10"])
+@pytest.mark.parametrize("version", ["3.12"])
 def test_export_includes_phev_charger_and_preserves_inventory(completed, version):
     model = deepcopy(completed)
     model.array = model.array.sel(value=["standard"])

@@ -54,10 +54,14 @@ def test_bound_repairs_preserve_all_central_values_and_unaffected_records():
         assert original["name"] == current[key]["name"] == "CNG pump-to-tank leakage"
         assert current[key]["amount"] == leakage["default_additional_loss_ratio"] == 0
         restored[key] = original
-    # Restoring both migrations recovers the entire original data, including
+    # Undo the independently approved chemistry identifier migration before
+    # comparing with the historical, pre-migration source hash.
+    # Restoring all migrations recovers the entire original data, including
     # all 2025 records and unrelated physical assumptions.
     digest = hashlib.sha256(
-        json.dumps(restored, sort_keys=True, separators=(",", ":")).encode()
+        json.dumps(restored, sort_keys=True, separators=(",", ":"))
+        .replace("NMC-532", "NMC-523")
+        .encode()
     ).hexdigest()
     assert digest == provenance["source_records_sha256"]
     inputs = TruckInputParameters()

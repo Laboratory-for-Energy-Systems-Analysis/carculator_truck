@@ -347,10 +347,10 @@
       ],
       "missing_endpoint": false
     },
-    "baseline-2025-0049-battery cell energy density, NMC-523": {
+    "baseline-2025-0049-battery cell energy density, NMC-532": {
       "endpoint_records": [
-        "1938-2020-battery cell energy density, NMC-523",
-        "1939-2030-battery cell energy density, NMC-523"
+        "1938-2020-battery cell energy density, NMC-532",
+        "1939-2030-battery cell energy density, NMC-532"
       ],
       "missing_endpoint": false
     },
@@ -424,10 +424,10 @@
       ],
       "missing_endpoint": false
     },
-    "baseline-2025-0060-battery cell mass share, NMC-523": {
+    "baseline-2025-0060-battery cell mass share, NMC-532": {
       "endpoint_records": [
-        "1884-2020-battery cell mass share, NMC-523",
-        "1885-2030-battery cell mass share, NMC-523"
+        "1884-2020-battery cell mass share, NMC-532",
+        "1885-2030-battery cell mass share, NMC-532"
       ],
       "missing_endpoint": false
     },
@@ -556,10 +556,10 @@
       ],
       "missing_endpoint": false
     },
-    "baseline-2025-0079-battery cycle life, NMC-523": {
+    "baseline-2025-0079-battery cycle life, NMC-532": {
       "endpoint_records": [
-        "2004-2020-battery cycle life, NMC-523",
-        "2005-2030-battery cycle life, NMC-523"
+        "2004-2020-battery cycle life, NMC-532",
+        "2005-2030-battery cycle life, NMC-532"
       ],
       "missing_endpoint": false
     },
@@ -1220,10 +1220,10 @@
       ],
       "missing_endpoint": false
     },
-    "baseline-2025-0174-energy battery cost per kWh, NMC-523": {
+    "baseline-2025-0174-energy battery cost per kWh, NMC-532": {
       "endpoint_records": [
-        "344-2020-energy battery cost per kWh, NMC-523",
-        "345-2030-energy battery cost per kWh, NMC-523"
+        "344-2020-energy battery cost per kWh, NMC-532",
+        "345-2030-energy battery cost per kWh, NMC-532"
       ],
       "missing_endpoint": false
     },

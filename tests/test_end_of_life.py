@@ -145,7 +145,7 @@ def test_disposal_lcia_matches_treatment_demand_over_lifetime(
     assert (disposal > 0).all()
 
 
-@pytest.mark.parametrize("version", ["3.9", "3.10"])
+@pytest.mark.parametrize("version", ["3.12"])
 def test_exported_disposal_signs_and_repeated_exports(completed, version):
     model = deepcopy(completed)
     model.array = model.array.sel(value=[2])

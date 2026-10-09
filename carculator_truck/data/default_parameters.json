@@ -9417,7 +9417,7 @@
         "minimum": 23.77053096584048,
         "maximum": 89.81418270697976
     },
-    "344-2020-energy battery cost per kWh, NMC-523": {
+    "344-2020-energy battery cost per kWh, NMC-532": {
         "amount": 125,
         "category": "Costs",
         "powertrain": [
@@ -9435,7 +9435,7 @@
             "60t"
         ],
         "year": 2020,
-        "name": "energy battery cost per kWh, NMC-523",
+        "name": "energy battery cost per kWh, NMC-532",
         "unit": "\u20ac/kWh",
         "importance": "High",
         "source": "Sources: BNEF 2023; https://battery2030.eu/research/roadmap; https://www.iea.org/reports/global-ev-outlook-2024; www.anl.gov/cse/batpac-model-software;\nhttps://ourworldindata.org/grapher/average-battery-cell-price\nhttps://www.spglobal.com/automotive-insights/en/blogs/2025/01/where-are-ev-battery-prices-headed-in-2025-and-beyond\nhttps://patentpc.com/blog/battery-costs-in-2020-2030-how-much-have-prices-dropped-for-evs-and-energy-storage\nhttps://www.batterytechonline.com/ev-batteries/iea-report-lfp-dominates-as-ev-battery-prices-fall ",
@@ -9447,7 +9447,7 @@
         "minimum": 115,
         "maximum": 135
     },
-    "345-2030-energy battery cost per kWh, NMC-523": {
+    "345-2030-energy battery cost per kWh, NMC-532": {
         "amount": 87.5,
         "category": "Costs",
         "powertrain": [
@@ -9465,7 +9465,7 @@
             "60t"
         ],
         "year": 2030,
-        "name": "energy battery cost per kWh, NMC-523",
+        "name": "energy battery cost per kWh, NMC-532",
         "unit": "\u20ac/kWh",
         "importance": "High",
         "source": "Sources: BNEF 2023; https://battery2030.eu/research/roadmap; https://www.iea.org/reports/global-ev-outlook-2024; www.anl.gov/cse/batpac-model-software;\nhttps://ourworldindata.org/grapher/average-battery-cell-price\nhttps://www.spglobal.com/automotive-insights/en/blogs/2025/01/where-are-ev-battery-prices-headed-in-2025-and-beyond\nhttps://patentpc.com/blog/battery-costs-in-2020-2030-how-much-have-prices-dropped-for-evs-and-energy-storage\nhttps://www.batterytechonline.com/ev-batteries/iea-report-lfp-dominates-as-ev-battery-prices-fall ",
@@ -9477,7 +9477,7 @@
         "minimum": 80.5,
         "maximum": 94.5
     },
-    "346-2040-energy battery cost per kWh, NMC-523": {
+    "346-2040-energy battery cost per kWh, NMC-532": {
         "amount": 68.47574873963059,
         "category": "Costs",
         "powertrain": [
@@ -9495,7 +9495,7 @@
             "60t"
         ],
         "year": 2040,
-        "name": "energy battery cost per kWh, NMC-523",
+        "name": "energy battery cost per kWh, NMC-532",
         "unit": "\u20ac/kWh",
         "importance": "High",
         "source": "Sources: BNEF 2023; https://battery2030.eu/research/roadmap; https://www.iea.org/reports/global-ev-outlook-2024; www.anl.gov/cse/batpac-model-software;\nhttps://ourworldindata.org/grapher/average-battery-cell-price\nhttps://www.spglobal.com/automotive-insights/en/blogs/2025/01/where-are-ev-battery-prices-headed-in-2025-and-beyond\nhttps://patentpc.com/blog/battery-costs-in-2020-2030-how-much-have-prices-dropped-for-evs-and-energy-storage\nhttps://www.batterytechonline.com/ev-batteries/iea-report-lfp-dominates-as-ev-battery-prices-fall ",
@@ -9507,7 +9507,7 @@
         "minimum": 46.3172799251759,
         "maximum": 99.49005671840642
     },
-    "347-2050-energy battery cost per kWh, NMC-523": {
+    "347-2050-energy battery cost per kWh, NMC-532": {
         "amount": 44.6564587186002,
         "category": "Costs",
         "powertrain": [
@@ -9525,7 +9525,7 @@
             "60t"
         ],
         "year": 2050,
-        "name": "energy battery cost per kWh, NMC-523",
+        "name": "energy battery cost per kWh, NMC-532",
         "unit": "\u20ac/kWh",
         "importance": "High",
         "source": "Sources: BNEF 2023; https://battery2030.eu/research/roadmap; https://www.iea.org/reports/global-ev-outlook-2024; www.anl.gov/cse/batpac-model-software;\nhttps://ourworldindata.org/grapher/average-battery-cell-price\nhttps://www.spglobal.com/automotive-insights/en/blogs/2025/01/where-are-ev-battery-prices-headed-in-2025-and-beyond\nhttps://patentpc.com/blog/battery-costs-in-2020-2030-how-much-have-prices-dropped-for-evs-and-energy-storage\nhttps://www.batterytechonline.com/ev-batteries/iea-report-lfp-dominates-as-ev-battery-prices-fall ",
@@ -51443,7 +51443,7 @@
         "minimum": 0.77,
         "maximum": 0.85
     },
-    "1882-2000-battery cell mass share, NMC-523": {
+    "1882-2000-battery cell mass share, NMC-532": {
         "amount": 0.6,
         "category": "Energy Storage",
         "powertrain": [
@@ -51466,7 +51466,7 @@
             "60t"
         ],
         "year": 2000,
-        "name": "battery cell mass share, NMC-523",
+        "name": "battery cell mass share, NMC-532",
         "unit": "unitless",
         "importance": "Critical",
         "source": "For LFP :Yang, X.-G., Liu, T., & Wang, C.-Y. (2021). Thermally modulated lithium iron phosphate batteries for mass-market electric vehicles. Nature Energy 2021 6:2, 6(2), 176\u2013185. https://doi.org/10.1038/s41560-020-00757-7\nFor NMC/NCA: Towards more flexibility and transparency in life cycle inventories for Lithium-ion batteries. EleonorCrenna, Marcel Gauch, Rolf Widmer, Patrick W\u00e4ger, Roland Hischier",
@@ -51478,7 +51478,7 @@
         "minimum": 0.55,
         "maximum": 0.75
     },
-    "1883-2010-battery cell mass share, NMC-523": {
+    "1883-2010-battery cell mass share, NMC-532": {
         "amount": 0.65,
         "category": "Energy Storage",
         "powertrain": [
@@ -51501,7 +51501,7 @@
             "60t"
         ],
         "year": 2010,
-        "name": "battery cell mass share, NMC-523",
+        "name": "battery cell mass share, NMC-532",
         "unit": "unitless",
         "importance": "Critical",
         "source": "For LFP :Yang, X.-G., Liu, T., & Wang, C.-Y. (2021). Thermally modulated lithium iron phosphate batteries for mass-market electric vehicles. Nature Energy 2021 6:2, 6(2), 176\u2013185. https://doi.org/10.1038/s41560-020-00757-7\nFor NMC/NCA: Towards more flexibility and transparency in life cycle inventories for Lithium-ion batteries. EleonorCrenna, Marcel Gauch, Rolf Widmer, Patrick W\u00e4ger, Roland Hischier",
@@ -51513,7 +51513,7 @@
         "minimum": 0.6,
         "maximum": 0.7
     },
-    "1884-2020-battery cell mass share, NMC-523": {
+    "1884-2020-battery cell mass share, NMC-532": {
         "amount": 0.7,
         "category": "Energy Storage",
         "powertrain": [
@@ -51536,7 +51536,7 @@
             "60t"
         ],
         "year": 2020,
-        "name": "battery cell mass share, NMC-523",
+        "name": "battery cell mass share, NMC-532",
         "unit": "unitless",
         "importance": "Critical",
         "source": "For LFP :Yang, X.-G., Liu, T., & Wang, C.-Y. (2021). Thermally modulated lithium iron phosphate batteries for mass-market electric vehicles. Nature Energy 2021 6:2, 6(2), 176\u2013185. https://doi.org/10.1038/s41560-020-00757-7\nFor NMC/NCA: Towards more flexibility and transparency in life cycle inventories for Lithium-ion batteries. EleonorCrenna, Marcel Gauch, Rolf Widmer, Patrick W\u00e4ger, Roland Hischier",
@@ -51548,7 +51548,7 @@
         "minimum": 0.65,
         "maximum": 0.73
     },
-    "1885-2030-battery cell mass share, NMC-523": {
+    "1885-2030-battery cell mass share, NMC-532": {
         "amount": 0.75,
         "category": "Energy Storage",
         "powertrain": [
@@ -51571,7 +51571,7 @@
             "60t"
         ],
         "year": 2030,
-        "name": "battery cell mass share, NMC-523",
+        "name": "battery cell mass share, NMC-532",
         "unit": "unitless",
         "importance": "Critical",
         "source": "For LFP :Yang, X.-G., Liu, T., & Wang, C.-Y. (2021). Thermally modulated lithium iron phosphate batteries for mass-market electric vehicles. Nature Energy 2021 6:2, 6(2), 176\u2013185. https://doi.org/10.1038/s41560-020-00757-7\nFor NMC/NCA: Towards more flexibility and transparency in life cycle inventories for Lithium-ion batteries. EleonorCrenna, Marcel Gauch, Rolf Widmer, Patrick W\u00e4ger, Roland Hischier",
@@ -51583,7 +51583,7 @@
         "minimum": 0.7,
         "maximum": 0.77
     },
-    "1886-2040-battery cell mass share, NMC-523": {
+    "1886-2040-battery cell mass share, NMC-532": {
         "amount": 0.77,
         "category": "Energy Storage",
         "powertrain": [
@@ -51606,7 +51606,7 @@
             "60t"
         ],
         "year": 2040,
-        "name": "battery cell mass share, NMC-523",
+        "name": "battery cell mass share, NMC-532",
         "unit": "unitless",
         "importance": "Critical",
         "source": "For LFP :Yang, X.-G., Liu, T., & Wang, C.-Y. (2021). Thermally modulated lithium iron phosphate batteries for mass-market electric vehicles. Nature Energy 2021 6:2, 6(2), 176\u2013185. https://doi.org/10.1038/s41560-020-00757-7\nFor NMC/NCA: Towards more flexibility and transparency in life cycle inventories for Lithium-ion batteries. EleonorCrenna, Marcel Gauch, Rolf Widmer, Patrick W\u00e4ger, Roland Hischier",
@@ -51618,7 +51618,7 @@
         "minimum": 0.75,
         "maximum": 0.8
     },
-    "1887-2050-battery cell mass share, NMC-523": {
+    "1887-2050-battery cell mass share, NMC-532": {
         "amount": 0.8,
         "category": "Energy Storage",
         "powertrain": [
@@ -51641,7 +51641,7 @@
             "60t"
         ],
         "year": 2050,
-        "name": "battery cell mass share, NMC-523",
+        "name": "battery cell mass share, NMC-532",
         "unit": "unitless",
         "importance": "Critical",
         "source": "For LFP :Yang, X.-G., Liu, T., & Wang, C.-Y. (2021). Thermally modulated lithium iron phosphate batteries for mass-market electric vehicles. Nature Energy 2021 6:2, 6(2), 176\u2013185. https://doi.org/10.1038/s41560-020-00757-7\nFor NMC/NCA: Towards more flexibility and transparency in life cycle inventories for Lithium-ion batteries. EleonorCrenna, Marcel Gauch, Rolf Widmer, Patrick W\u00e4ger, Roland Hischier",
@@ -53333,7 +53333,7 @@
         "minimum": 0.19,
         "maximum": 0.21000000000000002
     },
-    "1936-2000-battery cell energy density, NMC-523": {
+    "1936-2000-battery cell energy density, NMC-532": {
         "amount": 0.05,
         "category": "Energy Storage",
         "powertrain": [
@@ -53356,7 +53356,7 @@
             "60t"
         ],
         "year": 2000,
-        "name": "battery cell energy density, NMC-523",
+        "name": "battery cell energy density, NMC-532",
         "unit": "kWh/kg",
         "importance": "Critical",
         "source": "https://pubs.acs.org/doi/pdf/10.1021/acsenergylett.7b00432",
@@ -53368,7 +53368,7 @@
         "minimum": 0.045000000000000005,
         "maximum": 0.05500000000000001
     },
-    "1937-2010-battery cell energy density, NMC-523": {
+    "1937-2010-battery cell energy density, NMC-532": {
         "amount": 0.1,
         "category": "Energy Storage",
         "powertrain": [
@@ -53391,7 +53391,7 @@
             "60t"
         ],
         "year": 2010,
-        "name": "battery cell energy density, NMC-523",
+        "name": "battery cell energy density, NMC-532",
         "unit": "kWh/kg",
         "importance": "Critical",
         "source": "https://pubs.acs.org/doi/pdf/10.1021/acsenergylett.7b00432",
@@ -53403,7 +53403,7 @@
         "minimum": 0.09000000000000001,
         "maximum": 0.11000000000000001
     },
-    "1938-2020-battery cell energy density, NMC-523": {
+    "1938-2020-battery cell energy density, NMC-532": {
         "amount": 0.2,
         "category": "Energy Storage",
         "powertrain": [
@@ -53426,7 +53426,7 @@
             "60t"
         ],
         "year": 2020,
-        "name": "battery cell energy density, NMC-523",
+        "name": "battery cell energy density, NMC-532",
         "unit": "kWh/kg",
         "importance": "Critical",
         "source": "https://pubs.acs.org/doi/pdf/10.1021/acsenergylett.7b00432",
@@ -53438,7 +53438,7 @@
         "minimum": 0.19,
         "maximum": 0.21000000000000002
     },
-    "1939-2030-battery cell energy density, NMC-523": {
+    "1939-2030-battery cell energy density, NMC-532": {
         "amount": 0.2,
         "category": "Energy Storage",
         "powertrain": [
@@ -53461,7 +53461,7 @@
             "60t"
         ],
         "year": 2030,
-        "name": "battery cell energy density, NMC-523",
+        "name": "battery cell energy density, NMC-532",
         "unit": "kWh/kg",
         "importance": "Critical",
         "source": "https://pubs.acs.org/doi/pdf/10.1021/acsenergylett.7b00432",
@@ -53473,7 +53473,7 @@
         "minimum": 0.19,
         "maximum": 0.21000000000000002
     },
-    "1940-2040-battery cell energy density, NMC-523": {
+    "1940-2040-battery cell energy density, NMC-532": {
         "amount": 0.21,
         "category": "Energy Storage",
         "powertrain": [
@@ -53496,7 +53496,7 @@
             "60t"
         ],
         "year": 2040,
-        "name": "battery cell energy density, NMC-523",
+        "name": "battery cell energy density, NMC-532",
         "unit": "kWh/kg",
         "importance": "Critical",
         "source": "https://pubs.acs.org/doi/pdf/10.1021/acsenergylett.7b00432",
@@ -53508,7 +53508,7 @@
         "minimum": 0.19949999999999998,
         "maximum": 0.2205
     },
-    "1941-2050-battery cell energy density, NMC-523": {
+    "1941-2050-battery cell energy density, NMC-532": {
         "amount": 0.22,
         "category": "Energy Storage",
         "powertrain": [
@@ -53531,7 +53531,7 @@
             "60t"
         ],
         "year": 2050,
-        "name": "battery cell energy density, NMC-523",
+        "name": "battery cell energy density, NMC-532",
         "unit": "kWh/kg",
         "importance": "Critical",
         "source": "https://pubs.acs.org/doi/pdf/10.1021/acsenergylett.7b00432",
@@ -55643,7 +55643,7 @@
         "minimum": 3000,
         "maximum": 5000
     },
-    "2002-2000-battery cycle life, NMC-523": {
+    "2002-2000-battery cycle life, NMC-532": {
         "amount": 3000,
         "category": "Energy Storage",
         "powertrain": [
@@ -55666,7 +55666,7 @@
             "60t"
         ],
         "year": 2000,
-        "name": "battery cycle life, NMC-523",
+        "name": "battery cycle life, NMC-532",
         "unit": "unit",
         "importance": "Critical",
         "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
@@ -55678,7 +55678,7 @@
         "minimum": 2250,
         "maximum": 3750
     },
-    "2003-2010-battery cycle life, NMC-523": {
+    "2003-2010-battery cycle life, NMC-532": {
         "amount": 3000,
         "category": "Energy Storage",
         "powertrain": [
@@ -55701,7 +55701,7 @@
             "60t"
         ],
         "year": 2010,
-        "name": "battery cycle life, NMC-523",
+        "name": "battery cycle life, NMC-532",
         "unit": "unit",
         "importance": "Critical",
         "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
@@ -55713,7 +55713,7 @@
         "minimum": 2250,
         "maximum": 3750
     },
-    "2004-2020-battery cycle life, NMC-523": {
+    "2004-2020-battery cycle life, NMC-532": {
         "amount": 3000,
         "category": "Energy Storage",
         "powertrain": [
@@ -55736,7 +55736,7 @@
             "60t"
         ],
         "year": 2020,
-        "name": "battery cycle life, NMC-523",
+        "name": "battery cycle life, NMC-532",
         "unit": "unit",
         "importance": "Critical",
         "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
@@ -55748,7 +55748,7 @@
         "minimum": 2250,
         "maximum": 3750
     },
-    "2005-2030-battery cycle life, NMC-523": {
+    "2005-2030-battery cycle life, NMC-532": {
         "amount": 4000,
         "category": "Energy Storage",
         "powertrain": [
@@ -55771,7 +55771,7 @@
             "60t"
         ],
         "year": 2030,
-        "name": "battery cycle life, NMC-523",
+        "name": "battery cycle life, NMC-532",
         "unit": "unit",
         "importance": "Critical",
         "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
@@ -55783,7 +55783,7 @@
         "minimum": 3000,
         "maximum": 5000
     },
-    "2006-2040-battery cycle life, NMC-523": {
+    "2006-2040-battery cycle life, NMC-532": {
         "amount": 4000,
         "category": "Energy Storage",
         "powertrain": [
@@ -55806,7 +55806,7 @@
             "60t"
         ],
         "year": 2040,
-        "name": "battery cycle life, NMC-523",
+        "name": "battery cycle life, NMC-532",
         "unit": "unit",
         "importance": "Critical",
         "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
@@ -55818,7 +55818,7 @@
         "minimum": 3000,
         "maximum": 5000
     },
-    "2007-2050-battery cycle life, NMC-523": {
+    "2007-2050-battery cycle life, NMC-532": {
         "amount": 4000,
         "category": "Energy Storage",
         "powertrain": [
@@ -55841,7 +55841,7 @@
             "60t"
         ],
         "year": 2050,
-        "name": "battery cycle life, NMC-523",
+        "name": "battery cycle life, NMC-532",
         "unit": "unit",
         "importance": "Critical",
         "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
@@ -67506,7 +67506,7 @@
         "minimum": 0.17099999999999999,
         "maximum": 0.189
     },
-    "baseline-2025-0049-battery cell energy density, NMC-523": {
+    "baseline-2025-0049-battery cell energy density, NMC-532": {
         "amount": 0.2,
         "category": "Energy Storage",
         "powertrain": [
@@ -67529,11 +67529,11 @@
             "7.5t"
         ],
         "year": 2025,
-        "name": "battery cell energy density, NMC-523",
+        "name": "battery cell energy density, NMC-532",
         "unit": "kWh/kg",
         "importance": "Critical",
         "source": "https://pubs.acs.org/doi/pdf/10.1021/acsenergylett.7b00432",
-        "comment": "2025 baseline: linear interpolation of the effective 2020 and 2030 records, before empirical calibration. Triangular modes and bounds are interpolated. Endpoint records: ('1938-2020-battery cell energy density, NMC-523', '1939-2030-battery cell energy density, NMC-523'). ",
+        "comment": "2025 baseline: linear interpolation of the effective 2020 and 2030 records, before empirical calibration. Triangular modes and bounds are interpolated. Endpoint records: ('1938-2020-battery cell energy density, NMC-532', '1939-2030-battery cell energy density, NMC-532'). ",
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
@@ -67891,7 +67891,7 @@
         "minimum": 0.675,
         "maximum": 0.75
     },
-    "baseline-2025-0060-battery cell mass share, NMC-523": {
+    "baseline-2025-0060-battery cell mass share, NMC-532": {
         "amount": 0.725,
         "category": "Energy Storage",
         "powertrain": [
@@ -67914,11 +67914,11 @@
             "7.5t"
         ],
         "year": 2025,
-        "name": "battery cell mass share, NMC-523",
+        "name": "battery cell mass share, NMC-532",
         "unit": "unitless",
         "importance": "Critical",
         "source": "For LFP :Yang, X.-G., Liu, T., & Wang, C.-Y. (2021). Thermally modulated lithium iron phosphate batteries for mass-market electric vehicles. Nature Energy 2021 6:2, 6(2), 176\u2013185. https://doi.org/10.1038/s41560-020-00757-7\nFor NMC/NCA: Towards more flexibility and transparency in life cycle inventories for Lithium-ion batteries. EleonorCrenna, Marcel Gauch, Rolf Widmer, Patrick W\u00e4ger, Roland Hischier",
-        "comment": "2025 baseline: linear interpolation of the effective 2020 and 2030 records, before empirical calibration. Triangular modes and bounds are interpolated. Endpoint records: ('1884-2020-battery cell mass share, NMC-523', '1885-2030-battery cell mass share, NMC-523'). ",
+        "comment": "2025 baseline: linear interpolation of the effective 2020 and 2030 records, before empirical calibration. Triangular modes and bounds are interpolated. Endpoint records: ('1884-2020-battery cell mass share, NMC-532', '1885-2030-battery cell mass share, NMC-532'). ",
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,
@@ -68520,7 +68520,7 @@
         "minimum": 2625.0,
         "maximum": 4375.0
     },
-    "baseline-2025-0079-battery cycle life, NMC-523": {
+    "baseline-2025-0079-battery cycle life, NMC-532": {
         "amount": 3500.0,
         "category": "Energy Storage",
         "powertrain": [
@@ -68543,11 +68543,11 @@
             "7.5t"
         ],
         "year": 2025,
-        "name": "battery cycle life, NMC-523",
+        "name": "battery cycle life, NMC-532",
         "unit": "unit",
         "importance": "Critical",
         "source": "Yuliya Preger et al 2020 J. Electrochem. Soc. 167 120532",
-        "comment": "2025 baseline: linear interpolation of the effective 2020 and 2030 records, before empirical calibration. Triangular modes and bounds are interpolated. Endpoint records: ('2004-2020-battery cycle life, NMC-523', '2005-2030-battery cycle life, NMC-523'). Cycle life, used to calculate battery lifetime.",
+        "comment": "2025 baseline: linear interpolation of the effective 2020 and 2030 records, before empirical calibration. Triangular modes and bounds are interpolated. Endpoint records: ('2004-2020-battery cycle life, NMC-532', '2005-2030-battery cycle life, NMC-532'). Cycle life, used to calculate battery lifetime.",
         "status": "",
         "kind": "distribution",
         "uncertainty_type": 5,
@@ -71205,7 +71205,7 @@
         "minimum": 102.0,
         "maximum": 119.0
     },
-    "baseline-2025-0174-energy battery cost per kWh, NMC-523": {
+    "baseline-2025-0174-energy battery cost per kWh, NMC-532": {
         "amount": 106.25,
         "category": "Costs",
         "powertrain": [
@@ -71223,11 +71223,11 @@
             "7.5t"
         ],
         "year": 2025,
-        "name": "energy battery cost per kWh, NMC-523",
+        "name": "energy battery cost per kWh, NMC-532",
         "unit": "\u20ac/kWh",
         "importance": "High",
         "source": "Sources: BNEF 2023; https://battery2030.eu/research/roadmap; https://www.iea.org/reports/global-ev-outlook-2024; www.anl.gov/cse/batpac-model-software;\nhttps://ourworldindata.org/grapher/average-battery-cell-price\nhttps://www.spglobal.com/automotive-insights/en/blogs/2025/01/where-are-ev-battery-prices-headed-in-2025-and-beyond\nhttps://patentpc.com/blog/battery-costs-in-2020-2030-how-much-have-prices-dropped-for-evs-and-energy-storage\nhttps://www.batterytechonline.com/ev-batteries/iea-report-lfp-dominates-as-ev-battery-prices-fall ",
-        "comment": "2025 baseline: linear interpolation of the effective 2020 and 2030 records, before empirical calibration. Triangular modes and bounds are interpolated. An endpoint mode lies outside its published bounds; for this 2025 prior only, its bounds are reconstructed using the other endpoint's relative bounds before interpolation. Endpoint records: ('344-2020-energy battery cost per kWh, NMC-523', '345-2030-energy battery cost per kWh, NMC-523'). ",
+        "comment": "2025 baseline: linear interpolation of the effective 2020 and 2030 records, before empirical calibration. Triangular modes and bounds are interpolated. An endpoint mode lies outside its published bounds; for this 2025 prior only, its bounds are reconstructed using the other endpoint's relative bounds before interpolation. Endpoint records: ('344-2020-energy battery cost per kWh, NMC-532', '345-2030-energy battery cost per kWh, NMC-532'). ",
         "status": "Acceptable",
         "kind": "distribution",
         "uncertainty_type": 5,

@@ -13,7 +13,7 @@ Correction and scope
 
 The repair changes only ``minimum`` and ``maximum`` in:
 
-* Six 2030 battery-cost records: LTO, NCA, NMC-111, NMC-523, NMC-622 and NMC-811.
+* Six 2030 battery-cost records: LTO, NCA, NMC-111, NMC-532, NMC-622 and NMC-811.
 * Fifteen glider-cost records: five size groups in each of 2030, 2040 and 2050.
 
 Each corrected bound uses the same parameter/vehicle group's valid 2020

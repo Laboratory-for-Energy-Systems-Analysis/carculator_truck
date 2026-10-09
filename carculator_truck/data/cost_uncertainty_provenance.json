@@ -214,8 +214,8 @@
       "scale_factor": 0.7
     },
     {
-      "record_id": "345-2030-energy battery cost per kWh, NMC-523",
-      "anchor_record_id": "344-2020-energy battery cost per kWh, NMC-523",
+      "record_id": "345-2030-energy battery cost per kWh, NMC-532",
+      "anchor_record_id": "344-2020-energy battery cost per kWh, NMC-532",
       "anchor_record": {
         "amount": 125,
         "category": "Costs",
@@ -234,7 +234,7 @@
           "60t"
         ],
         "year": 2020,
-        "name": "energy battery cost per kWh, NMC-523",
+        "name": "energy battery cost per kWh, NMC-532",
         "unit": "€/kWh",
         "importance": "High",
         "source": "Sources: BNEF 2023; https://battery2030.eu/research/roadmap; https://www.iea.org/reports/global-ev-outlook-2024; www.anl.gov/cse/batpac-model-software;\nhttps://ourworldindata.org/grapher/average-battery-cell-price\nhttps://www.spglobal.com/automotive-insights/en/blogs/2025/01/where-are-ev-battery-prices-headed-in-2025-and-beyond\nhttps://patentpc.com/blog/battery-costs-in-2020-2030-how-much-have-prices-dropped-for-evs-and-energy-storage\nhttps://www.batterytechonline.com/ev-batteries/iea-report-lfp-dominates-as-ev-battery-prices-fall ",
@@ -264,7 +264,7 @@
           "60t"
         ],
         "year": 2030,
-        "name": "energy battery cost per kWh, NMC-523",
+        "name": "energy battery cost per kWh, NMC-532",
         "unit": "€/kWh",
         "importance": "High",
         "source": "Sources: BNEF 2023; https://battery2030.eu/research/roadmap; https://www.iea.org/reports/global-ev-outlook-2024; www.anl.gov/cse/batpac-model-software;\nhttps://ourworldindata.org/grapher/average-battery-cell-price\nhttps://www.spglobal.com/automotive-insights/en/blogs/2025/01/where-are-ev-battery-prices-headed-in-2025-and-beyond\nhttps://patentpc.com/blog/battery-costs-in-2020-2030-how-much-have-prices-dropped-for-evs-and-energy-storage\nhttps://www.batterytechonline.com/ev-batteries/iea-report-lfp-dominates-as-ev-battery-prices-fall ",

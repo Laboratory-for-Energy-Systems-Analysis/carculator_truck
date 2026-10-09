@@ -20,6 +20,9 @@ it has not yet been published. Older entries, where present, retain their origin
 
 ### Model and inventory changes
 
+- Replace the NMC-523 option with NMC-532 for the ecoinvent 3.12 background refresh. Update explicit chemistry selections and custom parameter names; engineering priors retain their previous numerical values.
+- Use the matching shared premise 2.5.4 / ecoinvent 3.12 coefficient bundle; exports default to 3.12 and reject unverified older supplier links.
+
 - Make repeated `set_all()` calls rebuild from retained inputs, with stable costs/energy and retained PHEV components. Preserve explicit input edits and selected sample prices; see the shared repeat-run guide.
 
 - Allocate depot charger production over charger lifetime and capacity-limited fleet throughput, applying depot and PHEV electric-driving shares once. Preserve actual PHEV charger specifications, reject invalid active settings, and verify completed inventories, LCIA and exports. Energy and costs are unchanged; regenerate affected impacts and exports. See [charger inventory accounting](docs/validity.rst#depot-charger-inventory).
