@@ -37,6 +37,45 @@ Completed model/inventory checks and the shared billing contract are described
 in the `shared charging-cost validation <https://github.com/Laboratory-for-Energy-Systems-Analysis/carculator_utils/blob/master/docs/validity.rst#charging-cost-accounting>`_.
 
 
+.. _depot-throughput-accounting:
+
+Depot infrastructure throughput
+-------------------------------
+
+Depot-infrastructure costs now use ``electricity consumption`` (grid kWh/km)
+both to calculate annual charger throughput and to allocate the resulting
+EUR/kWh surcharge per vehicle-km. Previously the throughput input omitted
+charger losses while the per-km allocation included them. Below the annual
+capacity ceiling, this inflated the infrastructure component by 11.1% at
+90% charger efficiency, or 25% at 80% efficiency.
+
+The annual cost still consists of capital recovery over the charger lifetime,
+fixed operation/maintenance and the capacity charge. Annual throughput is the
+smaller of fleet grid-electricity demand and the existing capacity ceiling
+(``charger power * 8760 * 0.98 * 0.94``). The 0.98 availability and 0.94
+capacity factor, financing assumptions, number of trucks per charger and
+depot-share allocation are unchanged. This is an accounting correction,
+not new calibration of charger capacity or depot utilization. Zero throughput
+retains the existing zero-surcharge convention; noncharging vehicles have no
+depot-infrastructure charge.
+
+For the default Swiss 2025 ``40t`` BEV on ``Long haul``, the infrastructure
+component falls from EUR 6.62 to EUR 5.96 per 100 vehicle-km. It stays at
+approximately EUR 5.96 when charger efficiency changes from 90% to 80%, while
+the same annual charger cost is spread over more grid electricity below the
+capacity ceiling. Capacity-limited cases continue to use that ceiling.
+Vehicle energy demand, purchased electricity and LCIA are unaffected.
+
+``tests/test_depot_throughput.py`` checks completed BEV/PHEV runs against
+independent discounted annual cash flows and grid-throughput balances, with
+reordered years, labelled samples, varying charging efficiencies and depot
+shares. Cases below, across and above the capacity ceiling exercise both
+branches, alongside noncharging and zero-demand controls. PHEV infrastructure
+costs retain electric-driving-share weighting. Completed inventories confirm
+grid purchases and finite impacts. Run the focused checks with::
+
+   python -m pytest tests/test_depot_throughput.py tests/test_infrastructure_costs.py
+
 Delivery-truck evidence
 -----------------------
 

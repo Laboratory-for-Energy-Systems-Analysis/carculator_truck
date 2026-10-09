@@ -971,7 +971,7 @@ class TruckModel(VehicleModel):
             "(com_repl_cost * df_mid * amortisation_factor) / km_per_year"
         )
 
-        # infrastructure cost for depot charging
+        # Use grid purchases for both annual throughput and the per-km charge.
         self["energy infrastructure cost"] = (
             self.set_depot_infrastructure_costs(
                 charger_power_kw=self["depot charger power"],
@@ -983,8 +983,7 @@ class TruckModel(VehicleModel):
                 fixed_om_share=self["depot charger O&M share"],
                 trucks_per_charger=self["trucks per depot charger"],
                 annual_km_per_truck=self["kilometers per year"],
-                consumption_kwh_per_km_at_plug=(self["TtW energy"] / 3600)
-                / self["battery charge efficiency"],
+                consumption_kwh_per_km_at_plug=self["electricity consumption"],
                 capacity_charge_per_kw_year=self[
                     "depot charger capacity charger per kW-year"
                 ],
