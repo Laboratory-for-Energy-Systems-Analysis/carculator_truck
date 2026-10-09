@@ -76,6 +76,52 @@ grid purchases and finite impacts. Run the focused checks with::
 
    python -m pytest tests/test_depot_throughput.py tests/test_infrastructure_costs.py
 
+.. _adblue-cost-accounting:
+
+AdBlue cost accounting
+----------------------
+
+Truck AdBlue costs use diesel-blend consumption in litres per vehicle-km,
+the supplied AdBlue-to-diesel volume ratio, an AdBlue density of 1.09 kg/L,
+and the supplied price in EUR/kg::
+
+   adblue cost = fuel consumption * adblue use per liter diesel * 1.09 * adblue cost per kg
+
+``adblue use per liter diesel`` is a dimensionless ratio of L AdBlue/L diesel;
+``fuel consumption`` is L diesel blend/km. The blend's component densities
+are already accounted for in that fuel-volume output. The 1.09 kg/L conversion
+is for the AdBlue solution, not its urea content. It is the typical density
+at 20 degrees C reported in the
+`77 Lubricants technical sheet <https://www.77lubricants.nl/wp-content/uploads/2025/11/44850_AdBlue_v0.pdf>`_.
+The existing default dosing rate of 0.05 L/L is retained. It lies within the
+4--6 L per 100 L diesel range described in the
+`Shell AdBlue technical sheet <https://shellcarcareproducts.com/files/products/tds/shell-adblue-tds-en%284%29.pdf>`_.
+That broad range supports the units and the generic assumption; it does not
+validate dosing for every truck, fuel blend, year or duty cycle. Prices and
+the existing applicability of the dosing inputs are retained.
+
+Previously the formula applied the volume ratio directly to diesel mass,
+then billed that result as kilograms of AdBlue. For the default Swiss 2025
+``40t`` diesel truck on ``Long haul``, 30.21 L diesel/100 km corresponds to
+1.51 L or 1.65 kg AdBlue/100 km at the 5% rate. At the existing EUR 1.40/kg
+price, the corrected AdBlue cost is EUR 2.31/100 km, previously EUR 1.76.
+This adds approximately 0.45% to total ownership costs for that case.
+
+AdBlue remains part of maintenance costs. Explicit maintenance-cost overrides,
+including zero, take precedence. PHEV combustion-mode costs receive the
+combustion-driving share once during PHEV assembly; fully electric operation
+has zero AdBlue cost. This correction changes financial outputs while leaving
+vehicle sizing, fuel purchases and environmental inventories unchanged.
+
+``tests/test_adblue_costs.py`` verifies completed model/inventory/LCIA runs
+against the volumes of purchased blend components. It covers conventional
+diesel and diesel hybrids, PHEV electric shares of 0%, 50% and 100%, non-diesel
+controls, pure fuels and mixed fuels with year-specific shares and densities,
+reordered years, labelled samples, varied prices/rates, zero dosing, caller
+input preservation and maintenance overrides. Run it with::
+
+   python -m pytest tests/test_adblue_costs.py tests/test_cost_defaults.py
+
 Delivery-truck evidence
 -----------------------
 

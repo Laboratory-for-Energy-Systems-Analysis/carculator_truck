@@ -20,6 +20,8 @@ from . import DATA_DIR
 warnings.simplefilter(action="ignore", category=FutureWarning)
 
 CARGO_MASSES = DATA_DIR / "payloads.yaml"
+# Typical AdBlue density at 20 degrees C; sources in docs/validity.rst.
+ADBLUE_DENSITY_KG_PER_L = 1.09
 
 
 def finite(array, mask_value=0):
@@ -898,12 +900,14 @@ class TruckModel(VehicleModel):
             self["purchase cost"] * amortisation_factor / self["kilometers per year"]
         )
 
-        # per vkm
+        # EUR/vkm: diesel L/km * AdBlue L/L diesel * AdBlue kg/L * EUR/kg.
+        # PHEV combustion costs receive their driving share in create_PHEV().
         self["adblue cost"] = (
             self["adblue cost per kg"]
             * self["adblue use per liter diesel"]
-            * self["fuel mass"]
-        ) / self["target range"]
+            * self["fuel consumption"]
+            * ADBLUE_DENSITY_KG_PER_L
+        )
 
         self._set_cost_with_default(
             "maintenance cost", self["maintenance cost per km"] + self["adblue cost"]

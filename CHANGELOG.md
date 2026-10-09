@@ -16,6 +16,7 @@ it has not yet been published. Older entries, where present, retain their origin
 
 ### Model and inventory changes
 
+- Correct AdBlue costs by applying the dosing ratio to diesel litres and converting AdBlue volume to mass at 1.09 kg/L before billing EUR/kg. Retain dosing rates, prices, PHEV driving-share weighting and maintenance overrides; verify completed diesel/hybrid runs, fuel blends and zero-use controls. See [AdBlue cost accounting](docs/validity.rst#adblue-cost-accounting).
 - Use grid electricity consistently for annual depot-charger throughput and per-km infrastructure allocation. Remove the artificial surcharge caused by mixing electricity with and without charger losses; retain financing, capacity ceilings and depot-share assumptions. Verify completed BEV/PHEV runs, capacity transitions, noncharging and zero-demand cases. See [depot throughput accounting](docs/validity.rst#depot-throughput-accounting).
 - Bill BEVs and PHEV electric operation from grid electricity consumption, including charger losses. Preserve fuel-mode costs, PHEV driving-share weighting and model-specific cost units; verify costs against completed inventory purchases. See [charging cost accounting](docs/validity.rst#charging-cost-accounting).
 - Complete runs after selecting a nonzero sample label. Display payload, weight warnings and availability from the same retained sample: the named sensitivity reference when present, otherwise the first sample. Inherit preserved LCIA sample labels and selected-sample export support from the shared release.
