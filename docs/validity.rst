@@ -76,6 +76,64 @@ grid purchases and finite impacts. Run the focused checks with::
 
    python -m pytest tests/test_depot_throughput.py tests/test_infrastructure_costs.py
 
+.. _depot-charger-inventory:
+
+Depot charger inventory allocation
+----------------------------------
+
+Physical charger production is now allocated over the charger's lifetime and
+the fleet service it supplies. Previously each BEV received a fixed fraction
+of a charger regardless of charger lifetime or depot-charging share, while
+PHEVs received none because the inventory excluded vehicles with combustion
+power. Both the impact calculations and exported inventories were affected.
+
+The existing 200-kW reference inventory is scaled by ``depot charger power``.
+For one charger, annual grid throughput is the smaller of fleet demand
+(``trucks per depot charger * kilometers per year * electric-mode grid kWh/km``)
+and the existing capacity ceiling (``power * 8760 * 0.98 * 0.94``). Costs and
+inventories now share this throughput calculation. Allocation per vehicle-km is::
+
+   (charger power / 200) * grid kWh/km * depot share
+   -------------------------------------------------
+       charger lifetime * annual grid throughput
+
+The vehicle-production inventory multiplies this quantity by lifetime km;
+transport inventories and ``tkm`` results subsequently normalize by vehicle
+use and cargo. Charger lifetime therefore applies independently of truck
+lifetime. Active depot charging requires finite positive power, charger life,
+fleet size and mileage; invalid inputs raise a contextual error. Zero grid
+demand, zero depot share and unavailable vehicles receive no depot hardware.
+
+PHEV power, charger lifetime, trucks per charger and depot share retain their
+electric-mode values through hybrid aggregation. Grid purchases already
+include the electric-driving share; that share is applied once to hardware
+allocation. The denominator uses electric-mode throughput, consistently with
+the existing cost convention. Costs themselves are unchanged. This represents
+allocation of shared service, rather than sizing a dedicated station from a
+route timetable. Capacity factors and linear power scaling remain engineering
+assumptions. Only depot hardware is included here; public-charger production
+is not separately modelled by this correction.
+
+In completed Swiss 2025 ``40t`` runs on ``Long haul`` with the ``static``
+background, the default BEV charger contribution changes from 32.04 to
+14.18 g CO2-eq/vehicle-km. Six- and 24-year charger lives give 28.35 and
+7.09 g/km respectively, while zero depot share gives zero. A PHEV with a
+50% electric-driving share now includes 7.09 g/km instead of zero. These
+figures use the bundled ecoinvent 3.12 cut-off factors and IPCC 2021 GWP100
+excluding biogenic CO2 (``recipe``/``midpoint``, ``climate change``).
+Paired runs preserve energy, costs and every non-charger inventory exchange.
+Regenerate affected impacts and exports made with the previous allocation.
+
+``tests/test_charger_inventory.py`` verifies completed 7.5t/40t models,
+reordered 2025/2030 years, named samples, electric-driving shares of 0%, 50%
+and 100%, charger life, zero depot use and capacity-limited service. It checks
+independent physical allocation, prospective ``vkm``/``tkm`` impacts, invalid
+active inputs, and repeated Brightway/SimaPro exports for ecoinvent 3.9/3.10.
+It also follows vehicle-specific charger suppliers when electricity mixes
+differ. Run these and the unchanged cost regressions with::
+
+   python -m pytest tests/test_charger_inventory.py tests/test_depot_throughput.py tests/test_infrastructure_costs.py
+
 .. _adblue-cost-accounting:
 
 AdBlue cost accounting

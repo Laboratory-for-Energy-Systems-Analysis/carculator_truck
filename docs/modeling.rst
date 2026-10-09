@@ -983,48 +983,46 @@ potentially impact end-results as carbon fiber is very energy-intensive to produ
 Charging stations
 ~~~~~~~~~~~~~~~~~
 
-The parameters for the fast charging station used for battery electric
-trucks are presented in :ref:`Table 16 <table-16>`. The number of vehicles serviced by the
-charging station daily is defined by the battery capacity of the
-vehicles it serves. Theoretically, level-3 chargers can fast-charge the
-equivalent of 2’100 kWh daily, if operated within a safe SoC amplitude,
-or about five trucks with a 350 kWh battery pack.
+The depot charger reference inventory and current allocation inputs are
+summarized in :ref:`Table 16 <table-16>`. BEVs and the electric operation of
+PHEVs receive a share of charger production according to grid electricity use,
+depot share, charger lifetime and annual fleet throughput. The latter is limited
+by both fleet demand and charger capacity. See
+:ref:`depot-charger-inventory` for the equation, hybrid handling, boundaries
+and completed model/inventory verification.
 
 .. _table-16:
 
-.. table:: Table 16: Parameters of the charging station for battery electric trucks
-   :widths: auto
-   :align: center
+.. list-table:: Table 16: Depot charging infrastructure
+   :header-rows: 1
+   :widths: 40 60
 
-   +----------------------------------+----------------------------------+
-   |                                  | **EV charger, level 3, plug-in** |
-   +----------------------------------+----------------------------------+
-   | Vehicle type                     | BEV-depot                        |
-   +----------------------------------+----------------------------------+
-   | Power [kW]                       | 200                              |
-   +----------------------------------+----------------------------------+
-   | Efficiency [%]                   | 95                               |
-   +----------------------------------+----------------------------------+
-   | Source for efficiency            | :cite:`ct-1011`                  |
-   +----------------------------------+----------------------------------+
-   | Lifetime [years]                 | 24                               |
-   +----------------------------------+----------------------------------+
-   | Number of trucks allocated per   | 2’100 [kWh/day] / energy storage |
-   | charging system                  | cap. [kWh]                       |
-   +----------------------------------+----------------------------------+
-   | Share of the charging station    | 1 / (24 [years] \* no. trucks \* |
-   | allocated to the vehicle         | annual mileage [km/day] \* cargo |
-   |                                  | mass [ton])                      |
-   +----------------------------------+----------------------------------+
-   | Source for inventories           | :cite:`ct-1001, ct-1056`         |
-   +----------------------------------+----------------------------------+
-   | Comment                          | Assumed lifetime of 24 years. It |
-   |                                  | is up scaled to represent a 200  |
-   |                                  | kW Level-3 charger by scaling    |
-   |                                  | the charger component up based   |
-   |                                  | on a mass of 1’290 kg given by   |
-   |                                  | AAB's 200 kW bus charger.        |
-   +----------------------------------+----------------------------------+
+   * - Item
+     - Current assumption
+   * - Reference inventory
+     - EV charger, level 3, plug-in, 200 kW
+   * - Modelled power
+     - ``depot charger power``: 180, 250 or 350 kW by size class
+   * - Power scaling
+     - Modelled power divided by the 200-kW inventory rating
+   * - Charger lifetime
+     - ``depot charger lifetime``: 12 years by default
+   * - Fleet size
+     - ``trucks per depot charger``: 10 by default
+   * - Depot share
+     - ``share depot charging``: 80% by default
+   * - Annual throughput limit
+     - Power * 8760 hours * 0.98 availability * 0.94 capacity factor
+   * - Inventory sources
+     - :cite:`ct-1001, ct-1056`; the original 200-kW reference scales
+       charger components using a mass of 1,290 kg.
+
+These are allocation assumptions for shared depot service. Charger production
+is spread over its own lifetime; the truck lifetime determines how much service
+is allocated to that vehicle. The 0.94 factor limits throughput and is not
+applied as a second electricity loss. Public-charger production is not
+separately included. The former 24-year, 2,100-kWh/day description does not
+represent the current input defaults.
 
 Finding solutions
 *****************

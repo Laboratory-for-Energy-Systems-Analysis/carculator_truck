@@ -16,6 +16,7 @@ from carculator_utils.numerical import capital_recovery_factor
 from prettytable import PrettyTable
 
 from . import DATA_DIR
+from .infrastructure import annual_charger_throughput
 
 warnings.simplefilter(action="ignore", category=FutureWarning)
 
@@ -197,6 +198,22 @@ class TruckModel(VehicleModel):
             self.drop_hybrid()
 
         self.remove_energy_consumption_from_unavailable_vehicles()
+
+    def create_PHEV(self):
+        """Combine driving modes while retaining the actual depot charger specs."""
+        super().create_PHEV()
+        if "PHEV-d" in self.array.powertrain.values:
+            # Hardware characteristics and depot share are not weighted prices
+            # or energy demands. Retain them even at zero electric-driving share.
+            parameters = [
+                "depot charger power",
+                "depot charger lifetime",
+                "trucks per depot charger",
+                "share depot charging",
+            ]
+            self.array.loc[dict(powertrain="PHEV-d", parameter=parameters)] = (
+                self.array.sel(powertrain="PHEV-e", parameter=parameters, drop=True)
+            )
 
     def set_cargo_mass_and_annual_mileage(self):
         """Set the cargo mass and annual mileage of the vehicles."""
@@ -778,13 +795,14 @@ class TruckModel(VehicleModel):
         annual_cost_per_charger = annual_capital + annual_om + annual_capacity
 
         # Annual energy per charger (kWh/year)
-        E_demand = (
-            trucks_per_charger * annual_km_per_truck * consumption_kwh_per_km_at_plug
+        E = annual_charger_throughput(
+            charger_power_kw,
+            trucks_per_charger,
+            annual_km_per_truck,
+            consumption_kwh_per_km_at_plug,
+            availability,
+            efficiency,
         )
-        E_cap = charger_power_kw * 8760.0 * availability * efficiency
-
-        # Element-wise minimum that preserves xarray coords
-        E = xr.apply_ufunc(np.minimum, E_demand, E_cap)
 
         # Guard against zero/near-zero energy to avoid div-by-zero
         E = xr.where(E > 0, E, np.nan)

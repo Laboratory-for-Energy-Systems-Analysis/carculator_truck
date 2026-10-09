@@ -5,9 +5,11 @@ inventory.py contains Inventory which provides all methods to solve inventories.
 import warnings
 
 import numpy as np
+import xarray as xr
 from carculator_utils.inventory import Inventory
 
 from . import DATA_DIR
+from .infrastructure import annual_charger_throughput
 
 warnings.filterwarnings("ignore", category=np.VisibleDeprecationWarning)
 
@@ -353,28 +355,84 @@ class InventoryTruck(Inventory):
 
         self.add_refrigerant_emissions()
 
-        # Charging infrastructure
-        # Plugin BEV trucks
-        # The charging station has a lifetime by default of 15 years
-        # Hence, we calculate the lifetime of the truck
-        # We assume 10 trucks per charging station by default
+        self.add_depot_chargers()
+        print("*********************************************************************")
 
-        tpdc = self.array.sel(parameter="trucks per depot charger")
-        life = self.array.sel(parameter="depot charger lifetime")
-        power = self.array.sel(parameter="depot charger power")
-        mask = self.array.sel(parameter="combustion power") == 0
+    def add_depot_chargers(self):
+        """Allocate the 200-kW charger reference over lifetime grid throughput."""
+        # Work in the same labelled order as the vehicle columns in the matrix.
+        powertrains = xr.DataArray(
+            [label.rsplit(" - ", 1)[1] for label in self.array.combined_dim.values],
+            dims="combined_dim",
+            coords={"combined_dim": self.array.combined_dim},
+        )
+        available = (self.array.sel(parameter="TtW energy") > 0) & powertrains.isin(
+            ["BEV", "PHEV-d", "PHEV-e"]
+        )
 
-        # base = (-1.0 / (tpdc * life)) / 200 * power * mask
-        base = (-1.0 / (tpdc * 1)) / 200 * power * mask
+        def checked(parameter, mask, minimum=0, maximum=None, positive=False):
+            value = self.array.sel(parameter=parameter, drop=True)
+            invalid = ~np.isfinite(value) | (
+                value <= minimum if positive else value < minimum
+            )
+            if maximum is not None:
+                invalid |= value > maximum
+            invalid &= mask
+            if bool(invalid.any()):
+                position = np.argwhere(invalid.values)[0]
+                coords = {
+                    dim: invalid[dim].isel({dim: int(i)}).item()
+                    for dim, i in zip(invalid.dims, position)
+                }
+                raise ValueError(
+                    f"Invalid {parameter!r} for depot charging at {coords}."
+                )
+            return value
 
-        val = base.values[:, None, :, :]
-
+        grid = checked("electricity consumption", available)
+        share = checked("share depot charging", available, maximum=1)
+        active = available & (grid > 0) & (share > 0)
+        power = checked("depot charger power", active, positive=True).where(active, 0)
+        life = checked("depot charger lifetime", active, positive=True).where(active, 1)
+        trucks = checked("trucks per depot charger", active, positive=True).where(
+            active, 1
+        )
+        annual_km = checked("kilometers per year", active, positive=True).where(
+            active, 1
+        )
+        lifetime_km = checked("lifetime kilometers", active, positive=True).where(
+            active, 0
+        )
+        uf = checked(
+            "electric utility factor",
+            active & (powertrains == "PHEV-d"),
+            maximum=1,
+            positive=True,
+        )
+        uf = xr.where(active & (powertrains == "PHEV-d"), uf, 1)
+        grid = grid.where(active, 0)
+        # Combined PHEV grid purchases already include the electric-driving share.
+        # Recover mode throughput, then apply the share once via those purchases.
+        throughput = annual_charger_throughput(power, trucks, annual_km, grid / uf)
+        quantity = (
+            power
+            / 200
+            / life
+            / throughput.where(active, 1)
+            * grid
+            * share.where(active, 0)
+            * lifetime_km
+        )
+        if not bool(np.isfinite(quantity).all()):
+            raise ValueError(
+                "Nonfinite depot charger allocation from active charging inputs."
+            )
+        # Per vehicle here; the vehicle-to-transport exchange and functional-unit
+        # normalization subsequently allocate this over lifetime km and cargo.
         self.A[
             np.ix_(
                 np.arange(self.iterations),
                 self.find_input_indices(("EV charger, level 3, plugin, 200 kW",)),
                 [j for i, j in self.inputs.items() if i[0].startswith("truck, ")],
             )
-        ] = val
-
-        print("*********************************************************************")
+        ] = -quantity.transpose("value", "combined_dim", "year").values[:, None, :, :]
