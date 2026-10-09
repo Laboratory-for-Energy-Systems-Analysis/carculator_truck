@@ -24,8 +24,10 @@ Composed of eight modules to build the truck models:
 Additionally, three modules are used to:
 
 * configure energy systems for the background model (background systems module)
-* build and solve the life cycle inventory of cars (inventory module)
-* export the life cycle inventory of cars (export module)
+* build and solve the life cycle inventory of trucks (inventory module)
+* export the life cycle inventory of trucks through ``carculator_utils`` and
+  Brightpath (Brightway Excel, SimaPro CSV and foreground-only openLCA JSON-LD;
+  see :doc:`inventory_export` for sample selection and background linking)
 
 Driving cycle module
 --------------------
