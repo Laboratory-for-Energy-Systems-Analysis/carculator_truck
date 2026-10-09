@@ -122,6 +122,52 @@ input preservation and maintenance overrides. Run it with::
 
    python -m pytest tests/test_adblue_costs.py tests/test_cost_defaults.py
 
+.. _end-of-life-signs:
+
+End-of-life waste-flow signs
+----------------------------
+
+All three used-lorry treatment routes now receive positive waste outputs in
+the calculation matrix. Brightway exports represent these outputs as negative
+technosphere exchanges to treatment; SimaPro lists positive quantities under
+``Waste to treatment``. This follows the
+`Brightway matrix sign convention <https://docs.brightway.dev/en/latest/content/overview/matrix.html>`_.
+The bundled treatment factors are characterized per positive unit of the
+used-lorry reference product. Physical treatment requires negative demand for
+that product, giving a positive disposal burden for the bundled climate factors.
+
+Previously the 28t and 40t treatment exchanges had the opposite sign. This
+turned their disposal burdens into credits, affecting the default 26t, 32t,
+40t and 60t trucks across powertrains. The 16t treatment route already had the
+consistent sign. Characterization factors and the existing gross-mass scaling
+are retained: trucks below 26t use the 16t reference vehicle; trucks from 26t
+to below 40t use the 28t reference; trucks of 40t and above use the 40t reference.
+Each quantity is gross mass divided by reference-vehicle gross mass, then
+allocated over lifetime vehicle-km and, for ``tkm``, cargo in tonnes.
+
+For Swiss 2025 ``40t`` trucks on ``Long haul`` with the ``static`` background,
+the isolated disposal contribution changes from -2.18 to +2.18 g CO2-eq per
+vehicle-km for both diesel and BEV. Total climate impacts increase by about
+0.30% for diesel and 0.41% for BEV. These results use the bundled ecoinvent
+3.12 cut-off factors and IPCC 2021 GWP100 excluding biogenic CO2 (the
+``recipe``/``midpoint`` category ``climate change``). Driving energy, costs and
+fuel/electricity purchases are unaffected. Regenerate affected inventories,
+impact results and exports made with the former signs.
+
+``tests/test_end_of_life.py`` checks completed diesel runs across all seven
+sizes and BEV, fuel-cell, gas and hybrid controls, with reordered 2025/2030
+years and labelled samples with different lifetimes. It verifies treatment
+selection and scaled mass balance, isolates disposal impacts against physical
+waste demand for static/prospective backgrounds and ``vkm``/``tkm``, and
+checks both years of Brightway and SimaPro exports for ecoinvent 3.9/3.10.
+Repeated exports must preserve model and inventory state. Run it with::
+
+   python -m pytest tests/test_end_of_life.py tests/test_inventory.py
+
+This is a sign-accounting correction. The existing gross-mass treatment proxy
+and material-recovery assumptions have not been recalibrated, and export
+checks do not establish LCIA equivalence inside SimaPro.
+
 Delivery-truck evidence
 -----------------------
 

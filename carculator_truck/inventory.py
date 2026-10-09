@@ -282,6 +282,8 @@ class InventoryTruck(Inventory):
         self.add_cng_tank()
 
         # End-of-life disposal and treatment
+        # Used lorries leave the vehicle as waste: positive matrix outputs,
+        # exported as negative Brightway technosphere exchanges in every class.
 
         self.A[
             :,
@@ -302,7 +304,7 @@ class InventoryTruck(Inventory):
                 contains=("treatment of used lorry, 28 metric ton",)
             ),
             [j for i, j in self.inputs.items() if i[0].startswith("truck, ")],
-        ] = -1 * (
+        ] = 1 * (
             self.array.sel(parameter="gross mass")
             * np.where(self.array.sel(parameter="gross mass") < 26000, 0, 1)
             * np.where(self.array.sel(parameter="gross mass") >= 40000, 0, 1)
@@ -316,7 +318,7 @@ class InventoryTruck(Inventory):
                 contains=("treatment of used lorry, 40 metric ton",)
             ),
             [j for i, j in self.inputs.items() if i[0].startswith("truck, ")],
-        ] = -1 * (
+        ] = 1 * (
             self.array.sel(parameter="gross mass")
             * (self.array.sel(parameter="gross mass") >= 40000)
             / 1000
