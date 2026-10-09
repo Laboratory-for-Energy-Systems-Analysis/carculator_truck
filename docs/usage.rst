@@ -119,3 +119,13 @@ calibration, measurement comparisons and known limitations.
 The complete default parameter set is validated before sampling. See
 :doc:`uncertainty_bounds` for repaired truck cost distributions, their provenance
 and a complete stochastic model/inventory example.
+
+
+Repeated completion
+-------------------
+
+Repeated ``set_all()`` calls reuse retained inputs instead of previous results.
+Existing coordinate selections and explicit input-cell edits are supported.
+Modify PHEV component inputs in a fresh model rather than aggregated outputs.
+See the `shared repeat-run contract
+<https://github.com/Laboratory-for-Energy-Systems-Analysis/carculator_utils/blob/master/docs/repeated_runs.rst>`_.

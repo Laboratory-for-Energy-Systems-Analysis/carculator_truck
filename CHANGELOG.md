@@ -16,6 +16,8 @@ it has not yet been published. Older entries, where present, retain their origin
 
 ### Model and inventory changes
 
+- Make repeated `set_all()` calls rebuild from retained inputs, with stable costs/energy and retained PHEV components. Preserve explicit input edits and selected sample prices; see the shared repeat-run guide.
+
 - Allocate depot charger production over charger lifetime and capacity-limited fleet throughput, applying depot and PHEV electric-driving shares once. Preserve actual PHEV charger specifications, reject invalid active settings, and verify completed inventories, LCIA and exports. Energy and costs are unchanged; regenerate affected impacts and exports. See [charger inventory accounting](docs/validity.rst#depot-charger-inventory).
 - Correct reversed waste-output signs for the 28t and 40t used-lorry treatment routes, removing artificial disposal credits for heavier trucks. Preserve treatment selection and mass scaling; verify completed model/LCIA runs and Brightway/SimaPro exports across years and weight classes. Regenerate affected impacts and exports; see [end-of-life accounting](docs/validity.rst#end-of-life-signs).
 - Correct AdBlue costs by applying the dosing ratio to diesel litres and converting AdBlue volume to mass at 1.09 kg/L before billing EUR/kg. Retain dosing rates, prices, PHEV driving-share weighting and maintenance overrides; verify completed diesel/hybrid runs, fuel blends and zero-use controls. See [AdBlue cost accounting](docs/validity.rst#adblue-cost-accounting).

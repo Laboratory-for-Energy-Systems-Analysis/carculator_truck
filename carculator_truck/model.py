@@ -12,6 +12,7 @@ from carculator_utils.energy_consumption import (
     get_default_driving_cycle_name,
 )
 from carculator_utils.model import VehicleModel
+from carculator_utils.model_run import repeatable_run
 from carculator_utils.numerical import capital_recovery_factor
 from prettytable import PrettyTable
 
@@ -111,6 +112,7 @@ class TruckModel(VehicleModel):
                 dict(parameter=parameter, powertrain=powertrain, size=size, year=year)
             ] = amount
 
+    @repeatable_run
     def set_all(self, electric_utility_factor: float = None):
         """
         This method runs a series of other methods to obtain the tank-to-wheel energy requirement,
