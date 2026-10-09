@@ -17,11 +17,11 @@ from carculator_truck import (
 
 
 def test_bound_repairs_preserve_all_central_values_and_unaffected_records():
-    current = json.loads(TruckInputParameters.DEFAULT.read_text())
+    current = json.loads(TruckInputParameters.DEFAULT.read_text(encoding="utf-8"))
     provenance = json.loads(
         (
             TruckInputParameters.DEFAULT.parent / "cost_uncertainty_provenance.json"
-        ).read_text()
+        ).read_text(encoding="utf-8")
     )
     restored = deepcopy(current)
     assert provenance["changed_record_count"] == len(provenance["records"]) == 21
@@ -56,7 +56,7 @@ def test_bound_repairs_preserve_all_central_values_and_unaffected_records():
 
 
 def test_all_default_distributions_sample_reproducibly_with_valid_bounds():
-    records = json.loads(TruckInputParameters.DEFAULT.read_text())
+    records = json.loads(TruckInputParameters.DEFAULT.read_text(encoding="utf-8"))
     first = TruckInputParameters()
     first.stochastic(64, seed=42)
     second = TruckInputParameters()

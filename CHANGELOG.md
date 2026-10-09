@@ -39,6 +39,7 @@ it has not yet been published. Older entries, where present, retain their origin
 
 ### Documentation and verification
 
+- Read uncertainty-bound provenance JSON explicitly as UTF-8 on Windows, preserving euro-denominated units and exact comparisons with the source records.
 - Add current installation and executable 2025 quick-start examples, migration notes and a release checklist.
 - Record calibration scope, measurement boundaries and numerical consistency separately from empirical validation.
 - Verify built wheels and sdist-built wheels, packaged resource hashes, installed tests with export extras and offline core-only model/LCIA smoke runs.
