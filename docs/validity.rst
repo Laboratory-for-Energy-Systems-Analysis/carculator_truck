@@ -9,6 +9,34 @@ sub-1% agreement applies to that original configuration and model version.
 The current 2025 evidence review separates measurement boundaries, road load,
 vehicle vintage and route before interpreting discrepancies.
 
+.. _charging-cost-accounting:
+
+Charging cost accounting
+------------------------
+
+Electricity running costs use grid purchases: ``electricity consumption`` in
+kWh/km times the electricity tariff. Grid consumption already includes both
+battery-charge and charger losses; neither efficiency is applied again when
+billing that electricity. Previously the cost formula omitted charger losses.
+At 90% charger efficiency it understated the electricity component by 10%; at
+80% efficiency it understated it by 20%. This correction changes costs, while
+preserving vehicle energy demand, inventory electricity exchanges and LCIA.
+
+BEVs and PHEV electric intermediates use this grid-based calculation. Combined
+PHEVs retain the utility-factor-weighted sum of electric and combustion costs,
+with the electric share applied once. Fuel-mode costs retain their existing
+convention. Tariffs and charging-efficiency assumptions have not been refitted.
+
+Truck costs remain per vehicle-km. The electricity tariff is the weighted
+average of depot and public prices using ``share depot charging``; depot
+infrastructure remains a separate cost component. The default Swiss 2025
+``40t`` BEV on ``Long haul`` costs approximately EUR 27.43/100 km for
+electricity, corrected from EUR 24.69/100 km.
+
+Completed model/inventory checks and the shared billing contract are described
+in the `shared charging-cost validation <https://github.com/Laboratory-for-Energy-Systems-Analysis/carculator_utils/blob/master/docs/validity.rst#charging-cost-accounting>`_.
+
+
 Delivery-truck evidence
 -----------------------
 

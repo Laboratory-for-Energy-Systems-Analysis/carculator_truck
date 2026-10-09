@@ -839,31 +839,12 @@ class TruckModel(VehicleModel):
 
         self["fuel tank cost"] = self["fuel tank cost per kg"] * self["fuel mass"]
 
-        # Per vkm
-        self["energy cost"] = (
-            (
-                self["energy cost per kWh (depot)"]
-                * self["share depot charging"]
-                * self["TtW energy"]
-            )
-            + (
-                self["energy cost per kWh (public)"]
-                * (1 - self["share depot charging"])
-                * self["TtW energy"]
-            )
-        ) / 3600
-
-        # For BEVs, need to divide cost of electricity in battery by efficiency of charging
-        for pt in [
-            pwt
-            for pwt in ["BEV", "PHEV-e"]
-            if pwt in self.array.coords["powertrain"].values
-        ]:
-            self.array.loc[
-                dict(powertrain=pt, parameter="energy cost")
-            ] /= self.array.loc[
-                dict(powertrain=pt, parameter="battery charge efficiency")
-            ]
+        # Per vkm, with the existing depot/public tariff weighting.
+        energy_price = self["energy cost per kWh (depot)"] * self[
+            "share depot charging"
+        ] + self["energy cost per kWh (public)"] * (1 - self["share depot charging"])
+        self["energy cost"] = energy_price * self["TtW energy"] / 3600
+        self.set_electricity_costs(energy_price)
 
         self["component replacement cost"] = (
             self["energy battery cost"] * self["battery lifetime replacements"]
