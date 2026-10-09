@@ -1,4 +1,3 @@
-import warnings
 from copy import deepcopy
 from itertools import product
 from numbers import Integral, Real
@@ -19,8 +18,6 @@ from prettytable import PrettyTable
 from . import DATA_DIR
 from .infrastructure import annual_charger_throughput
 
-warnings.simplefilter(action="ignore", category=FutureWarning)
-
 CARGO_MASSES = DATA_DIR / "payloads.yaml"
 # Typical AdBlue density at 20 degrees C; sources in docs/validity.rst.
 ADBLUE_DENSITY_KG_PER_L = 1.09
@@ -40,12 +37,8 @@ class TruckModel(VehicleModel):
     This class represents the entirety of the vehicles considered, with useful attributes, such as an array that stores
     all the vehicles parameters.
 
-    :ivar array: multidimensional numpy-like array that contains parameters' value(s)
-    :vartype array: xarray.DataArray
-    :ivar mappings: Dictionary with names correspondence
-    :vartype mappings: dict
-    :ivar ecm: instance of :class:`EnergyConsumptionModel` class for a given driving cycle
-    :vartype ecm: coarse.energy_consumption.EnergyConsumptionModel
+    ``array`` is the labelled parameter array. ``ecm`` is the energy-consumption
+    model created for the selected driving cycle during a completed run.
 
     """
 

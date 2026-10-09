@@ -2,16 +2,12 @@
 inventory.py contains Inventory which provides all methods to solve inventories.
 """
 
-import warnings
-
 import numpy as np
 import xarray as xr
 from carculator_utils.inventory import Inventory
 
 from . import DATA_DIR
 from .infrastructure import annual_charger_throughput
-
-warnings.filterwarnings("ignore", category=np.VisibleDeprecationWarning)
 
 IAM_FILES_DIR = DATA_DIR / "IAM"
 
