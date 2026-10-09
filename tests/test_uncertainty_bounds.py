@@ -43,16 +43,27 @@ def test_bound_repairs_preserve_all_central_values_and_unaffected_records():
                 anchor[bound] / anchor["loc"]
             )
         restored[key] = original
-    # Restoring the 21 original records must recover the entire original data:
-    # this also protects all 2025 records and unrelated physical assumptions.
+    # Undo the independently documented methane-boundary change as well, so
+    # the historical cost audit still protects every other default record.
+    leakage = json.loads(
+        (
+            TruckInputParameters.DEFAULT.parent / "methane_leakage_provenance.json"
+        ).read_text(encoding="utf-8")
+    )
+    for key, original in leakage["original_records"].items():
+        assert original["name"] == current[key]["name"] == "CNG pump-to-tank leakage"
+        assert current[key]["amount"] == leakage["default_additional_loss_ratio"] == 0
+        restored[key] = original
+    # Restoring both migrations recovers the entire original data, including
+    # all 2025 records and unrelated physical assumptions.
     digest = hashlib.sha256(
         json.dumps(restored, sort_keys=True, separators=(",", ":")).encode()
     ).hexdigest()
     assert digest == provenance["source_records_sha256"]
     inputs = TruckInputParameters()
     inputs.static()
-    for key, original in restored.items():
-        np.testing.assert_array_equal(inputs.values[key], original["amount"])
+    for key, record in current.items():
+        np.testing.assert_array_equal(inputs.values[key], record["amount"])
 
 
 def test_all_default_distributions_sample_reproducibly_with_valid_bounds():
