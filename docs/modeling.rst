@@ -838,9 +838,13 @@ For trucks, battery replacement demand is derived from lifetime energy use:
 
 :math:`L_{vehicle}` is lifetime distance in km, :math:`F_{ttw}` stored-energy use
 in kJ/km, :math:`C_{battery}` capacity in kWh and :math:`N_{cycles}` battery cycle
-life. This factor applies to charger-equipped vehicles. The automatic calculation
-runs when the supplied replacement inputs are all zero; explicit nonzero
-replacement inputs are retained. The factor can be fractional and can be zero.
+life. This factor applies to charger-equipped vehicles and is evaluated after
+battery capacity and driving energy have converged. Each zero supplied input
+requests this calculation; nonzero supplied inputs are retained separately for
+each vehicle, year and sample. A calculated result does not become an override
+when the model is run again. Fuel-cell replacements likewise preserve supplied
+values per cell and otherwise use the final operating-hours calculation.
+The battery factor can be fractional and can be zero.
 There is no mandatory one-pack replacement in the truck calculation. Bus defaults
 use a different, explicitly documented assumption.
 

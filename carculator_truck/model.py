@@ -128,6 +128,14 @@ class TruckModel(VehicleModel):
         :return: Does not return anything. Modifies ``self.array`` in place.
         """
 
+        # repeatable_run restores caller inputs before each completed run.
+        # Keep those inputs separate from values calculated by this routine.
+        self._replacement_inputs = self.array.sel(
+            parameter=[
+                "battery lifetime replacements",
+                "fuel cell lifetime replacements",
+            ]
+        ).copy(deep=True)
         self["is_compliant"] = True
         self["is_available"] = True
 
@@ -182,7 +190,6 @@ class TruckModel(VehicleModel):
             self.set_ttw_efficiency()
 
             self.set_share_recuperated_energy()
-            self.set_battery_fuel_cell_replacements()
 
             self.set_energy_stored_properties()
             self.set_power_battery_properties()
@@ -481,27 +488,44 @@ class TruckModel(VehicleModel):
         """
         Calculate battery and fuel-cell replacement demand.
 
-        When all supplied battery replacement inputs are zero, lifetime energy
-        throughput and chemistry-specific cycle life determine a fractional
-        replacement factor, clipped to 0–3 for charger-equipped vehicles.
-        Nonzero supplied battery replacement inputs are retained. The factor
+        After sizing, each zero supplied battery replacement input requests a
+        calculation from final lifetime energy throughput and chemistry-specific
+        cycle life, clipped to 0–3 for charger-equipped vehicles. Nonzero supplied
+        inputs are retained per vehicle, year and sample. The factor
         is not rounded up and there is no mandatory replacement battery.
         Production is allocated to this vehicle without a second-life credit.
         Fuel cells use a separate lifetime-hours calculation, rounded up.
         """
         _ = lambda array: np.where(array == 0, 1, array)
 
-        if self["battery lifetime replacements"].sum() == 0:
-            self["battery lifetime replacements"] = np.clip(
-                (
-                    (self["lifetime kilometers"] * self["TtW energy"] / 3600)
-                    / _(self["electric energy stored"])
-                    / _(self["battery cycle life"])
-                    - 1
-                ),
-                0,
-                3,
-            ) * (self["charger mass"] > 0)
+        if not hasattr(self, "_replacement_inputs"):
+            # Support explicit component calls as well as completed runs.
+            self._replacement_inputs = self.array.sel(
+                parameter=[
+                    "battery lifetime replacements",
+                    "fuel cell lifetime replacements",
+                ]
+            ).copy(deep=True)
+
+        def supplied(parameter):
+            current = self[parameter]
+            return self._replacement_inputs.sel(
+                parameter=parameter,
+                **{dim: current[dim] for dim in current.dims},
+            )
+
+        battery = np.clip(
+            (
+                (self["lifetime kilometers"] * self["TtW energy"] / 3600)
+                / _(self["electric energy stored"])
+                / _(self["battery cycle life"])
+                - 1
+            ),
+            0,
+            3,
+        ) * (self["charger mass"] > 0)
+        inputs = supplied("battery lifetime replacements")
+        self["battery lifetime replacements"] = inputs.where(inputs != 0, battery)
 
         # The number of fuel cell replacements is based on the
         # average distance driven with a set of fuel cells given
@@ -536,10 +560,10 @@ class TruckModel(VehicleModel):
         replacements = xr.apply_ufunc(np.ceil, stacks_needed) - 1
         replacements = replacements.clip(min=0, max=5)
 
-        if self["fuel cell lifetime replacements"].sum() == 0:
-            self["fuel cell lifetime replacements"] = replacements * (
-                self["fuel cell stack mass"] > 0
-            )
+        inputs = supplied("fuel cell lifetime replacements")
+        self["fuel cell lifetime replacements"] = inputs.where(
+            inputs != 0, replacements * (self["fuel cell stack mass"] > 0)
+        )
 
     def set_vehicle_masses(self):
         """

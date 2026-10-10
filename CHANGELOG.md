@@ -26,6 +26,11 @@ it has not yet been published. Older entries, where present, retain their origin
 
 ### Model and inventory changes
 
+- Calculate battery and fuel-cell replacements after truck sizing. Preserve
+  supplied nonzero values per vehicle, year and sample, independently of automatic
+  results. This removes premature three-battery replacement counts for default
+  electric trucks and prevents one override from suppressing other calculations.
+
 - Converge driving mass, payload, battery mass, fuel mass and energy together, then refresh energy at the final mass. Apply payload limits within sizing and preserve fixed-mass overrides. This removes the previous-mass energy residual and keeps fuel/grid purchases and LCIA consistent with the completed truck; see [sizing validation](docs/validity.rst#sizing-consistency).
 
 - Replace the NMC-523 option with NMC-532 for the ecoinvent 3.12 background refresh. Update explicit chemistry selections and custom parameter names; engineering priors retain their previous numerical values.
