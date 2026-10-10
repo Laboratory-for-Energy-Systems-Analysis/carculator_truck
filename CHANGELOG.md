@@ -5,6 +5,12 @@ it has not yet been published. Older entries, where present, retain their origin
 
 ## [0.5.1] - Unreleased
 
+- Review the documentation against current code, explain units and assumptions
+  in plain English, and add validation bar charts with sources and explicit
+  limits. Correct outdated descriptions of exports, repeated runs and scientific
+  accounting; preserve dated historical results as such.
+
+
 - Remove import-time global warning suppression and refresh API/documentation contracts; shared sulfur-table reductions use explicit pandas axis arguments.
 
 - Default additional CNG pump-to-tank leakage to zero beyond the delivered-fuel supplier boundary. Remove the unqualified 0.4% overlay while retaining upstream and exhaust methane; explicit measured residuals remain supported.

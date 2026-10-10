@@ -117,8 +117,10 @@ class TruckModel(VehicleModel):
         `combustion engine mass`, `electric engine mass`. `energy battery mass` is influencedby the `curb mass` but also
         by the `target range` the truck has. `power` is also varying with `curb_mass`.
 
-        The current solution is to loop through the methods until the change in payload between
-        two iterations is inferior to 0.1%. It is then assumed that the trucks are correctly sized.
+        Sizing iterates until available payload changes by less than 1% for each
+        active vehicle, year and sample. The iteration count is bounded; failure
+        to converge raises an error. Convergence is a numerical check, not a
+        guarantee that the truck can meet a particular operating schedule.
 
         :param electric_utility_factor: the share of km driven in battery-depleting mode over the required range autonomy
         :return: Does not return anything. Modifies ``self.array`` in place.
@@ -454,19 +456,16 @@ class TruckModel(VehicleModel):
 
     def set_battery_fuel_cell_replacements(self):
         """
-        This method calculates the number of replacement batteries needed
-        to match the vehicle lifetime. Given the chemistry used,
-        the cycle life is known. Given the lifetime kilometers and
-        the kilometers per charge, the number of charge cycles can be inferred.
+        Calculate battery and fuel-cell replacement demand.
 
-        If the battery lifetime surpasses the vehicle lifetime,
-        100% of the burden of the battery production is allocated to the vehicle.
-        Also, the number of replacement is rounded up.
-        This means that the entirety of the battery replacement is allocated
-        to the vehicle (and not to its potential second life).
+        When all supplied battery replacement inputs are zero, lifetime energy
+        throughput and chemistry-specific cycle life determine a fractional
+        replacement factor, clipped to 0–3 for charger-equipped vehicles.
+        Nonzero supplied battery replacement inputs are retained. The factor
+        is not rounded up and there is no mandatory replacement battery.
+        Production is allocated to this vehicle without a second-life credit.
+        Fuel cells use a separate lifetime-hours calculation, rounded up.
         """
-        # Number of replacement of battery is rounded *up*
-
         _ = lambda array: np.where(array == 0, 1, array)
 
         if self["battery lifetime replacements"].sum() == 0:

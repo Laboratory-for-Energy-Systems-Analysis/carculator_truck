@@ -24,7 +24,7 @@ relative uncertainty:
    b_y = b_{2020}\,\frac{m_y}{m_{2020}}
 
 Here :math:`m` is the triangular mode (``loc``) and :math:`b` is either bound.
-This follows the endpoint reconstruction already documented when the native
+This follows the endpoint reconstruction already documented when the tabulated
 2025 records were constructed. It is a repair of inconsistent uncertainty
 definitions, not a new calibration to market observations.
 

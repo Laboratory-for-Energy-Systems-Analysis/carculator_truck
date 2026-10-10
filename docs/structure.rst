@@ -1,58 +1,37 @@
-.. _structure:
+How the package fits together
+=============================
 
-Structure
-=========
+The calculation follows the same sequence as the example in :doc:`usage`:
 
-.. image:: https://github.com/romainsacchi/carculator/blob/master/docs/_static/img/coarse.png?raw=true
-    :width: 900
-    :alt: Alternative text
+1. ``TruckInputParameters`` loads parameter records, units and uncertainty distributions.
+   Call ``static()`` for central values or ``stochastic(n, seed=...)`` for samples.
+2. ``fill_xarray_from_input_parameters()`` builds a labelled array and its
+   coordinate mappings. Select the sizes, powertrains and years needed for the study.
+3. ``TruckModel`` accepts this array and any constructor overrides. ``set_all()``
+   calculates masses, component sizes, energy demand, direct emissions and costs.
+4. ``InventoryTruck`` combines the calculated vehicle with material and energy
+   suppliers. ``calculate_impacts()`` returns results by impact category and
+   contribution group.
+5. Export methods write foreground inventories for use in another LCA tool.
+   Linking them to that tool's background database is a separate step.
 
-Modules
--------
+The vehicle packages contain their own defaults and sizing rules.
+``carculator_utils`` supplies the common array handling, cycle physics, fuel and
+electricity systems, emissions, matrix calculations and export interface. The
+bare shared input class has no standalone vehicle defaults.
 
-Composed of eight modules to build the truck models:
+Key files for readers of the code
+---------------------------------
 
-* Driving cycle module
-* Mass module
-* Auxiliary energy module
-* Motive energy module
-* Fuel-related emissions module
-* Hot pollutant emissions module
-* Non-exhaust emissions module
-* Noise emissions module
+* ``vehicle_input_parameters.py`` and ``array.py`` load and arrange inputs.
+* ``model.py`` calculates vehicle properties; vehicle packages extend this class.
+* ``energy_consumption.py`` calculates power over the driving cycle.
+* ``background_systems.py`` selects fuel properties and electricity shares.
+* ``inventory.py`` assembles inventories and calculates impact scores.
+* ``export.py`` prepares inventories for the supported export writers.
 
-Additionally, three modules are used to:
-
-* configure energy systems for the background model (background systems module)
-* build and solve the life cycle inventory of trucks (inventory module)
-* export the life cycle inventory of trucks through ``carculator_utils`` and
-  Brightpath (Brightway Excel, SimaPro CSV and foreground-only openLCA JSON-LD;
-  see :doc:`inventory_export` for sample selection and background linking)
-
-Driving cycle module
---------------------
-
-.. image:: https://github.com/romainsacchi/carculator/blob/master/docs/_static/img/driving_cycle.png?raw=true
-    :width: 400
-    :alt: Alternative text
-
-Mass module
------------
-
-.. image:: https://github.com/romainsacchi/carculator/blob/master/docs/_static/img/mass_module.png?raw=true
-    :width: 900
-    :alt: Alternative text
-
-Auxiliary energy module
------------------------
-
-.. image:: https://github.com/romainsacchi/carculator/blob/master/docs/_static/img/aux_energy.png?raw=true
-    :width: 900
-    :alt: Alternative text
-
-Motive energy module
---------------------
-
-.. image:: https://github.com/romainsacchi/carculator/blob/master/docs/_static/img/motive_energy.png?raw=true
-    :width: 900
-    :alt: Alternative text
+The last four shared files live in ``carculator_utils``; a vehicle package may
+also have its own ``model.py`` and ``inventory.py``. See :doc:`interpretation` for
+units and :doc:`validity` for checks on these interfaces. Input samples, sizing
+iterations and background scenarios are different concepts and should not be
+used interchangeably when reporting a study.

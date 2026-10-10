@@ -3,6 +3,10 @@
 Truck calibration and validation
 ================================
 
+Start with :doc:`validation_examples` for bar charts and an explanation of the
+evidence. This page records detailed checks and limitations; dated test totals
+and before/after results refer to their stated software snapshots.
+
 The historical VECTO comparison in :doc:`modeling` is calibration against a
 simulator, not an independent measurement of every truck class. Its reported
 sub-1% agreement applies to that original configuration and model version.
@@ -33,7 +37,7 @@ infrastructure remains a separate cost component. The default Swiss 2025
 ``40t`` BEV on ``Long haul`` costs approximately EUR 27.43/100 km for
 electricity, corrected from EUR 24.69/100 km.
 
-Completed model/inventory checks and the shared billing contract are described
+Completed model/inventory checks and the shared billing calculation are described
 in the `shared charging-cost validation <https://github.com/Laboratory-for-Energy-Systems-Analysis/carculator_utils/blob/master/docs/validity.rst#charging-cost-accounting>`_.
 
 
@@ -101,7 +105,7 @@ The vehicle-production inventory multiplies this quantity by lifetime km;
 transport inventories and ``tkm`` results subsequently normalize by vehicle
 use and cargo. Charger lifetime therefore applies independently of truck
 lifetime. Active depot charging requires finite positive power, charger life,
-fleet size and mileage; invalid inputs raise a contextual error. Zero grid
+fleet size and mileage; invalid inputs raise a error identifying the affected input. Zero grid
 demand, zero depot share and unavailable vehicles receive no depot hardware.
 
 PHEV power, charger lifetime, trucks per charger and depot share retain their
@@ -128,7 +132,7 @@ Regenerate affected impacts and exports made with the previous allocation.
 reordered 2025/2030 years, named samples, electric-driving shares of 0%, 50%
 and 100%, charger life, zero depot use and capacity-limited service. It checks
 independent physical allocation, prospective ``vkm``/``tkm`` impacts, invalid
-active inputs, and repeated Brightway/SimaPro exports for ecoinvent 3.9/3.10.
+active inputs, and repeated Brightway/SimaPro exports for ecoinvent 3.12.
 It also follows vehicle-specific charger suppliers when electricity mixes
 differ. Run these and the unchanged cost regressions with::
 
@@ -217,7 +221,7 @@ sizes and BEV, fuel-cell, gas and hybrid controls, with reordered 2025/2030
 years and labelled samples with different lifetimes. It verifies treatment
 selection and scaled mass balance, isolates disposal impacts against physical
 waste demand for static/prospective backgrounds and ``vkm``/``tkm``, and
-checks both years of Brightway and SimaPro exports for ecoinvent 3.9/3.10.
+checks both years of Brightway and SimaPro exports for ecoinvent 3.12.
 Repeated exports must preserve model and inventory state. Run it with::
 
    python -m pytest tests/test_end_of_life.py tests/test_inventory.py
@@ -302,12 +306,12 @@ by 100 gives kWh/100 km. A meter boundary must be identified before comparing
 these outputs. Regeneration and battery/charger losses must not be counted twice.
 
 The 2025 motor/inverter (0.90), electric transmission (0.97), charger (0.90)
-and symmetric battery one-way (sqrt(0.97)) values are component priors in their
+and symmetric battery one-way (sqrt(0.97)) values are component assumptions in their
 documented scopes, not universally measured efficiencies. For relevant hybrid
 scopes, the independent motor peak/system-power ratio is 0.65. The temporal
 update preserves all 2025 scalar values and uncertainty distributions. Storage
 and charger trends preserve relative legacy losses; newly explicit component
-priors are extended across native years to avoid interpolating from missing
+assumptions are extended across tabulated years to avoid interpolating from missing
 zero values. Historical estimates and future projections therefore change.
 
 The family audit completes 546 annual cases (21 configurations, 2015–2040),
@@ -337,7 +341,7 @@ record excluded observations as well as paired values. Multiple cycles of one
 vehicle and AC/DC measurements from one run are not independent vehicles.
 
 Additional methane leakage
----------------------------
+--------------------------
 
 Gas trucks now emit the methane represented by their additional fuel-purchase allowance; previously the lost gas was absent from direct emissions.
 The shared calculation preserves the existing convention: loss in kg per km
@@ -346,12 +350,13 @@ is engine fuel plus that loss. Fossil/non-fossil methane follows the blend.
 Both generic-air methane flows now enter non-exhaust impacts and exports;
 combustion CO2 and HBEFA exhaust emissions are unchanged.
 
-The historical 0.4% default is retained as an additional-loss assumption.
-Its source combines several station/delivery/vehicle stages and includes LNG
-boil-off; it does not establish a residual CNG loss after every supplier.
-Existing supplier losses are retained, so possible overlap is not eliminated
-by this accounting repair. Specify only loss additional to the selected
-supplier; set the parameter to zero if that supplier covers all relevant losses.
+The current default is **zero additional leakage** at all tabulated years.
+The former 0.4% assumption combined several delivery and vehicle stages and did
+not establish an extra loss after the selected supplier. Losses already present
+in the supplier inventory and HBEFA exhaust factors remain included. Set
+``CNG pump-to-tank leakage`` only when evidence supports an additional loss
+outside that supplier's boundary; a value of zero does not mean the whole gas
+supply chain is leak-free.
 See the shared `methane leakage boundary and verification notes
 <https://github.com/Laboratory-for-Energy-Systems-Analysis/carculator_utils/blob/master/docs/methane_leakage.rst>`_.
 
@@ -363,7 +368,7 @@ These establish accounting consistency, not measured leakage-rate validation.
 
 
 Retained uncertainty samples
------------------------------
+----------------------------
 
 The shared ``tests/test_sample_labels.py`` completes 40t long-haul diesel runs
 in 2025/2030 after selecting a single nonzero-labelled Monte Carlo sample.

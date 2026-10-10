@@ -3,6 +3,14 @@
 Modeling
 ========
 
+.. note::
+
+   This chapter combines equations used by the current model with source tables
+   and figures from the original studies. Historical tables are retained as
+   evidence of those studies, not as a complete listing of current defaults.
+   Use the installed input tables for current parameter values, and
+   :doc:`validation_examples` for dated comparisons and their limitations.
+
 This document describes the ``carculator_truck`` model, assumptions
 and inventories as exhaustively as possible.
 
@@ -320,9 +328,9 @@ Traction energy
 
 The traction energy for medium- and heavy-duty trucks is calculated
 based on the driving cycles for trucks provided by VECTO. Simulations
-are run in VECTO with trucks modeled as closely as possible to those of
-this study, to obtain performance indicators along the driving cycle
-(e.g., speed and fuel consumption, among others).
+were run in VECTO during the original study to obtain reference speed and
+performance profiles. A current ``carculator_truck`` run reads the bundled
+profiles; it does not invoke VECTO software.
 
 The calculation of the total resistance to overcome at the wheel level
 is the sum of the following resistances:
@@ -331,7 +339,9 @@ is the sum of the following resistances:
 * The rolling resistance, calculated as driving mass * rolling resistance coefficient * gravity
 * The aerodynamic drag, calculated as frontal area * aerodynamic drag coefficient * air density * speed^2 / 2
 * The gradient resistance, calculated as driving mass * gravity * sin(gradient)
-* As well as the resistance from braking, calculated as the force from the vehicle inertia when negative.
+
+Negative total wheel power indicates braking or deceleration. It is not an
+extra resistance added to the inertial force.
 
 :ref:`Figure 1 <figure-1>` shows the contribution of each type of resistance as calculated by
 ``carculator_truck`` for the first hundred seconds of the “Urban delivery” driving cycle, for an 18t diesel truck.
@@ -371,8 +381,11 @@ lasts much longer. :ref:`Figure 3 <figure-3>` shows the first two hundred second
    Figure 3: VECTO's "Long haul" driving cycle (first two hundred seconds)
 
 :ref:`Table 7 <table-7>` shows a few parameters about the three driving cycles
-considered. Value intervals are shown for some parameters as they vary
-across size classes.
+used in the original study. Its padded durations and average speeds predate
+the cycle-duration correction and must not be used as current cycle statistics.
+For example, the corrected long-haul profile has 5,454 active seconds and covers
+108.191 km, averaging about 71.4 km/h including stops. See the shared
+`truck cycle diagnostics <https://github.com/Laboratory-for-Energy-Systems-Analysis/carculator_utils/blob/master/docs/truck_energy_diagnostics.rst>`_.
 
 .. note::
 
@@ -743,18 +756,18 @@ they are also repeated in :ref:`Table 12 <table-12>`.
    | Discharge efficiency                                                        | 88%                                                              |                                        |                                                          | :cite:`ct-1080`                                                                                                             |
    +-----------------------------------------------------------------------------+------------------------------------------------------------------+----------------------------------------+----------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
 
-The default NMC battery cell corresponds to a so-called NMC 6-2-2 chemistry:
-it exhibits three times the mass amount of Ni compared to Mn, and Co, while
-Mn and Co are present in equal amount.
-Development aims at reducing the content of Cobalt and increasing the Nickel share.
-The user can also select NMC-1-1-1 or NMC-8-1-1.
+The historical NMC-622 example denotes a nickel:manganese:cobalt atomic
+ratio of 6:2:2, not an elemental mass ratio. Current truck defaults use NMC-622
+at 2020, NMC-811 at 2025 and 2030, and NMC-955 from 2035. Between the listed
+milestones, the truck hook uses the closest earlier chemistry, rather than
+interpolating chemistry labels. Explicit selections override these defaults.
 
 .. note::
 
     * **Important remark:** the battery cell energy density is not the same
       as the battery pack energy density. The latter is the product of the
       cell energy density and the cell-to-pack ratio.
-    * Changing the cell chemistry affects the caurb mass of the vehicle
+    * Changing the cell chemistry affects the curb mass of the vehicle
       and its cargo carrying capacity (since the range autonomy required remains unchanged).
 
 .. _table-12:
@@ -816,29 +829,24 @@ The user can also select NMC-1-1-1 or NMC-8-1-1.
    +----------------------------------------------------------------------------+--------------------------------------------------------------+--------+----------------------------------------+-------+----------------------------------------------------------+-------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-For trucks, for which the mileage varies across size classes and application types,
-the number of battery replacements is calculated based on the required number
-of charge cycles (which is itself conditioned by the battery capacity and the
-total mileage over the lifetime), in relation with the cycle life of the battery
-(which differs across chemistry – see :ref:`Table 11 <table-11>`).
+For trucks, battery replacement demand is derived from lifetime energy use:
 
-.. note::
+.. math::
 
-    Important assumption: The environmental burden associated with the manufacture
-    of spare batteries is entirely allocated to the vehicle use. The number of battery replacements is rounded up.
+   n_{replacement}=\operatorname{clip}\left(
+   \frac{L_{vehicle} F_{ttw}}{3600 C_{battery} N_{cycles}}-1,0,3\right).
 
-Given the energy consumption of the vehicle and the required battery
-capacity, ``carculator_truck`` calculates the number of charging cycles
-needed and the resulting number of battery replacements, given the cycle
-life of the chemistry used. As discussed  above, the expected cycle life is corrected.
+:math:`L_{vehicle}` is lifetime distance in km, :math:`F_{ttw}` stored-energy use
+in kJ/km, :math:`C_{battery}` capacity in kWh and :math:`N_{cycles}` battery cycle
+life. This factor applies to charger-equipped vehicles. The automatic calculation
+runs when the supplied replacement inputs are all zero; explicit nonzero
+replacement inputs are retained. The factor can be fractional and can be zero.
+There is no mandatory one-pack replacement in the truck calculation. Bus defaults
+use a different, explicitly documented assumption.
 
-Beyond the chemistry-specific resistance to degradation induced by
-charge-discharge cycles, the calendar aging of the cells for batteries
-that equip trucks is also considered: regardless of the charging type and
-cycle life, there is a minimum of one replacement of the battery during the vehicle lifetime.
-
-:ref:`Table 13 <table-13>` gives an overview of the number of battery replacements assumed for
-the different electric vehicles in this study.
+Replacement production is allocated to the vehicle, with no second-life credit.
+The following table preserves the original study's configurations; inspect the
+completed model's ``battery lifetime replacements`` for a current case.
 
 .. _table-13:
 
@@ -1027,23 +1035,17 @@ represent the current input defaults.
 Finding solutions
 *****************
 
-Very much like ``carculator`` and ``carculator_bus``,
-``carculator_truck`` iterates on the sizing procedure until:
+Truck sizing iterates until the **available payload** changes by less than
+1% for each active vehicle, year and sample. ``max_iterations`` limits the
+number of attempts; nonfinite values or failure to converge raise an error
+identifying the affected configuration. Agreement of a summed fleet mass is
+not sufficient.
 
--  The change in curb mass of the vehicles between two modeling
-   iterations is below 1%. This indicates that the vehicle model and the
-   size of its components have stabilized, and further iterating will
-   not affect its mass or its fuel consumption.
-
-All while considering the **following constraints**:
-
--  For **all trucks**, the driving mass when fully occupied cannot be
-   superior to the gross mass of the vehicle (this is specifically
-   relevant for battery electric vehicles)
--  Particularly relevant to battery electric vehicles, the curb mass
-   (including the battery mass) should be so low as to allow it to
-   retain at least 10% of the initial cargo carrying capacity, all while
-   staying under the permissible gross weight limit.
+The model checks actual driving mass against gross mass. After sizing, cargo
+mass is limited to the available payload. The former description of a mandatory
+10% residual cargo capacity is not an enforced check in the current code. The
+size class denotes gross vehicle mass, not the mass of cargo. Convergence establishes numerical stability;
+it does not prove that the assumed battery or duty cycle is commercially feasible.
 
 .. _validation-2:
 
@@ -1186,8 +1188,9 @@ infrastructure is calculated on the following basis:
 
 The driving mass of the vehicle consists of the mass of the vehicle in
 running condition (including fuel) in addition to the mass of passengers
-and cargo, if any. Unless changed, the passenger mass is 75 kilograms,
-and the average occupancy is 1.6 persons per vehicle.
+and cargo. Driver/passenger and cargo masses come from the selected vehicle
+inputs. For freight comparisons, ``tkm`` divides impacts by cargo tonnes,
+not by gross vehicle mass or passenger count.
 
 The demand rates used to calculate the amounts required for road
 construction and maintenance (based on vehicle mass per km and per km,
@@ -1279,9 +1282,9 @@ The amount of sulfur dioxide released by the vehicle over one km [kg/km] is calc
 
         SO_2 = r_{S} \times F_{fuel} \times (64/32)
 
-where :math:`r_{S}` is the sulfur content per kg of fuel [kg SO2/kg fuel],
+where :math:`r_{S}` is the sulfur content per kg of fuel [kg S/kg fuel],
 :math:`F_{fuel}` is the fuel consumption of the vehicle [kg/km],
-and :math:`64/32` is the ratio between the molar mass of SO2 and the molar mass of O2.
+and :math:`64/32` is the ratio between the molar mass of SO2 and the molar mass of sulfur (S).
 
 Country-specific fuel blends are sourced from the IEA's Extended World
 Energy Balances database :cite:`ct-1045`. By default, the biofuel used is assumed
@@ -1496,10 +1499,10 @@ The respective amounts of brake and tire wear emissions in urban, rural
 and motorway driving conditions are weighted, to represent the driving
 cycle used. The weight coefficients sum to 1 and the coefficients
 considered are presented in :ref:`Table 25 <table-25>`. They have been calculated by
-analyzing the speed profile of each driving cycle, with the exception of
-two-wheelers, for which no driving cycle is used (i.e., the energy
-consumption is from reported values) and where simple assumptions are
-made in that regard instead.
+analyzing the speed profiles used in the original study. The table is a
+historical summary, not a current list of all cycle-dependent coefficients.
+Current two-wheeler energy calculations also use driving cycles; their earlier
+use of owner-reported consumption should not be inferred from this table.
 
 .. _table-25:
 
@@ -1703,7 +1706,7 @@ km/h, beyond which the combustion engine is used.
 The total noise level (in A-weighted decibels) is calculated using the
 following equation:
 
-.. math:: L_{W,\ dBA} = 10*\log\left( 10^{\frac{L_{W,R}}{10}} \right) + 10*log(10^{\frac{L_{W,P}}{10}})
+.. math:: L_{W,\ dBA} = 10\log_{10}\left(10^{L_{W,R}/10}+10^{L_{W,P}/10}\right)
 
 The total sound power level is converted into Watts (or joules per
 second), using the following equation:
@@ -1728,33 +1731,29 @@ Life Year, respectively.
 Electricity mix calculation
 ***************************
 
-Electricity supply mix are calculated based on the weighting from the
-distribution the lifetime kilometers of the vehicles over the years of
-use. For example, should a BEV enter the fleet in Poland in 2020, most
-LCA models of trucks would use the electricity mix for
-Poland corresponding to that year, which corresponds to the row of the
-year 2020 in :ref:`Table 31 <table-31>`, based on ENTSO-E's TYNDP 2020 projections
-(National Trends scenario) :cite:`ct-1120`. ``carculator_truck`` calculates instead the
-average electricity mix obtained from distributing the annual kilometers
-driven along the vehicle lifetime, assuming an equal number of
-kilometers is driven each year. Therefore, with a lifetime of 200,000 km
-and an annual mileage of 12,000 kilometers, the projected electricity
-mixes to consider between 2020 and 2035 for Poland are shown in :ref:`Table 31 <table-31>`.
-Using the kilometer-distributed average of the projected mixes
-between 2020 and 2035 results in the electricity mix presented in the
-last row of :ref:`Table 31 <table-31>`. The difference in terms of technology contribution
-and unitary GHG-intensity between the electricity mix of 2020 and the
-electricity mix based on the annual kilometer distribution is
-significant (-23%). The merit of this approach ultimately depends on
-whether the projections will be realized or not.
+Electricity generation shares are averaged over each vehicle and sample's
+operating lifetime, assuming equal annual distance. The default uses national
+Ember observations followed by GECO 2025 Reference projections. Other GECO
+pathways and a TYNDP 2026 option can be selected explicitly. These generation
+choices are separate from the background-impact scenario. In particular,
+``scenario="static"`` does not freeze national generation shares.
 
-It is also important to remember that the unitary GHG emissions of each
-electricity-producing technology changes over time, as the background
-database ecoinvent has been transformed by premise :cite:`ct-1121`: for example,
-photovoltaic panels become more efficient, as well as some of the
-combustion-based technologies (e.g., natural gas). For more information
-about the transformation performed on the background life cycle
-database, refer to :cite:`ct-1121`.
+The operating lifetime is lifetime distance divided by annual distance; the
+calculation retains whole years and uses at least one year. Refreshed generation
+shares are held at their final values after 2070. Background technology impact
+coefficients are selected for the manufacturing year, with their own time
+horizon; this is not a year-by-year dynamic LCIA calculation.
+
+See the shared `electricity guide
+<https://github.com/Laboratory-for-Energy-Systems-Analysis/carculator_utils/blob/master/docs/electricity_scenarios.rst>`_
+for geographic coverage and scenario assumptions, and its
+`lifetime calculation
+<https://github.com/Laboratory-for-Energy-Systems-Analysis/carculator_utils/blob/master/docs/electricity_lifetime.rst>`_
+for averaging and custom mixes.
+
+**Historical illustration:** the Poland table below uses TYNDP 2020 and the
+original study's lifetime assumptions. It illustrates averaging but does not
+contain the current default generation mix or current climate coefficients.
 
 .. _table-31:
 
@@ -1941,42 +1940,36 @@ The source for the inventories used to model energy storage components are liste
 Life cycle impact assessment
 ----------------------------
 
-To build the inventory of every vehicle, ``carculator_truck`` populates a
-three-dimensional array *A* (i.e., a tensor) such as:
+The inventory uses a labelled array ``A`` with four axes: **sample, product,
+activity and year**. A sample is a set of uncertain inputs, not an iteration of
+the sizing procedure. The product and activity axes have the same length and
+include the background suppliers and foreground processes needed for the model.
 
-.. math:: \ A = \left\lbrack a_{\text{ijk}} \right\rbrack,\ i = 1,\ \ldots,\ L,\ j = 1,\ \ldots,\ M,\ k = 1,\ \ldots,\ N
+For each year and sample, the model solves the linear system
 
-The second and third dimensions (i.e., *M* and *N*) have the same
-length. They correspond to product and natural flow exchanges between
-supplying activities (i.e., *M*) and receiving activities (i.e., *N*).
-The first dimension (i.e., *L*) stores model iterations. Its length
-depends on whether the analysis is static or if an uncertainty analysis
-is performed (e.g., Monte Carlo).
+.. math::
 
-Given a final demand vector *f* (e.g., 1 kilometer driven with a
-specific vehicle, represented by a vector filled with zeroes and the
-value 1 at the position corresponding to the index *j* of the driving
-activity in dimension M) of length equal to that of the second dimension
-of *A* (i.e., *M*), ``carculator_truck`` calculates the scaling factor *s* so
-that:
+   A s = f,\qquad h = B s.
 
-.. math:: s = A^{- 1}f
+:math:`f` specifies demand for a vehicle or transport service; :math:`s` contains
+the required activity amounts; :math:`h` contains impact scores. The result is
+normalized to vehicle-km, passenger-km or tonne-km as requested.
 
-Finally, the scaling factor *s* is multiplied with a characterization
-matrix *B.* This matrix contains midpoint characterization factors for a
-number of impact assessment methods (as rows) for every activity in *A*
-(as columns).
+``B`` has axes **year, impact category and activity**. It contains precomputed
+supply-chain impact coefficients for background activities and characterization
+factors for elementary flows represented in the inventory. It is **not a raw
+biosphere-exchange matrix**. Its ordering must match ``A`` and the input index.
 
-As described earlier, the tool chooses between several
-characterization matrices *B*, which contain pre-calculated values for
-activities for a given year, depending on the year of production of the
-vehicle as well as the REMIND climate scenario considered (i.e.,
-"SSP2-Baseline", "SSP2-PkBudg1150" or "SSP2-PkBudg500"). Midpoint and
-endpoint (i.e., human health, ecosystem impacts and resources use)
-indicators include those of the ReCiPe 2008 v.1.13 impact assessment
-method, as well as those of ILCD 2018. Inventories can also be
-exported through Brightpath as Brightway Excel, SimaPro CSV or foreground-only
-openLCA JSON-LD. After matching external providers and elementary flows in the
-destination database, users can apply the methods available there. See
-:doc:`inventory_export` for supported ecoinvent targets and linking limitations.
+The bundled background was rebuilt from ecoinvent 3.12 cutoff with premise.
+Supported background scenarios are ``SSP2-NPi``, ``SSP2-PkBudg1000``,
+``SSP2-PkBudg650`` and ``static``. The old 1150/500 names are rejected.
+ReCiPe supplies midpoint and endpoint collections; EF 3.1 supplies midpoint
+indicators. In the ``recipe`` midpoint collection, ``climate change`` specifically
+uses IPCC 2021 GWP100 excluding biogenic CO2. See :doc:`interpretation` for units
+and the separate category that includes biogenic CO2.
+
+See :doc:`inventory_export` for Brightway Excel, SimaPro CSV and foreground-only
+openLCA JSON-LD exports. The destination application needs matching background
+providers and elementary flows. A successfully written file does not prove
+that those links have been resolved in the destination database.
 
