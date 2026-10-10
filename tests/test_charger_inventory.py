@@ -130,15 +130,17 @@ def test_charger_allocation_respects_service_and_lifetime(completed):
 
 
 @pytest.mark.parametrize("functional_unit", ["vkm", "tkm"])
-@pytest.mark.parametrize("supplier_count", [1, 2], ids=["single", "multiple"])
+@pytest.mark.parametrize(
+    "electricity_supplier_count", [1, 2], ids=["single", "multiple"]
+)
 def test_charger_impacts_follow_physical_allocation(
-    completed, functional_unit, supplier_count
+    completed, functional_unit, electricity_supplier_count
 ):
     completed = deepcopy(completed)
     # Exact lifetime ratios make electricity-supplier counts independent of
     # platform roundoff: one shared mix, or distinct mixes for the two sizes.
     lifetimes = xr.DataArray(
-        [8, 8 if supplier_count == 1 else 16],
+        [8, 8 if electricity_supplier_count == 1 else 16],
         dims="size",
         coords={"size": completed.array.coords["size"]},
     )
@@ -148,8 +150,14 @@ def test_charger_impacts_follow_physical_allocation(
     )
     actual = inventory.calculate_impacts()
     assert np.isfinite(actual).all()
+    electricity_rows = inventory.find_input_indices(
+        ("electricity supply for electric vehicles",)
+    )
+    assert len(electricity_rows) == electricity_supplier_count
+    # Charger manufacturing is outside the vehicle fuel supply chain. Distinct
+    # operating mixes must not clone its background manufacturing electricity.
     rows = inventory.find_input_indices((CHARGER[0],))
-    assert len(rows) == supplier_count
+    assert len(rows) == 1
     without = deepcopy(inventory)
     columns = [i for k, i in inventory.inputs.items() if k[0].startswith("truck, ")]
     for row in rows:
