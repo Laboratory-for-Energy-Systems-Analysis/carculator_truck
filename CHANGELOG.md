@@ -49,6 +49,7 @@ it has not yet been published. Older entries, where present, retain their origin
 
 ### Documentation and verification
 
+- Preserve the supplier axis in the charger-impact test when SciPy returns a vector for one supplier. Exercise deterministic single- and multiple-supplier cases for both functional units and all PHEV electric-driving shares, fixing Linux/Windows CI failures without changing model calculations.
 - Read uncertainty-bound provenance JSON explicitly as UTF-8 on Windows, preserving euro-denominated units and exact comparisons with the source records.
 - Add current installation and executable 2025 quick-start examples, migration notes and a release checklist.
 - Record calibration scope, measurement boundaries and numerical consistency separately from empirical validation.

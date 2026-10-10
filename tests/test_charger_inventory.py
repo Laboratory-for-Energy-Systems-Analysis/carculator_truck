@@ -130,13 +130,26 @@ def test_charger_allocation_respects_service_and_lifetime(completed):
 
 
 @pytest.mark.parametrize("functional_unit", ["vkm", "tkm"])
-def test_charger_impacts_follow_physical_allocation(completed, functional_unit):
+@pytest.mark.parametrize("supplier_count", [1, 2], ids=["single", "multiple"])
+def test_charger_impacts_follow_physical_allocation(
+    completed, functional_unit, supplier_count
+):
+    completed = deepcopy(completed)
+    # Exact lifetime ratios make electricity-supplier counts independent of
+    # platform roundoff: one shared mix, or distinct mixes for the two sizes.
+    lifetimes = xr.DataArray(
+        [8, 8 if supplier_count == 1 else 16],
+        dims="size",
+        coords={"size": completed.array.coords["size"]},
+    )
+    completed["lifetime kilometers"] = completed["kilometers per year"] * lifetimes
     inventory = make_inventory(
         completed, scenario="SSP2-NPi", functional_unit=functional_unit
     )
     actual = inventory.calculate_impacts()
     assert np.isfinite(actual).all()
     rows = inventory.find_input_indices((CHARGER[0],))
+    assert len(rows) == supplier_count
     without = deepcopy(inventory)
     columns = [i for k, i in inventory.inputs.items() if k[0].startswith("truck, ")]
     for row in rows:
@@ -150,7 +163,10 @@ def test_charger_impacts_follow_physical_allocation(completed, functional_unit):
     demand[rows, np.arange(len(rows))] = 1
     for y, year in enumerate(completed.array.year.values):
         for n, sample in enumerate(completed.array.value.values):
-            supply = spsolve(csc_matrix(inventory.A[n, :, :, y]), demand)
+            # spsolve squeezes a single RHS column; keep the supplier axis.
+            supply = spsolve(csc_matrix(inventory.A[n, :, :, y]), demand).reshape(
+                demand.shape
+            )
             factors = (
                 inventory.B.sel(category="climate change").interp(year=year).values
                 @ supply
