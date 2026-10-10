@@ -1035,14 +1035,22 @@ represent the current input defaults.
 Finding solutions
 *****************
 
-Truck sizing iterates until the **available payload** changes by less than
-1% for each active vehicle, year and sample. ``max_iterations`` limits the
-number of attempts; nonfinite values or failure to converge raise an error
-identifying the affected configuration. Agreement of a summed fleet mass is
-not sufficient.
+Truck sizing converges **driving mass, available payload, energy-battery mass,
+fuel mass and TtW energy together**. Each active vehicle, year and sample must
+change by no more than a relative tolerance of ``1e-6`` (0.0001%), with a small
+absolute tolerance for values near zero. ``max_iterations`` limits the number
+of attempts; nonfinite values or nonconvergence raise an error identifying the
+affected configuration. A fixed mass or a converged fleet total alone is not
+sufficient.
 
-The model checks actual driving mass against gross mass. After sizing, cargo
-mass is limited to the available payload. The former description of a mandatory
+Cargo is limited to the available payload during sizing. Each iteration starts
+from the requested load, so capacity released by a lighter powertrain remains
+available. Once sizing converges, the model refreshes the energy trace at the
+final driving mass before calculating consumption, costs and direct emissions.
+Stored energy and the requested range agree within the sizing tolerance when
+storage is sized for range; an explicit capacity override remains an override.
+
+The model checks actual driving mass against gross mass. The former description of a mandatory
 10% residual cargo capacity is not an enforced check in the current code. The
 size class denotes gross vehicle mass, not the mass of cargo. Convergence establishes numerical stability;
 it does not prove that the assumed battery or duty cycle is commercially feasible.

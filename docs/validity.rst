@@ -380,3 +380,34 @@ exported fuel inputs equal consumption divided by cargo in tonnes.
 Truck component tests separately check payload-table selection, availability
 and weight warnings with distinct sample values. These are software consistency
 checks and do not change the physical calibration.
+
+
+.. _sizing-consistency:
+
+Consistent sizing, energy and inventory
+---------------------------------------
+
+The October 2026 end-to-end audit found a small numerical residual in the
+2025 26t fuel-cell truck on the Regional delivery cycle in Germany. Energy
+was calculated at 17,611.60 kg, while the reported final mass was 17,691.40 kg.
+Refreshing energy at the reported mass increased consumption by 0.25%.
+The former stopping condition, a 1% change in available payload, permitted
+this difference even though the complete run returned successfully.
+
+Sizing now checks driving mass, available payload, battery mass, fuel mass
+and TtW energy together to a relative tolerance of ``1e-6`` per active cell.
+Payload limits participate in the iteration; the final energy trace is
+refreshed before consumption, costs, direct emissions and inventories are
+calculated. This is a numerical correction, not a new fuel-cell calibration.
+
+``tests/test_sizing_consistency.py`` independently reconstructs rolling work
+from final mass and the driving cycle, checks usable-energy/range balance,
+and verifies fuel/grid purchases and finite LCIA results. Cases include
+fuel-cell, battery-electric and diesel trucks, fixed curb mass, a payload
+limited by gross mass, labelled samples, multiple years, unavailable historical
+vehicles and bounded nonconvergence. Run it with::
+
+   python -m pytest tests/test_sizing_consistency.py
+
+The shared end-to-end audit and Brightway comparisons are recorded in the
+``carculator_utils`` repository under ``results/pipeline_audit_20261010``.

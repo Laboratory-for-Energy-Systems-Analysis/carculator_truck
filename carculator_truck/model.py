@@ -117,10 +117,12 @@ class TruckModel(VehicleModel):
         `combustion engine mass`, `electric engine mass`. `energy battery mass` is influencedby the `curb mass` but also
         by the `target range` the truck has. `power` is also varying with `curb_mass`.
 
-        Sizing iterates until available payload changes by less than 1% for each
-        active vehicle, year and sample. The iteration count is bounded; failure
-        to converge raises an error. Convergence is a numerical check, not a
-        guarantee that the truck can meet a particular operating schedule.
+        Sizing converges driving mass, available payload, battery mass, fuel
+        mass and TtW energy together to a relative tolerance of 1e-6 per active
+        vehicle, year and sample. Payload limits are applied within the loop.
+        The final energy trace uses the final driving mass. Iterations are
+        bounded; nonconvergence raises rather than returning a partial vehicle.
+        Numerical convergence does not establish real-world duty feasibility.
 
         :param electric_utility_factor: the share of km driven in battery-depleting mode over the required range autonomy
         :return: Does not return anything. Modifies ``self.array`` in place.
@@ -149,8 +151,17 @@ class TruckModel(VehicleModel):
         sizing_available = (self.array.year >= 2020) | ~self.array.powertrain.isin(
             ["BEV", "FCEV", "PHEV-d", "HEV-d", "PHEV-e", "PHEV-c-d"]
         )
+        requested_cargo = self["cargo mass"].copy(deep=True)
         for _ in self.iterate_sizing(
-            "available payload", rtol=0.01, mask=sizing_available
+            [
+                "driving mass",
+                "available payload",
+                "energy battery mass",
+                "fuel mass",
+                "TtW energy",
+            ],
+            rtol=1e-6,
+            mask=sizing_available,
         ):
 
             if self.target_mass:
@@ -177,8 +188,20 @@ class TruckModel(VehicleModel):
             self.set_power_battery_properties()
 
             self.set_vehicle_masses()
+            # Reapply the requested load, not the previous clipped value: a
+            # lighter converging powertrain can free payload in the next step.
+            self["cargo mass"] = np.minimum(
+                requested_cargo.clip(min=0), self["available payload"].clip(min=0)
+            )
+            self.set_vehicle_masses()
 
-        self["cargo mass"] = np.clip(self["cargo mass"], 0, self["available payload"])
+        # Storage was sized from the last cycle calculation. Its residual is
+        # bounded above; refresh energy at the final mass before costs, direct
+        # emissions, fuel/grid purchases and inventories consume those outputs.
+        self.calculate_ttw_energy()
+        self.set_ttw_efficiency()
+        self.set_share_recuperated_energy()
+        self.set_battery_fuel_cell_replacements()
 
         self["capacity utilization"] = np.clip(
             (self["cargo mass"] / self["available payload"]), 0, 1
